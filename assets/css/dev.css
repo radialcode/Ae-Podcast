@@ -1,3 +1,52 @@
 .take_quiz {
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
+  padding: 116px 0px;
+}
+.did_you_know {
+  max-width: 478px;
+}
+.start_btn_clr {
+  background: -webkit-linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.start_btn {
+  width: 125px;
+  height: 52px;
+  border-radius: 8px;
+}
+.start_btn_hover:hover .start_btn_clr {
+  -webkit-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
+}
+.transition_300 {
+  transition: 300ms linear;
+}
+.laptop {
+  max-width: 685px;
+}
+/* ------------------podcast compare ----------- */
+.podcast_compare_section {
+  padding:162px 0px;
+}
+.podcast_graph {
+  max-width: 573px;
+  box-shadow: 0px 4px 20px 0px #06060614;
+}
+@media (max-width: 991.98px) {
+  .take_quiz {
+    padding: 80px 0px;
+  }
+  .did_you_know {
+    max-width: 680px;
+  }
+}
+@media (max-width: 767.98px) {
+  .take_quiz {
+    padding: 64px 0px;
+  }
+  .start_btn {
+    width: 100%;
+  }
 }

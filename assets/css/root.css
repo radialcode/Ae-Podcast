@@ -11,6 +11,7 @@
   src: url("../fonts/GraphikSemibold.otf");
   src: url("../fonts/GraphikRegular.otf");
   src: url("../fonts/GraphikBold.otf");
+  src: url("../fonts/GraphikMedium.otf");
 }
 .ff_graphik {
   font-family: "Graphik" !important;
