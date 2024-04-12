@@ -12,10 +12,77 @@
     <!-- css links  -->
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    
+
 </head>
 
 <body>
+    <!-----------------Hero-------------->
+    <section>
+        <div class="custom_container">
+            <nav class="d-flex align-items-center justify-content-between nav_space">
+                <div>
+                    <a href=""><img src="./assets/images/svg/header_logo.svg" alt="nav-logo" /></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <ul id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
+                        <li>
+                            <a href="#" class="fw-normal fs_sm clr_grey ff_graphik">Features</a>
+                            <ul class="dropdown-content">
+                                <!-- Dropdown items -->
+                                <li><a href="#">Dropdown Item 1</a></li>
+                                <li><a href="#">Dropdown Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="openNav()" href="#home" class="fw-normal fs_sm clr_grey ff_graphik">Pricing</a>
+                            <ul class="dropdown-content">
+                                <!-- Dropdown items -->
+                                <li><a href="#">Dropdown Item 1</a></li>
+                                <li><a href="#">Dropdown Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="openNav()" href="#home" class="fw-normal fs_sm clr_grey ff_graphik">About us</a>
+                            <ul class="dropdown-content">
+                                <!-- Dropdown items -->
+                                <li><a href="#">Dropdown Item 1</a></li>
+                                <li><a href="#">Dropdown Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="openNav()" href="#home" class="fw-normal fs_sm clr_grey ff_graphik">Community</a>
+                            <ul class="dropdown-content">
+                                <!-- Dropdown items -->
+                                <li><a href="#">Dropdown Item 1</a></li>
+                                <li><a href="#">Dropdown Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="openNav()" href="#home" class="fw-normal fs_sm clr_grey ff_graphik">Education</a>
+                            <ul class="dropdown-content">
+                                <!-- Dropdown items -->
+                                <li><a href="#">Dropdown Item 1</a></li>
+                                <li><a href="#">Dropdown Item 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-md-block space_bttn align-items-center">
+                    <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login">
+                        Login
+                    </button>
+                    <button class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg">
+                        Register
+                    </button>
+                </div>
+                <button onclick="openNav()" class="d-lg-none z-3 bttn_nav">
+                    <span class="nav-line"></span>
+                    <span class="new_hamburger_line"></span>
+                    <span class="nav-lines"> </span>
+                </button>
+            </nav>
+        </div>
+    </section>
     <!-- ------- take the quiz -------- -->
     <!-- -----podcast compare ------>
     <section class="podcast_compare_section">
@@ -66,6 +133,15 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/custom.js"></script>
+    <!-- navbar-js -->
+    <script>
+        const Navbar = document.getElementById("NavBar");
+
+        function openNav() {
+            Navbar.classList.toggle("left-0");
+            document.body.classList.toggle("overflow_hidden");
+        }
+    </script>
 </body>
 
 </html>
