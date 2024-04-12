@@ -12,11 +12,9 @@
   src: url("../fonts/GraphikRegular.otf");
   src: url("../fonts/GraphikBold.otf");
 }
-
 .ff_graphik {
   font-family: "Graphik" !important;
 }
-
 :root {
   /* --------font sizes --------------- */
   --fs-5xl: 48px;
@@ -40,102 +38,78 @@
   --clr-red: #ff4d4d;
   --clr-lightblack: #343434;
 }
-
 /* ------------font classes ------------ */
 .fs_5xl {
   font-size: var(--fs-5xl);
 }
-
 .fs_4xl {
   font-size: var(--fs-4xl);
 }
-
 .fs_3xl {
   font-size: var(--fs-3xl);
 }
-
 .fs_2xl {
   font-size: var(--fs-2xl);
 }
-
 .fs_xl {
   font-size: var(--fs-xl);
 }
-
 .fs_lg {
   font-size: var(--fs-lg);
 }
-
 .fs_md {
   font-size: var(--fs-md);
 }
-
 .fs_sm {
   font-size: var(--fs-sm);
 }
-
 .fs_xsm {
   font-size: var(--fs-xsm);
 }
-
 /* ------------ colors classes ------------- */
 .clr_black {
   color: var(--clr-black);
 }
-
 .clr_grey {
   color: var(--clr-grey);
 }
-
 .clr_darkgrey {
   color: var(--clr-darkgrey);
 }
-
 .clr_offwhite {
   color: var(--clr-offwhite);
 }
-
 .clr_skyblue {
   color: var(--clr-skyblue);
 }
-
 .clr_seagreen {
   color: var(--clr-seagreen);
 }
-
 .clr_red {
   color: var(--clr-red);
 }
-
 .clr_green {
   color: var(--clr-green);
 }
-
 .clr_offgrey {
   color: var(--clr-offgrey);
 }
-
 .clr_lightblack {
   color: var(--clr-lightblack);
 }
-
 /* ------------- line heights ------------- */
 .lh_120 {
   line-height: 120%;
 }
-
 .lh_110 {
   line-height: 110%;
 }
-
 .lh_130 {
   line-height: 130%;
 }
-
 .lh_150 {
   line-height: 150%;
 }
-
 /* ----------- custom-container --------------- */
 .custom_container {
   max-width: 1164px;
@@ -147,7 +121,6 @@
   .custom_container {
     padding: 0 20px;
   }
-
   :root {
     /* --------font sizes --------------- */
     --fs-5xl: 28px;
@@ -159,7 +132,6 @@
     --fs-sm: 14px;
   }
 }
-
 @media (max-width: 991.98px) {
   :root {
     /* --------font sizes --------------- */
