@@ -1,11 +1,7 @@
-.footer_bg {
-    background-color: #EBECEF;
+.poadcasting_heading {
+    max-width: 526px !important;
 }
 
-.footer_padding {
-    padding: 258px 0px 0px 0px;
-}
-
-.footer_logo {
-    max-width: 227px;
+.poadcasting_para {
+    max-width: 546px !important;
 }
