@@ -241,11 +241,14 @@
             </div>
         </div>
     </section>
+    <!------------ Back to top button --------------->
+    <a id="button"></a>
+    <!-- ------------ Bootstrap Cdn Link ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/custom.js"></script>
-    <!-- navbar-js -->
+    <!----------------- Navbar-Js -------------------->
     <script>
         const Navbar = document.getElementById("NavBar");
 
@@ -253,6 +256,22 @@
             Navbar.classList.toggle("left-0");
             document.body.classList.toggle("overflow_hidden");
         }
+    </script>
+    <!-- ---------------- Back To Top -------------- -->
+    <script>  var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
     </script>
 </body>
 
