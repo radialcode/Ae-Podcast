@@ -22,11 +22,109 @@
   </head>
 
   <body>
+    <!-----------------Hero-------------->
+    <section>
+      <div class="custom_container">
+        <nav class="d-flex align-items-center justify-content-between">
+          <div>
+            <a href=""
+              ><img src="./assets/images/svg/header_logo.svg" alt="nav-logo"
+            /></a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <ul id="NavBar" class="d-flex gap-5 nav_bar mb-0 ps-0">
+              <li>
+                <a href="#" class="fw-normal fs_sm clr_grey">Features</a>
+                <ul class="dropdown-content">
+                  <!-- Dropdown items -->
+                  <li><a href="#">Dropdown Item 1</a></li>
+                  <li><a href="#">Dropdown Item 2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  onclick="openNav()"
+                  href="#home"
+                  class="fw-normal fs_sm clr_grey"
+                  >Pricing</a
+                >
+                <ul class="dropdown-content">
+                  <!-- Dropdown items -->
+                  <li><a href="#">Dropdown Item 1</a></li>
+                  <li><a href="#">Dropdown Item 2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  onclick="openNav()"
+                  href="#home"
+                  class="fw-normal fs_sm clr_grey"
+                  >About us</a
+                >
+                <ul class="dropdown-content">
+                  <!-- Dropdown items -->
+                  <li><a href="#">Dropdown Item 1</a></li>
+                  <li><a href="#">Dropdown Item 2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  onclick="openNav()"
+                  href="#home"
+                  class="fw-normal fs_sm clr_grey"
+                  >Community</a
+                >
+                <ul class="dropdown-content">
+                  <!-- Dropdown items -->
+                  <li><a href="#">Dropdown Item 1</a></li>
+                  <li><a href="#">Dropdown Item 2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  onclick="openNav()"
+                  href="#home"
+                  class="fw-normal fs_sm clr_grey"
+                  >Education</a
+                >
+                <ul class="dropdown-content">
+                  <!-- Dropdown items -->
+                  <li><a href="#">Dropdown Item 1</a></li>
+                  <li><a href="#">Dropdown Item 2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button class="fw-semibold fs_sm clr_black bttn_login">
+              Login
+            </button>
+            <button class="fw-semibold fs_sm clr_offwhite bttn_rsg">
+              Register
+            </button>
+          </div>
+          <button onclick="openNav()" class="d-lg-none z-3 bttn_nav">
+            <span class="nav-line"></span>
+            <span class="new_hamburger_line"></span>
+            <span class="nav-lines"> </span>
+          </button>
+        </nav>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/custom.js"></script>
+    <!-- navbar-js -->
+    <script>
+      const Navbar = document.getElementById("NavBar");
+
+      function openNav() {
+        Navbar.classList.toggle("left-0");
+        document.body.classList.toggle("overflow_hidden");
+      }
+    </script>
   </body>
 </html>
