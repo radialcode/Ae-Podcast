@@ -112,11 +112,14 @@
                             <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">384,629</p>
                             <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">(+3.39%)</p>
                         </div>
+
                         <div class="total_box">
-                            <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
-                            <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">2,963,829
-                            </p>
-                            <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+0.65%)</p>
+                            <div class="ps-4 pe-3 py-3">
+                                <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
+                                <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">2,963,829
+                                </p>
+                                <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+0.65%)</p>
+                            </div>
                         </div>
 
                     </div>
@@ -124,10 +127,10 @@
                     <div class="d-flex align-items-center">
                         <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">Only 13.3% of the total
                             podcasts
-                            <span class="d-block">are
+                            <span class="d-sm-block d-inline">are
                                 active!</span>
                         </p>
-                        <img class="ms-2" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector">
+                        <img class="ms-sm-2 ms-1" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector">
                     </div>
                 </div>
 
@@ -141,13 +144,10 @@
 
         </div>
     </section>
-
     <!-------------- possible future ---------------->
-    <section class="bg-white">
+    <section class="bg-white d-lg-block d-none future_sec_p">
         <div class="custom_container">
-
             <div class="row justify-content-between">
-
                 <div class="col-lg-6">
                     <img class="w-100 podcasting_chart" src="./assets/images/svg/possible_future_chart.svg"
                         alt="possible_future">
@@ -161,8 +161,8 @@
                         <option value="March">March 2024</option>
                     </select>
 
-                    <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 poadcasting_heading fw-semibold mt-3">Possible
-                        Future Actively Established Podcasts</h2>
+                    <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">Possible
+                        Future Actively Established Podcasts</h3>
                     <p class="clr_grey poadcasting_para fw-normal ff_graphik my-3 fs_sm lh_150">Most interview-based
                         independent podcasters fail to reach the Actively Established status due to quitting prematurely
                         or
@@ -175,39 +175,100 @@
                             <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">(+5.64%)</p>
                         </div>
                         <div class="total_box d-flex flex-column justify-content-center">
-                            <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
-                            <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">505,677
-                            </p>
-                            <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+1.27%)</p>
+                            <div class="ps-4 pe-1 py-3">
+                                <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
+                                <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">505,677</p>
+                                <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+1.27%)</p>
+                            </div>
                         </div>
-
                     </div>
-
                     <div class="d-flex align-items-center mt-4 pt-1 ">
                         <img src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector">
                         <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2">Only 23.78% are active!
                         </p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
     <!-- -----podcast compare ------>
     <section class="podcast_compare_section">
         <div class="custom_container">
             <div class="d-flex flex-lg-row flex-column-reverse">
-
-                <img class="podcast_graph w-100 me-1" src="./assets/images/png/podcast_compare_graph.png"
-                    alt="podcast_compare_graph">
-
-                <div class="d-flex flex-column align-items-start ms-4 ps-3">
-                    <h2 class="ff_graphik clr_black fw-semibold fs_5xl lh_150">Your Podcast Compared to Industry
-                        Averages</h2>
-                    <p>A podcast listener is 100x more valuable than an engagement on social media. Podcasting is
+    
+                <img class="podcast_graph mx-auto ms-lg-0 w-100 me-lg-1 mt-4 mt-lg-0"
+                    src="./assets/images/png/podcast_compare_graph.png" alt="podcast_compare_graph">
+    
+                <div class="d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-3 your_podcast_compared">
+                    <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120">Your Podcast Compared to Industry
+                        Averages <span> <img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol"></span>
+                    </h2>
+    
+                    <p class="clr_grey ff_graphik fw-normal mb-1 fw-light pb-3">A podcast listener is 100x more valuable
+                        than an
+                        engagement
+                        on social media. Podcasting is
                         comparable to public
                         speaking. Hosts are speakers, listeners are attendees.</p>
+                    <table class="radius_4 mt-3">
+                        <tr class="w-100 ">
+                            <th
+                                class="text-white poadcast_group_th bg_episode fw-semibold fs_xsm text-center radius_4_left p-2">
+                                Podcasters Group
+                            </th>
+                            <th
+                                class="fs_xsm fw-semibold text-white poadcast_group_th bg_episode text-center fw-semibold radius_4_right p-2">
+                                Episode Downloads <span class="fw-normal">(First 7 Days) </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 ">
+                                Top 1%</td>
+                            <td class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0">
+                                4,896</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 ">
+                                Top 5%
+                            </td>
+                            <td
+                                class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0">
+                                1,119
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 ">
+                                Top 10%
+                            </td>
+                            <td class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0">
+                                480</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 ">
+                                Top 25%
+                            </td>
+                            <td
+                                class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0">
+                                119</td>
+                        </tr>
+                        <div class="border_l_radius">
+                            <tr class="bottom_l_radius">
+                                <td class="text-center ff_graphik py-2 td_clr td_border border-top-0 bottom_l_radius ">
+                                    Top 50%
+                                </td>
+                                <td class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius">
+                                    31</td>
+                            </tr>
+                        </div>
+                    </table>
+                    <div class="d-flex align-items-center pt-1 mt-4">
+                        <img src="./assets/images/svg/data_provided_arrow.svg" alt="data_provided_arrow">
+                        <p class="data_provided_by ff_graphik fs_ fw-bold mb-0 lh_150 ps-2 ms-1">Data provided by</p>
+                        <img class="ms-2" src="./assets/images/svg/buzzspport.svg" alt="buzzspport">
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,12 +277,10 @@
     <section class="take_quiz">
         <div class="custom_container">
             <div class="d-flex flex-lg-row align-items-center flex-column-reverse justify-content-between">
-                <div
-                    class="d-flex flex-column align-items-center align-items-lg-start  mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0">
+                <div class="d-flex flex-column align-items-center align-items-lg-start  mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0">
                     <h2 class="ff_graphik fw-semibold text-lg-start text-center fs_4xl text-white mb-0 mb-3">Take The
                         Quiz</h2>
-                    <p
-                        class="ff_graphik text-white clr_grey text-lg-start text-center lh_150 did_you_know fs_sm fw-medium pb-4">
+                    <p class="ff_graphik text-white text-lg-start text-center lh_150 did_you_know fs_sm fw-medium pb-4">
                         Did you know it takes most
                         podcasters 2 years
                         to achieve meaningful results with their podcast? Only
@@ -236,8 +295,8 @@
                         </button>
                     </div>
                 </div>
-                <div class="ms-lg-4 ps-lg-1  mt-1 mt-lg-0"><img class="laptop w-100"
-                        src="./assets/images/webp/laptop.webp" alt="laptop"></div>
+                <div class="ms-lg-4 ps-lg-1  mt-1 mt-lg-0"><img class="laptop w-100" src="./assets/images/webp/laptop.webp"
+                        alt="laptop"></div>
             </div>
         </div>
     </section>
