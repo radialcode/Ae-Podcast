@@ -3,18 +3,6 @@
   text-decoration: none !important;
 }
 
-/* ---------- font-family -------------  */
-@font-face {
-  font-family: graphik;
-  src: "url(../fonts/GraphikBlack.otf) ";
-  src: "url(../fonts/GraphikBold.otf)";
-  src: "url(../fonts/GraphikMedium.otf)";
-  src: "url(../fonts/GraphikSemibold.otf)";
-  src: "url(../fonts/GraphikRegular.otf)";
-}
-.ff_graphik {
-  font-family: graphik;
-}
 :root {
   /* --------font sizes --------------- */
   --fs-5xl: 48px;
@@ -124,7 +112,7 @@
   :root {
     /* --------font sizes --------------- */
     --fs-5xl: 28px;
-    --fs-4xl: 32px;
+    --fs-4xl: 26px;
     --fs-3xl: 28px;
     --fs-2xl: 24px;
     --fs-xl: 20px;
