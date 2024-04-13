@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <div class="overflow-hidden">
     <!-----------------Hero-------------->
     <section>
         <nav class="custom_container d-flex align-items-center justify-content-between nav_space">
@@ -30,8 +31,7 @@
             <div class="d-flex justify-content-center align-items-center">
                 <ul id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
                     <label class="dropdown" id="dropdown1">
-                        <button
-                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                        <button class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
                             onclick="toggleDropdown('dropdown1')">
                             Features
                             <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
@@ -49,8 +49,7 @@
                         </ul>
                     </label>
                     <label class="dropdown" id="dropdown2">
-                        <button
-                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                        <button class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
                             onclick="toggleDropdown('dropdown2')">
                             Pricing
                             <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
@@ -68,8 +67,7 @@
                         </ul>
                     </label>
                     <label class="dropdown" id="dropdown3">
-                        <button
-                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                        <button class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
                             onclick="toggleDropdown('dropdown3')">
                             About us
                             <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
@@ -87,8 +85,7 @@
                         </ul>
                     </label>
                     <label class="dropdown" id="dropdown4">
-                        <button
-                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                        <button class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
                             onclick="toggleDropdown('dropdown4')">
                             Community
                             <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
@@ -106,8 +103,7 @@
                         </ul>
                     </label>
                     <label class="dropdown" id="dropdown5">
-                        <button
-                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                        <button class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
                             onclick="toggleDropdown('dropdown5')">
                             Education
                             <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
@@ -157,13 +153,12 @@
                         interview-based host with 100+ episodes and a release cadence of
                         10 days or less.
                     </p>
-                    <div class="box_hdr position-relative">
+                    <div class="box_hdr">
                         <p id="counter" class="fw-semibold fs_3xl lh_120 text-white mb-0 ff_graphik">
                             38,965
                         </p>
                         <span class="mx-3">
-                            <svg width="2" height="35" viewBox="0 0 2 35" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="2" height="35" viewBox="0 0 2 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.808105" width="1" height="34" fill="url(#paint0_linear_967_4724)" />
                                 <defs>
                                     <linearGradient id="paint0_linear_967_4724" x1="1" y1="0.808105" x2="1" y2="34.8081"
@@ -939,8 +934,151 @@
             </div>
         </div>
     </section>
+    <!----------------------------------------- footer -------------------------------------->
+    <footer class="footer_padding footer_bg">
+        <div class="custom_container">
+    
+            <div class="row pb-sm-5 pb-4">
+    
+                <div class="col-lg-4">
+    
+                    <div
+                        class="d-flex align-items-center justify-content-sm-center justify-content-lg-start justify-content-start">
+                        <a href="/" class="footer_logo d-flex align-items-center justify-content-center"><img
+                                class="footer_logo" src="assets/images/webp/footer_logo.webp" alt="footer_logo"></a>
+                    </div>
+    
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                        <p
+                            class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start">
+                            PodMatch is the future standard for finding and booking podcast interviews. This is the
+                            quickest way to find guests for your podcast, and vice versa!</p>
+                    </div>
+    
+                </div>
+    
+                <div class="col-lg-8 pt-3 pt-sm-0">
+                    <div class="d-flex justify-content-between gap-sm-4 flex-wrap">
+    
+                        <ul class="ps-0 mb-0">
+                            <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Product</li>
+                            <li class="footer_links"><a href="#feature"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey">Features</a>
+                            </li>
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey">Pricing</a>
+                            </li>
+                            <li class="footer_links"><a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey"><span
+                                        class="d-sm-inline d-block">Best of</span> PodMatch</a>
+                            </li>
+                        </ul>
+    
+                        <ul class="ps-0 mb-0">
+                            <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Resources</li>
+    
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey">Awards</a>
+                            </li>
+                            <li class="footer_links"><a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey ">Live
+                                    Event</a>
+                            </li>
+                            <li class="footer_links"><a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey "><span
+                                        class="d-block d-sm-inline">Visit</span>
+                                    Community</a>
+                            </li>
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey ">Podcast</a>
+                            </li>
+                            <li class="footer_links"> <a href="" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey "><span
+                                        class="d-block d-sm-inline">Industry</span>
+                                    Report</a>
+                            </li>
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey">Quizzes</a>
+                            </li>
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey ">Blog</a>
+                            </li>
+                        </ul>
+    
+                        <ul class="ps-0 mb-0">
+                            <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Company</li>
+                            <li class="footer_links"><a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey ">New &
+                                    Updates</a></li>
+                            <li class="footer_links"><a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey">Legal</a>
+                            </li>
+                            <li class="footer_links"><a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey ">Meet
+                                    the
+                                    Team</a></li>
+                        </ul>
+    
+                        <ul class="ps-0 mb-0 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                            <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Contact</li>
+    
+                            <li class="footer_links">
+                                <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2">
+                                    <img class="w_24" src="./assets/images/webp/mail_symbol.webp" alt="mail_symbol">
+                                    <span>Team@PodMatch.com</span>
+                                </a>
+                            </li>
+    
+                            <li class="footer_links">
+                                <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2">
+                                    <img class="w_24" src="./assets/images/webp/help_icon.webp" alt="help_icon">
+                                    <span>Help</span>
+                                </a>
+                            </li>
+    
+                            <li class="footer_links">
+                                <a href="#"
+                                    class="ff_graphik fw-normal fs_xsm lh_150 clr_grey d-flex align-items-start gap-2">
+                                    <img class="w_24" src="./assets/images/webp/location_icon.webp" alt="location_icon">
+                                    <span class="d-flex flex-column">
+                                        <span class="">Jacksonville, Florida 32256 USA</span>
+                                        <span class="d-block footer_links">7643 Gate Pkwy STE
+                                            104-30</span>
+                                    </span>
+                                </a>
+                            </li>
+    
+    
+                        </ul>
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div
+                class="d-flex align-items-center justify-content-between flex-md-row flex-column-reverse mt-3 py-3 footer_line">
+                <p class="mb-0 ff_graphik fw-normal lh_150 fs_xsm clr_grey mt-md-0 mt-4">&copy; <span
+                        id="currentYear"></span>
+                    PodMatch. All Rights reserved</p>
+    
+                <div class="d-flex align-items-center footer_icons_gap pb-2 pb-md-0">
+                    <a target="_blank" href="https://www.facebook.com/"><img class="footer_icon"
+                            src="assets/images/webp/facebook.webp" alt="facebook"></a>
+                    <a target="_blank" href="https://twitter.com/?lang=en"><img class="footer_icon"
+                            src="assets/images/webp/twitter.webp" alt="twitter"></a>
+                    <a target="_blank" href="https://web.telegram.org/k/"><img class="footer_icon"
+                            src="assets/images/webp/telegram.webp" alt="telegram"></a>
+                    <a target="_blank" href="https://www.youtube.com/user/youtube"><img class="footer_icon"
+                            src="assets/images/webp/youtube.webp" alt="youtube"></a>
+                    <a target="_blank" href="https://www.instagram.com/"><img class="footer_icon"
+                            src="assets/images/webp/instagram.webp" alt="instagram"></a>
+                    <a target="_blank" href="https://www.linkedin.com/feed/"><img class="footer_icon"
+                            src="assets/images/webp/linked_in.webp" alt="linked_in"></a>
+                    <a href="#tiktok"><img class="footer_icon" src="assets/images/webp/tiktok.webp" alt="tiktok"></a>
+                </div>
+    
+            </div>
+    
+        </div>
+    </footer>
     <!------------ Back to top button --------------->
     <a id="button"></a>
+    </div>
     <!-- ------------ Bootstrap Cdn Link ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -952,21 +1090,26 @@
         // Get the initial count value
         let count = 0; // Start the counter from 0
 
+        // Calculate the increment value to reach 38,965 in 5 seconds
+        const targetCount = 38965;
+        const duration = 500000; // 5 seconds
+        const increment = targetCount / (duration / 1000); // Increment per millisecond
+
         // Function to increment the counter
         function updateCounter() {
             // Increment the count
-            count += 1;
+            count += increment;
             // Update the text content of the counter with the new count
-            counter.innerText = count.toLocaleString(); // Add commas for readability
+            counter.innerText = Math.floor(count).toLocaleString(); // Add commas for readability
 
-            // Check if the count has reached 38,965
-            if (count >= 38965) {
-                clearInterval(counterInterval); // Stop the counter when it reaches 38,965
+            // Check if the count has reached or exceeded the target count
+            if (count >= targetCount) {
+                clearInterval(counterInterval); // Stop the counter when it reaches or exceeds the target count
             }
         }
 
-        // Call the updateCounter function every second (adjust as needed)
-        const counterInterval = setInterval(updateCounter, 0.001);
+        // Call the updateCounter function every millisecond
+        const counterInterval = setInterval(updateCounter, 1);
     </script>
     <script>
         const dropdownToggles = document.querySelectorAll(
