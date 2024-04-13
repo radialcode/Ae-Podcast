@@ -532,7 +532,180 @@
         </div>
       </div>
     </section>
+    <!--------------Frequently-Asked-Questions ------------------->
+    <section>
+      <div class="custom_container space_faq">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <h2 class="ff_graphik mb-0 fw-semibold fs_4xl mxw_faq text-center">
+            Frequently Asked Questions About The AE Podcast Report
+          </h2>
+          </div>
+           <div class="d-flex justify-content-center align-items-center">
+          <div class="accordion space_accd" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What does it mean to be an Actively Established podcaster?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What is this report exactly?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  How are hosting providers scored?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  How are hosting providers scored?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  How are hosting providers scored?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  How are hosting providers scored?
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Actively established podcasters are interview-based show hosts
+                  with more than 100 episodes released without missing beyond a
+                  percentage of episode releases along the way.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
 
+    <div class="custom_container"></div>
     <script>
       function toggleDropdown(dropdownId) {
         var dropdown = document.getElementById(dropdownId);
@@ -559,22 +732,28 @@
       // Get the initial count value
       let count = 0; // Start the counter from 0
 
+      // Calculate the increment value to reach 38,965 in 5 seconds
+      const targetCount = 38965;
+      const duration = 500000; // 5 seconds
+      const increment = targetCount / (duration / 1000); // Increment per millisecond
+
       // Function to increment the counter
       function updateCounter() {
         // Increment the count
-        count += 1;
+        count += increment;
         // Update the text content of the counter with the new count
-        counter.innerText = count.toLocaleString(); // Add commas for readability
+        counter.innerText = Math.floor(count).toLocaleString(); // Add commas for readability
 
-        // Check if the count has reached 38,965
-        if (count >= 38965) {
-          clearInterval(counterInterval); // Stop the counter when it reaches 38,965
+        // Check if the count has reached or exceeded the target count
+        if (count >= targetCount) {
+          clearInterval(counterInterval); // Stop the counter when it reaches or exceeds the target count
         }
       }
 
-      // Call the updateCounter function every second (adjust as needed)
-      const counterInterval = setInterval(updateCounter, 0.001);
+      // Call the updateCounter function every millisecond
+      const counterInterval = setInterval(updateCounter, 1);
     </script>
+
     <script>
       const dropdownToggles = document.querySelectorAll(
         "[data-toggle='dropdown']"

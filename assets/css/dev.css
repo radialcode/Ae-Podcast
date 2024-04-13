@@ -114,7 +114,7 @@
   right: -12%;
   max-width: 115%;
 }
-.aep_lines_vec{
+.aep_lines_vec {
   top: -100%;
   right: -12%;
   max-width: 115px;
@@ -135,13 +135,30 @@
 .less_than {
   max-width: 525px;
 }
-
+/*---------------------------------- podcast hosting provider -------------------------------*/
+.ph_provider_sec {
+  padding-top: 150px;
+}
+.ph_provider_heading {
+  max-width: 633px;
+}
+.looking_switch {
+  max-width: 606px;
+}
+.here_choice {
+  background: -webkit-linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
   }
 }
 @media (max-width: 991.98px) {
+  .ph_provider_sec {
+    padding-top: 90px;
+  }
   .activity_heading {
     max-width: 100%;
   }
