@@ -95,6 +95,23 @@
 .scerious_podcast {
   max-width: 498px;
 }
+
+.chance_3 {
+  max-width: 163px !important;
+  height: 106px;
+}
+/* -------------------------activity establish ----------------------- */
+.activity_establish_chart {
+  max-width: 573px;
+}
+.activity_establish_sec {
+  padding-top: 228px;
+  padding-bottom: 172px;
+}
+.less_than {
+  max-width: 525px;
+}
+
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
