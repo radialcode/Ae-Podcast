@@ -1,3 +1,9 @@
+.max_width {
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+/*============================== poadcasting industries section  ===================*/
 .poadcasting_heading {
     max-width: 526px !important;
 }
@@ -27,14 +33,21 @@
     border: 1px solid #d2cfcf;
     border-radius: 4px;
     color: #474646;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('/assets/images/webp/select_arrow.webp');
+    background-size: 9px 5px;
+    background-repeat: no-repeat;
+    background-position: 20px right center;
 }
 
 .active_box {
     border: 1px solid #00B9FF;
     padding: 16px 24px;
-    max-width: 176px !important;
     width: 100%;
     border-radius: 16px;
+    max-width: 176px;
 }
 
 .total_box {
@@ -57,6 +70,16 @@
     -webkit-text-fill-color: transparent;
 }
 
+.podcasting_chart {
+    max-width: 522px !important;
+}
+
+.td_gradient {
+    background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+}
+
+/*================ future sec =====================*/
+
 .future_sec_p {
     padding: 0px 0px 257px 0px;
 }
@@ -68,6 +91,10 @@
 
 .chances_table {
     max-width: 558px;
+}
+
+.possible_future_chart {
+    max-width: 494px;
 }
 
 /*============================ ellipse ============================*/
@@ -101,6 +128,7 @@
     transform: translateY(50%);
     box-shadow: 0px 12px 30px 0px #706AF34D;
     padding: 54.5px 36px;
+    margin-top: -230px !important;
 }
 
 .gradient_btn {
@@ -114,6 +142,10 @@
 .gradient_btn:hover {
     background: #fff;
     color: #010101;
+}
+
+.card_p {
+    padding: 0px 12px;
 }
 
 /*============================ footer =============================*/
@@ -161,9 +193,15 @@
 }
 
 .footer_line {
-    border-top: 2px solid #dfdfef;
+    height: 2px !important;
+    width: 100% !important;
+    background-color: #dfdfef;
+    bottom: 15% !important;
 }
 
+.links_hov:hover {
+    color: #00B9FF;
+}
 
 /*=================================== media-screen =====================================*/
 
@@ -199,10 +237,6 @@
         padding: 0;
     }
 
-    .podcasting_chart {
-        max-width: 800px !important;
-    }
-
     .poadcasting_para {
         max-width: 575px !important;
     }
@@ -214,6 +248,20 @@
     .impactful_card {
         padding: 50px 37px;
         transform: translateY(58%);
+    }
+
+    .podcasting_chart {
+        margin-top: 60px;
+    }
+
+    .footer_line {
+        bottom: 11% !important;
+    }
+}
+
+@media (max-width:767.98px) {
+    .footer_line {
+        bottom: 18% !important;
     }
 }
 
@@ -237,5 +285,17 @@
     .impactful_card {
         padding: 70px 52px;
         transform: translateY(51%);
+    }
+
+    .card_p {
+        padding: 0px 20px;
+    }
+
+    .podcasting_chart {
+        margin-top: 40px;
+    }
+
+    .footer_line {
+        bottom: 13.5% !important;
     }
 }
