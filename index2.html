@@ -146,7 +146,8 @@
                         Register
                     </button>
                 </div>
-                <button onclick="openNav()" class="d-lg-none position-relative z_15 bttn_nav overflow-hidden">
+                <button onclick="openNav()"
+                    class="d-lg-none position-relative z_15 border_none bttn_nav overflow-hidden">
                     <span class="nav-line"></span>
                     <span class="new_hamburger_line"></span>
                     <span class="nav-lines"> </span>
@@ -203,9 +204,9 @@
                 alt="layer-img" />
             <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
                 alt="layer-img" />
-            <div class="row card_space justify-content-center align-items-center">
-                <div class="col-md-5 col-lg-3 order-0 p-md-0 justify-content-center align-items-center d-flex">
-                    <div class="card_main">
+            <div class="row card_space justify-content-center align-items-center position-relative z_15">
+                <div class="col-md-6 col-lg-4 col-xl-3 order-0 p-md-0 justify-content-center align-items-center d-flex">
+                    <div class="card_main px-4">
                         <span>
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -242,13 +243,14 @@
                         <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
                             HIGH
                         </p>
-                        <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                        <p class="ff_graphik mb-0 mt-3 fs_sm clr_grey fw-normal lh_110">
                             “Podcasts” are trending at 85% on search engines. (↓1%)
                         </p>
                     </div>
                 </div>
+
                 <div
-                    class="col-md-5 col-lg-3 p-md-0 mt-4 order-2 order-xl-1 mt-lg-0 justify-content-center align-items-center d-flex">
+                    class="col-md-6 col-lg-4 col-xl-3 p-md-0 mt-4 order-2 order-xl-1 mt-lg-0 justify-content-center align-items-center d-flex">
                     <div class="card_main">
                         <span>
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -277,15 +279,16 @@
                         <p class="mb-0 clr_red fs_xsm fw-semibold lh_150 ff_graphik">
                             LOW
                         </p>
-                        <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                        <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal clr_grey lh_110">
                             Extremely high failure rate with limited
                             <span class="txt_clr_para">clear success paths.</span>
                         </p>
                     </div>
                 </div>
+
                 <div
-                    class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
-                    <div class="card_main">
+                    class="col-md-6 col-lg-4 col-xl-3 p-md-0 mt-4 mt-md-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
+                    <div class="card_main px-4">
                         <span>
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -308,13 +311,14 @@
                         <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
                             HIGH
                         </p>
-                        <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                        <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal clr_grey lh_110">
                             504.9M podcast listeners estimated for 2024. (↑8.7%)
                         </p>
                     </div>
                 </div>
+
                 <div
-                    class="col-md-5 col-lg-3 p-md-0 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
+                    class="col-md-6 col-lg-4 col-xl-3 p-md-0 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
                     <div class="card_main">
                         <span>
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -1258,10 +1262,14 @@
         dropdown.classList.toggle("open");
     }
 </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 <script src="./assets/js/custom.js"></script>
+
 <script>
     // Get the counter element
     const counter = document.getElementById("counter");
@@ -1320,6 +1328,7 @@
         document.body.classList.toggle("overflow_hidden");
     }
 </script>
+
 </body>
 
 </html>
