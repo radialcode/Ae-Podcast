@@ -2,48 +2,60 @@
   padding-top: 18px;
   padding-bottom: 18px;
 }
+
 .space_ul_nav {
   gap: 21px;
 }
+
 .mx_hdng {
   max-width: 813px;
 }
+
 .mxw_para {
   max-width: 606px;
 }
+
 .mxw_para_cntr {
   max-width: 100px;
 }
+
 .mxw_faq {
   max-width: 566px;
 }
+
 .counter_mxw {
   width: 115px;
 }
+
 .space_faq {
   padding-top: 130px;
   padding-bottom: 172px;
 }
+
 .space_header {
   padding-top: 110px;
   padding-bottom: 119px;
 }
+
 .space_overall {
-  padding-top: 83px;
+  padding-top: 80px;
   padding-bottom: 149px;
 }
+
 .layer_img {
   z-index: -3;
   width: 96%;
   top: -28%;
   left: 2%;
 }
+
 .space_crd_para {
   margin-top: 28px;
 }
+
 .card_main {
-  width: 267px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 450px;
   height: 251px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px 4px #dadada40;
@@ -55,6 +67,7 @@
   align-items: center;
   text-align: center;
 }
+
 .box_hdr {
   margin-top: 35px;
   width: 321px;
@@ -67,37 +80,41 @@
   z-index: 7;
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
 }
+
 .txt_hdng_clr {
-  background: linear-gradient(
-    99.76deg,
-    #00b9ff 24.35%,
-    #6f69f2 100%,
-    #10b6d0 88.28%
-  );
+  background: linear-gradient(99.76deg,
+      #00b9ff 24.35%,
+      #6f69f2 100%,
+      #10b6d0 88.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .txt_clr_para {
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .bg_hero {
   background-image: url("../images/png/hero_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bttn_login {
   background-color: transparent;
   border: none;
   margin-right: 18px;
 }
+
 .nav_line {
   background: #e0e0e0;
   width: 100%;
   height: 2px;
 }
+
 .bttn_rsg {
   color: #fefefe;
   border-radius: 100px;
@@ -107,11 +124,13 @@
   transition: all 350ms linear;
   border: 1px solid transparent;
 }
+
 .bttn_rsg:hover {
   background-color: #fefefe;
   color: #6f69f2;
   border: 1px solid #6f69f2;
 }
+
 .dropdown .arrow {
   display: inline-block;
   padding: 3px;
@@ -141,13 +160,16 @@
 .dropdown.show .dropdown-menu {
   display: block;
 }
+
 .bttn_nav {
   background-color: transparent;
   border: none;
 }
+
 .z_15 {
   z-index: 15;
 }
+
 .bttn_nav .nav-line {
   transform: translateX(-3px);
   border: 2px solid black;
@@ -165,7 +187,8 @@
   z-index: 14;
   border: 2px solid black;
   display: flex;
-  width: 30px; /* Full width */
+  width: 30px;
+  /* Full width */
   background-color: black;
   margin-bottom: 4.5px;
   border-radius: 100px;
@@ -184,6 +207,7 @@
   margin-bottom: 0;
   border-radius: 100px;
 }
+
 a {
   text-decoration: none;
   color: #000000;
@@ -199,10 +223,12 @@ a:hover {
   display: inline-block;
   margin-right: 10px;
 }
+
 .dd-button {
   background-color: transparent;
   border: none;
 }
+
 .dd-menu {
   display: none;
   position: absolute;
@@ -236,14 +262,17 @@ a:hover {
   background-color: #4d4d4d;
   transition: all 350ms linear !important;
 }
+
 .line-3:hover::after {
   width: 100%;
   right: 0;
 }
+
 /* accordion */
 .space_accd {
   margin-top: 50px;
 }
+
 .accordion-button {
   font-family: "Graphik" !important;
   width: 800px;
@@ -262,6 +291,7 @@ a:hover {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     border-radius 0.15s ease;
 }
+
 .accordion-body {
   padding: 0 !important;
   padding-bottom: 12px !important;
@@ -280,29 +310,33 @@ a:hover {
   outline: 0;
   box-shadow: none !important;
 }
+
 .accordion-button:not(.collapsed) {
   color: #000000;
   font-size: 20px !important;
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
 .accordion-button:focus {
   z-index: 3;
   border-color: transparent !important;
   outline: 0;
   box-shadow: none !important;
 }
+
 .accordion-item {
   border: none !important;
   border-bottom: 1px solid #d6d6d6 !important;
 }
+
 .accordion-button::after {
   width: 23px !important;
   height: 23px !important;
   background-image: url("../images/svg/faq_open.svg") !important;
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 991.98px) {
   .nav_bar {
     position: fixed;
     top: 0 !important;
@@ -316,168 +350,197 @@ a:hover {
     flex-direction: column;
     transition: 300ms linear;
   }
+
   .left-0 {
     left: 0;
   }
+
   .overflow_hidden {
     overflow: hidden !important;
     height: 100vh;
   }
+
   .d_none {
     display: none;
   }
 }
-@media (max-width: 1024px) {
-  .card_space {
-    margin-left: 0;
-    margin-right: 0;
-  }
+
+@media (max-width: 1023.98px) {
+
   .card_main {
-    width: 231px;
     padding: 24px 10px;
   }
+
   .space_ul_nav {
     gap: 0px;
   }
 }
-@media (max-width: 992px) {
+
+@media (max-width: 991.98px) {
   .accordion-button {
     max-width: 650px !important;
   }
+
   .accordion-body {
     max-width: 650px !important;
   }
+
   .mx_hdng {
     max-width: 756px;
   }
+
   .mxw_para {
     max-width: 497px;
   }
+
   .layer_img {
     z-index: -3;
     width: 51%;
     top: -18%;
     left: 23%;
   }
+
   .card_main {
-    width: 267px;
     padding: 24px 10px;
   }
-  .card_space {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .card_space {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .counter_mxw {
-    width: 105px;
-  }
-  .space_ul_nav {
-    gap: 21px;
-  }
-  .card_main {
-    width: 290px;
-    padding: 24px 27px;
-  }
-  .accordion-button {
-    max-width: 700px !important;
-    font-size: 15px !important;
-  }
-  .accordion-button:not(.collapsed) {
-    font-size: 16px !important;
-  }
-  .accordion-body {
-    max-width: 700px !important;
-    font-size: 15px !important;
-  }
-  .mx_hdng {
-    max-width: 711px;
-  }
+
   .space_header {
     padding-top: 88px;
     padding-bottom: 130px;
   }
+
+  .space_overall {
+    padding-top: 24px;
+    padding-bottom: 110px;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .counter_mxw {
+    width: 105px;
+  }
+
+  .space_ul_nav {
+    gap: 21px;
+  }
+
+  .card_main {
+    height: 271px;
+    padding: 16px 20px;
+  }
+
+  .accordion-button {
+    max-width: 700px !important;
+    font-size: 15px !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    font-size: 16px !important;
+  }
+
+  .accordion-body {
+    max-width: 700px !important;
+    font-size: 15px !important;
+  }
+
+  .mx_hdng {
+    max-width: 711px;
+  }
+
   .layer_img {
     z-index: -3;
     width: 49%;
     top: -18%;
     left: 25%;
   }
+
   .space_overall {
-    padding-top: 80px;
+    padding-top: 24px;
     padding-bottom: 110px;
   }
 }
+
 @media (max-width: 575.98px) {
   .accordion-button::after {
     background-image: url("../images/svg/sm_faq_close.svg") !important;
-    background-size: 10px 10px; /* Set the width and height here */
+    background-size: 10px 10px;
+    /* Set the width and height here */
     width: 10px;
     height: 10px;
   }
+
   .card_main {
-    width: 335px;
+    height: 251px;
     padding: 24px 25px;
   }
-  .card_space {
-    margin-left: 0;
-    margin-right: 0;
-  }
+
+
+
   .counter_mxw {
     width: 90px;
   }
+
   .space_ul_nav {
     gap: 21px;
   }
+
   .space_faq {
     padding-top: 82px;
     padding-bottom: 80px;
   }
+
   .space_accd {
     margin-top: 24px;
   }
+
   .accordion-button {
     max-width: 800px !important;
     width: 100% !important;
     padding-bottom: 6px !important;
     font-size: 14px !important;
   }
+
   .accordion-button:not(.collapsed) {
     font-size: 16px !important;
   }
+
   .accordion-body {
     max-width: 800px !important;
     width: 100% !important;
     font-size: 14px !important;
   }
+
   .bg_hero {
     background-image: url("../images/png/header_bg_sm.png");
   }
+
   .mxw_para {
     max-width: 297px;
   }
+
   .txt_hdng {
     font-size: 32px;
   }
+
   .box_hdr {
     margin-top: 32px;
     width: 281px;
     height: 62px;
   }
+
   .layer_img {
     width: 72%;
     top: -10%;
     left: 15%;
     z-index: -2;
   }
+
   .space_header {
     padding-top: 74px;
     padding-bottom: 119px;
   }
+
   .space_overall {
     padding-top: 31px;
     padding-bottom: 80px;

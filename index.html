@@ -29,7 +29,7 @@
                     <a href=""><img src="./assets/images/svg/header_logo.svg" alt="nav-logo" /></a>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
-                    <ul id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
+                    <div id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
                         <label class="dropdown" id="dropdown1">
                             <button
                                 class="dd-button fw-normal fs_sm line-3 position-relative clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
@@ -131,7 +131,7 @@
                         <button class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150">
                             Register
                         </button>
-                    </ul>
+                    </div>
                 </div>
                 <div class="d-none d-lg-block space_bttn align-items-center">
                     <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
@@ -208,8 +208,8 @@
                     src="./assets/images/svg/layer_header.svg" alt="layer-img" />
                 <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
                     alt="layer-img" />
-                <div class="row card_space justify-content-center align-items-center">
-                    <div class="col-md-5 col-lg-3 order-0 p-md-0 justify-content-center align-items-center d-flex">
+                <div class="row card_space justify-content-center align-items-center column-gap-md-2 column-gap-lg-0">
+                    <div class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -253,7 +253,7 @@
                         </div>
                     </div>
                     <div
-                        class="col-md-5 col-lg-3 p-md-0 mt-4 order-2 order-xl-1 mt-lg-0 justify-content-center align-items-center d-flex">
+                        class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -289,7 +289,7 @@
                         </div>
                     </div>
                     <div
-                        class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
+                        class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div
-                        class="col-md-5 col-lg-3 p-md-0 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
+                        class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -1243,6 +1243,15 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/custom.js"></script>
+    <!----------------- Navbar-Js -------------------->
+    <script>
+        const Navbar = document.getElementById("NavBar");
+
+        function openNav() {
+            Navbar.classList.toggle("left-0");
+            document.body.classList.toggle("overflow_hidden");
+        }
+    </script>
     <script>
         // Get the counter element
         const counter = document.getElementById("counter");
@@ -1291,15 +1300,7 @@
             });
         });
     </script>
-    <!----------------- Navbar-Js -------------------->
-    <script>
-        const Navbar = document.getElementById("NavBar");
 
-        function openNav() {
-            Navbar.classList.toggle("left-0");
-            document.body.classList.toggle("overflow_hidden");
-        }
-    </script>
     <script>
         function toggleDropdown(dropdownId) {
             var dropdown = document.getElementById(dropdownId);
