@@ -1,3 +1,4 @@
+/*============================== poadcasting industries section  ===================*/
 .poadcasting_heading {
     max-width: 526px !important;
 }
@@ -57,6 +58,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+.podcasting_chart {
+    max-width: 522px;
+}
+
+/*================ future sec =====================*/
+
 .future_sec_p {
     padding: 0px 0px 257px 0px;
 }
@@ -68,6 +75,10 @@
 
 .chances_table {
     max-width: 558px;
+}
+
+.possible_future_chart {
+    max-width: 494px;
 }
 
 /*============================ ellipse ============================*/
@@ -204,10 +215,6 @@
 
     .future_sec_p {
         padding: 0;
-    }
-
-    .podcasting_chart {
-        max-width: 800px !important;
     }
 
     .poadcasting_para {
