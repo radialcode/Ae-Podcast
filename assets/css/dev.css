@@ -101,6 +101,9 @@
   height: 106px;
 }
 /* -------------------------activity establish ----------------------- */
+.activity_heading {
+  max-width: 485px;
+}
 .activity_establish_chart {
   max-width: 573px;
 }
@@ -118,6 +121,13 @@
   }
 }
 @media (max-width: 991.98px) {
+  .activity_heading {
+    max-width: 100%;
+  }
+  .activity_establish_sec {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
   .podcast_gathering_circle {
     margin-top: 112px;
   }
@@ -145,6 +155,10 @@
   }
 }
 @media (max-width: 767.98px) {
+  .activity_establish_sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   .take_quiz {
     padding: 64px 0px;
   }

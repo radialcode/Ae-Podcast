@@ -29,56 +29,101 @@
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <ul id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle arrow fw-normal fs_sm clr_grey ff_graphik lh_150"
-                            id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <label class="dropdown" id="dropdown1">
+                        <button
+                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                            onclick="toggleDropdown('dropdown1')">
                             Features
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a href="#">Dropdown Item 1</a></li>
-                            <li><a href="#">Dropdown Item 2</a></li>
+                            <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                                        fill="#010101" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dd-menu">
+                            <li>Action 1</li>
+                            <li>Another action 1</li>
+                            <li>Something else here 1</li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle arrow fw-normal fs_sm clr_grey ff_graphik lh_150"
-                            id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </label>
+                    <label class="dropdown" id="dropdown2">
+                        <button
+                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                            onclick="toggleDropdown('dropdown2')">
                             Pricing
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                            <li><a href="#">Dropdown Item 1</a></li>
-                            <li><a href="#">Dropdown Item 2</a></li>
+                            <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                                        fill="#010101" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dd-menu">
+                            <li>Action 2</li>
+                            <li>Another action 2</li>
+                            <li>Something else here 2</li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle arrow fw-normal fs_sm clr_grey ff_graphik lh_150"
-                            id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </label>
+                    <label class="dropdown" id="dropdown3">
+                        <button
+                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                            onclick="toggleDropdown('dropdown3')">
                             About us
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                            <li><a href="#">Dropdown Item 1</a></li>
-                            <li><a href="#">Dropdown Item 2</a></li>
+                            <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                                        fill="#010101" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dd-menu">
+                            <li>Action 2</li>
+                            <li>Another action 2</li>
+                            <li>Something else here 2</li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle arrow fw-normal fs_sm clr_grey ff_graphik lh_150"
-                            id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </label>
+                    <label class="dropdown" id="dropdown4">
+                        <button
+                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                            onclick="toggleDropdown('dropdown4')">
                             Community
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                            <li><a href="#">Dropdown Item 1</a></li>
-                            <li><a href="#">Dropdown Item 2</a></li>
+                            <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                                        fill="#010101" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dd-menu">
+                            <li>Action 2</li>
+                            <li>Another action 2</li>
+                            <li>Something else here 2</li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle arrow fw-normal fs_sm clr_grey ff_graphik lh_150"
-                            id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </label>
+                    <label class="dropdown" id="dropdown5">
+                        <button
+                            class="dd-button fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
+                            onclick="toggleDropdown('dropdown5')">
                             Education
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                            <li><a href="#">Dropdown Item 1</a></li>
-                            <li><a href="#">Dropdown Item 2</a></li>
+                            <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                                        fill="#010101" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dd-menu">
+                            <li>Action 2</li>
+                            <li>Another action 2</li>
+                            <li>Something else here 2</li>
                         </ul>
-                    </li>
+                    </label>
                 </ul>
             </div>
             <div class="d-none d-md-block space_bttn align-items-center">
@@ -528,9 +573,11 @@
         <section class="bg-white activity_establish_sec">
             <div class="custom_container">
                 <div class="row justify-content-between flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 ">
-                        <img class="w-100 activity_establish_chart me-lg-3"
-                            src="./assets/images/png/activity_establish_podcast.png" alt="possible_future">
+                    <div class="col-lg-6 mt-lg-0 mt-4 pt-lg-0 pt-3">
+                        <div class="d-flex d-lg-block justify-content-center">
+                            <img class="w-100 activity_establish_chart me-lg-3"
+                                src="./assets/images/png/activity_establish_podcast.png" alt="possible_future">
+                        </div>
                     </div>
 
                     <div class="col-lg-6 ">
@@ -541,7 +588,7 @@
                             <option value="March">March 2024</option>
                         </select>
 
-                        <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">Actively
+                        <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 activity_heading fw-semibold mt-3">Actively
                             Established Podcasts</h3>
                         <p class="clr_grey less_than fw-normal ff_graphik my-3 fs_sm lh_150">Less than 10% of
                             independent podcasters are in the Actively Established category, but, they hold over 90% of
@@ -557,7 +604,8 @@
                             </div>
                             <div class="active_box chance_3">
                                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">Change</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap">+ 3.39%</p>
+                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap">+ 3.39%
+                                </p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mt-4 pt-1 ">
@@ -754,6 +802,49 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/custom.js"></script>
+    <script>
+        // Get the counter element
+        const counter = document.getElementById("counter");
+        // Get the initial count value
+        let count = 0; // Start the counter from 0
+
+        // Function to increment the counter
+        function updateCounter() {
+            // Increment the count
+            count += 1;
+            // Update the text content of the counter with the new count
+            counter.innerText = count.toLocaleString(); // Add commas for readability
+
+            // Check if the count has reached 38,965
+            if (count >= 38965) {
+                clearInterval(counterInterval); // Stop the counter when it reaches 38,965
+            }
+        }
+
+        // Call the updateCounter function every second (adjust as needed)
+        const counterInterval = setInterval(updateCounter, 0.001);
+    </script>
+    <script>
+        const dropdownToggles = document.querySelectorAll(
+            "[data-toggle='dropdown']"
+        );
+        dropdownToggles.forEach((toggle) => {
+            toggle.addEventListener("click", (e) => {
+                const dropdownMenu = e.target.nextElementSibling;
+                if (dropdownMenu.classList.contains("show")) {
+                    dropdownMenu.classList.remove("show");
+                } else {
+                    dropdownToggles.forEach((t) => {
+                        const menu = t.nextElementSibling;
+                        if (menu.classList.contains("show")) {
+                            menu.classList.remove("show");
+                        }
+                    });
+                    dropdownMenu.classList.add("show");
+                }
+            });
+        });
+    </script>
     <!----------------- Navbar-Js -------------------->
     <script>
         const Navbar = document.getElementById("NavBar");
@@ -761,6 +852,20 @@
         function openNav() {
             Navbar.classList.toggle("left-0");
             document.body.classList.toggle("overflow_hidden");
+        }
+    </script>
+    <script>
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            var dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(function (item) {
+                if (item.id !== dropdownId) {
+                    item.classList.remove("open");
+                }
+            });
+
+            dropdown.classList.toggle("open");
         }
     </script>
     <!-- ---------------- Back To Top -------------- -->
