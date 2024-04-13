@@ -34,7 +34,6 @@
 .pc_lines_vec {
   max-width: 115px;
   right: -12%;
-  
 }
 .podcast_compare_section {
   padding: 171px 0px;
@@ -82,7 +81,7 @@
   white-space: nowrap;
 }
 .podcast_gathering_circle {
-  max-width: 322px;
+  max-width: 570px;
 }
 .mw_451 {
   max-width: 451px;
@@ -110,6 +109,19 @@
   height: 106px;
 }
 /* -------------------------activity establish ----------------------- */
+.aep_blue_elipse {
+  bottom: -58%;
+  right: -12%;
+  max-width: 115%;
+}
+.aep_lines_vec{
+  top: -100%;
+  right: -12%;
+  max-width: 115px;
+}
+.aep_chart {
+  box-shadow: 0px 4px 20px 0px rgba(6, 6, 6, 0.08);
+}
 .activity_heading {
   max-width: 485px;
 }
