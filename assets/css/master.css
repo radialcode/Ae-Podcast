@@ -71,7 +71,71 @@
     max-width: 558px;
 }
 
+/*============================ ellipse ============================*/
+.podcasting_industries_ellipse {
+    top: -75% !important;
+}
+
+.your_podcast_right_vec {
+    top: 50%;
+    right: 0;
+    max-height: 484px;
+}
+
+.chances_left_vector {
+    top: -60%;
+    max-height: 484px;
+}
+
+.possible_future_ellipse {
+    top: 20%;
+}
+
+/*============================ footer =============================*/
+.footer_padding {
+    padding: 257px 0px 0px 0px;
+}
+
+.footer_bg {
+    background: #ebecef;
+}
+
+.footer_logo {
+    max-width: 227px !important;
+}
+
+.footer_para {
+    max-width: 324px;
+}
+
+.w_24 {
+    width: 24px !important;
+}
+
+.max_w_207 {
+    max-width: 207px !important;
+}
+
 @media (max-width:991.98px) {
+
+    .possible_future_ellipse {
+        top: 10%;
+    }
+
+    .podcasting_industries_ellipse {
+        top: -40% !important;
+    }
+
+    .your_podcast_right_vec {
+        top: 25%;
+        right: 0;
+        max-height: 389px;
+    }
+
+    .chances_left_vector {
+        top: -9%;
+        max-height: 359px;
+    }
 
     .future_sec_p {
         padding: 0;
