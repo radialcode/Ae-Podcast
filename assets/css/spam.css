@@ -416,6 +416,14 @@ a:hover {
     padding-bottom: 110px;
   }
 }
+@media (max-width: 765px) {
+  .accordion-button {
+    max-width: 500px !important;
+  } 
+  .accordion-body {
+    max-width: 500px !important;
+  }
+}
 @media (max-width: 575.98px) {
   .accordion-button::after {
     background-image: url("../images/svg/sm_faq_close.svg") !important;
