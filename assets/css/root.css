@@ -6,12 +6,32 @@
 /* ---------- font-family -------------  */
 @font-face {
   font-family: graphik;
-  src: url(" ../fonts/GraphikBlack.otf");
-  src: url("../fonts/GraphikMedium.otf");
-  src: url("../fonts/GraphikSemibold.otf");
-  src: url("../fonts/GraphikRegularItalic.otf");
+  src: url("../fonts/GraphikBlack.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: graphik;
   src: url("../fonts/GraphikBold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: graphik;
+  src: url("../fonts/GraphikSemibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: graphik;
   src: url("../fonts/GraphikMedium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: graphik;
+  src: url("../fonts/GraphikRegular.otf");
+  font-weight: 400;
+}
+
+.ff_graphik {
+  font-family: "Graphik" !important;
 }
 
 .ff_graphik {
@@ -144,6 +164,14 @@
   padding: 0 12px;
 }
 
+@media (max-width: 991.98px) {
+  :root {
+    /* --------font sizes --------------- */
+    --fs-5xl: 40px;
+    --fs-3xl: 32px;
+    --fs-md: 16px;
+  }
+}
 @media (max-width: 575.98px) {
   .custom_container {
     padding: 0 20px;
@@ -157,15 +185,6 @@
     --fs-2xl: 24px;
     --fs-xl: 20px;
     --fs-md: 14px;
-    --fs-sm: 14px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  :root {
-    /* --------font sizes --------------- */
-    --fs-5xl: 40px;
-    --fs-3xl: 32px;
-    --fs-md: 16px;
+    --fs-sm: 14px !important;
   }
 }

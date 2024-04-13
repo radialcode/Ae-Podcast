@@ -48,7 +48,7 @@
 }
 
 .gap_32 {
-    gap: 32px;
+    gap: 32px !important;
 }
 
 .gradient_text {
