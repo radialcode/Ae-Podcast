@@ -59,7 +59,7 @@
 }
 
 .podcasting_chart {
-    max-width: 522px;
+    max-width: 522px !important;
 }
 
 /*================ future sec =====================*/
@@ -229,6 +229,10 @@
         padding: 50px 37px;
         transform: translateY(58%);
     }
+
+    .podcasting_chart {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width:575.98px) {
@@ -255,5 +259,9 @@
 
     .card_p {
         padding: 0px 20px;
+    }
+
+    .podcasting_chart {
+        margin-top: 40px;
     }
 }
