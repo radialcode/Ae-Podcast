@@ -1,0 +1,101 @@
+.poadcasting_heading {
+    max-width: 526px !important;
+}
+
+.poadcasting_para {
+    max-width: 546px !important;
+}
+
+.poadcasting_p {
+    padding: 0px 0px 174px 0px;
+}
+
+.possible_heading {
+    max-width: 539px !important;
+}
+
+.chances_heading {
+    max-width: 532px !important;
+}
+
+.gradient_para_width {
+    max-width: 432px;
+}
+
+.select_bg {
+    background-color: #e9e6e6;
+    border: 1px solid #d2cfcf;
+    border-radius: 4px;
+    color: #474646;
+    padding: 6.5px 11.5px !important;
+}
+
+.active_box {
+    border: 1px solid #00B9FF;
+    padding: 16px 24px;
+    max-width: 176px !important;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.total_box {
+    border: 1px solid;
+    border-image-source: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+    background-color: transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+    background-clip: content-box, border-box;
+    max-width: 205px !important;
+    border-radius: 16px;
+}
+
+.gap_32 {
+    gap: 32px;
+}
+
+.gradient_text {
+    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.future_sec_p {
+    padding: 0px 0px 257px 0px;
+}
+
+.arrow_width {
+    width: 106px;
+    margin: 25px 0px 0px -20px;
+}
+
+.chances_table {
+    max-width: 558px;
+}
+
+@media (max-width:991.98px) {
+
+    .future_sec_p {
+        padding: 0;
+    }
+
+    .podcasting_chart {
+        max-width: 800px !important;
+    }
+
+    .poadcasting_para {
+        max-width: 575px !important;
+    }
+
+    .poadcasting_p {
+        padding: 0px 0px 110px 0px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .gap_32 {
+        gap: 24px !important;
+    }
+
+    .poadcasting_p {
+        padding: 0px 0px 80px 0px;
+    }
+}
