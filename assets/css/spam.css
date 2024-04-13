@@ -18,7 +18,7 @@
   max-width: 566px;
 }
 .counter_mxw {
-  width: 102px;
+  width: 115px;
 }
 .space_faq {
   padding-top: 130px;
@@ -105,7 +105,7 @@
   transition: all 350ms linear;
 }
 .bttn_rsg:hover {
-  box-shadow: 10px 10px 10px #5e59ce, -1px -1px 10px #8079ff;
+  box-shadow: 5px 5px 0px 0px rgba(111, 105, 140, 1);
 }
 .dropdown .arrow {
   display: inline-block;
@@ -219,6 +219,22 @@ a:hover {
 .dropdown.open .dd-button svg {
   transform: rotate(180deg);
 }
+
+.line-3::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  right: 50%;
+  display: block;
+  background-color: #4d4d4d;
+  transition: all 350ms linear !important;
+}
+.line-3:hover::after {
+  width: 100%;
+  right: 0;
+}
 /* accordion */
 .space_accd {
   margin-top: 50px;
@@ -314,6 +330,9 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
+  .counter_mxw {
+    width: 105px;
+  }
   .space_ul_nav {
     gap: 21px;
   }
@@ -351,6 +370,9 @@ a:hover {
   }
 }
 @media (max-width: 575.98px) {
+  .counter_mxw {
+    width: 90px;
+  }
   .space_ul_nav {
     gap: 21px;
   }
