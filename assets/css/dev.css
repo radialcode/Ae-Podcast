@@ -1,3 +1,4 @@
+/* --------------------------take quiz --------------------------------------- */
 .take_quiz {
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
   padding: 116px 0px;
@@ -26,7 +27,7 @@
 .laptop {
   max-width: 685px;
 }
-/* ------------------podcast compare ----------- */
+/* --------------------------------------------podcast compare -------------------------------- */
 .pc_blue_ellipse {
   bottom: -46%;
   right: -12%;
@@ -113,7 +114,7 @@
 .podcast_guesting {
   max-width: 485px;
 }
-/* -------------------------activity establish ----------------------- */
+/* -------------------------------------------------------activity establish -------------------------------------------- */
 .aep_blue_elipse {
   bottom: -58%;
   right: -12%;
@@ -152,7 +153,7 @@
 .guests {
   right: -27%;
 }
-/*---------------------------------- podcast hosting provider -------------------------------*/
+/*--------------------------------------------------------- podcast hosting provider ---------------------------------------------*/
 .ph_provider_sec {
   padding-top: 150px;
 }
@@ -168,7 +169,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* ---------------------------------table -------------------------------- */
+/* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
   max-width: 70px;
 }
@@ -252,6 +253,10 @@
   }
 }
 @media (max-width: 575.98px) {
+  .poadcast_group_th {
+  min-width: 167px;
+  height: 37px;
+}
   .podcast_guesting_circle {
     max-width: 205px;
   }
