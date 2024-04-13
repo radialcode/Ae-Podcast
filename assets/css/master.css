@@ -33,6 +33,13 @@
     border: 1px solid #d2cfcf;
     border-radius: 4px;
     color: #474646;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('/assets/images/webp/select_arrow.webp');
+    background-size: 9px 5px;
+    background-repeat: no-repeat;
+    background-position: 20px right center;
 }
 
 .active_box {
@@ -65,6 +72,10 @@
 
 .podcasting_chart {
     max-width: 522px !important;
+}
+
+.td_gradient {
+    background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 /*================ future sec =====================*/
