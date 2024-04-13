@@ -116,7 +116,9 @@
 .possible_future_ellipse {
     top: 20%;
 }
-
+.faq{
+    z-index: 5;
+}
 /*============================ card ===========================*/
 .impactful_card {
     max-width: 1140px;
