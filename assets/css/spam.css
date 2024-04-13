@@ -98,14 +98,18 @@
   height: 2px;
 }
 .bttn_rsg {
+  color: #fefefe;
   border-radius: 100px;
   border: none;
   background-color: #6f69f2;
   padding: 10px 25px;
   transition: all 350ms linear;
+  border: 1px solid transparent;
 }
 .bttn_rsg:hover {
-  box-shadow: 5px 5px 0px 0px rgba(111, 105, 140, 1);
+  background-color: #fefefe;
+  color: #6f69f2;
+  border: 1px solid #6f69f2;
 }
 .dropdown .arrow {
   display: inline-block;
