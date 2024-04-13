@@ -171,6 +171,10 @@
     --fs-3xl: 32px;
     --fs-md: 16px;
   }
+  .custom_container {
+  padding: 0 48px;
+}
+
 }
 @media (max-width: 575.98px) {
   .custom_container {

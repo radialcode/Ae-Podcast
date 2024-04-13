@@ -80,8 +80,8 @@
 .ws_nowrap {
   white-space: nowrap;
 }
-.podcast_gathering_circle {
-  max-width: 570px;
+.podcast_guesting_circle {
+  max-width: 322px;
 }
 .mw_451 {
   max-width: 451px;
@@ -97,9 +97,7 @@
   color: rgba(111, 105, 242, 1);
   text-decoration: underline !important;
 }
-.podcast_gathering {
-  max-width: 526px;
-}
+
 .scerious_podcast {
   max-width: 498px;
 }
@@ -107,6 +105,9 @@
 .chance_3 {
   max-width: 163px !important;
   height: 106px;
+}
+.podcast_guesting {
+  max-width: 485px;
 }
 /* -------------------------activity establish ----------------------- */
 .aep_blue_elipse {
@@ -134,6 +135,18 @@
 }
 .less_than {
   max-width: 525px;
+}
+.host_box {
+  box-shadow: 0px 0px 107px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 9.5px;
+  width: 139px;
+  height: 80px;
+}
+.hosts {
+  left: -23%;
+}
+.guests {
+  right: -27%;
 }
 /*---------------------------------- podcast hosting provider -------------------------------*/
 .ph_provider_sec {
@@ -165,13 +178,15 @@
   max-width: 119px;
 }
 
-
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
   }
 }
 @media (max-width: 991.98px) {
+  .podcast_guesting {
+    max-width: 100%;
+  }
   .ph_provider_sec {
     padding-top: 90px;
   }

@@ -125,9 +125,15 @@
                                 <li>Something else here 2</li>
                             </ul>
                         </label>
+                        <button class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150">
+                            Login
+                        </button>
+                        <button class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150">
+                            Register
+                        </button>
                     </ul>
                 </div>
-                <div class="d-none d-md-block space_bttn align-items-center">
+                <div class="d-none d-lg-block space_bttn align-items-center">
                     <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
                         Login
                     </button>
@@ -135,11 +141,21 @@
                         Register
                     </button>
                 </div>
-                <button onclick="openNav()" class="d-lg-none position-relative z_15 bttn_nav">
-                    <span class="nav-line"></span>
-                    <span class="new_hamburger_line"></span>
-                    <span class="nav-lines"> </span>
-                </button>
+                <div class="d-flex align-items-center gap-4">
+                    <div class="d-none d-md-block d-lg-none me-2 space_bttn align-items-center">
+                        <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
+                            Login
+                        </button>
+                        <button class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg lh_150">
+                            Register
+                        </button>
+                    </div>
+                    <button onclick="openNav()" class="d-lg-none position-relative z_15 bttn_nav overflow-hidden">
+                        <span class="nav-line"></span>
+                        <span class="new_hamburger_line"></span>
+                        <span class="nav-lines"> </span>
+                    </button>
+                </div>
             </nav>
             <div class="nav_line"></div>
             <header class="bg_hero">
@@ -159,7 +175,7 @@
                             10 days or less.
                         </p>
                         <div class="box_hdr">
-                            <p id="counter" class="fw-semibold fs_3xl lh_120 text-white mb-0 ff_graphik">
+                            <p id="counter" class="fw-semibold counter_mxw fs_3xl lh_120 text-white mb-0 ff_graphik">
                                 38,965
                             </p>
                             <span class="mx-3">
@@ -193,7 +209,7 @@
                 <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
                     alt="layer-img" />
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-5 col-lg-3 p-md-0 justify-content-center align-items-center d-flex">
+                    <div class="col-md-5 col-lg-3 order-0 p-md-0 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -236,7 +252,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 justify-content-center align-items-center d-flex">
+                    <div
+                        class="col-md-5 col-lg-3 p-md-0 mt-4 order-2 order-xl-1 mt-lg-0 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -272,7 +289,7 @@
                         </div>
                     </div>
                     <div
-                        class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-5 mt-lg-0 justify-content-center align-items-center d-flex">
+                        class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -302,7 +319,7 @@
                         </div>
                     </div>
                     <div
-                        class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-5 mt-lg-0 justify-content-center align-items-center d-flex">
+                        class="col-md-5 col-lg-3 p-md-0 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
                         <div class="card_main">
                             <span>
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -606,7 +623,7 @@
                     </div>
 
                     <div class="col-lg-6 ">
-                        <select class="select_bg">
+                        <select class="select_bg aep_select p-0 text-center fs_xsm">
                             <option value="March">March 2024</option>
                             <option value="March">March 2024</option>
                             <option value="March">March 2024</option>
@@ -644,7 +661,7 @@
                 </div>
             </div>
         </section>
-        <!-- ------ podcasting gathering -- -->
+        <!-- ------ podcasting guesting -- -->
         <section class="bg-white">
             <div class="custom_container pt-5">
 
@@ -658,14 +675,14 @@
                             <option value="March">March 2024</option>
                         </select>
 
-                        <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 poadcasting_gathering fw-semibold mt-3">
+                        <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3">
                             Podcast
                             Guesting Health (BETA) <span><img src="./assets/images/svg/warning_symbol.svg"
                                     alt="warning_symbol"></span></h2>
                         <p class="clr_grey scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150">Serious podcast
                             guests
                             and
-                            hosts exclusively use <a class="clr_purple" href="#">PodMatch.com </a>
+                            hosts exclusively use <a class="clr_purple fw-medium" href="#">PodMatch.com </a>
                             to connect for interviews and to streamline the administrative and booking process.</p>
 
                         <div class="d-flex align-items-center justiy-content-center pt-3 gap_32">
@@ -703,9 +720,17 @@
 
 
                     <div class="col-lg-5">
-                        <div class="d-flex align-items-center justify-content-center"> <img
-                                class="w-100 podcast_gathering_circle"
-                                src="./assets/images/png/poodcast_gathering_circle.png" alt="podcasting_chart"></div>
+                        <div class="d-flex align-items-center justify-content-center bg-white ">
+                            <div class="position-relative"><img class="w-100 podcast_guesting_circle"
+                                    src="./assets/images/png/poodcast_gathering_circle.png" alt="podcasting_chart">
+                                <div class="d-flex justify-content-center align-items-center host_box bg-white top-0 position-absolute hosts">
+                                    <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white">Hosts</p>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center host_box bg-white position-absolute bottom-0 guests">
+                                    <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white">Guests</p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -860,17 +885,20 @@
                             class="text-white ff_graphik rank poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left p-2">
                             Rank
                         </th>
-                        <th class="fs_xsm ff_graphik fw-normal rank_change text-white poadcast_group_th bg_episode text-center p-2">
+                        <th
+                            class="fs_xsm ff_graphik fw-normal rank_change text-white poadcast_group_th bg_episode text-center p-2">
                             Rank Change
                         </th>
-                        <th class="fs_xsm ff_graphik fw-normal text-white hosting_provider poadcast_group_th bg_episode text-center p-2">
+                        <th
+                            class="fs_xsm ff_graphik fw-normal text-white hosting_provider poadcast_group_th bg_episode text-center p-2">
                             Hosting Provider
                         </th>
                         <th
                             class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
                             All
                         </th>
-                        <th class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2">
+                        <th
+                            class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2">
                             Active
                         </th>
                         <th
@@ -892,13 +920,13 @@
                         </td>
                         <td
                             class="text-center fw-medium td_bg_clr clr_black fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                        0</td>
+                            0</td>
                         <td
                             class="text-center td_bg_clr fw-semibold td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                        captivate</td>
+                            captivate</td>
                         <td
                             class="text-center td_bg_clr fw-bold td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                    8158</td>
+                            8158</td>
                     </tr>
 
                     <div class="border_l_radius">
@@ -912,7 +940,7 @@
                                 0</td>
                             <td
                                 class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                            buzzsprout</td>
+                                buzzsprout</td>
                         </tr>
                     </div>
                 </table>
