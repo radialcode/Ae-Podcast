@@ -2,19 +2,34 @@
   padding-top: 18px;
   padding-bottom: 18px;
 }
+.cross {
+  width: 4px;
+  height: 33px;
+  rotate: 45deg;
+  background-color: #222222;
+}
+.cross2 {
+  rotate: -45deg;
+  margin-top: -33px;
+}
+.open_icon .cross_btn {
+  display: none;
+}
+.open_icon.active .cross_btn,
+.cross_btn.active .open_icon {
+  display: block;
+}
 .fw-semibold {
   font-weight: 600 !important;
 }
-.fw-medium{
+.fw-medium {
   font-weight: 500 !important;
 }
-.fw-bold{
+.fw-bold {
   font-weight: 700 !important;
 }
-.fw-bold{
-  font-weight: 100
-  
-  ;
+.fw-bold {
+  font-weight: 100;
 }
 .space_ul_nav {
   gap: 21px;
@@ -387,12 +402,13 @@ a:hover {
     padding: 24px 10px;
   }
 
-  .space_ul_nav {
-    gap: 0px;
-  }
+
 }
 
 @media (max-width: 991.98px) {
+  .space_ul_nav {
+    gap: 20px;
+  }
   .accordion-button {
     max-width: 650px !important;
   }
