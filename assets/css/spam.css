@@ -2,7 +2,10 @@
   padding-top: 18px;
   padding-bottom: 18px;
 }
-
+ 
+.cursor_pointer{
+  cursor: pointer;
+}
 .space_ul_nav {
   gap: 21px;
 }
@@ -401,7 +404,7 @@ a:hover {
   .layer_img {
     z-index: -3;
     width: 51%;
-    top: -18%;
+    top: -21%;
     left: 23%;
   }
 
@@ -415,7 +418,7 @@ a:hover {
   }
 
   .space_overall {
-    padding-top: 24px;
+    padding-top: 53px;
     padding-bottom: 110px;
   }
 }
@@ -462,7 +465,6 @@ a:hover {
 
   .space_overall {
     padding-top: 24px;
-    padding-bottom: 110px;
   }
 }
 @media (max-width: 765px) {
@@ -558,5 +560,8 @@ a:hover {
   .space_overall {
     padding-top: 31px;
     padding-bottom: 80px;
+  }
+  .d_sm_none{
+    display: none;
   }
 }
