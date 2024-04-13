@@ -17,6 +17,9 @@
 .mxw_faq {
   max-width: 566px;
 }
+.counter_mxw {
+  width: 102px;
+}
 .space_faq {
   padding-top: 130px;
   padding-bottom: 172px;
@@ -45,7 +48,7 @@
   border-radius: 24px;
   box-shadow: 0px 0px 20px 4px #dadada40;
   background-color: white;
-  padding: 24px 24px;
+  padding: 24px 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,6 +102,10 @@
   border: none;
   background-color: #6f69f2;
   padding: 10px 25px;
+  transition: all 350ms linear;
+}
+.bttn_rsg:hover {
+  box-shadow: 10px 10px 10px #5e59ce, -1px -1px 10px #8079ff;
 }
 .dropdown .arrow {
   display: inline-block;
@@ -137,11 +144,12 @@
   z-index: 15;
 }
 .bttn_nav .nav-line {
-  border: 1px solid black;
+  transform: translateX(-3px);
+  border: 2px solid black;
   display: flex;
   justify-content: start !important;
   align-items: start !important;
-  width: 20px; /* Adjusted width */
+  width: 12px;
   background-color: black;
   margin-bottom: 4.5px;
   border-radius: 100px;
@@ -150,9 +158,9 @@
 
 .new_hamburger_line {
   z-index: 14;
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
-  width: 100%; /* Full width */
+  width: 30px; /* Full width */
   background-color: black;
   margin-bottom: 4.5px;
   border-radius: 100px;
@@ -160,12 +168,13 @@
 }
 
 .bttn_nav .nav-lines {
+  transform: translateX(14px);
   z-index: 14;
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
-  justify-content: flex-end; /* Adjusted alignment */
-  align-items: flex-end; /* Adjusted alignment */
-  width: 20px; /* Adjusted width */
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 15px;
   background-color: black;
   margin-bottom: 0;
   border-radius: 100px;
@@ -300,8 +309,18 @@ a:hover {
     width: 231px;
     padding: 24px 10px;
   }
+  .space_ul_nav {
+    gap: 0px;
+  }
 }
 @media (max-width: 768px) {
+  .space_ul_nav {
+    gap: 21px;
+  }
+  .card_main {
+    width: 290px;
+    padding: 24px 27px;
+  }
   .accordion-button {
     max-width: 700px !important;
     font-size: 15px !important;
@@ -322,9 +341,9 @@ a:hover {
   }
   .layer_img {
     z-index: -3;
-    width: 60%;
-    top: -23%;
-    left: 22%;
+    width: 49%;
+    top: -18%;
+    left: 25%;
   }
   .space_overall {
     padding-top: 80px;
@@ -332,6 +351,9 @@ a:hover {
   }
 }
 @media (max-width: 575.98px) {
+  .space_ul_nav {
+    gap: 21px;
+  }
   .space_faq {
     padding-top: 82px;
     padding-bottom: 80px;

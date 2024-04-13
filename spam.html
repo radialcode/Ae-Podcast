@@ -170,9 +170,19 @@
                 <li>Something else here 2</li>
               </ul>
             </label>
+            <button
+              class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150"
+            >
+              Login
+            </button>
+            <button
+              class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150"
+            >
+              Register
+            </button>
           </ul>
         </div>
-        <div class="d-none d-md-block space_bttn align-items-center">
+        <div class="d-none d-lg-block space_bttn align-items-center">
           <button
             class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150"
           >
@@ -184,14 +194,30 @@
             Register
           </button>
         </div>
-        <button
-          onclick="openNav()"
-          class="d-lg-none position-relative z_15 bttn_nav"
-        >
-          <span class="nav-line"></span>
-          <span class="new_hamburger_line"></span>
-          <span class="nav-lines"> </span>
-        </button>
+        <div class="d-flex align-items-center gap-4">
+          <div
+            class="d-none d-md-block d-lg-none me-2 space_bttn align-items-center"
+          >
+            <button
+              class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150"
+            >
+              Login
+            </button>
+            <button
+              class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg lh_150"
+            >
+              Register
+            </button>
+          </div>
+          <button
+            onclick="openNav()"
+            class="d-lg-none position-relative z_15 bttn_nav overflow-hidden"
+          >
+            <span class="nav-line"></span>
+            <span class="new_hamburger_line"></span>
+            <span class="nav-lines"> </span>
+          </button>
+        </div>
       </nav>
       <div class="nav_line"></div>
       <header class="bg_hero">
@@ -221,7 +247,7 @@
             <div class="box_hdr">
               <p
                 id="counter"
-                class="fw-semibold fs_3xl lh_120 text-white mb-0 ff_graphik"
+                class="fw-semibold counter_mxw fs_3xl lh_120 text-white mb-0 ff_graphik"
               >
                 38,965
               </p>
@@ -281,7 +307,7 @@
         />
         <div class="row justify-content-center align-items-center">
           <div
-            class="col-md-5 col-lg-3 p-md-0 justify-content-center align-items-center d-flex"
+            class="col-md-5 col-lg-3 order-0 p-md-0 justify-content-center align-items-center d-flex"
           >
             <div class="card_main">
               <span>
@@ -353,7 +379,7 @@
             </div>
           </div>
           <div
-            class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 justify-content-center align-items-center d-flex"
+            class="col-md-5 col-lg-3 p-md-0 mt-4 order-2 order-xl-1 mt-lg-0 justify-content-center align-items-center d-flex"
           >
             <div class="card_main">
               <span>
@@ -416,7 +442,7 @@
             </div>
           </div>
           <div
-            class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-5 mt-lg-0 justify-content-center align-items-center d-flex"
+            class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-0 order-1 order-xl-2 justify-content-center align-items-center d-flex"
           >
             <div class="card_main">
               <span>
@@ -468,7 +494,7 @@
             </div>
           </div>
           <div
-            class="col-md-5 col-lg-3 p-md-0 mt-4 mt-md-5 mt-lg-0 justify-content-center align-items-center d-flex"
+            class="col-md-5 col-lg-3 p-md-0 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex"
           >
             <div class="card_main">
               <span>
