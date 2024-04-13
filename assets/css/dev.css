@@ -102,7 +102,7 @@
 }
 @media (max-width: 991.98px) {
   .podcast_gathering_circle {
-   margin-top: 112px;
+    margin-top: 112px;
   }
   .scerious_podcast {
     max-width: 603px;
@@ -142,7 +142,11 @@
     max-width: 115px;
   }
 }
-@media (max-width:575.98px) {
+@media (max-width: 575.98px) {
+  .seeking_guest_box {
+    max-width: 159px !important;
+    height: 117px;
+  }
   .podcast_group {
     max-width: 79px;
   }
