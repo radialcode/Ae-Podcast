@@ -35,6 +35,7 @@
     padding: 16px 24px;
     width: 100%;
     border-radius: 16px;
+    max-width: 176px;
 }
 
 .total_box {
