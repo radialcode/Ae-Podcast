@@ -292,6 +292,7 @@ a:hover {
   box-shadow: none !important;
 }
 .accordion-item {
+  margin-top: 16px !important;
   border: none !important;
   border-bottom: 1px solid #d6d6d6 !important;
 }
