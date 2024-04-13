@@ -1,3 +1,8 @@
+.max_width {
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
 /*============================== poadcasting industries section  ===================*/
 .poadcasting_heading {
     max-width: 526px !important;
@@ -111,6 +116,7 @@
     transform: translateY(50%);
     box-shadow: 0px 12px 30px 0px #706AF34D;
     padding: 54.5px 36px;
+    margin-top: -150px !important;
 }
 
 .gradient_btn {
@@ -175,7 +181,10 @@
 }
 
 .footer_line {
-    border-top: 2px solid #dfdfef;
+    height: 2px !important;
+    width: 100% !important;
+    background-color: #dfdfef;
+    bottom: 15% !important;
 }
 
 .links_hov:hover {
@@ -232,6 +241,16 @@
     .podcasting_chart {
         margin-top: 60px;
     }
+
+    .footer_line {
+        bottom: 11% !important;
+    }
+}
+
+@media (max-width:767.98px) {
+    .footer_line {
+        bottom: 18% !important;
+    }
 }
 
 @media (max-width:575.98px) {
@@ -262,5 +281,9 @@
 
     .podcasting_chart {
         margin-top: 40px;
+    }
+
+    .footer_line {
+        bottom: 13.5% !important;
     }
 }
