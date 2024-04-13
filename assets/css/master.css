@@ -71,6 +71,31 @@
     max-width: 558px;
 }
 
+/*============================ footer =============================*/
+.footer_padding {
+    padding: 257px 0px 0px 0px;
+}
+
+.footer_bg {
+    background: #ebecef;
+}
+
+.footer_logo {
+    max-width: 227px !important;
+}
+
+.footer_para {
+    max-width: 324px;
+}
+
+.w_24 {
+    width: 24px !important;
+}
+
+.max_w_207 {
+    max-width: 207px !important;
+}
+
 @media (max-width:991.98px) {
 
     .future_sec_p {
