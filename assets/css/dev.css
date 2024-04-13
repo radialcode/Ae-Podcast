@@ -27,6 +27,15 @@
   max-width: 685px;
 }
 /* ------------------podcast compare ----------- */
+.pc_blue_ellipse {
+  bottom: -46%;
+  right: -12%;
+}
+.pc_lines_vec {
+  max-width: 115px;
+  right: -20%;
+  
+}
 .podcast_compare_section {
   padding: 171px 0px;
 }
