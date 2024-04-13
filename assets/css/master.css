@@ -92,6 +92,10 @@
 }
 
 /*============================ footer =============================*/
+.footer_links {
+    margin-top: 14px !important;
+}
+
 .footer_padding {
     padding: 257px 0px 0px 0px;
 }
@@ -116,7 +120,36 @@
     max-width: 207px !important;
 }
 
+.footer_icons_gap {
+    gap: 19px;
+}
+
+.footer_icon {
+    width: 32px;
+    height: 32px;
+    transition: all 300ms linear;
+}
+
+.footer_icon:hover {
+    transform: translateY(-5px);
+    scale: 1.1;
+}
+
+.footer_line {
+    border-top: 2px solid #dfdfef;
+}
+
+
+/*=================================== media-screen =====================================*/
+
 @media (max-width:991.98px) {
+    .footer_para {
+        max-width: 378px;
+    }
+
+    .footer_padding {
+        padding-top: 356px;
+    }
 
     .possible_future_ellipse {
         top: 10%;
@@ -161,5 +194,13 @@
 
     .poadcasting_p {
         padding: 0px 0px 80px 0px;
+    }
+
+    .footer_para {
+        max-width: none;
+    }
+
+    .footer_padding {
+        padding-top: 326px;
     }
 }
