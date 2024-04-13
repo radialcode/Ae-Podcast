@@ -150,6 +150,22 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ---------------------------------table -------------------------------- */
+.rank {
+  max-width: 70px;
+}
+.rank_change {
+  max-width: 158px;
+}
+.hosting_provider {
+  max-width: 336px;
+}
+.all {
+  max-width: 119px;
+}
+
+
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
