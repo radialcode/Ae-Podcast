@@ -29,17 +29,20 @@
 }
 
 .select_bg {
+    width: 115px;
+    padding: 6px 11px;
     background-color: #e9e6e6;
     border: 1px solid #d2cfcf;
     border-radius: 4px;
     color: #474646;
+    outline: none !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-image: url('/assets/images/webp/select_arrow.webp');
     background-size: 9px 5px;
     background-repeat: no-repeat;
-    background-position: 20px right center;
+    background-position: calc(100% - 12px) center;
 }
 
 .active_box {
@@ -116,9 +119,11 @@
 .possible_future_ellipse {
     top: 20%;
 }
-.faq{
+
+.faq {
     z-index: 5;
 }
+
 /*============================ card ===========================*/
 .impactful_card {
     max-width: 1140px;
