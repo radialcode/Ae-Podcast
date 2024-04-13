@@ -18,7 +18,7 @@
   max-width: 566px;
 }
 .counter_mxw {
-  width: 102px;
+  width: 115px;
 }
 .space_faq {
   padding-top: 130px;
@@ -106,7 +106,7 @@
   transition: all 350ms linear;
 }
 .bttn_rsg:hover {
-  box-shadow: 10px 10px 10px #5e59ce, -1px -1px 10px #8079ff;
+  box-shadow: 5px 5px 0px 0px rgba(111, 105, 140, 1);
 }
 .dropdown .arrow {
   display: inline-block;
@@ -220,6 +220,22 @@ a:hover {
 .dropdown.open .dd-button svg {
   transform: rotate(180deg);
 }
+
+.line-3::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  right: 50%;
+  display: block;
+  background-color: #4d4d4d;
+  transition: all 350ms linear !important;
+}
+.line-3:hover::after {
+  width: 100%;
+  right: 0;
+}
 /* accordion */
 .space_accd {
   margin-top: 50px;
@@ -277,6 +293,8 @@ a:hover {
   border-bottom: 1px solid #d6d6d6 !important;
 }
 .accordion-button::after {
+  width: 23px !important;
+  height: 23px !important;
   background-image: url("../images/svg/faq_open.svg") !important;
 }
 
@@ -288,7 +306,7 @@ a:hover {
     z-index: 10;
     width: 100%;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: white;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -306,6 +324,10 @@ a:hover {
   }
 }
 @media (max-width: 1024px) {
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .card_main {
     width: 231px;
     padding: 24px 10px;
@@ -314,7 +336,42 @@ a:hover {
     gap: 0px;
   }
 }
+@media (max-width: 992px) {
+  .accordion-button {
+    max-width: 650px !important;
+  }
+  .accordion-body {
+    max-width: 650px !important;
+  }
+  .mx_hdng {
+    max-width: 756px;
+  }
+  .mxw_para {
+    max-width: 497px;
+  }
+  .layer_img {
+    z-index: -3;
+    width: 51%;
+    top: -18%;
+    left: 23%;
+  }
+  .card_main {
+    width: 267px;
+    padding: 24px 10px;
+  }
+  .card_space {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
 @media (max-width: 768px) {
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .counter_mxw {
+    width: 105px;
+  }
   .space_ul_nav {
     gap: 21px;
   }
@@ -352,6 +409,23 @@ a:hover {
   }
 }
 @media (max-width: 575.98px) {
+  .accordion-button::after {
+    background-image: url("../images/svg/sm_faq_close.svg") !important;
+    background-size: 10px 10px; /* Set the width and height here */
+    width: 10px;
+    height: 10px;
+  }
+  .card_main {
+    width: 335px;
+    padding: 24px 25px;
+  }
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .counter_mxw {
+    width: 90px;
+  }
   .space_ul_nav {
     gap: 21px;
   }
