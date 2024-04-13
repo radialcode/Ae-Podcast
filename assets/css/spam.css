@@ -292,6 +292,8 @@ a:hover {
   border-bottom: 1px solid #d6d6d6 !important;
 }
 .accordion-button::after {
+  width: 23px !important;
+  height: 23px !important;
   background-image: url("../images/svg/faq_open.svg") !important;
 }
 
@@ -321,6 +323,10 @@ a:hover {
   }
 }
 @media (max-width: 1024px) {
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .card_main {
     width: 231px;
     padding: 24px 10px;
@@ -329,7 +335,39 @@ a:hover {
     gap: 0px;
   }
 }
+@media (max-width: 992px) {
+  .accordion-button {
+    max-width: 650px !important;
+  }
+  .accordion-body {
+    max-width: 650px !important;
+  }
+  .mx_hdng {
+    max-width: 756px;
+  }
+  .mxw_para {
+    max-width: 497px;
+  }
+  .layer_img {
+    z-index: -3;
+    width: 51%;
+    top: -18%;
+    left: 23%;
+  }
+  .card_main {
+    width: 267px;
+    padding: 24px 10px;
+  }
+  .card_space {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
 @media (max-width: 768px) {
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .counter_mxw {
     width: 105px;
   }
@@ -370,6 +408,20 @@ a:hover {
   }
 }
 @media (max-width: 575.98px) {
+  .accordion-button::after {
+    background-image: url("../images/svg/sm_faq_close.svg") !important;
+    background-size: 10px 10px; /* Set the width and height here */
+    width: 10px;
+    height: 10px;
+  }
+  .card_main {
+    width: 335px;
+    padding: 24px 25px;
+  }
+  .card_space {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .counter_mxw {
     width: 90px;
   }
