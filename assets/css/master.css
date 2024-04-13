@@ -116,6 +116,10 @@
     color: #010101;
 }
 
+.card_p {
+    padding: 0px 12px;
+}
+
 /*============================ footer =============================*/
 .footer_links {
     margin-top: 14px !important;
@@ -240,5 +244,9 @@
     .impactful_card {
         padding: 70px 52px;
         transform: translateY(51%);
+    }
+
+    .card_p {
+        padding: 0px 20px;
     }
 }
