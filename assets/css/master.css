@@ -81,11 +81,11 @@
 }
 
 .poadcasting_para {
-    max-width: 546px !important;
+    max-width: 553px !important;
 }
 
 .poadcasting_p {
-    padding: 0px 0px 174px 0px;
+    padding: 0px 0px 200px 0px;
 }
 
 .possible_heading {
@@ -105,7 +105,7 @@
     border: 1px solid #d2cfcf;
     border-radius: 4px;
     color: #474646;
-    padding: 5.5px 24px 5.5px 11.5px;
+    padding: 6.5px 23px 4.12px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -122,6 +122,7 @@
     width: 100%;
     border-radius: 16px;
     max-width: 176px;
+    box-shadow: 12px 12px 12px 0px #fcfeff;
 }
 
 .total_box {
@@ -132,6 +133,7 @@
     background-clip: content-box, border-box;
     max-width: 205px !important;
     border-radius: 16px;
+    box-shadow: 12px 12px 20px 0px #fcfeff;
 }
 
 .gap_32 {
@@ -139,7 +141,7 @@
 }
 
 .gradient_text {
-    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    background: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
