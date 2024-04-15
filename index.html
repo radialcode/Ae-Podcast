@@ -1,1443 +1,2186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ae-podcast</title>
     <link rel="icon" href="./assets/images/svg/favicon.svg" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- css links  -->
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/spam.css">
-    <link rel="stylesheet" href="./assets/css/master.css">
-    <link rel="stylesheet" href="./assets/css/dev.css">
+    <link rel="stylesheet" href="./assets/css/spam.css" />
+    <link rel="stylesheet" href="./assets/css/master.css" />
+    <link rel="stylesheet" href="./assets/css/dev.css" />
     <!-- --favicon --- -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/png/favicon.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/png/favicon.png"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="overflow-x-hidden">
-        <!-----------------Hero-------------->
-        <section>
-            <nav class="custom_container d-flex align-items-center justify-content-between nav_space">
-                <div class="position-relative">
-                    <a href=""><img src="./assets/images/svg/header_logo.svg" alt="nav-logo" /></a>
+      <!-----------------Hero-------------->
+      <section>
+        <nav
+          class="custom_container d-flex align-items-center justify-content-between nav_space"
+        >
+          <div class="position-relative">
+            <a href=""
+              ><img src="./assets/images/svg/header_logo.svg" alt="nav-logo"
+            /></a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
+              <div
+                onclick="openNav()"
+                class="cursor_pointer d-lg-none position-absolute top-0 end-0 mt-4 me-4"
+              >
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.21687 1.65264C0.331356 2.53816 0.331356 3.97382 1.21687 4.85934L9.34604 12.9885L1.21687 21.1178C0.331356 22.0032 0.331356 23.439 1.21687 24.3244C2.10236 25.2099 3.53805 25.2099 4.42354 24.3244L12.5527 16.1951L20.682 24.3244C21.5674 25.2099 23.0032 25.2099 23.8887 24.3244C24.7741 23.439 24.7741 22.0032 23.8887 21.1178L15.7593 12.9885L23.8887 4.85936C24.7741 3.97387 24.7741 2.53818 23.8887 1.65269C23.003 0.767175 21.5674 0.767175 20.682 1.65269L12.5527 9.78183L4.42354 1.65264C3.53805 0.767153 2.10236 0.767153 1.21687 1.65264Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </div>
+              <div class="custom-dropdown position-relative d-inline-block">
+                <button
+                  class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2"
+                >
+                  Features
+                  <span>
+                    <svg
+                      width="7"
+                      height="4"
+                      viewBox="0 0 7 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                        fill="#010101"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
+                >
+                  <a href="#" class="text-decoration-none d-block">Education</a>
+                  <a href="#" class="text-decoration-none d-block">About us</a>
+                  <a href="#" class="text-decoration-none d-block">Community</a>
+                  <a href="#" class="text-decoration-none d-block">Pricing</a>
                 </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
-                        <div onclick="openNav()"
-                            class="cursor_pointer d-lg-none position-absolute top-0 end-0 mt-4 me-4">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1.21687 1.65264C0.331356 2.53816 0.331356 3.97382 1.21687 4.85934L9.34604 12.9885L1.21687 21.1178C0.331356 22.0032 0.331356 23.439 1.21687 24.3244C2.10236 25.2099 3.53805 25.2099 4.42354 24.3244L12.5527 16.1951L20.682 24.3244C21.5674 25.2099 23.0032 25.2099 23.8887 24.3244C24.7741 23.439 24.7741 22.0032 23.8887 21.1178L15.7593 12.9885L23.8887 4.85936C24.7741 3.97387 24.7741 2.53818 23.8887 1.65269C23.003 0.767175 21.5674 0.767175 20.682 1.65269L12.5527 9.78183L4.42354 1.65264C3.53805 0.767153 2.10236 0.767153 1.21687 1.65264Z"
-                                    fill="#0F0F0F" />
-                            </svg>
-                        </div>
-                        <label class="dropdown" id="dropdown1">
-                            <button
-                                class="dd-button fw-normal fs_sm line-3 position-relative clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
-                                onclick="toggleDropdown('dropdown1')">
-                                Features
-                                <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
-                                            fill="#010101" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <ul class="dd-menu">
-                                <li>Education</li>
-                                <li>About us</li>
-                                <li>Community</li>
-                                <li>Pricing</li>
-                            </ul>
-                        </label>
-                        <label class="dropdown" id="dropdown2">
-                            <button
-                                class="dd-button fw-normal fs_sm line-3 position-relative clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
-                                onclick="toggleDropdown('dropdown2')">
-                                Pricing
-                                <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
-                                            fill="#010101" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <ul class="dd-menu">
-                                <li>About us</li>
-                                <li>Pricing</li>
-                                <li>Education</li>
-                                <li>Features</li>
-                            </ul>
-                        </label>
-                        <label class="dropdown" id="dropdown3">
-                            <button
-                                class="dd-button fw-normal line-3 position-relative fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
-                                onclick="toggleDropdown('dropdown3')">
-                                About us
-                                <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
-                                            fill="#010101" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <ul class="dd-menu">
-                                <li>Pricing</li>
-                                <li>Education</li>
-                            </ul>
-                        </label>
-                        <label class="dropdown" id="dropdown4">
-                            <button
-                                class="dd-button fw-normal line-3 position-relative fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
-                                onclick="toggleDropdown('dropdown4')">
-                                Community
-                                <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
-                                            fill="#010101" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <ul class="dd-menu">
-                                <li>Education</li>
-                                <li>Features</li>
-                                <li>Pricing</li>
-                            </ul>
-                        </label>
-                        <label class="dropdown" id="dropdown5">
-                            <button
-                                class="dd-button fw-normal line-3 position-relative fs_sm clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
-                                onclick="toggleDropdown('dropdown5')">
-                                Education
-                                <span><svg width="7" height="4" viewBox="0 0 7 4" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
-                                            fill="#010101" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <ul class="dd-menu">
-                                <li>Community</li>
-                                <li>Features</li>
-                            </ul>
-                        </label>
-                        <button class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150">
-                            Login
-                        </button>
-                        <button class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150">
-                            Register
-                        </button>
-                    </div>
+              </div>
+              <div class="custom-dropdown position-relative d-inline-block">
+                <button
+                  class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2"
+                >
+                  Pricing
+                  <span>
+                    <svg
+                      width="7"
+                      height="4"
+                      viewBox="0 0 7 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                        fill="#010101"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
+                >
+                  <a href="#" class="text-decoration-none d-block">About us</a>
+                  <a href="#" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" class="text-decoration-none d-block">Education</a>
+                  <a href="#" class="text-decoration-none d-block">Features</a>
                 </div>
-                <div class="d-none d-lg-block space_bttn align-items-center">
-                    <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
-                        Login
-                    </button>
-                    <button class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg lh_150">
-                        Register
-                    </button>
+              </div>
+              <div class="custom-dropdown position-relative d-inline-block">
+                <button
+                  class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2"
+                >
+                  About us
+                  <span>
+                    <svg
+                      width="7"
+                      height="4"
+                      viewBox="0 0 7 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                        fill="#010101"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
+                >
+                  <a href="#" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" class="text-decoration-none d-block">Education</a>
                 </div>
-                <div class="d-flex align-items-center gap-4">
-                    <div class="d-none d-md-block position-relative  d-lg-none me-2 space_bttn align-items-center">
-                        <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
-                            Login
-                        </button>
-                        <button class="fw-semibold fs_sm ff_graphik bttn_rsg lh_150">
-                            Register
-                        </button>
-                    </div>
-                    <button onclick="openNav()" class="d-lg-none position-relative  bttn_nav overflow-hidden">
-                        <span class="nav-line"></span>
-                        <span class="new_hamburger_line"></span>
-                        <span class="nav-lines"> </span>
-                    </button>
+              </div>
+              <div class="custom-dropdown position-relative d-inline-block">
+                <button
+                  class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2"
+                >
+                  Community
+                  <span>
+                    <svg
+                      width="7"
+                      height="4"
+                      viewBox="0 0 7 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.28787 3.78787C3.40503 3.90502 3.59497 3.90503 3.71213 3.78787L6.73787 0.762132C6.92686 0.573143 6.79301 0.25 6.52574 0.25H0.474264C0.206992 0.25 0.0731426 0.573143 0.262132 0.762132L3.28787 3.78787Z"
+                        fill="#010101"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
+                >
+                  <a href="#" class="text-decoration-none d-block">Education</a>
+                  <a href="#" class="text-decoration-none d-block">Features</a>
+                  <a href="#" class="text-decoration-none d-block">Pricing</a>
                 </div>
-            </nav>
-            <div class="nav_line"></div>
-            <header class="bg_hero">
-                <div class="custom_container space_header">
-                    <div class="d-flex flex-column justify-content-center align-items-center text-center">
-                        <h1 class="lh_120 fs_4xl d-none d-md-block fw-semibold mb-0 mx_hdng ff_graphik">
-                            The Actively Established Podcast Report
-                            <span class="txt_hdng_clr">March 2024</span>
-                        </h1>
-                        <h1 class="lh_120 fs_4xl d-md-none fw-semibold mb-0 mx_hdng ff_graphik">
-                            The Actively Established Podcast Report
-                            <span class="txt_hdng_clr d-block txt_hdng mt-2">March 2024</span>
-                        </h1>
-                        <p class="fs_sm clr_black fw-normal lh_150 mxw_para mt-2 pt-1 mt-md-0 mt-md-3 mb-0 ff_graphik">
-                            An Actively Established Podcaster is a non-celebrity independent
-                            interview-based host with 100+ episodes and a release cadence of
-                            10 days or less.
-                        </p>
-                        <div class="box_hdr">
-                            <p id="counter" class="fw-semibold counter_mxw fs_3xl lh_120 text-white mb-0 ff_graphik">
-                                38,965
-                            </p>
-                            <span class="mx-3">
-                                <svg width="2" height="35" viewBox="0 0 2 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.808105" width="1" height="34"
-                                        fill="url(#paint0_linear_967_4724)" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_967_4724" x1="1" y1="0.808105" x2="1"
-                                            y2="34.8081" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#D9D9D9" stop-opacity="0" />
-                                            <stop offset="0.495" stop-color="#D9D9D9" />
-                                            <stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <p class="mb-0 fw-semibold fs_md lh_120 ff_graphik text-white mxw_para_cntr">
-                                Total AE Podcasters
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </section>
-        <!-----------Overall---------------->
-        <section>
-            <div class="custom_container space_overall position-relative z-3">
-                <img class="position-absolute d-none d-lg-block layer_img z-n1"
-                    src="./assets/images/svg/layer_header.svg" alt="layer-img" />
-                <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
-                    alt="layer-img" />
-                <div class="row card_space justify-content-center align-items-center column-gap-md-2 column-gap-lg-0">
-                    <div class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex">
-                        <div class="card_main">
-                            <span>
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5223)" />
-                                    <g clip-path="url(#clip0_967_5223)">
-                                        <path
-                                            d="M24.8971 17.6699C26.91 16.7157 28.6339 16.2784 31.2249 16.0597C31.452 16.0398 32.061 16.0498 32.5668 16.0696C35.4262 16.1989 38.203 17.004 40.3913 18.3458C40.7733 18.5844 41.083 18.7534 41.083 18.7136C41.083 18.6739 41.1449 18.7136 41.2171 18.7931C41.2791 18.8726 41.6713 19.1907 42.0636 19.4989C45.0055 21.785 47.0288 25.085 47.803 28.872C47.9681 29.7169 47.9888 29.9257 47.9888 31.3272C47.9991 33.2654 47.7926 34.5178 47.1526 36.3766C46.812 37.3805 45.9965 39.0404 45.5113 39.7263C45.3462 39.9549 45.212 40.1835 45.212 40.2332C45.212 40.2928 45.181 40.3525 45.1397 40.3723C45.0881 40.3823 44.8713 40.6208 44.6442 40.8992C42.6107 43.3742 39.9268 45.1732 36.7578 46.1672C35.8494 46.4555 35.8081 46.4654 35.8804 46.2766C35.9113 46.197 35.8804 46.1076 35.8184 46.0678C35.7359 46.0181 35.7255 45.7895 35.7668 45.3323C35.8494 44.4377 35.9113 44.2091 36.0249 44.2787C36.0868 44.3085 36.1281 44.2687 36.1281 44.1793C36.1281 44.0799 36.3346 43.9407 36.6752 43.8115C36.9642 43.6922 37.7488 43.3443 38.3991 43.0362C39.0494 42.7281 39.7513 42.4001 39.9475 42.3205C40.4636 42.1019 41.8055 40.9588 42.4868 40.1736C45.5526 36.6251 46.523 32.351 45.3152 27.7787C45.0365 26.7151 43.9423 24.5979 43.1371 23.5543C42.3939 22.6001 40.6597 21.129 40.6597 21.129C33.1102 16.1024 25.3931 19.1973 22.8739 21.5564C22.8739 21.5564 22.3681 21.8446 21.821 22.4311C20.8094 23.5245 20.252 24.3296 19.5604 25.6913C18.8275 27.1127 18.4765 28.2657 18.27 29.8561C18.0842 31.2874 18.2288 33.7723 18.5488 34.5874C18.5797 34.6669 18.621 34.8558 18.6417 35.0049C18.7242 35.5714 19.7875 37.9172 20.0455 38.0763C20.0971 38.1061 20.1488 38.1757 20.1384 38.2254C20.1281 38.4043 20.252 38.7621 20.3242 38.7621C20.3655 38.7621 20.6236 39.0603 20.9126 39.4281C21.563 40.2928 22.7707 41.4657 23.6894 42.1217C24.6288 42.7976 26.301 43.6723 27.1475 43.9407C27.5191 44.06 27.8288 44.1693 27.8494 44.1793C27.87 44.1892 27.9423 44.7061 28.0146 45.3124L28.1384 46.4257L27.8804 46.3561C27.7359 46.3163 27.5294 46.2865 27.4365 46.2766C27.3333 46.2766 27.2507 46.2368 27.2507 46.197C27.2507 46.1573 27.1991 46.1175 27.1371 46.1175C27.0752 46.1175 26.5591 45.9386 25.981 45.7199C23.9681 44.9645 21.9759 43.6425 20.3655 42.0025C19.4778 41.088 18.3423 39.6269 18.0017 38.9311C17.8984 38.7323 17.7746 38.5633 17.7333 38.5633C17.6817 38.5633 17.661 38.5236 17.7023 38.4739C17.7333 38.4242 17.692 38.3148 17.6094 38.2353C17.5268 38.1558 17.4855 38.0663 17.5165 38.0266C17.5578 37.9967 17.5268 37.9669 17.4649 37.9669C17.3926 37.9669 17.3513 37.9371 17.3617 37.8874C17.372 37.8476 17.2791 37.5495 17.1449 37.2214C16.8146 36.3865 16.4636 35.2534 16.2468 34.2793C15.9681 33.0567 15.9681 30.0449 16.2571 28.6733C16.3707 28.1266 16.4636 27.6296 16.4636 27.5799C16.4636 27.5202 16.4842 27.4606 16.5152 27.4308C16.5462 27.401 16.701 26.9736 16.8662 26.4865C17.0313 25.9895 17.3823 25.1645 17.6507 24.6476C17.9191 24.1308 18.1565 23.6537 18.1771 23.604C18.1978 23.5443 18.27 23.435 18.332 23.3555C18.4042 23.276 18.8068 22.7492 19.2404 22.2025C20.6752 20.3437 22.7294 18.6937 24.8971 17.6699Z"
-                                            fill="white" />
-                                        <path
-                                            d="M27.6132 23.3057C27.6752 23.2361 27.9539 23.0473 28.2326 22.8882C29.5162 22.4332 32.8307 21.8279 35.8197 23.0473C35.8197 23.097 35.9952 23.2162 36.2119 23.3057C36.4184 23.4051 36.8829 23.6735 37.2442 23.912C37.6055 24.1506 37.9255 24.3494 37.9668 24.3593C38.1319 24.3792 39.701 26.1385 40.0623 26.715C40.599 27.5798 41.0532 28.6632 41.2494 29.5379C41.4868 30.6313 41.4661 32.6491 41.1977 33.6331C40.9397 34.5774 40.2171 36.0584 39.7113 36.6945C39.5048 36.9629 39.35 37.1717 39.381 37.1717C39.4636 37.1717 37.8842 38.6427 37.6365 38.7918C37.5229 38.8614 37.2545 39.0204 37.0481 39.1397L36.6661 39.3584V38.6924C36.6558 38.3147 36.5939 37.8078 36.5113 37.5593L36.3668 37.1021L36.8519 36.6945C37.1203 36.4659 37.5848 35.9789 37.8636 35.6111C38.359 34.9849 39.0094 33.6331 39.061 33.1262C39.0816 32.997 39.1229 32.8677 39.1539 32.828C39.1952 32.7982 39.2261 32.1819 39.2261 31.4762C39.2261 30.3132 39.1952 30.1144 38.9165 29.2894C38.741 28.7924 38.4416 28.1364 38.2455 27.8283C37.781 27.0927 36.759 26.0888 35.9436 25.572C34.2197 24.4686 31.7836 24.1605 29.8119 24.7768C29.0584 25.0253 28.3977 25.3036 28.2842 25.4328C28.2532 25.4626 28.0984 25.562 27.9229 25.6415C27.4274 25.8801 26.1887 27.1325 25.7861 27.7985C25.1668 28.8123 24.7539 30.1144 24.7436 31.0587C24.7436 32.0825 24.8261 32.8479 25.0119 33.3945C25.27 34.2096 25.6932 35.0843 25.8274 35.0843C25.879 35.0843 25.8997 35.1241 25.8687 35.1638C25.7965 35.2831 26.6429 36.287 27.1797 36.7244L27.6339 37.0921L27.4894 37.5593C27.4171 37.8078 27.3448 38.3147 27.3345 38.6825C27.3345 39.3385 27.3242 39.3485 27.1074 39.2391C25.8171 38.5831 24.31 36.9729 23.5255 35.4322C22.8029 34.0009 22.5861 33.1361 22.5861 31.5557C22.5758 29.6473 22.9681 28.2756 23.9694 26.6653C24.4648 25.8602 25.8377 24.4985 26.7358 23.9319C27.159 23.6536 27.5616 23.3753 27.6132 23.3057Z"
-                                            fill="white" />
-                                        <path
-                                            d="M30.5029 28.9715C29.8217 29.389 29.481 29.7866 29.2126 30.4823C28.4797 32.3411 29.9249 34.3191 31.9997 34.3191C33.5997 34.3191 34.8591 33.186 35.0036 31.6055C35.0965 30.6911 34.4255 29.5281 33.5068 28.9715C33.0423 28.7031 32.9184 28.6733 32.01 28.6634C31.0604 28.6435 30.9984 28.6534 30.5029 28.9715Z"
-                                            fill="white" />
-                                        <path
-                                            d="M29.1513 37.9371C29.4403 36.9928 30.359 36.1877 31.4119 35.979C33.0223 35.6609 34.7048 36.7841 34.9526 38.3247C34.9835 38.5633 34.9423 39.3883 34.839 40.1537C34.7461 40.929 34.6945 41.6247 34.7255 41.6943C34.7564 41.7738 34.7358 41.8633 34.6945 41.8832C34.6532 41.913 34.581 42.3106 34.5397 42.7579C34.4158 44.3085 34.0545 47.1612 33.9616 47.4594C33.8584 47.7576 33.4971 48.185 33.0532 48.5229C32.667 48.7857 32.1434 48.7019 31.5152 48.7019C31.2055 48.7019 30.5758 48.3043 30.3074 47.9266C30.1319 47.6781 29.9977 47.3103 29.9255 46.9028C29.7913 46.0181 29.3371 42.072 29.2648 41.0582C29.2339 40.601 29.1823 40.1835 29.1513 40.1338C28.9964 39.9052 28.9964 38.4341 29.1513 37.9371Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_967_5223" x1="43.2676" y1="65.7712"
-                                            x2="29.847" y2="34.8908" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#6F69F2" />
-                                            <stop offset="1" stop-color="#269FFB" />
-                                        </linearGradient>
-                                        <clipPath id="clip0_967_5223">
-                                            <rect width="32" height="33" fill="white" transform="translate(16 16)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <p class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik">
-                                Overall Industry Buzz
-                            </p>
-                            <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
-                                HIGH
-                            </p>
-                            <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
-                                “Podcasts” are trending at 85% on search engines. (↓1%)
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center align-items-center d-flex">
-                        <div class="card_main">
-                            <span>
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5237)" />
-                                    <g clip-path="url(#clip0_967_5237)">
-                                        <path
-                                            d="M33.2918 40.6415L33.0833 40.6766V40.888V42.3333C33.0833 42.9313 32.5979 43.4167 32 43.4167C31.4021 43.4167 30.9167 42.9313 30.9167 42.3333V40.888V40.6766L30.7082 40.6415C27.0477 40.0254 24.25 36.8331 24.25 33C24.25 32.4021 24.7354 31.9167 25.3333 31.9167C25.9313 31.9167 26.4167 32.4021 26.4167 33C26.4167 36.0794 28.9206 38.5833 32 38.5833C35.0794 38.5833 37.5833 36.0794 37.5833 33C37.5833 32.4021 38.0687 31.9167 38.6667 31.9167C39.2646 31.9167 39.75 32.4021 39.75 33C39.75 36.8331 36.9523 40.0254 33.2918 40.6415ZM31.5922 23.9494L31.5922 23.9494C33.0212 23.7168 34.2655 24.736 34.4039 26.0833H33.3333C32.4593 26.0833 31.75 26.7926 31.75 27.6667C31.75 28.5407 32.4593 29.25 33.3333 29.25H34.4167V30.0833H33.3333C32.4593 30.0833 31.75 30.7926 31.75 31.6667C31.75 32.5407 32.4593 33.25 33.3333 33.25H34.4039C34.2655 34.597 33.0214 35.6154 31.5922 35.3839C30.4201 35.1931 29.5833 34.0828 29.5833 32.8573V26.476C29.5833 25.2518 30.4201 24.1402 31.5922 23.9494ZM16.25 33C16.25 24.3154 23.3154 17.25 32 17.25C40.6846 17.25 47.75 24.3154 47.75 33C47.75 41.6846 40.6846 48.75 32 48.75C23.3154 48.75 16.25 41.6846 16.25 33ZM18.4167 33C18.4167 40.4901 24.5099 46.5833 32 46.5833C39.4901 46.5833 45.5833 40.4901 45.5833 33C45.5833 25.5099 39.4901 19.4167 32 19.4167C24.5099 19.4167 18.4167 25.5099 18.4167 33Z"
-                                            fill="white" stroke="white" stroke-width="0.5" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_967_5237" x1="43.2676" y1="65.7712"
-                                            x2="29.847" y2="34.8908" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#6F69F2" />
-                                            <stop offset="1" stop-color="#269FFB" />
-                                        </linearGradient>
-                                        <clipPath id="clip0_967_5237">
-                                            <rect width="32" height="32" fill="white" transform="translate(16 17)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <p class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik">
-                                Podcasters Health
-                            </p>
-                            <p class="mb-0 clr_red fs_xsm fw-semibold lh_150 ff_graphik">
-                                LOW
-                            </p>
-                            <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
-                                Extremely high failure rate with limited
-                                <span class="txt_clr_para">clear success paths.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
-                        <div class="card_main">
-                            <span>
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5247)" />
-                                    <path
-                                        d="M43.7496 33.5654V33.7285L43.8989 33.7942C45.2449 34.3869 46.3464 35.424 47.0191 36.7318C47.6918 38.0397 47.8948 39.539 47.5941 40.9786C47.2935 42.4183 46.5074 43.711 45.3674 44.6402C44.2276 45.5694 42.8033 46.0789 41.3328 46.0834C40.6919 46.0834 40.0773 45.8288 39.6241 45.3756C39.1709 44.9224 38.9163 44.3077 38.9163 43.6667V35.6667C38.9163 35.0258 39.1709 34.4111 39.6241 33.9579C40.0773 33.5047 40.692 33.2501 41.3329 33.2501H41.5829V33.0001V31.6667C41.5829 29.1251 40.5733 26.6875 38.776 24.8903C36.9788 23.0931 34.5413 22.0834 31.9996 22.0834C29.4579 22.0834 27.0204 23.0931 25.2232 24.8903C23.4259 26.6875 22.4163 29.1251 22.4163 31.6667V33.0001V33.2501H22.6663C23.3072 33.2501 23.9219 33.5047 24.3751 33.9579C24.8283 34.4111 25.0829 35.0258 25.0829 35.6667V43.6667C25.0829 44.3077 24.8283 44.9224 24.3751 45.3756C23.9219 45.8288 23.3073 46.0834 22.6664 46.0834C21.1959 46.0789 19.7716 45.5694 18.6318 44.6402C17.4919 43.711 16.7058 42.4183 16.4051 40.9786C16.1044 39.539 16.3074 38.0397 16.9801 36.7318C17.6528 35.424 18.7543 34.3869 20.1004 33.7942L20.2496 33.7285V33.5654V31.6667C20.2496 28.5505 21.4876 25.5618 23.6911 23.3582C25.8947 21.1547 28.8833 19.9167 31.9996 19.9167C35.1159 19.9167 38.1046 21.1547 40.3081 23.3582C42.5117 25.5618 43.7496 28.5505 43.7496 31.6667V33.5654ZM22.6663 43.9167H22.9163V43.6667V35.6667V35.4167H22.6663C21.5391 35.4167 20.4581 35.8645 19.6611 36.6615C18.864 37.4586 18.4163 38.5396 18.4163 39.6667C18.4163 40.7939 18.864 41.8749 19.6611 42.672C20.4581 43.469 21.5391 43.9167 22.6663 43.9167ZM41.0829 43.6667V43.9167H41.3329C42.4601 43.9167 43.5411 43.469 44.3381 42.672C45.1352 41.8749 45.5829 40.7939 45.5829 39.6667C45.5829 38.5396 45.1352 37.4586 44.3381 36.6615C43.5411 35.8645 42.4601 35.4167 41.3329 35.4167H41.0829V35.6667V43.6667Z"
-                                        fill="white" stroke="white" stroke-width="0.5" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_967_5247" x1="43.2676" y1="65.7712"
-                                            x2="29.847" y2="34.8908" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#6F69F2" />
-                                            <stop offset="1" stop-color="#269FFB" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <p class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik">
-                                Listenership Health
-                            </p>
-                            <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
-                                HIGH
-                            </p>
-                            <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
-                                504.9M podcast listeners estimated for 2024. (↑8.7%)
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
-                        <div class="card_main">
-                            <span>
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5257)" />
-                                    <g clip-path="url(#clip0_967_5257)">
-                                        <path
-                                            d="M32.095 33.0174C31.7369 32.6611 31.159 32.662 30.8015 33.0142L25.8578 37.6141C25.1507 38.2711 24.0447 38.2337 23.3843 37.5243C22.7266 36.8176 22.7672 35.7091 23.4743 35.051C23.4743 35.051 23.4743 35.051 23.4743 35.0509L28.3689 30.499L28.369 30.4991L28.3754 30.4927C30.0024 28.8657 32.7056 28.8206 34.4372 30.4171L34.4486 30.4276L34.4613 30.4367L34.6067 30.2333L34.4613 30.4367L34.4614 30.4367L34.4616 30.4369L34.4625 30.4375L34.4659 30.44L34.4795 30.4497L34.531 30.4865L34.7156 30.6187C34.8687 30.7285 35.0737 30.8757 35.2811 31.0253C35.4886 31.1751 35.6981 31.3269 35.8604 31.4462C35.9417 31.5059 36.0105 31.5569 36.0611 31.5951C36.0936 31.6197 36.1131 31.6351 36.1233 31.643C36.1317 31.6496 36.1337 31.6512 36.1312 31.6487L36.1317 31.6492C36.49 32.0057 37.07 32.0066 37.4279 31.6496C37.4282 31.6493 37.4285 31.649 37.4288 31.6487L41.3057 27.8451L41.7425 27.4166H41.1307H39.3355C37.0345 27.3761 37.0401 23.957 39.3355 23.9166H43.3333C45.7685 23.9166 47.75 25.8993 47.75 28.3346V32.3324C47.7095 34.6334 44.2904 34.6279 44.25 32.3324V30.4559V29.8606L43.825 30.2775L39.8916 34.1348L39.8899 34.1365C38.2256 35.8008 35.5224 35.8448 33.7893 34.2493L33.7779 34.2389L33.7654 34.2299L33.62 34.4333L33.7653 34.2299L33.7653 34.2298L33.7651 34.2297L33.7642 34.229L33.7607 34.2266L33.7472 34.2169L33.6957 34.18L33.5111 34.0478C33.358 33.938 33.153 33.7908 32.9456 33.6412C32.7381 33.4915 32.5286 33.3396 32.3662 33.2204C32.2849 33.1607 32.2162 33.1097 32.1656 33.0714C32.1331 33.0468 32.1136 33.0315 32.1034 33.0235C32.0949 33.0169 32.093 33.0154 32.0954 33.0178L32.095 33.0174ZM47.75 46.9999C47.75 47.9672 46.9673 48.7499 46 48.7499H20.6667C18.2314 48.7499 16.25 46.7685 16.25 44.3333V19.0021C16.2904 16.7067 19.7095 16.7011 19.75 19.0021V44.3333C19.75 44.8393 20.1606 45.2499 20.6667 45.2499H46C46.9673 45.2499 47.75 46.0327 47.75 46.9999Z"
-                                            fill="white" stroke="#6F69F2" stroke-width="0.5" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_967_5257" x1="43.2676" y1="65.7712"
-                                            x2="29.847" y2="34.8908" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#6F69F2" />
-                                            <stop offset="1" stop-color="#269FFB" />
-                                        </linearGradient>
-                                        <clipPath id="clip0_967_5257">
-                                            <rect width="32" height="32" fill="white" transform="translate(16 17)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <p class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik">
-                                Podcasting Opportunity
-                            </p>
-                            <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
-                                VERY HIGH
-                            </p>
-                            <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
-                                There has never been a better time to start a podcast.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <button
+                class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150"
+              >
+                Login
+              </button>
+              <button
+                class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150"
+              >
+                Register
+              </button>
             </div>
-        </section>
-
-        <!-------------- Podcasting Industry Totals ---------------->
-        <section class="bg-white position-relative">
-            <img class="position-absolute podcasting_industries_ellipse d-md-block d-none"
-                src="assets/images/webp/podcasting_industries_left_ellipse.webp" alt="left_ellipse">
-
-            <img class="position-absolute your_podcast_right_vec d-md-block d-none"
-                src="assets/images/webp/your_podcast_right_vec.webp" alt="your_podcast_right_vec">
-
-            <div class="custom_container position-relative z-1 pt-lg-4">
-
-                <div class="row poadcasting_p">
-                    <div class="col-lg-6">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-
-                        <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 poadcasting_heading fw-semibold mt-3">
-                            Podcasting
-                            Industry Totals</h2>
-                        <p class="clr_grey poadcasting_para fw-normal ff_graphik my-sm-3 mt-3 mb-4 fs_sm lh_150"><span
-                                class="d-block d-sm-inline">Podcast
-                                listenership is rapidly increasing, but</span> <span class="d-block d-sm-inline">the
-                                number
-                                of active podcasts has not changed,</span> making podcasting a non-saturated industry.
-                        </p>
-
-                        <div class="d-flex align-items-center justiy-content-center pt-sm-3 pt-1 gap_32">
-                            <div class="active_box">
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">Active</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">384,629</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">(+3.39%)</p>
-                            </div>
-
-                            <div class="total_box">
-                                <div class="px-4 py-3">
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">2,963,829
-                                    </p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+0.65%)</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">Only 13.3% of the
-                                total
-                                podcasts
-                                <span class="d-sm-block d-inline">are
-                                    active!</span>
-                            </p>
-                            <img class="ms-sm-2 ms-1" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector">
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-6">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img class="w-100 podcasting_chart" src="./assets/images/svg/podcasting_chart.svg"
-                                alt="podcasting_chart">
-                        </div>
-                    </div>
-
-                </div>
-
+          </div>
+          <div class="d-none d-lg-block space_bttn align-items-center">
+            <button
+              class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150"
+            >
+              Login
+            </button>
+            <button
+              class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg lh_150"
+            >
+              Register
+            </button>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div
+              class="d-none d-md-block position-relative d-lg-none me-2 space_bttn align-items-center"
+            >
+              <button
+                class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150"
+              >
+                Login
+              </button>
+              <button class="fw-semibold fs_sm ff_graphik bttn_rsg lh_150">
+                Register
+              </button>
             </div>
-        </section>
-        <!-------------- possible future ---------------->
-        <section class="bg-white d-lg-block d-none future_sec_p position-relative">
-
-            <img class="position-absolute end-0 possible_future_ellipse"
-                src="assets/images/webp/possible_future_ellipse.webp" alt="possible_future_ellipse">
-
-            <div class="custom_container position-relative z-1">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img class="w-100 possible_future_chart" src="./assets/images/svg/possible_future_chart.svg"
-                                alt="possible_future">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-
-                        <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">Possible
-                            Future Actively Established Podcasts</h3>
-                        <p class="clr_grey poadcasting_para fw-normal ff_graphik my-3 fs_sm lh_150 pe-4">Most
-                            interview-based independent podcasters fail to reach the Actively Established status due to
-                            quitting prematurely or inconsistent episode releases.</p>
-
-                        <div class="d-flex align-items-center justiy-content-center pt-3 gap_32">
-                            <div class="active_box p-3">
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">Active</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">120,212</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">(+5.64%)</p>
-                            </div>
-                            <div class="total_box d-flex flex-column justify-content-center">
-                                <div class="px-4 py-3">
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">505,677</p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">(+1.27%)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mt-4 pt-1 ">
-                            <img src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector">
-                            <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2">Only 23.78% are active!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <button
+              onclick="openNav()"
+              class="d-lg-none position-relative bttn_nav overflow-hidden"
+            >
+              <span class="nav-line"></span>
+              <span class="new_hamburger_line"></span>
+              <span class="nav-lines"> </span>
+            </button>
+          </div>
+        </nav>
+        <div class="nav_line"></div>
+        <header class="bg_hero">
+          <div class="custom_container space_header">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center text-center"
+            >
+              <h1
+                class="lh_120 fs_4xl d-none d-md-block fw-semibold mb-0 mx_hdng ff_graphik"
+              >
+                The Actively Established Podcast Report
+                <span class="txt_hdng_clr">March 2024</span>
+              </h1>
+              <h1
+                class="lh_120 fs_4xl d-md-none fw-semibold mb-0 mx_hdng ff_graphik"
+              >
+                The Actively Established Podcast Report
+                <span class="txt_hdng_clr d-block txt_hdng mt-2"
+                  >March 2024</span
+                >
+              </h1>
+              <p
+                class="fs_sm clr_black fw-normal lh_150 mxw_para mt-2 pt-1 mt-md-0 mt-md-3 mb-0 ff_graphik"
+              >
+                An Actively Established Podcaster is a non-celebrity independent
+                interview-based host with 100+ episodes and a release cadence of
+                10 days or less.
+              </p>
+              <div class="box_hdr">
+                <p
+                  id="counter"
+                  class="fw-semibold counter_mxw fs_3xl lh_120 text-white mb-0 ff_graphik"
+                >
+                  38,965
+                </p>
+                <span class="mx-3">
+                  <svg
+                    width="2"
+                    height="35"
+                    viewBox="0 0 2 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.5"
+                      y="0.808105"
+                      width="1"
+                      height="34"
+                      fill="url(#paint0_linear_967_4724)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_967_4724"
+                        x1="1"
+                        y1="0.808105"
+                        x2="1"
+                        y2="34.8081"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#D9D9D9" stop-opacity="0" />
+                        <stop offset="0.495" stop-color="#D9D9D9" />
+                        <stop
+                          offset="1"
+                          stop-color="#D9D9D9"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <p
+                  class="mb-0 fw-semibold fs_md lh_120 ff_graphik text-white mxw_para_cntr"
+                >
+                  Total AE Podcasters
+                </p>
+              </div>
             </div>
-        </section>
-        <!-------------- chances section ---------------->
-        <section class="bg-white position-relative">
-            <img class="position-absolute chances_left_vector d-md-block d-none"
-                src="assets/images/webp/chances_left_vector.webp" alt="chances_left_vector">
-
-            <div class="custom_container position-relative z-1">
-                <div class="row align-items-center justify-content-between">
-
-                    <div class="col-lg-6">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-
-                        <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 chances_heading fw-semibold mt-3">Chances of
-                            "Making It" as a Podcaster</h3>
-                        <p class="clr_grey poadcasting_para fw-normal ff_graphik mt-3 mb-4 fs_sm lh_150">On average, it
-                            takes 2 years and 100 episodes released to begin yielding results from podcasting.
-                            Unfortunately, few
-                            stick with it long enough to experience the reward.</p>
-
-                        <table class="radius_4 mt-3 chances_table">
-
-                            <tr class="w-100 ">
-                                <th
-                                    class="text-white ff_graphik poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left p-2">
-                                    Episode Milestone
-                                </th>
-                                <th
-                                    class="fs_xsm ff_graphik fw-normal text-white poadcast_group_th bg_episode text-center p-2">
-                                    Likelihood of Success
-                                </th>
-                                <th
-                                    class="fs_xsm ff_graphik fw-normal text-white poadcast_group_th bg_episode text-center radius_4_right p-2">
-                                    Chances of Failure
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <td
-                                    class="text-center fw-normal ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 fs_xsm">
-                                    8 Episodes</td>
-                                <td
-                                    class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    45.95%</td>
-                                <td
-                                    class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    4.65%</td>
-                            </tr>
-
-                            <tr>
-                                <td
-                                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
-                                    50 Episodes
-                                </td>
-                                <td
-                                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    9.95%</td>
-                                <td
-                                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    34.56%</td>
-                            </tr>
-
-                            <tr>
-                                <td
-                                    class="text-center fw-semibold ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 fs_xsm">
-                                    100 <span class="d-block d-sm-inline">Episodes</span>
-                                </td>
-                                <td
-                                    class="text-center fw-semibold ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    6.86%</td>
-                                <td
-                                    class="text-center fw-semibold ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    53.55%</td>
-                            </tr>
-
-                            <tr>
-                                <td
-                                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
-                                    200 <span class="d-block d-sm-inline">Episodes</span>
-                                </td>
-                                <td
-                                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    2.19%</td>
-                                <td
-                                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                                    46.55%</td>
-                            </tr>
-
-                            <div class="border_l_radius">
-                                <tr class="bottom_l_radius">
-                                    <td
-                                        class="text-center fw-normal ff_graphik py-2 td_clr td_border border-top-0 bottom_l_radius fs_xsm">
-                                        300 <span class="d-sm-inline d-block"> Episodes</span>
-                                    </td>
-                                    <td
-                                        class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                                        3.68%</td>
-                                    <td
-                                        class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                                        5.34%</td>
-                                </tr>
-                            </div>
-                        </table>
-
-                        <div class="d-flex align-items-center">
-                            <p class="mb-0 mt-4 pt-2 fw-bold fs_sm lh_150 gradient_text ff_graphik gradient_para_width">
-                                <span class="d-block d-sm-inline">You're 4x more likely to succeed with</span> a
-                                business
-                                than a podcast. If you're
-                                podcasting to make money, stop!
-                                <span class="d-block">Go start a business instead.</span>
-                            </p>
-                            <img class="arrow_width" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector">
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-6">
-                        <div class="d-flex justify-content-center">
-                            <img class="w-100 podcasting_chart" src="./assets/images/svg/chances_chart.svg"
-                                alt="chances_chart">
-                        </div>
-                    </div>
-
-                </div>
+          </div>
+        </header>
+      </section>
+      <!-----------Overall---------------->
+      <section>
+        <div class="custom_container space_overall position-relative z-3">
+          <img
+            class="position-absolute d-none d-lg-block layer_img z-n1"
+            src="./assets/images/svg/layer_header.svg"
+            alt="layer-img"
+          />
+          <img
+            class="position-absolute d-lg-none layer_img z-n1"
+            src="./assets/images/svg/layer_header_sm.svg"
+            alt="layer-img"
+          />
+          <div
+            class="row card_space justify-content-center align-items-center column-gap-md-2 column-gap-lg-0"
+          >
+            <div
+              class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex"
+            >
+              <div class="card_main">
+                <span>
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="32"
+                      fill="url(#paint0_linear_967_5223)"
+                    />
+                    <g clip-path="url(#clip0_967_5223)">
+                      <path
+                        d="M24.8971 17.6699C26.91 16.7157 28.6339 16.2784 31.2249 16.0597C31.452 16.0398 32.061 16.0498 32.5668 16.0696C35.4262 16.1989 38.203 17.004 40.3913 18.3458C40.7733 18.5844 41.083 18.7534 41.083 18.7136C41.083 18.6739 41.1449 18.7136 41.2171 18.7931C41.2791 18.8726 41.6713 19.1907 42.0636 19.4989C45.0055 21.785 47.0288 25.085 47.803 28.872C47.9681 29.7169 47.9888 29.9257 47.9888 31.3272C47.9991 33.2654 47.7926 34.5178 47.1526 36.3766C46.812 37.3805 45.9965 39.0404 45.5113 39.7263C45.3462 39.9549 45.212 40.1835 45.212 40.2332C45.212 40.2928 45.181 40.3525 45.1397 40.3723C45.0881 40.3823 44.8713 40.6208 44.6442 40.8992C42.6107 43.3742 39.9268 45.1732 36.7578 46.1672C35.8494 46.4555 35.8081 46.4654 35.8804 46.2766C35.9113 46.197 35.8804 46.1076 35.8184 46.0678C35.7359 46.0181 35.7255 45.7895 35.7668 45.3323C35.8494 44.4377 35.9113 44.2091 36.0249 44.2787C36.0868 44.3085 36.1281 44.2687 36.1281 44.1793C36.1281 44.0799 36.3346 43.9407 36.6752 43.8115C36.9642 43.6922 37.7488 43.3443 38.3991 43.0362C39.0494 42.7281 39.7513 42.4001 39.9475 42.3205C40.4636 42.1019 41.8055 40.9588 42.4868 40.1736C45.5526 36.6251 46.523 32.351 45.3152 27.7787C45.0365 26.7151 43.9423 24.5979 43.1371 23.5543C42.3939 22.6001 40.6597 21.129 40.6597 21.129C33.1102 16.1024 25.3931 19.1973 22.8739 21.5564C22.8739 21.5564 22.3681 21.8446 21.821 22.4311C20.8094 23.5245 20.252 24.3296 19.5604 25.6913C18.8275 27.1127 18.4765 28.2657 18.27 29.8561C18.0842 31.2874 18.2288 33.7723 18.5488 34.5874C18.5797 34.6669 18.621 34.8558 18.6417 35.0049C18.7242 35.5714 19.7875 37.9172 20.0455 38.0763C20.0971 38.1061 20.1488 38.1757 20.1384 38.2254C20.1281 38.4043 20.252 38.7621 20.3242 38.7621C20.3655 38.7621 20.6236 39.0603 20.9126 39.4281C21.563 40.2928 22.7707 41.4657 23.6894 42.1217C24.6288 42.7976 26.301 43.6723 27.1475 43.9407C27.5191 44.06 27.8288 44.1693 27.8494 44.1793C27.87 44.1892 27.9423 44.7061 28.0146 45.3124L28.1384 46.4257L27.8804 46.3561C27.7359 46.3163 27.5294 46.2865 27.4365 46.2766C27.3333 46.2766 27.2507 46.2368 27.2507 46.197C27.2507 46.1573 27.1991 46.1175 27.1371 46.1175C27.0752 46.1175 26.5591 45.9386 25.981 45.7199C23.9681 44.9645 21.9759 43.6425 20.3655 42.0025C19.4778 41.088 18.3423 39.6269 18.0017 38.9311C17.8984 38.7323 17.7746 38.5633 17.7333 38.5633C17.6817 38.5633 17.661 38.5236 17.7023 38.4739C17.7333 38.4242 17.692 38.3148 17.6094 38.2353C17.5268 38.1558 17.4855 38.0663 17.5165 38.0266C17.5578 37.9967 17.5268 37.9669 17.4649 37.9669C17.3926 37.9669 17.3513 37.9371 17.3617 37.8874C17.372 37.8476 17.2791 37.5495 17.1449 37.2214C16.8146 36.3865 16.4636 35.2534 16.2468 34.2793C15.9681 33.0567 15.9681 30.0449 16.2571 28.6733C16.3707 28.1266 16.4636 27.6296 16.4636 27.5799C16.4636 27.5202 16.4842 27.4606 16.5152 27.4308C16.5462 27.401 16.701 26.9736 16.8662 26.4865C17.0313 25.9895 17.3823 25.1645 17.6507 24.6476C17.9191 24.1308 18.1565 23.6537 18.1771 23.604C18.1978 23.5443 18.27 23.435 18.332 23.3555C18.4042 23.276 18.8068 22.7492 19.2404 22.2025C20.6752 20.3437 22.7294 18.6937 24.8971 17.6699Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M27.6132 23.3057C27.6752 23.2361 27.9539 23.0473 28.2326 22.8882C29.5162 22.4332 32.8307 21.8279 35.8197 23.0473C35.8197 23.097 35.9952 23.2162 36.2119 23.3057C36.4184 23.4051 36.8829 23.6735 37.2442 23.912C37.6055 24.1506 37.9255 24.3494 37.9668 24.3593C38.1319 24.3792 39.701 26.1385 40.0623 26.715C40.599 27.5798 41.0532 28.6632 41.2494 29.5379C41.4868 30.6313 41.4661 32.6491 41.1977 33.6331C40.9397 34.5774 40.2171 36.0584 39.7113 36.6945C39.5048 36.9629 39.35 37.1717 39.381 37.1717C39.4636 37.1717 37.8842 38.6427 37.6365 38.7918C37.5229 38.8614 37.2545 39.0204 37.0481 39.1397L36.6661 39.3584V38.6924C36.6558 38.3147 36.5939 37.8078 36.5113 37.5593L36.3668 37.1021L36.8519 36.6945C37.1203 36.4659 37.5848 35.9789 37.8636 35.6111C38.359 34.9849 39.0094 33.6331 39.061 33.1262C39.0816 32.997 39.1229 32.8677 39.1539 32.828C39.1952 32.7982 39.2261 32.1819 39.2261 31.4762C39.2261 30.3132 39.1952 30.1144 38.9165 29.2894C38.741 28.7924 38.4416 28.1364 38.2455 27.8283C37.781 27.0927 36.759 26.0888 35.9436 25.572C34.2197 24.4686 31.7836 24.1605 29.8119 24.7768C29.0584 25.0253 28.3977 25.3036 28.2842 25.4328C28.2532 25.4626 28.0984 25.562 27.9229 25.6415C27.4274 25.8801 26.1887 27.1325 25.7861 27.7985C25.1668 28.8123 24.7539 30.1144 24.7436 31.0587C24.7436 32.0825 24.8261 32.8479 25.0119 33.3945C25.27 34.2096 25.6932 35.0843 25.8274 35.0843C25.879 35.0843 25.8997 35.1241 25.8687 35.1638C25.7965 35.2831 26.6429 36.287 27.1797 36.7244L27.6339 37.0921L27.4894 37.5593C27.4171 37.8078 27.3448 38.3147 27.3345 38.6825C27.3345 39.3385 27.3242 39.3485 27.1074 39.2391C25.8171 38.5831 24.31 36.9729 23.5255 35.4322C22.8029 34.0009 22.5861 33.1361 22.5861 31.5557C22.5758 29.6473 22.9681 28.2756 23.9694 26.6653C24.4648 25.8602 25.8377 24.4985 26.7358 23.9319C27.159 23.6536 27.5616 23.3753 27.6132 23.3057Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M30.5029 28.9715C29.8217 29.389 29.481 29.7866 29.2126 30.4823C28.4797 32.3411 29.9249 34.3191 31.9997 34.3191C33.5997 34.3191 34.8591 33.186 35.0036 31.6055C35.0965 30.6911 34.4255 29.5281 33.5068 28.9715C33.0423 28.7031 32.9184 28.6733 32.01 28.6634C31.0604 28.6435 30.9984 28.6534 30.5029 28.9715Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M29.1513 37.9371C29.4403 36.9928 30.359 36.1877 31.4119 35.979C33.0223 35.6609 34.7048 36.7841 34.9526 38.3247C34.9835 38.5633 34.9423 39.3883 34.839 40.1537C34.7461 40.929 34.6945 41.6247 34.7255 41.6943C34.7564 41.7738 34.7358 41.8633 34.6945 41.8832C34.6532 41.913 34.581 42.3106 34.5397 42.7579C34.4158 44.3085 34.0545 47.1612 33.9616 47.4594C33.8584 47.7576 33.4971 48.185 33.0532 48.5229C32.667 48.7857 32.1434 48.7019 31.5152 48.7019C31.2055 48.7019 30.5758 48.3043 30.3074 47.9266C30.1319 47.6781 29.9977 47.3103 29.9255 46.9028C29.7913 46.0181 29.3371 42.072 29.2648 41.0582C29.2339 40.601 29.1823 40.1835 29.1513 40.1338C28.9964 39.9052 28.9964 38.4341 29.1513 37.9371Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_967_5223"
+                        x1="43.2676"
+                        y1="65.7712"
+                        x2="29.847"
+                        y2="34.8908"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#6F69F2" />
+                        <stop offset="1" stop-color="#269FFB" />
+                      </linearGradient>
+                      <clipPath id="clip0_967_5223">
+                        <rect
+                          width="32"
+                          height="33"
+                          fill="white"
+                          transform="translate(16 16)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <p
+                  class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik"
+                >
+                  Overall Industry Buzz
+                </p>
+                <p
+                  class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik"
+                >
+                  HIGH
+                </p>
+                <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                  “Podcasts” are trending at 85% on search engines. (↓1%)
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- Activity Established Podcast -->
-        <section class="bg-white activity_establish_sec">
-            <div class="custom_container position-relative">
-                <img class="activity_blue_ellipse position-absolute aep_blue_elipse d-xl-block d-none "
-                    src="./assets/images/png/activity_blue_ellipse.png" alt="activity_blue_ellipse">
-                <img class="position-absolute aep_lines_vec d-xl-block d-none"
-                    src="./assets/images/png/pc_lines_vec.png" alt="lines-vec">
-                <div class="row justify-content-between flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 mt-lg-0 mt-4 pt-lg-0 pt-3">
-                        <div class="d-flex justify-content-center pe-lg-3">
-                            <img class="w-100 activity_establish_chart  aep_chart"
-                                src="./assets/images/png/activity_establish_podcast.png" alt="possible_future">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 ">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-
-                        <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 activity_heading fw-semibold mt-3">Actively
-                            Established Podcasts</h3>
-                        <p class="clr_grey less_than fw-normal ff_graphik my-3 fs_sm lh_150">Less than 10% of
-                            independent podcasters are in the Actively Established category, but, they hold over 90% of
-                            the
-                            influence in the podcasting industry!</p>
-
-                        <div class="d-flex align-items-center justiy-content-center pt-3 gap-3">
-                            <div class="total_box d-flex flex-column justify-content-center">
-                                <div class="px-4 py-3">
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">Total</p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">38,965</p>
-                                </div>
-                            </div>
-                            <div class="active_box chance_3">
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">Change</p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap">+ 3.39%
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mt-4 pt-1 ">
-                            <img src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector">
-                            <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2 ">Only 1.31% of all
-                                podcasts are part <br>
-                                of the Actively Established category!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center align-items-center d-flex"
+            >
+              <div class="card_main">
+                <span>
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="32"
+                      fill="url(#paint0_linear_967_5237)"
+                    />
+                    <g clip-path="url(#clip0_967_5237)">
+                      <path
+                        d="M33.2918 40.6415L33.0833 40.6766V40.888V42.3333C33.0833 42.9313 32.5979 43.4167 32 43.4167C31.4021 43.4167 30.9167 42.9313 30.9167 42.3333V40.888V40.6766L30.7082 40.6415C27.0477 40.0254 24.25 36.8331 24.25 33C24.25 32.4021 24.7354 31.9167 25.3333 31.9167C25.9313 31.9167 26.4167 32.4021 26.4167 33C26.4167 36.0794 28.9206 38.5833 32 38.5833C35.0794 38.5833 37.5833 36.0794 37.5833 33C37.5833 32.4021 38.0687 31.9167 38.6667 31.9167C39.2646 31.9167 39.75 32.4021 39.75 33C39.75 36.8331 36.9523 40.0254 33.2918 40.6415ZM31.5922 23.9494L31.5922 23.9494C33.0212 23.7168 34.2655 24.736 34.4039 26.0833H33.3333C32.4593 26.0833 31.75 26.7926 31.75 27.6667C31.75 28.5407 32.4593 29.25 33.3333 29.25H34.4167V30.0833H33.3333C32.4593 30.0833 31.75 30.7926 31.75 31.6667C31.75 32.5407 32.4593 33.25 33.3333 33.25H34.4039C34.2655 34.597 33.0214 35.6154 31.5922 35.3839C30.4201 35.1931 29.5833 34.0828 29.5833 32.8573V26.476C29.5833 25.2518 30.4201 24.1402 31.5922 23.9494ZM16.25 33C16.25 24.3154 23.3154 17.25 32 17.25C40.6846 17.25 47.75 24.3154 47.75 33C47.75 41.6846 40.6846 48.75 32 48.75C23.3154 48.75 16.25 41.6846 16.25 33ZM18.4167 33C18.4167 40.4901 24.5099 46.5833 32 46.5833C39.4901 46.5833 45.5833 40.4901 45.5833 33C45.5833 25.5099 39.4901 19.4167 32 19.4167C24.5099 19.4167 18.4167 25.5099 18.4167 33Z"
+                        fill="white"
+                        stroke="white"
+                        stroke-width="0.5"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_967_5237"
+                        x1="43.2676"
+                        y1="65.7712"
+                        x2="29.847"
+                        y2="34.8908"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#6F69F2" />
+                        <stop offset="1" stop-color="#269FFB" />
+                      </linearGradient>
+                      <clipPath id="clip0_967_5237">
+                        <rect
+                          width="32"
+                          height="32"
+                          fill="white"
+                          transform="translate(16 17)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <p
+                  class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik"
+                >
+                  Podcasters Health
+                </p>
+                <p class="mb-0 clr_red fs_xsm fw-semibold lh_150 ff_graphik">
+                  LOW
+                </p>
+                <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                  Extremely high failure rate with limited
+                  <span class="txt_clr_para">clear success paths.</span>
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- ------ podcasting guesting -- -->
-        <section class="bg-white">
-            <div class="custom_container pt-lg-5">
-
-                <div class="row poadcasting_p align-items-center">
-
-                    <div class="col-lg-7">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-
-                        <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3">
-                            Podcast
-                            Guesting Health (BETA) <span><img src="./assets/images/svg/warning_symbol.svg"
-                                    alt="warning_symbol"></span></h2>
-                        <p class="clr_grey scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150">Serious podcast
-                            guests
-                            and
-                            hosts exclusively use <a class="clr_purple fw-medium" href="#">PodMatch.com </a>
-                            to connect for interviews and to streamline the administrative and booking process.</p>
-
-                        <div class="d-flex align-items-center justiy-content-center pt-3 gap_32">
-                            <div class="seeking_guest_box p-3 w_224">
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">Podcasts
-                                    <br class="d-sm-none">
-                                    Seeking Guests
-                                </p>
-                                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0">
-                                    114,575
-                                </p>
-                            </div>
-
-                            <div class="seeking_guest_box p-3">
-                                <div>
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
-                                        Guests
-                                        Seeking <br class="d-sm-none">
-                                        Podcasts</p>
-                                    <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">2,920,750
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="d-sm-flex align-items-center d-none">
-                            <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">Every podcast has an
-                                average of <span class="people"> 25 people</span> <br> reaching out every day requesting
-                                to be a guest!
-                            </p>
-                            <img class="ms-sm-2 " src="/assets/images/svg/poadcast_guesting_vec.svg" alt="arrow_vector">
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-5">
-                        <div class="d-flex align-items-center justify-content-center bg-white mt_lg_166">
-                            <div class="position-relative"><img class="w-100 podcast_guesting_circle"
-                                    src="./assets/images/png/poodcast_gathering_circle.png" alt="podcasting_chart">
-                                <div
-                                    class="d-flex justify-content-center align-items-center host_box bg-white top-0 position-absolute hosts">
-                                    <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12">Hosts</p>
-                                </div>
-                                <div
-                                    class="d-flex justify-content-center align-items-center host_box bg-white position-absolute bottom-0 guests">
-                                    <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12">Guests</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div
+              class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center align-items-center d-flex"
+            >
+              <div class="card_main">
+                <span>
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="32"
+                      fill="url(#paint0_linear_967_5247)"
+                    />
+                    <path
+                      d="M43.7496 33.5654V33.7285L43.8989 33.7942C45.2449 34.3869 46.3464 35.424 47.0191 36.7318C47.6918 38.0397 47.8948 39.539 47.5941 40.9786C47.2935 42.4183 46.5074 43.711 45.3674 44.6402C44.2276 45.5694 42.8033 46.0789 41.3328 46.0834C40.6919 46.0834 40.0773 45.8288 39.6241 45.3756C39.1709 44.9224 38.9163 44.3077 38.9163 43.6667V35.6667C38.9163 35.0258 39.1709 34.4111 39.6241 33.9579C40.0773 33.5047 40.692 33.2501 41.3329 33.2501H41.5829V33.0001V31.6667C41.5829 29.1251 40.5733 26.6875 38.776 24.8903C36.9788 23.0931 34.5413 22.0834 31.9996 22.0834C29.4579 22.0834 27.0204 23.0931 25.2232 24.8903C23.4259 26.6875 22.4163 29.1251 22.4163 31.6667V33.0001V33.2501H22.6663C23.3072 33.2501 23.9219 33.5047 24.3751 33.9579C24.8283 34.4111 25.0829 35.0258 25.0829 35.6667V43.6667C25.0829 44.3077 24.8283 44.9224 24.3751 45.3756C23.9219 45.8288 23.3073 46.0834 22.6664 46.0834C21.1959 46.0789 19.7716 45.5694 18.6318 44.6402C17.4919 43.711 16.7058 42.4183 16.4051 40.9786C16.1044 39.539 16.3074 38.0397 16.9801 36.7318C17.6528 35.424 18.7543 34.3869 20.1004 33.7942L20.2496 33.7285V33.5654V31.6667C20.2496 28.5505 21.4876 25.5618 23.6911 23.3582C25.8947 21.1547 28.8833 19.9167 31.9996 19.9167C35.1159 19.9167 38.1046 21.1547 40.3081 23.3582C42.5117 25.5618 43.7496 28.5505 43.7496 31.6667V33.5654ZM22.6663 43.9167H22.9163V43.6667V35.6667V35.4167H22.6663C21.5391 35.4167 20.4581 35.8645 19.6611 36.6615C18.864 37.4586 18.4163 38.5396 18.4163 39.6667C18.4163 40.7939 18.864 41.8749 19.6611 42.672C20.4581 43.469 21.5391 43.9167 22.6663 43.9167ZM41.0829 43.6667V43.9167H41.3329C42.4601 43.9167 43.5411 43.469 44.3381 42.672C45.1352 41.8749 45.5829 40.7939 45.5829 39.6667C45.5829 38.5396 45.1352 37.4586 44.3381 36.6615C43.5411 35.8645 42.4601 35.4167 41.3329 35.4167H41.0829V35.6667V43.6667Z"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="0.5"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_967_5247"
+                        x1="43.2676"
+                        y1="65.7712"
+                        x2="29.847"
+                        y2="34.8908"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#6F69F2" />
+                        <stop offset="1" stop-color="#269FFB" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <p
+                  class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik"
+                >
+                  Listenership Health
+                </p>
+                <p
+                  class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik"
+                >
+                  HIGH
+                </p>
+                <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                  504.9M podcast listeners estimated for 2024. (↑8.7%)
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- -----podcast compare ------>
-        <section class="podcast_compare_section">
-            <div class="custom_container">
-                <div class="d-flex flex-lg-row flex-column-reverse">
-
-                    <img class="podcast_graph mx-auto ms-lg-0 w-100 me-lg-1 mt-4 mt-lg-0 mb-1 mb-lg-0"
-                        src="./assets/images/png/podcast_compare_graph.png" alt="podcast_compare_graph">
-
-                    <div
-                        class="d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3   your_podcast_compared">
-                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 d-sm-none">
-                            <option value="March">March 2024</option>
-                            <option value="March">Feb 2024</option>
-                            <option value="March">Jan 2024</option>
-                            <option value="March">Dec 2023</option>
-                        </select>
-                        <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3 mt-sm-0">Your Podcast
-                            Compared to Industry
-                            Averages <span> <img src="./assets/images/svg/warning_symbol.svg"
-                                    alt="warning_symbol"></span>
-                        </h2>
-
-                        <p class="clr_grey ff_graphik fs_sm fw-normal mb-1 fw-light pb-3">A podcast listener is 100x
-                            more
-                            valuable
-                            than an
-                            engagement
-                            on social media. Podcasting is
-                            comparable to public
-                            speaking. Hosts are speakers, listeners are attendees.</p>
-                        <table class="radius_4 mt-3">
-                            <tr class="w-100 ">
-                                <th
-                                    class="text-white poadcast_group_th bg_episode podcast_group fw-semibold fs_xsm text-center radius_4_left p-2">
-                                    Podcasters <br class="d-sm-none"> Group
-                                </th>
-                                <th
-                                    class="fs_xsm fw-semibold text-white poadcast_group_th bg_episode text-center fw-semibold radius_4_right p-2">
-                                    Episode Downloads <span class="fw-normal">(First 7 Days) </span>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 ">
-                                    Top 1%</td>
-                                <td
-                                    class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0">
-                                    4,896</td>
-                            </tr>
-                            <tr>
-                                <td
-                                    class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 ">
-                                    Top 5%
-                                </td>
-                                <td
-                                    class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0">
-                                    1,119
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 ">
-                                    Top 10%
-                                </td>
-                                <td
-                                    class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0">
-                                    480</td>
-                            </tr>
-                            <tr>
-                                <td
-                                    class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 ">
-                                    Top 25%
-                                </td>
-                                <td
-                                    class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0">
-                                    119</td>
-                            </tr>
-                            <div class="border_l_radius">
-                                <tr class="bottom_l_radius">
-                                    <td
-                                        class="text-center ff_graphik py-2 td_clr td_border border-top-0 bottom_l_radius ">
-                                        Top 50%
-                                    </td>
-                                    <td
-                                        class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius">
-                                        31</td>
-                                </tr>
-                            </div>
-                        </table>
-                        <div class="d-flex align-items-center pt-1 mt-4">
-                            <img src="./assets/images/svg/data_provided_arrow.svg" alt="data_provided_arrow">
-                            <p class="data_provided_by ff_graphik fs_ fw-bold mb-0 lh_150 ps-2 ms-1 fs_sm">Data provided
-                                by
-                            </p>
-                            <img class="ms-sm-2 ms-3 buzzsuppot" src="./assets/images/svg/buzzspport.svg"
-                                alt="buzzspport">
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex"
+            >
+              <div class="card_main">
+                <span>
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="32"
+                      fill="url(#paint0_linear_967_5257)"
+                    />
+                    <g clip-path="url(#clip0_967_5257)">
+                      <path
+                        d="M32.095 33.0174C31.7369 32.6611 31.159 32.662 30.8015 33.0142L25.8578 37.6141C25.1507 38.2711 24.0447 38.2337 23.3843 37.5243C22.7266 36.8176 22.7672 35.7091 23.4743 35.051C23.4743 35.051 23.4743 35.051 23.4743 35.0509L28.3689 30.499L28.369 30.4991L28.3754 30.4927C30.0024 28.8657 32.7056 28.8206 34.4372 30.4171L34.4486 30.4276L34.4613 30.4367L34.6067 30.2333L34.4613 30.4367L34.4614 30.4367L34.4616 30.4369L34.4625 30.4375L34.4659 30.44L34.4795 30.4497L34.531 30.4865L34.7156 30.6187C34.8687 30.7285 35.0737 30.8757 35.2811 31.0253C35.4886 31.1751 35.6981 31.3269 35.8604 31.4462C35.9417 31.5059 36.0105 31.5569 36.0611 31.5951C36.0936 31.6197 36.1131 31.6351 36.1233 31.643C36.1317 31.6496 36.1337 31.6512 36.1312 31.6487L36.1317 31.6492C36.49 32.0057 37.07 32.0066 37.4279 31.6496C37.4282 31.6493 37.4285 31.649 37.4288 31.6487L41.3057 27.8451L41.7425 27.4166H41.1307H39.3355C37.0345 27.3761 37.0401 23.957 39.3355 23.9166H43.3333C45.7685 23.9166 47.75 25.8993 47.75 28.3346V32.3324C47.7095 34.6334 44.2904 34.6279 44.25 32.3324V30.4559V29.8606L43.825 30.2775L39.8916 34.1348L39.8899 34.1365C38.2256 35.8008 35.5224 35.8448 33.7893 34.2493L33.7779 34.2389L33.7654 34.2299L33.62 34.4333L33.7653 34.2299L33.7653 34.2298L33.7651 34.2297L33.7642 34.229L33.7607 34.2266L33.7472 34.2169L33.6957 34.18L33.5111 34.0478C33.358 33.938 33.153 33.7908 32.9456 33.6412C32.7381 33.4915 32.5286 33.3396 32.3662 33.2204C32.2849 33.1607 32.2162 33.1097 32.1656 33.0714C32.1331 33.0468 32.1136 33.0315 32.1034 33.0235C32.0949 33.0169 32.093 33.0154 32.0954 33.0178L32.095 33.0174ZM47.75 46.9999C47.75 47.9672 46.9673 48.7499 46 48.7499H20.6667C18.2314 48.7499 16.25 46.7685 16.25 44.3333V19.0021C16.2904 16.7067 19.7095 16.7011 19.75 19.0021V44.3333C19.75 44.8393 20.1606 45.2499 20.6667 45.2499H46C46.9673 45.2499 47.75 46.0327 47.75 46.9999Z"
+                        fill="white"
+                        stroke="#6F69F2"
+                        stroke-width="0.5"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_967_5257"
+                        x1="43.2676"
+                        y1="65.7712"
+                        x2="29.847"
+                        y2="34.8908"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#6F69F2" />
+                        <stop offset="1" stop-color="#269FFB" />
+                      </linearGradient>
+                      <clipPath id="clip0_967_5257">
+                        <rect
+                          width="32"
+                          height="32"
+                          fill="white"
+                          transform="translate(16 17)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <p
+                  class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik"
+                >
+                  Podcasting Opportunity
+                </p>
+                <p
+                  class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik"
+                >
+                  VERY HIGH
+                </p>
+                <p class="ff_graphik mb-0 mt-3 fs_sm fw-normal lh_110">
+                  There has never been a better time to start a podcast.
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- ---------take quiz --- -->
-        <section class="take_quiz">
-            <div class="custom_container">
-                <div class="d-flex flex-lg-row align-items-center flex-column-reverse justify-content-between">
-                    <div
-                        class="d-flex flex-column align-items-center align-items-lg-start  mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0">
-                        <h2 class="ff_graphik fw-semibold text-lg-start text-center fs_4xl text-white mb-0 mb-3">Take
-                            The
-                            Quiz</h2>
-                        <p
-                            class="ff_graphik text-white text-lg-start text-center lh_150 did_you_know fs_sm fw-medium pb-4">
-                            Did you know it takes most
-                            podcasters 2 years
-                            to achieve meaningful results with their podcast? Only
-                            6.8% of podcasters
-                            ever make it to that point! If you want to achieve your podcasting goals faster, take the
-                            quiz!
-                        </p>
-                        <div
-                            class="d-inlin-block transition_300  mb-lg-0 mb-1 d-flex justify-content-center align-items-center bg-white start_btn start_btn_hover">
-                            <button
-                                class="ff_graphik transition_300 mx-lg-0 mx-auto  start_btn start_btn_clr w-100 fs_sm fw-semibold border-0 border-1 border-white bg-white">
-                                Start Now
-                            </button>
-                        </div>
-                    </div>
-                    <div class="ms-lg-4 ps-lg-1  mt-1 mt-lg-0"><img class="laptop w-100"
-                            src="./assets/images/webp/laptop.webp" alt="laptop"></div>
-                </div>
-            </div>
-        </section>
-        <!-- ---------Podcast Hostig Provider --------------- -->
-        <section class="ph_provider_sec">
-            <div class="custom_container">
-                <div class="d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="ff_graphik mb-0 fw-semibold  fs_4xl text-center">
-                        Podcast Hosting Providers Ranked by Their Ability to
-                        Serve/Support Independent Podcasters
-                    </h2>
-                    <p class="looking_switch ff_graphik text-center pt-3 fw-normal clr_darkgrey">Looking to switch
-                        hosting providers?
-                        <span class="here_choice fw-bold">Here’s our choice </span> for the best option + an exclusive
-                        discount to
-                        get started!
-                    </p>
-                </div>
-                <table class="mt-3 _table mx-auto">
-
-                    <tr class="">
-                        <th
-                            class="text-white ff_graphik rank poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left  p-2">
-                            Rank
-                        </th>
-                        <th
-                            class="fs_xsm ff_graphik fw-normal rank_change text-white poadcast_group_th bg_episode text-center p-2">
-                            Rank Change
-                        </th>
-                        <th
-                            class="fs_xsm ff_graphik fw-normal text-white hosting_provider poadcast_group_th bg_episode text-center p-2">
-                            Hosting Provider
-                        </th>
-                        <th
-                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
-                            All
-                        </th>
-                        <th
-                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2">
-                            Active
-                        </th>
-                        <th
-                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
-                            AE
-                        </th>
-                        <th
-                            class="fs_xsm ff_graphik fw-normal all text-white poadcast_group_th bg_episode text-center radius_4_right p-2">
-                            Score
-                        </th>
-                    </tr>
-                    <tr>
-                        <td
-                            class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
-                            1
-                        </td>
-                        <td
-                            class="text-center fw-medium  clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            0</td>
-                        <td
-                            class="text-center fw-semibold clr_grey ff_graphik  py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            captivate</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            8158</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            2732</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            824</td>
-                        <td
-                            class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            +463</td>
-                    </tr>
-                    <tr class="">
-                        <td
-                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm">
-                            2
-                        </td>
-                        <td
-                            class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            0</td>
-                        <td
-                            class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            buzzsprout</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            56256</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            17767</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            4076</td>
-                        <td
-                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            +447</td>
-                    </tr>
-                    <tr>
-                        <td
-                            class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
-                            3
-                        </td>
-                        <td
-                            class="text-center fw-medium  clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            0</td>
-                        <td
-                            class="text-center fw-semibold clr_grey ff_graphik  py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            redcircle</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            4304</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            1204</td>
-                        <td
-                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            490</td>
-                        <td
-                            class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                            +313</td>
-                    </tr>
-                    <tr class="">
-                        <td
-                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm">
-                            4
-                        </td>
-                        <td
-                            class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            0</td>
-                        <td
-                            class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            acast</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            9393</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            2909</td>
-                        <td
-                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            875</td>
-                        <td
-                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
-                            +156</td>
-                    </tr>
-                </table>
-
-            </div>
-        </section>
-        <!--------------Frequently-Asked-Questions ------------------->
-        <section class="position-relative z-3">
-            <img class="position-absolute d-none d-lg-block vctr_faq" src="./assets/images/svg/faq_vector.svg"
-                alt="side-vector">
-            <div class="custom_container space_faq">
-                <div class="d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="ff_graphik mb-0 fw-semibold fs_4xl clr_black mxw_faq text-center">
-                        Frequently Asked Questions About The AE Podcast Report
-                    </h2>
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="accordion space_accd" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header " id="headingOne">
-                                <button class="accordion-button d-flex align-items-start" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                    What does it mean to be an Actively Established podcaster?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What is this report exactly?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How are hosting providers scored?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    What to do with this hosting provider data?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    How did we get the data about podcasts?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    How did we get the data about podcast listenership?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Actively established podcasters are interview-based show hosts
-                                    with more than 100 episodes released without missing beyond a
-                                    percentage of episode releases along the way.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!------------------------------------ Impactful Interviews Card ---------------------------->
-        <div class="card_p position-relative z-1">
-            <div class="impactful_card mx-auto">
-
-                <h4 class="ff_graphik fw-semibold lh_130 text-center fs_xl text-white mb-0">Ready to Begin Getting
-                    Matched on
-                    Podmatch
-                </h4>
-
-                <h3 class="ff_graphik fw-semibold lh_130 text-center fs_4xl text-white mb-0 mt-1 mt-sm-0">So You Can
-                    Have
-                    More
-                    Impactful
-                    Interviews?
-                </h3>
-
-                <div class="d-flex justify-content-center pt-sm-1">
-                    <button class="mt-sm-3 mt-5 gradient_btn clr_offwhite ff_graphik fw-semibold fs_sm lh_150">See
-                        Matches</button>
-                </div>
-
-                <div class="mt-3 pt-1 d-flex align-items-center justify-content-center gap-2">
-                    <img class="w_24" src="./assets/images/webp/alert_icon.webp" alt="alert_icon">
-                    <p class="text-white ff_graphik fw-normal fs_sm lh_150 mb-0 ms-1">Try PodMatch Risk Free</p>
-                </div>
-
-            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- -------------------------------------------- footer ----------------------------------->
-        <footer class="footer_padding footer_bg position-relative">
-            <div class="max_width position-relative">
+      <!-------------- Podcasting Industry Totals ---------------->
+      <section class="bg-white position-relative">
+        <img
+          class="position-absolute podcasting_industries_ellipse d-md-block d-none"
+          src="assets/images/webp/podcasting_industries_left_ellipse.webp"
+          alt="left_ellipse"
+        />
 
-                <div class="custom_container">
-                    <div class="row pb-sm-5 pb-4">
+        <img
+          class="position-absolute your_podcast_right_vec d-md-block d-none"
+          src="assets/images/webp/your_podcast_right_vec.webp"
+          alt="your_podcast_right_vec"
+        />
 
-                        <div class="col-lg-4">
-                            <div
-                                class="d-flex align-items-center justify-content-sm-center justify-content-lg-start justify-content-start">
-                                <a href="/" class="footer_logo d-flex align-items-center justify-content-center"><img
-                                        class="footer_logo" src="assets/images/webp/footer_logo.webp"
-                                        alt="footer_logo"></a>
-                            </div>
+        <div class="custom_container position-relative z-1 pt-lg-4">
+          <div class="row poadcasting_p">
+            <div class="col-lg-6">
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
 
-                            <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                                <p
-                                    class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start">
-                                    PodMatch is the future standard for finding and booking podcast interviews. This is
-                                    the
-                                    quickest way to find guests for your podcast, and vice versa!</p>
-                            </div>
+              <h2
+                class="ff_graphik fs_5xl lh_120 clr_black mb-0 poadcasting_heading fw-semibold mt-3"
+              >
+                Podcasting Industry Totals
+              </h2>
+              <p
+                class="clr_grey poadcasting_para fw-normal ff_graphik my-sm-3 mt-3 mb-4 fs_sm lh_150"
+              >
+                <span class="d-block d-sm-inline"
+                  >Podcast listenership is rapidly increasing, but</span
+                >
+                <span class="d-block d-sm-inline"
+                  >the number of active podcasts has not changed,</span
+                >
+                making podcasting a non-saturated industry.
+              </p>
 
-                        </div>
-
-                        <div class="col-lg-8 pt-3 pt-sm-0">
-                            <div class="d-flex justify-content-between gap-sm-4 flex-wrap">
-
-                                <ul class="ps-0 mb-0">
-                                    <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Product</li>
-                                    <li class="footer_links"><a href="#feature"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Features</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Pricing</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"><span
-                                                class="d-sm-inline d-block">Best of</span> PodMatch</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="ps-0 mb-0">
-                                    <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Resources</li>
-
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Awards</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Live
-                                            Event</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"><span
-                                                class="d-block d-sm-inline">Visit</span>
-                                            Community</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Podcast</a>
-                                    </li>
-                                    <li class="footer_links"> <a href=""
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"><span
-                                                class="d-block d-sm-inline">Industry</span>
-                                            Report</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Quizzes</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Blog</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="ps-0 mb-0">
-                                    <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Company</li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">New
-                                            &
-                                            Updates</a></li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Legal</a>
-                                    </li>
-                                    <li class="footer_links"><a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Meet
-                                            the
-                                            Team</a></li>
-                                </ul>
-
-                                <ul class="ps-0 mb-0 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                                    <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Contact</li>
-
-                                    <li class="footer_links">
-                                        <a href="mailto:Team@PodMatch.com"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300">
-                                            <img class="w_24" src="./assets/images/webp/mail_symbol.webp"
-                                                alt="mail_symbol">
-                                            <span>Team@PodMatch.com</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="footer_links">
-                                        <a href="#"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300">
-                                            <img class="w_24" src="./assets/images/webp/help_icon.webp" alt="help_icon">
-                                            <span>Help</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="footer_links">
-                                        <a href="https://www.google.com/maps/place/7643+Gate+Pkwy+104+30,+Jacksonville,+FL+32256,+USA/@30.2415332,-81.5217774,17z/data=!3m1!4b1!4m5!3m4!1s0x88e5cab277f9880f:0x9f8965d8135a67f1!8m2!3d30.2415286!4d-81.5192025?entry=ttu"
-                                            target="_blank"
-                                            class="ff_graphik fw-normal fs_xsm lh_150 clr_grey d-flex align-items-start gap-2 links_hov transition_300">
-                                            <img class="w_24" src="./assets/images/webp/location_icon.webp"
-                                                alt="location_icon">
-                                            <span class="d-flex flex-column">
-                                                <span class="">Jacksonville, Florida 32256 USA</span>
-                                                <span class="d-block footer_links">7643 Gate Pkwy STE
-                                                    104-30</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div
-                        class="d-flex align-items-center justify-content-between flex-md-row flex-column-reverse mt-3 py-3 position-relative">
-                        <p class="mb-0 ff_graphik fw-normal lh_150 fs_xsm clr_grey mt-md-0 mt-4">&copy; <span
-                                id="currentYear"></span>
-                            PodMatch. All Rights reserved</p>
-
-                        <div class="d-flex align-items-center footer_icons_gap pb-2 pb-md-0">
-                            <a target="_blank" href="https://www.facebook.com/"><img class="footer_icon"
-                                    src="assets/images/webp/facebook.webp" alt="facebook"></a>
-                            <a target="_blank" href="https://twitter.com/?lang=en"><img class="footer_icon"
-                                    src="assets/images/webp/twitter.webp" alt="twitter"></a>
-                            <a target="_blank" href="https://web.telegram.org/k/"><img class="footer_icon"
-                                    src="assets/images/webp/telegram.webp" alt="telegram"></a>
-                            <a target="_blank" href="https://www.youtube.com/user/youtube"><img class="footer_icon"
-                                    src="assets/images/webp/youtube.webp" alt="youtube"></a>
-                            <a target="_blank" href="https://www.instagram.com/"><img class="footer_icon"
-                                    src="assets/images/webp/instagram.webp" alt="instagram"></a>
-                            <a target="_blank" href="https://www.linkedin.com/feed/"><img class="footer_icon"
-                                    src="assets/images/webp/linked_in.webp" alt="linked_in"></a>
-                            <a href="#tiktok"><img class="footer_icon" src="assets/images/webp/tiktok.webp"
-                                    alt="tiktok"></a>
-                        </div>
-
-                    </div>
-
+              <div
+                class="d-flex align-items-center justiy-content-center pt-sm-3 pt-1 gap_32"
+              >
+                <div class="active_box">
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2"
+                  >
+                    Active
+                  </p>
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                  >
+                    384,629
+                  </p>
+                  <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">
+                    (+3.39%)
+                  </p>
                 </div>
 
-                <div class="position-absolute footer_line"></div>
+                <div class="total_box">
+                  <div class="px-4 py-3">
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2"
+                    >
+                      Total
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                    >
+                      2,963,829
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120"
+                    >
+                      (+0.65%)
+                    </p>
+                  </div>
+                </div>
+              </div>
 
+              <div class="d-flex align-items-center">
+                <p
+                  class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik"
+                >
+                  Only 13.3% of the total podcasts
+                  <span class="d-sm-block d-inline">are active!</span>
+                </p>
+                <img
+                  class="ms-sm-2 ms-1"
+                  src="/assets/images/svg/arrow_vector.svg"
+                  alt="arrow_vector"
+                />
+              </div>
             </div>
-        </footer>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center justify-content-center">
+                <img
+                  class="w-100 podcasting_chart"
+                  src="./assets/images/svg/podcasting_chart.svg"
+                  alt="podcasting_chart"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------- possible future ---------------->
+      <section
+        class="bg-white d-lg-block d-none future_sec_p position-relative"
+      >
+        <img
+          class="position-absolute end-0 possible_future_ellipse"
+          src="assets/images/webp/possible_future_ellipse.webp"
+          alt="possible_future_ellipse"
+        />
 
+        <div class="custom_container position-relative z-1">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center justify-content-center">
+                <img
+                  class="w-100 possible_future_chart"
+                  src="./assets/images/svg/possible_future_chart.svg"
+                  alt="possible_future"
+                />
+              </div>
+            </div>
 
-        <!------------ Back to top button --------------->
-        <a id="button"></a>
+            <div class="col-lg-6">
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
+
+              <h3
+                class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3"
+              >
+                Possible Future Actively Established Podcasts
+              </h3>
+              <p
+                class="clr_grey poadcasting_para fw-normal ff_graphik my-3 fs_sm lh_150 pe-4"
+              >
+                Most interview-based independent podcasters fail to reach the
+                Actively Established status due to quitting prematurely or
+                inconsistent episode releases.
+              </p>
+
+              <div
+                class="d-flex align-items-center justiy-content-center pt-3 gap_32"
+              >
+                <div class="active_box p-3">
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2"
+                  >
+                    Active
+                  </p>
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                  >
+                    120,212
+                  </p>
+                  <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">
+                    (+5.64%)
+                  </p>
+                </div>
+                <div
+                  class="total_box d-flex flex-column justify-content-center"
+                >
+                  <div class="px-4 py-3">
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2"
+                    >
+                      Total
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                    >
+                      505,677
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120"
+                    >
+                      (+1.27%)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mt-4 pt-1">
+                <img
+                  src="/assets/images/svg/future_arrow_vector.svg"
+                  alt="future_arrow_vector"
+                />
+                <p
+                  class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2"
+                >
+                  Only 23.78% are active!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------- chances section ---------------->
+      <section class="bg-white position-relative">
+        <img
+          class="position-absolute chances_left_vector d-md-block d-none"
+          src="assets/images/webp/chances_left_vector.webp"
+          alt="chances_left_vector"
+        />
+
+        <div class="custom_container position-relative z-1">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6">
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
+
+              <h3
+                class="ff_graphik fs_4xl lh_120 clr_black mb-0 chances_heading fw-semibold mt-3"
+              >
+                Chances of "Making It" as a Podcaster
+              </h3>
+              <p
+                class="clr_grey poadcasting_para fw-normal ff_graphik mt-3 mb-4 fs_sm lh_150"
+              >
+                On average, it takes 2 years and 100 episodes released to begin
+                yielding results from podcasting. Unfortunately, few stick with
+                it long enough to experience the reward.
+              </p>
+
+              <table class="radius_4 mt-3 chances_table">
+                <tr class="w-100">
+                  <th
+                    class="text-white ff_graphik poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left p-2"
+                  >
+                    Episode Milestone
+                  </th>
+                  <th
+                    class="fs_xsm ff_graphik fw-normal text-white poadcast_group_th bg_episode text-center p-2"
+                  >
+                    Likelihood of Success
+                  </th>
+                  <th
+                    class="fs_xsm ff_graphik fw-normal text-white poadcast_group_th bg_episode text-center radius_4_right p-2"
+                  >
+                    Chances of Failure
+                  </th>
+                </tr>
+
+                <tr>
+                  <td
+                    class="text-center fw-normal ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 fs_xsm"
+                  >
+                    8 Episodes
+                  </td>
+                  <td
+                    class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    45.95%
+                  </td>
+                  <td
+                    class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    4.65%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm"
+                  >
+                    50 Episodes
+                  </td>
+                  <td
+                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    9.95%
+                  </td>
+                  <td
+                    class="text-center fw-normal td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    34.56%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    class="text-center fw-semibold ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0 fs_xsm"
+                  >
+                    100 <span class="d-block d-sm-inline">Episodes</span>
+                  </td>
+                  <td
+                    class="text-center fw-semibold ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    6.86%
+                  </td>
+                  <td
+                    class="text-center fw-semibold ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    53.55%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm"
+                  >
+                    200 <span class="d-block d-sm-inline">Episodes</span>
+                  </td>
+                  <td
+                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    2.19%
+                  </td>
+                  <td
+                    class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+                  >
+                    46.55%
+                  </td>
+                </tr>
+
+                <div class="border_l_radius">
+                  <tr class="bottom_l_radius">
+                    <td
+                      class="text-center fw-normal ff_graphik py-2 td_clr td_border border-top-0 bottom_l_radius fs_xsm"
+                    >
+                      300 <span class="d-sm-inline d-block"> Episodes</span>
+                    </td>
+                    <td
+                      class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm"
+                    >
+                      3.68%
+                    </td>
+                    <td
+                      class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm"
+                    >
+                      5.34%
+                    </td>
+                  </tr>
+                </div>
+              </table>
+
+              <div class="d-flex align-items-center">
+                <p
+                  class="mb-0 mt-4 pt-2 fw-bold fs_sm lh_150 gradient_text ff_graphik gradient_para_width"
+                >
+                  <span class="d-block d-sm-inline"
+                    >You're 4x more likely to succeed with</span
+                  >
+                  a business than a podcast. If you're podcasting to make money,
+                  stop!
+                  <span class="d-block">Go start a business instead.</span>
+                </p>
+                <img
+                  class="arrow_width"
+                  src="/assets/images/svg/arrow_vector.svg"
+                  alt="arrow_vector"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-center">
+                <img
+                  class="w-100 podcasting_chart"
+                  src="./assets/images/svg/chances_chart.svg"
+                  alt="chances_chart"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Activity Established Podcast -->
+      <section class="bg-white activity_establish_sec">
+        <div class="custom_container position-relative">
+          <img
+            class="activity_blue_ellipse position-absolute aep_blue_elipse d-xl-block d-none"
+            src="./assets/images/png/activity_blue_ellipse.png"
+            alt="activity_blue_ellipse"
+          />
+          <img
+            class="position-absolute aep_lines_vec d-xl-block d-none"
+            src="./assets/images/png/pc_lines_vec.png"
+            alt="lines-vec"
+          />
+          <div
+            class="row justify-content-between flex-column-reverse flex-lg-row"
+          >
+            <div class="col-lg-6 mt-lg-0 mt-4 pt-lg-0 pt-3">
+              <div class="d-flex justify-content-center pe-lg-3">
+                <img
+                  class="w-100 activity_establish_chart aep_chart"
+                  src="./assets/images/png/activity_establish_podcast.png"
+                  alt="possible_future"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
+
+              <h3
+                class="ff_graphik fs_4xl lh_120 clr_black mb-0 activity_heading fw-semibold mt-3"
+              >
+                Actively Established Podcasts
+              </h3>
+              <p
+                class="clr_grey less_than fw-normal ff_graphik my-3 fs_sm lh_150"
+              >
+                Less than 10% of independent podcasters are in the Actively
+                Established category, but, they hold over 90% of the influence
+                in the podcasting industry!
+              </p>
+
+              <div
+                class="d-flex align-items-center justiy-content-center pt-3 gap-3"
+              >
+                <div
+                  class="total_box d-flex flex-column justify-content-center"
+                >
+                  <div class="px-4 py-3">
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2"
+                    >
+                      Total
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                    >
+                      38,965
+                    </p>
+                  </div>
+                </div>
+                <div class="active_box chance_3">
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2"
+                  >
+                    Change
+                  </p>
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap"
+                  >
+                    + 3.39%
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mt-4 pt-1">
+                <img
+                  src="/assets/images/svg/future_arrow_vector.svg"
+                  alt="future_arrow_vector"
+                />
+                <p
+                  class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2"
+                >
+                  Only 1.31% of all podcasts are part <br />
+                  of the Actively Established category!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------ podcasting guesting -- -->
+      <section class="bg-white">
+        <div class="custom_container pt-lg-5">
+          <div class="row poadcasting_p align-items-center">
+            <div class="col-lg-7">
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
+
+              <h2
+                class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3"
+              >
+                Podcast Guesting Health (BETA)
+                <span
+                  ><img
+                    src="./assets/images/svg/warning_symbol.svg"
+                    alt="warning_symbol"
+                /></span>
+              </h2>
+              <p
+                class="clr_grey scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150"
+              >
+                Serious podcast guests and hosts exclusively use
+                <a class="clr_purple fw-medium" href="#">PodMatch.com </a> to
+                connect for interviews and to streamline the administrative and
+                booking process.
+              </p>
+
+              <div
+                class="d-flex align-items-center justiy-content-center pt-3 gap_32"
+              >
+                <div class="seeking_guest_box p-3 w_224">
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap"
+                  >
+                    Podcasts
+                    <br class="d-sm-none" />
+                    Seeking Guests
+                  </p>
+                  <p
+                    class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0"
+                  >
+                    114,575
+                  </p>
+                </div>
+
+                <div class="seeking_guest_box p-3">
+                  <div>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap"
+                    >
+                      Guests Seeking <br class="d-sm-none" />
+                      Podcasts
+                    </p>
+                    <p
+                      class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1"
+                    >
+                      2,920,750
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-sm-flex align-items-center d-none">
+                <p
+                  class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik"
+                >
+                  Every podcast has an average of
+                  <span class="people"> 25 people</span> <br />
+                  reaching out every day requesting to be a guest!
+                </p>
+                <img
+                  class="ms-sm-2"
+                  src="/assets/images/svg/poadcast_guesting_vec.svg"
+                  alt="arrow_vector"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div
+                class="d-flex align-items-center justify-content-center bg-white mt_lg_166"
+              >
+                <div class="position-relative">
+                  <img
+                    class="w-100 podcast_guesting_circle"
+                    src="./assets/images/png/poodcast_gathering_circle.png"
+                    alt="podcasting_chart"
+                  />
+                  <div
+                    class="d-flex justify-content-center align-items-center host_box bg-white top-0 position-absolute hosts"
+                  >
+                    <p
+                      class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12"
+                    >
+                      Hosts
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-center align-items-center host_box bg-white position-absolute bottom-0 guests"
+                  >
+                    <p
+                      class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12"
+                    >
+                      Guests
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -----podcast compare ------>
+      <section class="podcast_compare_section">
+        <div class="custom_container">
+          <div class="d-flex flex-lg-row flex-column-reverse">
+            <img
+              class="podcast_graph mx-auto ms-lg-0 w-100 me-lg-1 mt-4 mt-lg-0 mb-1 mb-lg-0"
+              src="./assets/images/png/podcast_compare_graph.png"
+              alt="podcast_compare_graph"
+            />
+
+            <div
+              class="d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 your_podcast_compared"
+            >
+              <select
+                class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 d-sm-none"
+              >
+                <option value="March">March 2024</option>
+                <option value="March">Feb 2024</option>
+                <option value="March">Jan 2024</option>
+                <option value="March">Dec 2023</option>
+              </select>
+              <h2
+                class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3 mt-sm-0"
+              >
+                Your Podcast Compared to Industry Averages
+                <span>
+                  <img
+                    src="./assets/images/svg/warning_symbol.svg"
+                    alt="warning_symbol"
+                /></span>
+              </h2>
+
+              <p class="clr_grey ff_graphik fs_sm fw-normal mb-1 fw-light pb-3">
+                A podcast listener is 100x more valuable than an engagement on
+                social media. Podcasting is comparable to public speaking. Hosts
+                are speakers, listeners are attendees.
+              </p>
+              <table class="radius_4 mt-3">
+                <tr class="w-100">
+                  <th
+                    class="text-white poadcast_group_th bg_episode podcast_group fw-semibold fs_xsm text-center radius_4_left p-2"
+                  >
+                    Podcasters <br class="d-sm-none" />
+                    Group
+                  </th>
+                  <th
+                    class="fs_xsm fw-semibold text-white poadcast_group_th bg_episode text-center fw-semibold radius_4_right p-2"
+                  >
+                    Episode Downloads
+                    <span class="fw-normal">(First 7 Days) </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td
+                    class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0"
+                  >
+                    Top 1%
+                  </td>
+                  <td
+                    class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0"
+                  >
+                    4,896
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0"
+                  >
+                    Top 5%
+                  </td>
+                  <td
+                    class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0"
+                  >
+                    1,119
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="text-center ff_graphik py-2 td_clr td_border border-bottom-0 border-top-0"
+                  >
+                    Top 10%
+                  </td>
+                  <td
+                    class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 border-bottom-0"
+                  >
+                    480
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="text-center td_bg_clr td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0"
+                  >
+                    Top 25%
+                  </td>
+                  <td
+                    class="text-center td_bg_clr td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0"
+                  >
+                    119
+                  </td>
+                </tr>
+                <div class="border_l_radius">
+                  <tr class="bottom_l_radius">
+                    <td
+                      class="text-center ff_graphik py-2 td_clr td_border border-top-0 bottom_l_radius"
+                    >
+                      Top 50%
+                    </td>
+                    <td
+                      class="text-center ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius"
+                    >
+                      31
+                    </td>
+                  </tr>
+                </div>
+              </table>
+              <div class="d-flex align-items-center pt-1 mt-4">
+                <img
+                  src="./assets/images/svg/data_provided_arrow.svg"
+                  alt="data_provided_arrow"
+                />
+                <p
+                  class="data_provided_by ff_graphik fs_ fw-bold mb-0 lh_150 ps-2 ms-1 fs_sm"
+                >
+                  Data provided by
+                </p>
+                <img
+                  class="ms-sm-2 ms-3 buzzsuppot"
+                  src="./assets/images/svg/buzzspport.svg"
+                  alt="buzzspport"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ---------take quiz --- -->
+      <section class="take_quiz">
+        <div class="custom_container">
+          <div
+            class="d-flex flex-lg-row align-items-center flex-column-reverse justify-content-between"
+          >
+            <div
+              class="d-flex flex-column align-items-center align-items-lg-start mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0"
+            >
+              <h2
+                class="ff_graphik fw-semibold text-lg-start text-center fs_4xl text-white mb-0 mb-3"
+              >
+                Take The Quiz
+              </h2>
+              <p
+                class="ff_graphik text-white text-lg-start text-center lh_150 did_you_know fs_sm fw-medium pb-4"
+              >
+                Did you know it takes most podcasters 2 years to achieve
+                meaningful results with their podcast? Only 6.8% of podcasters
+                ever make it to that point! If you want to achieve your
+                podcasting goals faster, take the quiz!
+              </p>
+              <div
+                class="d-inlin-block transition_300 mb-lg-0 mb-1 d-flex justify-content-center align-items-center bg-white start_btn start_btn_hover"
+              >
+                <button
+                  class="ff_graphik transition_300 mx-lg-0 mx-auto start_btn start_btn_clr w-100 fs_sm fw-semibold border-0 border-1 border-white bg-white"
+                >
+                  Start Now
+                </button>
+              </div>
+            </div>
+            <div class="ms-lg-4 ps-lg-1 mt-1 mt-lg-0">
+              <img
+                class="laptop w-100"
+                src="./assets/images/webp/laptop.webp"
+                alt="laptop"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ---------Podcast Hostig Provider --------------- -->
+      <section class="ph_provider_sec">
+        <div class="custom_container">
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <h2 class="ff_graphik mb-0 fw-semibold fs_4xl text-center">
+              Podcast Hosting Providers Ranked by Their Ability to Serve/Support
+              Independent Podcasters
+            </h2>
+            <p
+              class="looking_switch ff_graphik text-center pt-3 fw-normal clr_darkgrey"
+            >
+              Looking to switch hosting providers?
+              <span class="here_choice fw-bold">Here’s our choice </span> for
+              the best option + an exclusive discount to get started!
+            </p>
+          </div>
+          <table class="mt-3 _table mx-auto">
+            <tr class="">
+              <th
+                class="text-white ff_graphik rank poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left p-2"
+              >
+                Rank
+              </th>
+              <th
+                class="fs_xsm ff_graphik fw-normal rank_change text-white poadcast_group_th bg_episode text-center p-2"
+              >
+                Rank Change
+              </th>
+              <th
+                class="fs_xsm ff_graphik fw-normal text-white hosting_provider poadcast_group_th bg_episode text-center p-2"
+              >
+                Hosting Provider
+              </th>
+              <th
+                class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2"
+              >
+                All
+              </th>
+              <th
+                class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2"
+              >
+                Active
+              </th>
+              <th
+                class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2"
+              >
+                AE
+              </th>
+              <th
+                class="fs_xsm ff_graphik fw-normal all text-white poadcast_group_th bg_episode text-center radius_4_right p-2"
+              >
+                Score
+              </th>
+            </tr>
+            <tr>
+              <td
+                class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm"
+              >
+                1
+              </td>
+              <td
+                class="text-center fw-medium clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                0
+              </td>
+              <td
+                class="text-center fw-semibold clr_grey ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                captivate
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                8158
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                2732
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                824
+              </td>
+              <td
+                class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                +463
+              </td>
+            </tr>
+            <tr class="">
+              <td
+                class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm"
+              >
+                2
+              </td>
+              <td
+                class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                0
+              </td>
+              <td
+                class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                buzzsprout
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                56256
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                17767
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                4076
+              </td>
+              <td
+                class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                +447
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm"
+              >
+                3
+              </td>
+              <td
+                class="text-center fw-medium clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                0
+              </td>
+              <td
+                class="text-center fw-semibold clr_grey ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                redcircle
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                4304
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                1204
+              </td>
+              <td
+                class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                490
+              </td>
+              <td
+                class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm"
+              >
+                +313
+              </td>
+            </tr>
+            <tr class="">
+              <td
+                class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm"
+              >
+                4
+              </td>
+              <td
+                class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                0
+              </td>
+              <td
+                class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                acast
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                9393
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                2909
+              </td>
+              <td
+                class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                875
+              </td>
+              <td
+                class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm"
+              >
+                +156
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!--------------Frequently-Asked-Questions ------------------->
+      <section class="position-relative z-3">
+        <img
+          class="position-absolute d-none d-lg-block vctr_faq"
+          src="./assets/images/svg/faq_vector.svg"
+          alt="side-vector"
+        />
+        <div class="custom_container space_faq">
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <h2
+              class="ff_graphik mb-0 fw-semibold fs_4xl clr_black mxw_faq text-center"
+            >
+              Frequently Asked Questions About The AE Podcast Report
+            </h2>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="accordion space_accd" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button d-flex align-items-start"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    What does it mean to be an Actively Established podcaster?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    What is this report exactly?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    How are hosting providers scored?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    What to do with this hosting provider data?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    How did we get the data about podcasts?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    How did we get the data about podcast listenership?
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively established podcasters are interview-based show
+                    hosts with more than 100 episodes released without missing
+                    beyond a percentage of episode releases along the way.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------------------------ Impactful Interviews Card ---------------------------->
+      <div class="card_p position-relative z-1">
+        <div class="impactful_card mx-auto">
+          <h4
+            class="ff_graphik fw-semibold lh_130 text-center fs_xl text-white mb-0"
+          >
+            Ready to Begin Getting Matched on Podmatch
+          </h4>
+
+          <h3
+            class="ff_graphik fw-semibold lh_130 text-center fs_4xl text-white mb-0 mt-1 mt-sm-0"
+          >
+            So You Can Have More Impactful Interviews?
+          </h3>
+
+          <div class="d-flex justify-content-center pt-sm-1">
+            <button
+              class="mt-sm-3 mt-5 gradient_btn clr_offwhite ff_graphik fw-semibold fs_sm lh_150"
+            >
+              See Matches
+            </button>
+          </div>
+
+          <div
+            class="mt-3 pt-1 d-flex align-items-center justify-content-center gap-2"
+          >
+            <img
+              class="w_24"
+              src="./assets/images/webp/alert_icon.webp"
+              alt="alert_icon"
+            />
+            <p class="text-white ff_graphik fw-normal fs_sm lh_150 mb-0 ms-1">
+              Try PodMatch Risk Free
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- -------------------------------------------- footer ----------------------------------->
+      <footer class="footer_padding footer_bg position-relative">
+        <div class="max_width position-relative">
+          <div class="custom_container">
+            <div class="row pb-sm-5 pb-4">
+              <div class="col-lg-4">
+                <div
+                  class="d-flex align-items-center justify-content-sm-center justify-content-lg-start justify-content-start"
+                >
+                  <a
+                    href="/"
+                    class="footer_logo d-flex align-items-center justify-content-center"
+                    ><img
+                      class="footer_logo"
+                      src="assets/images/webp/footer_logo.webp"
+                      alt="footer_logo"
+                  /></a>
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-center justify-content-lg-start"
+                >
+                  <p
+                    class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start"
+                  >
+                    PodMatch is the future standard for finding and booking
+                    podcast interviews. This is the quickest way to find guests
+                    for your podcast, and vice versa!
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-8 pt-3 pt-sm-0">
+                <div class="d-flex justify-content-between gap-sm-4 flex-wrap">
+                  <ul class="ps-0 mb-0">
+                    <li
+                      class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black"
+                    >
+                      Product
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#feature"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Features</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Pricing</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        ><span class="d-sm-inline d-block">Best of</span>
+                        PodMatch</a
+                      >
+                    </li>
+                  </ul>
+
+                  <ul class="ps-0 mb-0">
+                    <li
+                      class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black"
+                    >
+                      Resources
+                    </li>
+
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Awards</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Live Event</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        ><span class="d-block d-sm-inline">Visit</span>
+                        Community</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Podcast</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href=""
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        ><span class="d-block d-sm-inline">Industry</span>
+                        Report</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Quizzes</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Blog</a
+                      >
+                    </li>
+                  </ul>
+
+                  <ul class="ps-0 mb-0">
+                    <li
+                      class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black"
+                    >
+                      Company
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >New & Updates</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Legal</a
+                      >
+                    </li>
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300"
+                        >Meet the Team</a
+                      >
+                    </li>
+                  </ul>
+
+                  <ul class="ps-0 mb-0 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">
+                      Contact
+                    </li>
+
+                    <li class="footer_links">
+                      <a
+                        href="mailto:Team@PodMatch.com"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300"
+                      >
+                        <img
+                          class="w_24"
+                          src="./assets/images/webp/mail_symbol.webp"
+                          alt="mail_symbol"
+                        />
+                        <span>Team@PodMatch.com</span>
+                      </a>
+                    </li>
+
+                    <li class="footer_links">
+                      <a
+                        href="#"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300"
+                      >
+                        <img
+                          class="w_24"
+                          src="./assets/images/webp/help_icon.webp"
+                          alt="help_icon"
+                        />
+                        <span>Help</span>
+                      </a>
+                    </li>
+
+                    <li class="footer_links">
+                      <a
+                        href="https://www.google.com/maps/place/7643+Gate+Pkwy+104+30,+Jacksonville,+FL+32256,+USA/@30.2415332,-81.5217774,17z/data=!3m1!4b1!4m5!3m4!1s0x88e5cab277f9880f:0x9f8965d8135a67f1!8m2!3d30.2415286!4d-81.5192025?entry=ttu"
+                        target="_blank"
+                        class="ff_graphik fw-normal fs_xsm lh_150 clr_grey d-flex align-items-start gap-2 links_hov transition_300"
+                      >
+                        <img
+                          class="w_24"
+                          src="./assets/images/webp/location_icon.webp"
+                          alt="location_icon"
+                        />
+                        <span class="d-flex flex-column">
+                          <span class="">Jacksonville, Florida 32256 USA</span>
+                          <span class="d-block footer_links"
+                            >7643 Gate Pkwy STE 104-30</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-center justify-content-between flex-md-row flex-column-reverse mt-3 py-3 position-relative"
+            >
+              <p
+                class="mb-0 ff_graphik fw-normal lh_150 fs_xsm clr_grey mt-md-0 mt-4"
+              >
+                &copy; <span id="currentYear"></span> PodMatch. All Rights
+                reserved
+              </p>
+
+              <div
+                class="d-flex align-items-center footer_icons_gap pb-2 pb-md-0"
+              >
+                <a target="_blank" href="https://www.facebook.com/"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/facebook.webp"
+                    alt="facebook"
+                /></a>
+                <a target="_blank" href="https://twitter.com/?lang=en"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/twitter.webp"
+                    alt="twitter"
+                /></a>
+                <a target="_blank" href="https://web.telegram.org/k/"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/telegram.webp"
+                    alt="telegram"
+                /></a>
+                <a target="_blank" href="https://www.youtube.com/user/youtube"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/youtube.webp"
+                    alt="youtube"
+                /></a>
+                <a target="_blank" href="https://www.instagram.com/"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/instagram.webp"
+                    alt="instagram"
+                /></a>
+                <a target="_blank" href="https://www.linkedin.com/feed/"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/linked_in.webp"
+                    alt="linked_in"
+                /></a>
+                <a href="#tiktok"
+                  ><img
+                    class="footer_icon"
+                    src="assets/images/webp/tiktok.webp"
+                    alt="tiktok"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-absolute footer_line"></div>
+        </div>
+      </footer>
+
+      <!------------ Back to top button --------------->
+      <a id="button"></a>
     </div>
     <!-- ------------ Bootstrap Cdn Link ---------- -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/custom.js"></script>
     <!----------------- Navbar-Js -------------------->
     <script>
-        const Navbar = document.getElementById("NavBar");
+      const Navbar = document.getElementById("NavBar");
 
-        function openNav() {
-            Navbar.classList.toggle("left-0");
-            document.body.classList.toggle("overflow_hidden");
-        }
+      function openNav() {
+        Navbar.classList.toggle("left-0");
+        document.body.classList.toggle("overflow_hidden");
+      }
     </script>
     <script>
-        // Get the counter element
-        const counter = document.getElementById("counter");
-        // Get the initial count value
-        let count = 0; // Start the counter from 0
+      // Get the counter element
+      const counter = document.getElementById("counter");
+      // Get the initial count value
+      let count = 0; // Start the counter from 0
 
-        // Calculate the increment value to reach 38,965 in 5 seconds
-        const targetCount = 38965;
-        const duration = 500000; // 5 seconds
-        const increment = targetCount / (duration / 1000); // Increment per millisecond
+      // Calculate the increment value to reach 38,965 in 5 seconds
+      const targetCount = 38965;
+      const duration = 500000; // 5 seconds
+      const increment = targetCount / (duration / 1000); // Increment per millisecond
 
-        // Function to increment the counter
-        function updateCounter() {
-            // Increment the count
-            count += increment;
-            // Update the text content of the counter with the new count
-            counter.innerText = Math.floor(count).toLocaleString(); // Add commas for readability
+      // Function to increment the counter
+      function updateCounter() {
+        // Increment the count
+        count += increment;
+        // Update the text content of the counter with the new count
+        counter.innerText = Math.floor(count).toLocaleString(); // Add commas for readability
 
-            // Check if the count has reached or exceeded the target count
-            if (count >= targetCount) {
-                clearInterval(counterInterval); // Stop the counter when it reaches or exceeds the target count
-            }
+        // Check if the count has reached or exceeded the target count
+        if (count >= targetCount) {
+          clearInterval(counterInterval); // Stop the counter when it reaches or exceeds the target count
         }
+      }
 
-        // Call the updateCounter function every millisecond
-        const counterInterval = setInterval(updateCounter, 1);
+      // Call the updateCounter function every millisecond
+      const counterInterval = setInterval(updateCounter, 1);
     </script>
     <script>
-        const dropdownToggles = document.querySelectorAll(
-            "[data-toggle='dropdown']"
-        );
-        dropdownToggles.forEach((toggle) => {
-            toggle.addEventListener("click", (e) => {
-                const dropdownMenu = e.target.nextElementSibling;
-                if (dropdownMenu.classList.contains("show")) {
-                    dropdownMenu.classList.remove("show");
-                } else {
-                    dropdownToggles.forEach((t) => {
-                        const menu = t.nextElementSibling;
-                        if (menu.classList.contains("show")) {
-                            menu.classList.remove("show");
-                        }
-                    });
-                    dropdownMenu.classList.add("show");
-                }
+      const dropdownToggles = document.querySelectorAll(
+        "[data-toggle='dropdown']"
+      );
+      dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          const dropdownMenu = e.target.nextElementSibling;
+          if (dropdownMenu.classList.contains("show")) {
+            dropdownMenu.classList.remove("show");
+          } else {
+            dropdownToggles.forEach((t) => {
+              const menu = t.nextElementSibling;
+              if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+              }
             });
+            dropdownMenu.classList.add("show");
+          }
         });
+      });
     </script>
 
     <script>
-        function toggleDropdown(dropdownId) {
-            var dropdown = document.getElementById(dropdownId);
-            var dropdowns = document.querySelectorAll(".dropdown");
+      function toggleDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        var dropdowns = document.querySelectorAll(".dropdown");
 
-            dropdowns.forEach(function (item) {
-                if (item.id !== dropdownId) {
-                    item.classList.remove("open");
-                }
-            });
+        dropdowns.forEach(function (item) {
+          if (item.id !== dropdownId) {
+            item.classList.remove("open");
+          }
+        });
 
-            dropdown.classList.toggle("open");
-        }
+        dropdown.classList.toggle("open");
+      }
     </script>
     <!-- ---------------- Back To Top -------------- -->
     <script>
-        var btn = $('#button');
+      var btn = $("#button");
 
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass("show");
+        } else {
+          btn.removeClass("show");
+        }
+      });
 
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
-        });
+      btn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "300");
+      });
     </script>
     <!-- ------------------ Copyright function ------- -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var currentYear = new Date().getFullYear();
-            document.getElementById("currentYear").textContent = currentYear;
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+      });
     </script>
-</body>
+    <script>
+      document.querySelectorAll(".dropbtn").forEach((btn) => {
+        btn.onclick = function () {
+          const menu = this.nextElementSibling;
+          document
+            .querySelectorAll(".custom-dropdown-menu")
+            .forEach((dropdown) => {
+              if (dropdown !== menu) {
+                dropdown.style.display = "none";
+              }
+            });
+          menu.style.display =
+            menu.style.display === "block" ? "none" : "block";
+        };
+      });
 
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
+          dropdowns.forEach((dropdown) => {
+            if (dropdown.style.display === "block") {
+              dropdown.style.display = "none";
+            }
+          });
+        }
+      };
+    </script>
+  </body>
 </html>
