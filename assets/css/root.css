@@ -148,6 +148,9 @@
 .clr_lightgrey {
   color: var(--clr-light-grey);
 }
+.bg_red{
+  background-color: var(--clr-red);
+}
 
 /* ------------- line heights ------------- */
 .lh_120 {

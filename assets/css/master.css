@@ -19,14 +19,58 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.table_shadow{
+
+.table_shadow {
     box-shadow: 4px 4px 20px 0px #D4D4D440;
 }
-.line_right_podcast_table{
+
+.line_right_podcast_table {
     top: -85px;
 }
-.line_left_podcast_table{
-    top: 50%;
+.line_right_second_podcast_table{
+    top: 90%;
+}
+
+.line_left_podcast_table {
+    top: 40%;
+}
+
+.blur_ellipse {
+    opacity: 10%;
+    filter: blur(100px);
+    border-radius: 60%;
+}
+
+.pink_blur_ellipse {
+    width: 258px;
+    height: 212px;
+    background-color: #6F69F2;
+}
+
+.sky_blur_ellipse_right_table {
+    width: 409px;
+    height: 336px;
+    background-color: #00C2CB;
+}
+
+.sky_blur_second_ellipse_right_table {
+    width: 258px;
+    height: 212px;
+    background-color: #00C2CB;
+}
+
+.pink_blur_left_position {
+    left: 73px;
+    top: 66%;
+}
+
+.sky_blur_right_position {
+    right: 10px;
+    top: 25%;
+}
+.sky_blur_second_right_position {
+    right: 40px;
+    top: 92%;
 }
 
 /*============================== poadcasting industries section  ===================*/
