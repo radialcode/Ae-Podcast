@@ -25,6 +25,9 @@
 .line_right_podcast_table{
     top: -85px;
 }
+.line_left_podcast_table{
+    top: 50%;
+}
 
 /*============================== poadcasting industries section  ===================*/
 .poadcasting_heading {
