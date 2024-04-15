@@ -46,7 +46,7 @@
 }
 
 .podcast_compare_section {
-  padding: 171px 0px;
+  padding: 0px 0px 171px 0px;
 }
 
 .podcast_graph {
@@ -140,7 +140,9 @@
 .podcast_guesting {
   max-width: 485px;
 }
-
+.py_7{
+  padding: 7px 0px;
+}
 /* -------------------------------------------------------activity establish -------------------------------------------- */
 .aep_blue_elipse {
   bottom: -58%;
@@ -208,7 +210,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.guesting_box{
+  box-shadow: 0px 0px 20px 4px #E2E2E240;
+border-radius: 24px;
+max-width: 570px;
+width: 100%;
+height: 438px;
+}
 /* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
   max-width: 70px;
@@ -236,7 +244,11 @@
   .podcast_guesting {
     max-width: 100%;
   }
-
+  .aep_blue_elipse {
+    bottom: -28% !important;
+    right: 7% !important;
+    max-width: 115%;
+  }
   .ph_provider_sec {
     padding-top: 80px;
   }
@@ -313,10 +325,17 @@
   .mt_lg_166 {
     margin-top: 66px;
   }
+ 
 }
 
 @media (max-width: 575.98px) {
-
+  .guesting_box{
+    box-shadow: 0px 0px 20px 4px #E2E2E240;
+  border-radius: 24px;
+  max-width: 570px;
+  width: 100%;
+  height: 278px;
+  }
   .podcast_guesting_circle {
     max-width: 205px;
   }
@@ -342,5 +361,10 @@
 
   .fs_sm_12 {
     font-size: 12px;
+  }
+  .aep_blue_elipse {
+    bottom: -28% !important;
+    right: -29% !important;
+    z-index: -1;
   }
 }

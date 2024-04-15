@@ -39,7 +39,7 @@
 }
 
 .poadcasting_p {
-    padding: 0px 0px 174px 0px;
+    padding: 0px 0px 200px 0px;
 }
 
 .possible_heading {
@@ -95,7 +95,7 @@
 }
 
 .gradient_text {
-    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    background: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
