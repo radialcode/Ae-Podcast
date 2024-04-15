@@ -9,21 +9,25 @@
   src: url("../fonts/GraphikBlack.otf");
   font-weight: 900;
 }
+
 @font-face {
   font-family: graphik;
   src: url("../fonts/GraphikBold.otf");
   font-weight: 700;
 }
+
 @font-face {
   font-family: graphik;
   src: url("../fonts/GraphikSemibold.otf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: graphik;
   src: url("../fonts/GraphikMedium.otf");
   font-weight: 500;
 }
+
 @font-face {
   font-family: graphik;
   src: url("../fonts/GraphikRegular.otf");
@@ -140,6 +144,7 @@
 .clr_lightblack {
   color: var(--clr-lightblack);
 }
+
 .clr_lightgrey {
   color: var(--clr-light-grey);
 }
@@ -175,11 +180,13 @@
     --fs-3xl: 32px;
     --fs-md: 16px;
   }
+
   .custom_container {
-  padding: 0 48px;
-}
+    padding: 0 48px;
+  }
 
 }
+
 @media (max-width: 575.98px) {
   .custom_container {
     padding: 0 20px;
