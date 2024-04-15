@@ -83,10 +83,10 @@
                 <div
                   class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
                 >
-                  <a href="#" class="text-decoration-none d-block">Education</a>
-                  <a href="#" class="text-decoration-none d-block">About us</a>
-                  <a href="#" class="text-decoration-none d-block">Community</a>
-                  <a href="#" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Education</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">About us</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Community</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Pricing</a>
                 </div>
               </div>
               <div class="custom-dropdown position-relative d-inline-block">
@@ -112,10 +112,10 @@
                 <div
                   class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
                 >
-                  <a href="#" class="text-decoration-none d-block">About us</a>
-                  <a href="#" class="text-decoration-none d-block">Pricing</a>
-                  <a href="#" class="text-decoration-none d-block">Education</a>
-                  <a href="#" class="text-decoration-none d-block">Features</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">About us</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Education</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Features</a>
                 </div>
               </div>
               <div class="custom-dropdown position-relative d-inline-block">
@@ -141,8 +141,8 @@
                 <div
                   class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
                 >
-                  <a href="#" class="text-decoration-none d-block">Pricing</a>
-                  <a href="#" class="text-decoration-none d-block">Education</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Education</a>
                 </div>
               </div>
               <div class="custom-dropdown position-relative d-inline-block">
@@ -168,18 +168,18 @@
                 <div
                   class="custom-dropdown-menu mt-2 position-absolute bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150"
                 >
-                  <a href="#" class="text-decoration-none d-block">Education</a>
-                  <a href="#" class="text-decoration-none d-block">Features</a>
-                  <a href="#" class="text-decoration-none d-block">Pricing</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Education</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Features</a>
+                  <a href="#" onclick="closeNav()" class="text-decoration-none d-block">Pricing</a>
                 </div>
               </div>
 
-              <button
+              <button onclick="closeNav()"
                 class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150 bg-transparent border-0 bttn_login_sm"
               >
                 Login
               </button>
-              <button
+              <button onclick="closeNav()"
                 class="fw-semibold fs_sm d-md-none ff_graphik clr_offwhite bttn_rsg lh_150 bttn_rsg_sm"
               >
                 Register
@@ -1343,7 +1343,7 @@
           </div>
         </div>
       </section>
-     <!-- ---------Podcast Hostig Provider --------------- -->
+      <!-- ---------Podcast Hostig Provider --------------- -->
         <section class="ph_provider_sec position-relative">
             <img class="position-absolute end-0 line_right_podcast_table d-none d-md-block z-n1" width="115px"
                 src="./assets/images/png/line_right_podcast_table.png" alt="line Image">
@@ -2888,6 +2888,10 @@
       function openNav() {
         Navbar.classList.toggle("left-0");
         document.body.classList.toggle("overflow_hidden");
+      }
+          function closeNav() {
+        Navbar.classList.remove("left-0");
+        document.body.classList.remove("overflow_hidden");
       }
     </script>
     <script>
