@@ -3,6 +3,13 @@
     margin: 0px auto;
 }
 
+.opacity_70 {
+    opacity: 70%;
+}
+.table_radius{
+    border-radius: 4px 4px 0px 0px;
+}
+
 /*============================== poadcasting industries section  ===================*/
 .poadcasting_heading {
     max-width: 526px !important;
