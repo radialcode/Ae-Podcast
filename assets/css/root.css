@@ -149,6 +149,9 @@
 .clr_lightgrey {
   color: var(--clr-light-grey);
 }
+.bg_red{
+  background-color: var(--clr-red);
+}
 
 .clr_tundora {
   color: var(--tundora);
