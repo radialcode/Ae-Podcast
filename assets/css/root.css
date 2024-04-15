@@ -56,6 +56,7 @@
   /* ------------colors----------------- */
   --clr-black: #010101;
   --clr-grey: #4d4d4d;
+  --tundora: #4E4E4E;
   --clr-offwhite: #fefefe;
   --clr-skyblue: #00b9ff;
   --clr-seagreen: #0bb2b9;
@@ -147,6 +148,10 @@
 
 .clr_lightgrey {
   color: var(--clr-light-grey);
+}
+
+.clr_tundora {
+  color: var(--tundora);
 }
 
 /* ------------- line heights ------------- */

@@ -20,12 +20,6 @@
   border-radius: 8px;
 }
 
-.start_btn_hover:hover .start_btn_clr {
-  -webkit-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-}
-
 .transition_300 {
   transition: 300ms linear;
 }
