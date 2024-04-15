@@ -3147,32 +3147,42 @@
       });
     </script>
     <script>
-      document.querySelectorAll(".dropbtn").forEach((btn) => {
-        btn.onclick = function () {
-          const menu = this.nextElementSibling;
-          document
-            .querySelectorAll(".custom-dropdown-menu")
-            .forEach((dropdown) => {
-              if (dropdown !== menu) {
-                dropdown.style.display = "none";
-              }
-            });
-          menu.style.display =
-            menu.style.display === "block" ? "none" : "block";
-        };
-      });
+     document.addEventListener("DOMContentLoaded", function () {
+  // Close all dropdowns on page load
+  const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
+  dropdowns.forEach((dropdown) => {
+    dropdown.style.display = "none";
+  });
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
-          dropdowns.forEach((dropdown) => {
-            if (dropdown.style.display === "block") {
-              dropdown.style.display = "none";
-            }
-          });
+  // Dropdown button click handler
+  document.querySelectorAll(".dropbtn").forEach((btn) => {
+    btn.onclick = function () {
+      const menu = this.nextElementSibling;
+      document
+        .querySelectorAll(".custom-dropdown-menu")
+        .forEach((dropdown) => {
+          if (dropdown !== menu) {
+            dropdown.style.display = "none";
+          }
+        });
+      menu.style.display =
+        menu.style.display === "block" ? "none" : "block";
+    };
+  });
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
         }
-      };
+      });
+    }
+  };
+});
+
     </script>
   </body>
 </html>
