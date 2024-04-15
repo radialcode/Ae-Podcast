@@ -85,10 +85,12 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(99.76deg,
-      #00b9ff 24.35%,
-      #6f69f2 100%,
-      #10b6d0 88.28%);
+  background: linear-gradient(
+    99.76deg,
+    #00b9ff 24.35%,
+    #6f69f2 100%,
+    #10b6d0 88.28%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -374,7 +376,6 @@ a:hover {
 }
 
 @media (max-width: 1023.98px) {
-
   .card_main {
     padding: 24px 10px;
   }
@@ -424,7 +425,6 @@ a:hover {
 }
 
 @media (max-width: 767.98px) {
-
   .counter_mxw {
     width: 105px;
   }
@@ -488,8 +488,6 @@ a:hover {
     height: 251px;
     padding: 24px 25px;
   }
-
-
 
   .counter_mxw {
     width: 90px;
