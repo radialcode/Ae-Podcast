@@ -6,8 +6,27 @@
 .opacity_70 {
     opacity: 70%;
 }
-.table_radius{
-    border-radius: 4px 4px 0px 0px;
+
+.table_radius {
+    border-radius: 0px 4px 4px 4px;
+}
+
+.mb_3 {
+    margin-bottom: 3px;
+}
+
+.py_10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.table_shadow{
+    box-shadow: 4px 4px 20px 0px #D4D4D440;
+}
+.line_right_podcast_table{
+    top: -85px;
+}
+.line_left_podcast_table{
+    top: 50%;
 }
 
 /*============================== poadcasting industries section  ===================*/
