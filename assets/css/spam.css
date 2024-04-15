@@ -2,10 +2,11 @@
   padding-top: 18px;
   padding-bottom: 18px;
 }
- 
-.cursor_pointer{
+
+.cursor_pointer {
   cursor: pointer;
 }
+
 .space_ul_nav {
   gap: 21px;
 }
@@ -85,12 +86,10 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(
-    99.76deg,
-    #00b9ff 24.35%,
-    #6f69f2 100%,
-    #10b6d0 88.28%
-  );
+  background: linear-gradient(99.76deg,
+      #00b9ff 24.35%,
+      #6f69f2 100%,
+      #10b6d0 88.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -106,12 +105,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bttn_login {
-  background-color: transparent;
-  border: none;
-  margin-right: 18px;
 }
 
 .nav_line {
@@ -337,15 +330,18 @@ a:hover {
 }
 
 .accordion-button::after {
-  background-size: 15px 15px; /* Set the width and height here */
+  background-size: 15px 15px;
+  /* Set the width and height here */
   width: 20px;
   height: 20px;
   background-image: url("../images/svg/faq_open.svg") !important;
 }
+
 .vctr_faq {
   left: 0;
   bottom: 20%;
 }
+
 @media (max-width: 991.98px) {
   .nav_bar {
     position: fixed;
@@ -467,14 +463,17 @@ a:hover {
     padding-top: 24px;
   }
 }
+
 @media (max-width: 765px) {
   .accordion-button {
     max-width: 500px !important;
-  } 
+  }
+
   .accordion-body {
     max-width: 500px !important;
   }
 }
+
 @media (max-width: 575.98px) {
   .accordion-button::after {
     background-image: url("../images/svg/sm_faq_close.svg") !important;
@@ -505,9 +504,11 @@ a:hover {
   .space_accd {
     margin-top: 24px;
   }
+
   .accordion-item {
     margin-top: 6px !important;
   }
+
   .accordion-button {
     max-width: 800px !important;
     width: 100% !important;
@@ -559,7 +560,8 @@ a:hover {
     padding-top: 31px;
     padding-bottom: 80px;
   }
-  .d_sm_none{
+
+  .d_sm_none {
     display: none;
   }
 }
