@@ -27,7 +27,8 @@
 .line_right_podcast_table {
     top: -85px;
 }
-.line_right_second_podcast_table{
+
+.line_right_second_podcast_table {
     top: 90%;
 }
 
@@ -68,6 +69,7 @@
     right: 10px;
     top: 25%;
 }
+
 .sky_blur_second_right_position {
     right: 40px;
     top: 92%;
@@ -371,3 +373,29 @@
         bottom: 13.5% !important;
     }
 }
+
+/* @media (min-width:768px) {
+    .accordion-button:not(.collapsed) .acc_first_slider {
+        transform: scale(1.25) translateX(46.5px) !important;
+    }
+
+    .accordion-button:not(.collapsed) .acc_second_slider {
+        transform: scale(1.25) translateX(19.5px) !important;
+    }
+
+    .accordion-button:not(.collapsed) .acc_third_slider {
+        transform: scale(1.25) translateX(26.5px) !important;
+    }
+
+    .accordion-button:not(.collapsed) .acc_fourth_slider {
+        transform: scale(1.25) translateX(34.5px) !important;
+    }
+
+    .accordion-button:not(.collapsed) .acc_fifth_slider {
+        transform: scale(1.25) translateX(30.5px) !important;
+    }
+
+    .accordion-button:not(.collapsed) .acc_six_slider {
+        transform: scale(1.25) translateX(40.5px) !important;
+    }
+} */
