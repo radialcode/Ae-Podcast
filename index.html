@@ -25,11 +25,20 @@
         <!-----------------Hero-------------->
         <section>
             <nav class="custom_container d-flex align-items-center justify-content-between nav_space">
-                <div class="z_15 position-relative">
+                <div class="position-relative">
                     <a href=""><img src="./assets/images/svg/header_logo.svg" alt="nav-logo" /></a>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div id="NavBar" class="d-flex space_ul_nav nav_bar mb-0 ps-0">
+                        <div onclick="openNav()"
+                            class="cursor_pointer d-lg-none position-absolute top-0 end-0 mt-4 me-4">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.21687 1.65264C0.331356 2.53816 0.331356 3.97382 1.21687 4.85934L9.34604 12.9885L1.21687 21.1178C0.331356 22.0032 0.331356 23.439 1.21687 24.3244C2.10236 25.2099 3.53805 25.2099 4.42354 24.3244L12.5527 16.1951L20.682 24.3244C21.5674 25.2099 23.0032 25.2099 23.8887 24.3244C24.7741 23.439 24.7741 22.0032 23.8887 21.1178L15.7593 12.9885L23.8887 4.85936C24.7741 3.97387 24.7741 2.53818 23.8887 1.65269C23.003 0.767175 21.5674 0.767175 20.682 1.65269L12.5527 9.78183L4.42354 1.65264C3.53805 0.767153 2.10236 0.767153 1.21687 1.65264Z"
+                                    fill="#0F0F0F" />
+                            </svg>
+                        </div>
                         <label class="dropdown" id="dropdown1">
                             <button
                                 class="dd-button fw-normal fs_sm line-3 position-relative clr_grey ff_graphik lh_150 d-flex align-items-center gap-2"
@@ -142,7 +151,7 @@
                     </button>
                 </div>
                 <div class="d-flex align-items-center gap-4">
-                    <div class="d-none d-md-block z_15 position-relative  d-lg-none me-2 space_bttn align-items-center">
+                    <div class="d-none d-md-block position-relative  d-lg-none me-2 space_bttn align-items-center">
                         <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150">
                             Login
                         </button>
@@ -150,7 +159,7 @@
                             Register
                         </button>
                     </div>
-                    <button onclick="openNav()" class="d-lg-none position-relative z_15 bttn_nav overflow-hidden">
+                    <button onclick="openNav()" class="d-lg-none position-relative  bttn_nav overflow-hidden">
                         <span class="nav-line"></span>
                         <span class="new_hamburger_line"></span>
                         <span class="nav-lines"> </span>
@@ -359,22 +368,21 @@
 
         <!-------------- Podcasting Industry Totals ---------------->
         <section class="bg-white position-relative">
-
             <img class="position-absolute podcasting_industries_ellipse d-md-block d-none"
                 src="assets/images/webp/podcasting_industries_left_ellipse.webp" alt="left_ellipse">
 
             <img class="position-absolute your_podcast_right_vec d-md-block d-none"
                 src="assets/images/webp/your_podcast_right_vec.webp" alt="your_podcast_right_vec">
 
-            <div class="custom_container position-relative z-1 pt-5">
+            <div class="custom_container position-relative z-1 pt-lg-4">
 
                 <div class="row poadcasting_p">
                     <div class="col-lg-6">
-                        <select class="select_bg ff_graphik fs_xsm px-0 lh_110">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
 
                         <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 poadcasting_heading fw-semibold mt-3">
@@ -444,11 +452,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <select class="select_bg">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
 
                         <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">Possible
@@ -482,7 +490,6 @@
         </section>
         <!-------------- chances section ---------------->
         <section class="bg-white position-relative">
-
             <img class="position-absolute chances_left_vector d-md-block d-none"
                 src="assets/images/webp/chances_left_vector.webp" alt="chances_left_vector">
 
@@ -490,11 +497,11 @@
                 <div class="row align-items-center justify-content-between">
 
                     <div class="col-lg-6">
-                        <select class="select_bg">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
 
                         <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 chances_heading fw-semibold mt-3">Chances of
@@ -628,11 +635,11 @@
                     </div>
 
                     <div class="col-lg-6 ">
-                        <select class="select_bg aep_select p-0 text-center fs_xsm">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
 
                         <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 activity_heading fw-semibold mt-3">Actively
@@ -668,16 +675,16 @@
         </section>
         <!-- ------ podcasting guesting -- -->
         <section class="bg-white">
-            <div class="custom_container pt-5">
+            <div class="custom_container pt-lg-5">
 
                 <div class="row poadcasting_p align-items-center">
 
                     <div class="col-lg-7">
-                        <select class="select_bg">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 ">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
 
                         <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3">
@@ -756,11 +763,11 @@
 
                     <div
                         class="d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3   your_podcast_compared">
-                        <select class="select_bg d-sm-none">
+                        <select class="select_bg ff_graphik fs_xsm cursor_pointer position-relative lh_110 d-sm-none">
                             <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
-                            <option value="March">March 2024</option>
+                            <option value="March">Feb 2024</option>
+                            <option value="March">Jan 2024</option>
+                            <option value="March">Dec 2023</option>
                         </select>
                         <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3 mt-sm-0">Your Podcast
                             Compared to Industry
@@ -879,7 +886,7 @@
         </section>
         <!-- ---------Podcast Hostig Provider --------------- -->
         <section class="ph_provider_sec">
-            <div class="container">
+            <div class="custom_container">
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <h2 class="ff_graphik mb-0 fw-semibold  fs_4xl text-center">
                         Podcast Hosting Providers Ranked by Their Ability to
@@ -892,11 +899,11 @@
                         get started!
                     </p>
                 </div>
-                <table class="radius_4 mt-3 _table mx-auto">
+                <table class="mt-3 _table mx-auto">
 
-                    <tr class="w-100 ">
+                    <tr class="">
                         <th
-                            class="text-white ff_graphik rank poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left p-2">
+                            class="text-white ff_graphik rank poadcast_group_th bg_episode fw-normal fs_xsm text-center radius_4_left  p-2">
                             Rank
                         </th>
                         <th
@@ -908,15 +915,15 @@
                             Hosting Provider
                         </th>
                         <th
-                            class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
+                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
                             All
                         </th>
                         <th
-                            class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2">
+                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center p-2">
                             Active
                         </th>
                         <th
-                            class="fs_xsm ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
+                            class="fs_xsm d_sm_none ff_graphik all fw-normal text-white poadcast_group_th bg_episode text-center  p-2">
                             AE
                         </th>
                         <th
@@ -924,39 +931,102 @@
                             Score
                         </th>
                     </tr>
-
-
-
                     <tr>
                         <td
-                            class="text-center td_bg_clr fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
+                            class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
                             1
                         </td>
                         <td
-                            class="text-center fw-medium td_bg_clr clr_black fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            class="text-center fw-medium  clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
                             0</td>
                         <td
-                            class="text-center td_bg_clr fw-semibold td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            class="text-center fw-semibold clr_grey ff_graphik  py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
                             captivate</td>
                         <td
-                            class="text-center td_bg_clr fw-bold td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
                             8158</td>
+                        <td
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            2732</td>
+                        <td
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            824</td>
+                        <td
+                            class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            +463</td>
                     </tr>
-
-                    <div class="border_l_radius">
-                        <tr class="bottom_l_radius">
-                            <td
-                                class="text-center fw-normal ff_graphik py-2 td_clr clr_black td_border border-top-0 bottom_l_radius fs_xsm">
-                                2
-                            </td>
-                            <td
-                                class="text-center fw-medium ff_graphik clr_black py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                                0</td>
-                            <td
-                                class="text-center fw-normal ff_graphik py-2 td_clr mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                                buzzsprout</td>
-                        </tr>
-                    </div>
+                    <tr class="">
+                        <td
+                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm">
+                            2
+                        </td>
+                        <td
+                            class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            0</td>
+                        <td
+                            class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            buzzsprout</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            56256</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            17767</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            4076</td>
+                        <td
+                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            +447</td>
+                    </tr>
+                    <tr>
+                        <td
+                            class="text-center fw-normal td_clr ff_graphik py-2 td_border border-bottom-0 border-top-0 fs_xsm">
+                            3
+                        </td>
+                        <td
+                            class="text-center fw-medium  clr_grey fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            0</td>
+                        <td
+                            class="text-center fw-semibold clr_grey ff_graphik  py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            redcircle</td>
+                        <td
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            4304</td>
+                        <td
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            1204</td>
+                        <td
+                            class="text-center fw-normal d_sm_none td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            490</td>
+                        <td
+                            class="text-center fw-normal td_clr ff_graphik py-2 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
+                            +313</td>
+                    </tr>
+                    <tr class="">
+                        <td
+                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey td_border border-top-0 border-bottom-0 bottom_l_radius fs_xsm">
+                            4
+                        </td>
+                        <td
+                            class="text-center td_bg_clr fw-medium ff_graphik clr_lightgrey py-2 mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            0</td>
+                        <td
+                            class="text-center td_bg_clr fw-semibold ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            acast</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            9393</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            2909</td>
+                        <td
+                            class="text-center d_sm_none td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            875</td>
+                        <td
+                            class="text-center td_bg_clr fw-normal ff_graphik py-2 clr_lightgrey mx-n1 td_border border-top-0 border-bottom-0 bottom_r_radius fs_xsm">
+                            +156</td>
+                    </tr>
                 </table>
 
             </div>
@@ -1106,29 +1176,31 @@
         <!-- -------------------------------------------- footer ----------------------------------->
         <footer class="footer_padding footer_bg position-relative">
             <div class="max_width position-relative">
-        
+
                 <div class="custom_container">
                     <div class="row pb-sm-5 pb-4">
-        
+
                         <div class="col-lg-4">
                             <div
                                 class="d-flex align-items-center justify-content-sm-center justify-content-lg-start justify-content-start">
                                 <a href="/" class="footer_logo d-flex align-items-center justify-content-center"><img
-                                        class="footer_logo" src="assets/images/webp/footer_logo.webp" alt="footer_logo"></a>
+                                        class="footer_logo" src="assets/images/webp/footer_logo.webp"
+                                        alt="footer_logo"></a>
                             </div>
-        
+
                             <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
                                 <p
                                     class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start">
-                                    PodMatch is the future standard for finding and booking podcast interviews. This is the
+                                    PodMatch is the future standard for finding and booking podcast interviews. This is
+                                    the
                                     quickest way to find guests for your podcast, and vice versa!</p>
                             </div>
-        
+
                         </div>
-        
+
                         <div class="col-lg-8 pt-3 pt-sm-0">
                             <div class="d-flex justify-content-between gap-sm-4 flex-wrap">
-        
+
                                 <ul class="ps-0 mb-0">
                                     <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Product</li>
                                     <li class="footer_links"><a href="#feature"
@@ -1142,10 +1214,10 @@
                                                 class="d-sm-inline d-block">Best of</span> PodMatch</a>
                                     </li>
                                 </ul>
-        
+
                                 <ul class="ps-0 mb-0">
                                     <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Resources</li>
-        
+
                                     <li class="footer_links"><a href="#"
                                             class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Awards</a>
                                     </li>
@@ -1173,7 +1245,7 @@
                                             class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_300">Blog</a>
                                     </li>
                                 </ul>
-        
+
                                 <ul class="ps-0 mb-0">
                                     <li class="ff_graphik fw-semibold fs_xsm fs_sm lh_150 clr_black">Company</li>
                                     <li class="footer_links"><a href="#"
@@ -1188,18 +1260,19 @@
                                             the
                                             Team</a></li>
                                 </ul>
-        
+
                                 <ul class="ps-0 mb-0 mt-4 pt-2 mt-sm-0 pt-sm-0">
                                     <li class="ff_graphik fw-semibold fs_sm lh_150 clr_black">Contact</li>
-        
+
                                     <li class="footer_links">
                                         <a href="mailto:Team@PodMatch.com"
                                             class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300">
-                                            <img class="w_24" src="./assets/images/webp/mail_symbol.webp" alt="mail_symbol">
+                                            <img class="w_24" src="./assets/images/webp/mail_symbol.webp"
+                                                alt="mail_symbol">
                                             <span>Team@PodMatch.com</span>
                                         </a>
                                     </li>
-        
+
                                     <li class="footer_links">
                                         <a href="#"
                                             class="ff_graphik fw-normal fs_xsm lh_150 clr_grey gap-2 links_hov transition_300">
@@ -1207,12 +1280,13 @@
                                             <span>Help</span>
                                         </a>
                                     </li>
-        
+
                                     <li class="footer_links">
                                         <a href="https://www.google.com/maps/place/7643+Gate+Pkwy+104+30,+Jacksonville,+FL+32256,+USA/@30.2415332,-81.5217774,17z/data=!3m1!4b1!4m5!3m4!1s0x88e5cab277f9880f:0x9f8965d8135a67f1!8m2!3d30.2415286!4d-81.5192025?entry=ttu"
                                             target="_blank"
                                             class="ff_graphik fw-normal fs_xsm lh_150 clr_grey d-flex align-items-start gap-2 links_hov transition_300">
-                                            <img class="w_24" src="./assets/images/webp/location_icon.webp" alt="location_icon">
+                                            <img class="w_24" src="./assets/images/webp/location_icon.webp"
+                                                alt="location_icon">
                                             <span class="d-flex flex-column">
                                                 <span class="">Jacksonville, Florida 32256 USA</span>
                                                 <span class="d-block footer_links">7643 Gate Pkwy STE
@@ -1221,18 +1295,18 @@
                                         </a>
                                     </li>
                                 </ul>
-        
+
                             </div>
                         </div>
-        
+
                     </div>
-        
+
                     <div
                         class="d-flex align-items-center justify-content-between flex-md-row flex-column-reverse mt-3 py-3 position-relative">
                         <p class="mb-0 ff_graphik fw-normal lh_150 fs_xsm clr_grey mt-md-0 mt-4">&copy; <span
                                 id="currentYear"></span>
                             PodMatch. All Rights reserved</p>
-        
+
                         <div class="d-flex align-items-center footer_icons_gap pb-2 pb-md-0">
                             <a target="_blank" href="https://www.facebook.com/"><img class="footer_icon"
                                     src="assets/images/webp/facebook.webp" alt="facebook"></a>
@@ -1246,15 +1320,16 @@
                                     src="assets/images/webp/instagram.webp" alt="instagram"></a>
                             <a target="_blank" href="https://www.linkedin.com/feed/"><img class="footer_icon"
                                     src="assets/images/webp/linked_in.webp" alt="linked_in"></a>
-                            <a href="#tiktok"><img class="footer_icon" src="assets/images/webp/tiktok.webp" alt="tiktok"></a>
+                            <a href="#tiktok"><img class="footer_icon" src="assets/images/webp/tiktok.webp"
+                                    alt="tiktok"></a>
                         </div>
-        
+
                     </div>
-        
+
                 </div>
-        
+
                 <div class="position-absolute footer_line"></div>
-        
+
             </div>
         </footer>
 
@@ -1340,7 +1415,8 @@
         }
     </script>
     <!-- ---------------- Back To Top -------------- -->
-    <script>  var btn = $('#button');
+    <script>
+        var btn = $('#button');
 
         $(window).scroll(function () {
             if ($(window).scrollTop() > 300) {
@@ -1362,5 +1438,6 @@
             document.getElementById("currentYear").textContent = currentYear;
         });
     </script>
+</body>
 
 </html>

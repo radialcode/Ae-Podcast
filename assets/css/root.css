@@ -60,6 +60,7 @@
   --clr-green: #44dc59;
   --clr-red: #ff4d4d;
   --clr-lightblack: #343434;
+  --clr-light-grey: #45474A;
 }
 
 /* ------------font classes ------------ */
@@ -138,6 +139,9 @@
 
 .clr_lightblack {
   color: var(--clr-lightblack);
+}
+.clr_lightgrey {
+  color: var(--clr-light-grey);
 }
 
 /* ------------- line heights ------------- */
