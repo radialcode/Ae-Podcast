@@ -342,6 +342,10 @@
 }
 
 @media (max-width:575.98px) {
+    .footer_links {
+        margin-top: 8px !important;
+    }
+
     .gap_32 {
         gap: 24px !important;
     }
@@ -359,7 +363,7 @@
     }
 
     .impactful_card {
-        padding: 70px 52px;
+        padding: 70px 42px;
         transform: translateY(51%);
     }
 
