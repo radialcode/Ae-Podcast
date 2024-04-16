@@ -23,6 +23,12 @@
 .interview_card_spacing{
   padding: 160px 0;
 }
+.guest_left_vector {
+  max-width: 115px;
+  position: absolute;
+  left: 0;
+  top: -30%;
+}
 /* --------------------------take quiz --------------------------------------- */
 .take_quiz {
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
@@ -350,6 +356,12 @@
 
   .mt_lg_166 {
     margin-top: 112px;
+  }
+  .guest_left_vector {
+    max-width: 115px;
+    position: absolute;
+    left: -5%;
+    top: -30%;
   }
 }
 
