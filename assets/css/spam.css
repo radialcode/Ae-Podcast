@@ -96,7 +96,7 @@
 }
 
 .bg_hero {
-  background-image: url("../images/png/hero_bg.png");
+  background-image: url("../images/webp/hero_bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -539,7 +539,7 @@ a:hover {
   }
 
   .bg_hero {
-    background-image: url("../images/png/header_bg_sm.png");
+    background-image: url("../images/webp/header_bg_sm.webp");
   }
 
   .mxw_para {
