@@ -118,7 +118,12 @@
 .people {
   border-bottom: 1px solid #6f69f2;
 }
-
+.abs_text{
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  
+}
 .ws_nowrap {
   white-space: nowrap;
 }
@@ -341,7 +346,7 @@
   }
 
   .mt_lg_166 {
-    margin-top: 166px;
+    margin-top: 112px;
   }
 }
 
@@ -425,5 +430,26 @@
   .height_box {
     height: 93px;
     width: 158px;
+  }
+  .chart_box {
+    height: 300px;
+  }
+  #chart {
+    width: 90%;
+  }
+  .abs_text{
+    left: -95px;
+    
+  }
+ 
+}
+@media (max-width:500px) {
+  .chart_verticle_line{
+    width: 1px;
+    height: 64%;
+    background-color: #010101;
+    position: absolute;
+    left: 50px;
+    top: 10%;
   }
 }

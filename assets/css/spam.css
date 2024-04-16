@@ -113,7 +113,7 @@
   border-radius: 100px;
   border: none;
   background-color: #6f69f2;
-  padding: 10px 25px;
+  padding: 9px 20.5px;
   transition: all 350ms linear;
   border: 1px solid transparent;
 }
@@ -343,7 +343,10 @@ a:hover {
     padding-top: 90px;
     padding-bottom: 42px;
   }
-
+  .box_hdr {
+    width: 295px;
+    height: 66px;
+  }
   .accordion-body {
     padding: 0px 56px 14px 0px !important;
   }
@@ -415,7 +418,7 @@ a:hover {
   }
 
   .card_main {
-    padding: 24px 10px;
+    padding: 24px;
   }
 
   .space_header {
@@ -426,6 +429,10 @@ a:hover {
   .space_overall {
     padding-top: 53px;
     padding-bottom: 110px;
+  }
+  .nav_space {
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 }
 
@@ -570,5 +577,8 @@ a:hover {
     display: none;
   }
 
-
+  .nav_space {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }

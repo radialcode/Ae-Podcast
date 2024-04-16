@@ -764,7 +764,6 @@
                 46.55%
               </td>
             </tr>
-
             <div class="border_l_radius">
               <tr class="bottom_l_radius">
                 <td
@@ -1104,11 +1103,10 @@
     <div class="custom_container">
       <div class="d-flex flex-lg-row flex-column-reverse">
         <img
-          class="podcast_graph mx-auto ms-lg-0 w-100 me-lg-1 mt-4 mt-lg-0 mb-1 mb-lg-0"
-          src="./assets/images/png/podcast_compare_graph.png"
-          alt="podcast_compare_graph"
-        />
-
+        class="podcast_graph mx-auto ms-lg-0 w-100 me-lg-1 mt-4 mt-lg-0 mb-1 mb-lg-0"
+        src="./assets/images/png/podcast_compare_graph.png"
+        alt="podcast_compare_graph"
+      />
         <div
           class="d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 your_podcast_compared"
         >
@@ -2898,44 +2896,58 @@
       document.getElementById("currentYear").textContent = currentYear;
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Close all dropdowns on page load
-      const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
-      dropdowns.forEach((dropdown) => {
-        dropdown.style.display = "none";
-      });
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Close all dropdowns on page load
+    const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
+    dropdowns.forEach((dropdown) => {
+      dropdown.style.display = "none";
+    });
 
-      // Dropdown button click handler
-      document.querySelectorAll(".dropbtn").forEach((btn) => {
-        btn.onclick = function () {
-          const menu = this.nextElementSibling;
+    // Dropdown button click handler
+    document.querySelectorAll(".dropbtn").forEach((btn) => {
+      let isOpen = false;
+
+      btn.addEventListener("click", function (e) {
+        const menu = this.nextElementSibling;
+        
+        if (isOpen) {
+          menu.style.display = "none";
+          isOpen = false;
+        } else {
+          // Close other dropdowns
           document
             .querySelectorAll(".custom-dropdown-menu")
             .forEach((dropdown) => {
-              if (dropdown !== menu) {
-                dropdown.style.display = "none";
-              }
+              dropdown.style.display = "none";
             });
-          menu.style.display =
-            menu.style.display === "block" ? "none" : "block";
-        };
+          
+          menu.style.display = "block";
+          isOpen = true;
+        }
       });
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
-          dropdowns.forEach((dropdown) => {
-            if (dropdown.style.display === "block") {
-              dropdown.style.display = "none";
-            }
-          });
-        }
-      };
+      // Close dropdown when an option is clicked
+      btn.nextElementSibling.querySelectorAll('a').forEach((option) => {
+        option.addEventListener('click', (e) => {
+          const dropdown = option.closest('.custom-dropdown-menu');
+          dropdown.style.display = 'none';
+          isOpen = false;
+        });
+      });
     });
 
-  </script>
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        const dropdowns = document.querySelectorAll(".custom-dropdown-menu");
+        dropdowns.forEach((dropdown) => {
+          dropdown.style.display = "none";
+        });
+      }
+    };
+  });
+</script>
   <!-- ========== Select ========= -->
   <script>
     var select = document.getElementById("selected");
