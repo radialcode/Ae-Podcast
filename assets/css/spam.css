@@ -11,10 +11,6 @@
   gap: 21px;
 }
 
-.mx_hdng {
-  max-width: 813px;
-}
-
 .mxw_para {
   max-width: 606px;
 }
@@ -33,7 +29,7 @@
 
 .space_faq {
   padding-top: 130px;
-  padding-bottom: 172px;
+  padding-bottom: 124px;
 }
 
 .space_header {
@@ -60,7 +56,6 @@
 .card_main {
   width: 100%;
   max-width: 450px;
-  height: 251px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px 4px #dadada40;
   background-color: white;
@@ -291,7 +286,7 @@ a:hover {
 }
 
 .accordion-body {
-  padding: 0 !important;
+  padding: 0px 30px 12px 0px !important;
   padding-bottom: 12px !important;
   font-family: "Graphik" !important;
   padding-top: 0 !important;
@@ -315,6 +310,7 @@ a:hover {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
 
 .accordion-button:focus {
   z-index: 3;
@@ -343,6 +339,20 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  .space_faq {
+    padding-top: 90px;
+    padding-bottom: 42px;
+  }
+
+  .accordion-body {
+    padding: 0px 56px 14px 0px !important;
+  }
+
+  .vctr_faq {
+    left: -50px;
+    bottom: -63%;
+  }
+
   .nav_bar {
     position: fixed;
     top: 0 !important;
@@ -382,16 +392,15 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  .space_accd {
+      margin-top: 40px;
+    }
   .accordion-button {
     max-width: 650px !important;
   }
 
   .accordion-body {
     max-width: 650px !important;
-  }
-
-  .mx_hdng {
-    max-width: 756px;
   }
 
   .mxw_para {
@@ -430,7 +439,6 @@ a:hover {
   }
 
   .card_main {
-    height: 271px;
     padding: 16px 20px;
   }
 
@@ -446,10 +454,7 @@ a:hover {
   .accordion-body {
     max-width: 700px !important;
     font-size: 15px !important;
-  }
-
-  .mx_hdng {
-    max-width: 711px;
+    padding: 0px 30px 14px 0px !important;
   }
 
   .layer_img {
@@ -484,7 +489,6 @@ a:hover {
   }
 
   .card_main {
-    height: 251px;
     padding: 24px 25px;
   }
 
@@ -498,7 +502,7 @@ a:hover {
 
   .space_faq {
     padding-top: 82px;
-    padding-bottom: 80px;
+    padding-bottom: 32px;
   }
 
   .space_accd {
@@ -524,6 +528,7 @@ a:hover {
     max-width: 800px !important;
     width: 100% !important;
     font-size: 14px !important;
+    padding: 0px 0px 12px 0px !important;
   }
 
   .bg_hero {
@@ -564,4 +569,6 @@ a:hover {
   .d_sm_none {
     display: none;
   }
+
+
 }

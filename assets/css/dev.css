@@ -42,12 +42,6 @@
   border-radius: 8px;
 }
 
-.start_btn_hover:hover .start_btn_clr {
-  -webkit-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 14px 5px -4px rgba(0, 0, 0, 0.75);
-}
-
 .transition_300 {
   transition: 300ms linear;
 }
@@ -95,7 +89,7 @@
 }
 
 .td_border {
-  border: 1px solid rgba(151, 203, 252);
+  border-left: 1px solid rgba(151, 203, 252);
 }
 
 .td_bg_clr {
