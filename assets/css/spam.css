@@ -392,6 +392,9 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  .space_accd {
+      margin-top: 40px;
+    }
   .accordion-button {
     max-width: 650px !important;
   }
