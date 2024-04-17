@@ -473,12 +473,22 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="d-flex align-items-center justify-content-center">
-            <img
+          <div class="d-flex align-items-center justify-content-center industry_chart_bg">
+            <!-- <img
               class="w-100 podcasting_chart"
               src="./assets/images/svg/podcasting_chart.svg"
               alt="podcasting_chart"
-            />
+            /> -->
+            <div class="d-inlin-block position-relative"><canvas class="pie_chart" id="myChart"></canvas>
+            <div class="active_abs">
+              <p class="mb-0 ff_graphik fw-semibold text-white fs_xl">Active</p>
+              <p class="mb-0 ff_graphik fw-normal fs_sm text-white">384,629</p>
+            </div>
+            <div class="total_abs">
+              <p class="mb-0 ff_graphik fw-semibold text-white fs_xl">Total</p>
+              <p class="mb-0 ff_graphik fw-normal fs_sm text-white">2,963,829</p>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3160,6 +3170,47 @@ function closeNav() {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+  </script>
+  <!-- ============= -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // JavaScript code for creating pie chart
+    var ctx = document.getElementById("myChart").getContext("2d");
+var myChart = new Chart(ctx, {
+  type: "pie",
+  data: {
+    labels: ["Total", "Active"], // Add labels here
+    datasets: [
+      {
+        backgroundColor: ["#5c76f4", "#00B9FF"],
+        data: [28, 7],
+      },
+    ],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false, // Hide the default legend
+      },
+      datalabels: {
+        color: 'white', // Color of the labels
+        anchor: 'end',
+        align: 'start',
+        offset: 10,
+        borderWidth: 2,
+        borderColor: 'white',
+        borderRadius: 4,
+        backgroundColor: function(context) {
+          return context.dataset.backgroundColor;
+        },
+        formatter: (value, context) => {
+          return context.chart.data.labels[context.dataIndex] + ': ' + value;
+        },
+      },
+    },
+  },
+});
 
   </script>
 </body>
