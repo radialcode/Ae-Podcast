@@ -198,7 +198,7 @@
 }
 
 .gradient_text {
-  background: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+  background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -211,7 +211,7 @@
   background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
 }
 
-/*================ future sec =====================*/
+/* ================ future sec ===================== */
 
 .future_sec_p {
   padding: 0px 0px 257px 0px;
