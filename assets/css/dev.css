@@ -4,7 +4,9 @@
   width: 500px !important;
   height: 400px;
 }
-
+.td_gradient{
+  background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+}
 /* ========= CHART JS ========= */
 #SvgjsLine1184 {
   display: contents !important;
