@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/spam.css" />
   <link rel="stylesheet" href="./assets/css/dev.css" />
+  <link rel="stylesheet" href="./assets/css/master.css" />
   <!-- --favicon --- -->
   <link rel="icon" type="image/x-icon" href="./assets/images/png/favicon.png" />
   <!-- =========== CHART JS SCRIPT =========== -->
@@ -57,7 +58,7 @@
             </div>
             <div class="custom-dropdown position-relative d-inline-block">
               <button
-                class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 pe-lg-1 ps-lg-0 px-0">
+                class="nav_dropbtn transition_03 border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 pe-lg-1 ps-lg-0 px-0">
                 Features
                 <span>
                   <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +78,7 @@
             </div>
             <div class="custom-dropdown position-relative d-inline-block">
               <button
-                class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 px-lg-1 px-0">
+                class="nav_dropbtn transition_03 border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 px-lg-1 px-0">
                 Pricing
                 <span>
                   <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +98,7 @@
             </div>
             <div class="custom-dropdown position-relative d-inline-block">
               <button
-                class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 px-lg-1 px-0">
+                class="nav_dropbtn transition_03 border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 px-lg-1 px-0">
                 About us
                 <span>
                   <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +116,7 @@
             </div>
             <div class="custom-dropdown position-relative d-inline-block">
               <button
-                class="dropbtn border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 ps-1 pe-0 px-0">
+                class="nav_dropbtn transition_03 border-0 bg-transparent bg-white z-1 fw-normal fs_sm clr_grey ff_graphik lh_150 d-flex gap-2 py-0 ps-1 pe-0 px-0">
                 Community
                 <span>
                   <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +135,7 @@
             </div>
 
             <button onclick="closeNav()"
-              class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login lh_150 bg-transparent border-0 bttn_login_sm">
+              class="fw-semibold fs_sm d-md-none ff_graphik clr_black bttn_login transition_03 lh_150 bg-transparent border-0 bttn_login_sm">
               Login
             </button>
             <button onclick="closeNav()"
@@ -145,16 +146,16 @@
         </div>
         <div class="d-none d-lg-block space_bttn align-items-center">
           <button
-            class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150 me-0 px-0 bg-transparent me-md-3 border-0">
+            class="fw-semibold fs_sm ff_graphik clr_black bttn_login transition_03 lh_150 me-0 px-0 bg-transparent me-md-3 border-0">
             Login
           </button>
           <button class="fw-semibold fs_sm ff_graphik clr_offwhite bttn_rsg lh_150">
             Register
           </button>
         </div>
-        <div class="d-flex align-items-center gap-4">
+        <div class="d-flex d-lg-none align-items-center gap-4">
           <div class="d-none d-md-block position-relative d-lg-none me-2 space_bttn align-items-center">
-            <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login lh_150 bg-transparent border-0">
+            <button class="fw-semibold fs_sm ff_graphik clr_black bttn_login transition_03 lh_150 bg-transparent border-0">
               Login
             </button>
             <button class="fw-semibold fs_sm ff_graphik bttn_rsg lh_150">
@@ -172,11 +173,11 @@
       <header class="bg_hero">
         <div class="custom_container space_header">
           <div class="d-flex flex-column justify-content-center align-items-center text-center">
-            <h1 class="lh_120 fs_4xl fw-semibold mb-0 podcast_report_heading ff_graphik">
-              The Actively Established Podcast Report <br class="d-sm-none">
+            <h1 class="lh_120 fs_4xl clr_black fw-semibold mb-0 podcast_report_heading ff_graphik">
+              The Actively Established Podcast Report
               <span class="txt_hdng_clr fs_5xl">March 2024</span>
             </h1>
-            <p class="fs_sm clr_black fw-normal lh_150 mxw_para mt-2 pt-1 mt-md-0 mt-md-3 mb-0 ff_graphik">
+            <p class="fs_sm clr_black fw-normal lh_150 mxw_para mt-2 mt-md-0 mt-md-3 mb-0 ff_graphik">
               An Actively Established Podcaster is a non-celebrity independent
               interview-based host with 100+ episodes and a release cadence of
               10 days or less.
@@ -213,9 +214,9 @@
           alt="layer-img" />
         <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
           alt="layer-img" />
-        <div class="row card_space justify-content-center align-items-center column-gap-md-2 column-gap-lg-0">
+        <div class="row justify-content-center align-items-center column-gap-md-2 column-gap-lg-0">
           <div class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex">
-            <div class="card_main">
+            <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5223)" />
@@ -256,9 +257,9 @@
               </p>
             </div>
           </div>
-          <div
-            class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center align-items-center d-flex">
-            <div class="card_main">
+          <div class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center 
+          align-items-center d-flex">
+            <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5237)" />
@@ -287,13 +288,13 @@
               </p>
               <p class="ff_graphik mb-0 mt-3 clr_tundora fs_sm fw-normal lh_110 line_height_24">
                 Extremely high failure rate with limited
-                <span class="txt_clr_para">clear success paths.</span>
+                <span class="txt_clr_para">clear success paths</span>.
               </p>
             </div>
           </div>
-          <div
-            class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center align-items-center d-flex">
-            <div class="card_main">
+          <div class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center 
+          align-items-center d-flex">
+            <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5247)" />
@@ -321,7 +322,7 @@
             </div>
           </div>
           <div class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
-            <div class="card_main">
+            <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32" cy="32" r="32" fill="url(#paint0_linear_967_5257)" />
@@ -2911,7 +2912,7 @@
     });
 
     // Get all dropdown buttons
-    const dropdownButtons = document.querySelectorAll('.dropbtn');
+    const dropdownButtons = document.querySelectorAll('.nav_dropbtn');
 
     // Add click event listener to each dropdown button
     dropdownButtons.forEach(button => {

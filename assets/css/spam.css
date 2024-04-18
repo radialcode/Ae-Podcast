@@ -12,7 +12,7 @@
 }
 
 .mxw_para {
-  max-width: 606px;
+  max-width: 620px;
 }
 
 .mxw_para_cntr {
@@ -67,6 +67,10 @@
   text-align: center;
 }
 
+.card_main:hover {
+  transform: scale(1.05);
+}
+
 .box_hdr {
   margin-top: 35px;
   width: 321px;
@@ -97,7 +101,7 @@
 
 .bg_hero {
   background-image: url("../images/webp/hero_bg.webp");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -343,10 +347,12 @@ a:hover {
     padding-top: 90px;
     padding-bottom: 42px;
   }
+
   .box_hdr {
     width: 295px;
     height: 66px;
   }
+
   .accordion-body {
     padding: 0px 56px 14px 0px !important;
   }
@@ -396,8 +402,9 @@ a:hover {
 
 @media (max-width: 991.98px) {
   .space_accd {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
+  }
+
   .accordion-button {
     max-width: 650px !important;
   }
@@ -430,6 +437,7 @@ a:hover {
     padding-top: 53px;
     padding-bottom: 110px;
   }
+
   .nav_space {
     padding-top: 13px;
     padding-bottom: 13px;
