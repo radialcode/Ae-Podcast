@@ -9,38 +9,48 @@
 #SvgjsLine1184 {
   display: contents !important;
 }
+
 #chart {
   width: 80%;
 }
+
 .apexcharts-toolbar {
   display: none !important;
 }
+
 #SvgjsPath1019 {
   width: 30px !important;
 }
+
 .apexcharts-bar-area:hover path {
   filter: none !important;
 }
+
 .chart_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
   width: 420px !important;
   height: 400px;
 }
+
 /* ============================= */
 /* ========== SECOND CHART ======= */
 #linechart {
   width: 90%;
 }
+
 .apexcharts-toolbar {
   display: none !important;
 }
+
 #SvgjsPath1019 {
   width: 30px !important;
 }
+
 .apexcharts-bar-area:hover path {
   filter: none !important;
 }
+
 /* ======= CHART 3 ====== */
 .pie_chart {
   max-width: 330px;
@@ -48,16 +58,19 @@
   max-height: 360px;
   height: 100%;
 }
+
 .active_abs {
   position: absolute;
   top: 15%;
   left: 20%;
 }
+
 .total_abs {
   position: absolute;
   bottom: 20%;
   left: 40%;
 }
+
 .industry_chart_bg {
   background-image: url("/assets/images/png/industry_chart_bg.png");
   background-repeat: no-repeat;
@@ -69,27 +82,32 @@
   max-height: 476px;
   padding-top: 30px;
 }
+
 /* =================== */
 #chartdiv {
   width: 350px;
   height: 370px;
 }
+
 .success_text_abs {
   position: absolute;
   top: 4%;
   left: 30%;
 }
+
 .failure_text_abs {
   position: absolute;
   bottom: 5%;
   left: 25%;
 }
+
 /* =================== */
 /* ========== */
 #donut-chart {
   width: 350px !important;
   height: 370px !important;
 }
+
 .content h1 {
   font-weight: 300;
   text-align: center;
@@ -115,39 +133,46 @@
     fill: #fff !important;
   }
 }
+
 .three_lines_abs {
   position: absolute !important;
   bottom: 5% !important;
   right: 23% !important;
   max-width: 200px;
 }
+
 .single_lines_abs {
   position: absolute !important;
   top: 19% !important;
   left: 30% !important;
   max-width: 200px;
 }
+
 /* ================ */
 /* =========== */
-#guesting-chart{
+#guesting-chart {
   width: 400px !important;
   height: 400px !important;
 }
-.guesting svg{
+
+.guesting svg {
   max-width: 500px;
   width: 100%;
   max-height: 500px;
   height: 100%;
   margin: 0 auto;
 }
+
 /* =========== */
 .height_box {
   height: 106px;
 }
+
 .select_box {
   width: 115px;
   height: 28px;
 }
+
 .option_box {
   width: 115px;
   background-color: white;
@@ -157,16 +182,20 @@
   top: 105%;
   box-shadow: 0px 0px 20px 4px #e2e2e240;
 }
+
 .option_item {
   transition: all 300ms linear;
   padding: 6px 10px;
 }
+
 .option_item:hover {
   background-color: #e9e6e6;
 }
+
 .interview_card_spacing {
   padding: 160px 0;
 }
+
 .guest_left_vector {
   max-width: 115px;
   position: absolute;
@@ -174,6 +203,7 @@
   top: -30%;
   z-index: 1;
 }
+
 .table_border {
   border-spacing: 0;
   border-collapse: separate;
@@ -181,6 +211,7 @@
   border: 1px solid rgba(151, 203, 252);
   overflow: hidden;
 }
+
 /* --------------------------take quiz --------------------------------------- */
 .take_quiz {
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
@@ -279,11 +310,13 @@
 .people {
   border-bottom: 1px solid #6f69f2;
 }
+
 .abs_text {
   left: -75px;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
 }
+
 .ws_nowrap {
   white-space: nowrap;
 }
@@ -323,15 +356,18 @@
 .podcast_guesting {
   max-width: 485px;
 }
+
 .py_7 {
   padding: 7px 0px;
 }
+
 /* -------------------------------------------------------activity establish -------------------------------------------- */
 .aep_blue_elipse {
   bottom: -58%;
   right: -12%;
   max-width: 115%;
 }
+
 .industry_elipse {
   bottom: -14%;
   right: -5%;
@@ -340,6 +376,7 @@
   opacity: 0.1;
   filter: blur(60px);
 }
+
 .chance_elipse {
   bottom: -5%;
   left: 5%;
@@ -355,17 +392,20 @@
   right: 0;
   max-width: 115px;
 }
+
 .compare_lines_vec {
   top: -10%;
   right: 0%;
   max-width: 115px;
 }
+
 .compare_left_vector {
   top: 25%;
   left: -3%;
   width: 83px !important;
   height: 359px !important;
 }
+
 .aep_chart {
   box-shadow: 0px 4px 20px 0px rgba(6, 6, 6, 0.08);
 }
@@ -413,15 +453,6 @@
   max-width: 633px;
 }
 
-.looking_switch {
-  max-width: 606px;
-}
-
-.here_choice {
-  background: -webkit-linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .guesting_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
@@ -429,6 +460,7 @@
   width: 100%;
   height: 438px;
 }
+
 /* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
   max-width: 70px;
@@ -467,11 +499,13 @@
   .podcast_guesting {
     max-width: 100%;
   }
+
   .aep_blue_elipse {
     bottom: -15% !important;
     right: -2% !important;
     max-width: 115%;
   }
+
   .ph_provider_sec {
     padding-top: 80px;
   }
@@ -521,27 +555,32 @@
   .mt_lg_166 {
     margin-top: 112px;
   }
+
   .guest_left_vector {
     max-width: 115px;
     position: absolute;
     left: -5%;
     top: -30%;
   }
+
   .industry_chart_bg {
     padding: 70px 0;
   }
+
   .failure_text_abs {
     position: absolute;
     bottom: -3%;
     left: 25%;
   }
+
   .nvd3.nv-pie .nv-pieLabels text {
     font-family: "Graphik";
     font-size: 12px !important;
     font-weight: 300;
     fill: #fff !important;
   }
-  .pb_80{
+
+  .pb_80 {
     padding-bottom: 80px;
   }
 }
@@ -587,6 +626,7 @@
   .podcast_guesting_circle {
     max-width: 205px;
   }
+
   .chance_elipse {
     bottom: -5%;
     left: -2%;
@@ -596,6 +636,7 @@
     opacity: 0.5;
     filter: blur(60px);
   }
+
   .data_provided_by {
     font-size: 14px;
   }
@@ -609,11 +650,12 @@
     max-width: 115px;
   }
 
-  .hosts{
+  .hosts {
     max-width: 88.98px;
     height: 51.33px;
     top: 10% !important;
   }
+
   .guests {
     max-width: 88.98px;
     height: 51.33px;
@@ -623,14 +665,17 @@
   .fs_sm_12 {
     font-size: 12px;
   }
+
   .aep_blue_elipse {
     bottom: -28% !important;
     right: -29% !important;
     z-index: -1;
   }
+
   .mt_lg_166 {
     margin-top: 40px;
   }
+
   .height_box {
     height: 93px;
     width: 158px;
@@ -644,41 +689,49 @@
   #chart {
     width: 90%;
   }
+
   .abs_text {
     left: -95px;
   }
+
   .pie_chart {
     max-width: 256px;
     width: 100%;
     max-height: 256px;
     height: 100%;
   }
+
   .industry_chart_bg {
     width: 100%;
     height: 100%;
     padding: 40px 0;
   }
+
   .failure_text_abs {
     position: absolute;
     bottom: 5%;
     left: 25%;
   }
+
   .three_lines_abs {
     bottom: 12% !important;
     right: 20% !important;
     max-width: 150px;
     transform: rotate(5deg);
   }
+
   .single_lines_abs {
     top: 20% !important;
     left: 10% !important;
     max-width: 200px;
   }
-  #guesting-chart{
+
+  #guesting-chart {
     width: 300px;
     height: 300px;
   }
 }
+
 @media (max-width: 500px) {
   .chart_verticle_line {
     width: 1px;
