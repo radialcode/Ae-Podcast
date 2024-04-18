@@ -31,6 +31,12 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/png/favicon.png" />
   <!-- =========== CHART JS SCRIPT =========== -->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- ======================= -->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- ==== -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -491,7 +497,7 @@
   </section>
   <!-- ------------ possible future -------------- -->
   <section
-    class="bg-white d-lg-block d-none future_sec_p position-relative"
+    class="bg-white future_sec_p position-relative pb_80"
   >
     <img
       class="position-absolute end-0 possible_future_ellipse"
@@ -500,14 +506,16 @@
     />
 
     <div class="custom_container position-relative z-1">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-lg-6">
-          <div class="d-flex align-items-center justify-content-center">
-            <img
-              class="w-100 possible_future_chart"
-              src="./assets/images/svg/possible_future_chart.svg"
-              alt="possible_future"
-            />
+      <div class="row align-items-center justify-content-between flex-lg-row flex-column-reverse">
+        <div class="col-lg-6 mt-lg-0 mt-4">
+          <div class="d-flex justify-content-center industry_chart_bg  position-relative">
+            <div class="content">
+              <div id="donut-chart">
+                <svg></svg>
+              </div>
+              <img class="three_lines_abs" src="./assets/images/png/chart_lines.png" alt="lines">
+              <img class="single_lines_abs" src="./assets/images/png/single_line.png" alt="lines">
+            </div>
           </div>
         </div>
 
@@ -802,21 +810,20 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center">
-            <img
-              class="w-100 podcasting_chart"
-              src="./assets/images/svg/chances_chart.svg"
-              alt="chances_chart"
-            />
+        <div class="col-lg-6 mt-lg-0 mt-sm-4 ">
+          <div class="d-flex justify-content-center industry_chart_bg">
+            <div class="position-relative"><div id="chartdiv"></div>
+              <img class="success_text_abs" src="./assets/images/png/succes_text.png" alt="succes">
+              <img class="failure_text_abs" src="./assets/images/png/failure_text.png" alt="failure">
+              </div>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Activity Established Podcast -->
-  <section class="bg-white activity_establish_sec">
-    <div class="custom_container position-relative z-1">
+  <section class="bg-white activity_establish_sec position-relative z-1">
+    <div class="custom_container">
       <img
         class="activity_blue_ellipse position-absolute aep_blue_elipse"
         src="./assets/images/png/activity_blue_ellipse.png"
@@ -2794,6 +2801,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="./assets/js/custom.js"></script>
+  <!-- ==== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
   <!-- --------------- Navbar-Js ------------------ -->
   <script>
     const Navbar = document.getElementById("NavBar");
@@ -3336,6 +3346,111 @@ var myChart = new Chart(ctx, {
   },
 });
 
+  </script>
+   <!-- =============== -->
+   <script>
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+    chart.data = [
+      {
+        country: "Chances of Failure",
+        litres: 100,
+      },
+      {
+        country: "Likelihood of Success",
+        litres: 20,
+      },
+    ];
+
+    chart.innerRadius = am4core.percent(40);
+    chart.depth = 0;
+
+    //   chart.legend = new am4charts.Legend();
+    var series = chart.series.push(new am4charts.PieSeries3D());
+    series.dataFields.value = "litres";
+    series.dataFields.depthValue = "litres";
+    series.dataFields.category = "country";
+    series.slices.template.cornerRadius = 3;
+    series.colors.step = 3;
+    series.labels.template.disabled = true;
+  </script>
+  <!-- ========== -->
+  <script>
+    nv.addGraph(function() {
+  var donutChart = nv.models.pieChart()
+  		.x(function(d) {
+        return d.label
+      })
+  		.y(function(d) {
+        return d.value
+      })
+  		.showLabels(true)
+  		.showLegend(false)
+  		.labelThreshold(.05)
+  		.labelType("key")
+  		.color(["#27A0FC", "#00B9FF",])
+  		.tooltipContent(
+        function(key, y, e, graph) { return 'Custom tooltip string' }
+      ) // This is for when I turn on tooltips
+  		.tooltips(false)
+  		.donut(true)
+  		.donutRatio(0.35);
+  
+  	// Insert text into the center of the donut
+  	function centerText() {
+			return function() {
+        var svg = d3.select("svg");
+
+    		var donut = svg.selectAll("g.nv-slice").filter(
+          function (d, i) {
+            return i == 0;
+          }
+        );
+        
+        // Insert first line of text into middle of donut pie chart
+        donut.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+        		.attr("dy", "-.55em")
+        		.style("fill", "#27A0FC");
+        // Insert second line of text into middle of donut pie chart
+        donut.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+        		.attr("dy", ".85em")
+        		.style("fill", "#27A0FC");
+      }
+    }
+  
+  // Put the donut pie chart together
+  d3.select("#donut-chart svg")
+    .datum(seedData())
+    .transition().duration(300)
+    .call(donutChart)
+    .call(centerText())
+    .call(pieSlice());
+    
+  return donutChart;
+});
+
+
+// Seed data to populate donut pie chart
+function seedData() {
+  return [
+    {
+      "label": "Total 505,677",
+      "value": 505677
+    },
+    {
+      "label": "Active 120,212",
+      "value":  120212
+    },
+  ];
+}
   </script>
 </body>
 
