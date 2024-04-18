@@ -81,8 +81,8 @@
 /* =================== */
 /* ========== */
 #donut-chart {
-  width: 350px;
-  height: 370px;
+  width: 350px !important;
+  height: 370px !important;
 }
 .content h1 {
   font-weight: 300;
@@ -90,9 +90,9 @@
 }
 
 .content svg {
-  max-width: 500px;
+  max-width: 500px !important;
   width: 100%;
-  max-height: 500px;
+  max-height: 500px !important;
   height: 100%;
   margin: 0 auto;
 
@@ -122,6 +122,19 @@
   max-width: 200px;
 }
 /* ================ */
+/* =========== */
+#guesting-chart{
+  width: 400px !important;
+  height: 400px !important;
+}
+.guesting svg{
+  max-width: 500px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  margin: 0 auto;
+}
+/* =========== */
 .height_box {
   height: 106px;
 }
@@ -376,11 +389,12 @@
 }
 
 .hosts {
-  left: -23%;
+  left: 10%;
 }
 
 .guests {
-  right: -27%;
+  right: 5%;
+  bottom: 10%;
 }
 
 /*--------------------------------------------------------- podcast hosting provider ---------------------------------------------*/
@@ -574,10 +588,15 @@
     max-width: 115px;
   }
 
-  .hosts,
+  .hosts{
+    max-width: 88.98px;
+    height: 51.33px;
+    top: 10% !important;
+  }
   .guests {
     max-width: 88.98px;
     height: 51.33px;
+    bottom: 10% !important;
   }
 
   .fs_sm_12 {
@@ -630,6 +649,10 @@
     top: 20% !important;
     left: 10% !important;
     max-width: 200px;
+  }
+  #guesting-chart{
+    width: 300px;
+    height: 300px;
   }
 }
 @media (max-width: 500px) {

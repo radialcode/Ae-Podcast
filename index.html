@@ -629,7 +629,7 @@
       alt="chances_left_vector"
     />
     <div
-    class="activity_blue_ellipse position-absolute chance_elipse"
+    class="activity_blue_ellipse position-absolute chance_elipse z-2"
   ></div>
     <div class="custom_container position-relative z-1">
       <div class="row align-items-center justify-content-between">
@@ -838,7 +838,7 @@
         class="row justify-content-between flex-column-reverse flex-lg-row"
       >
         <div class="col-lg-6 mt-lg-0 mt-4 pt-lg-0 pt-3">
-          <div class="d-flex justify-content-center pe-lg-3">
+          <div class="d-flex justify-content-lg-center pe-lg-3">
             <div class="chart_box d-flex flex-column align-items-center justify-content-center position-relative">
               <div id="linechart" class="position-relative">
               </div>
@@ -998,13 +998,13 @@
             class="clr_black opacity_70 scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150"
           >
             Serious podcast guests and hosts exclusively use
-            <a class="clr_purple fw-medium" href="#">PodMatch.com </a> to
+            <a class="clr_purple fw-medium" href="https://podmatch.com/">PodMatch.com </a> to
             connect for interviews and to streamline the administrative and
             booking process.
           </p>
 
           <div
-            class="d-flex align-items-center justiy-content-center pt-3 gap-md-4 gap-3"
+            class="d-flex align-items-center justiy-content-center pt-3 gap-md-4 gap-3 position-relative z-2"
           >
             <div class="seeking_guest_box p-3 w_224">
               <p
@@ -1059,11 +1059,11 @@
             class="d-flex align-items-center justify-content-center bg-white mt_lg_166 guesting_box"
           >
             <div class="position-relative">
-              <img
-                class="w-100 podcast_guesting_circle"
-                src="./assets/images/webp/poodcast_gathering_circle.webp"
-                alt="podcasting_chart"
-              />
+              <div class="guesting">
+                <div id="guesting-chart">
+                  <svg></svg>
+                </div>
+              </div>
               <div
                 class="d-flex justify-content-center align-items-center host_box bg-white top-0 position-absolute hosts"
               >
@@ -3314,7 +3314,7 @@ chart.render();
 var myChart = new Chart(ctx, {
   type: "pie",
   data: {
-    labels: ["Total", "Active"], // Add labels here
+    labels: ["Total", "Active"],
     datasets: [
       {
         backgroundColor: ["#5c76f4", "#00B9FF"],
@@ -3326,21 +3326,6 @@ var myChart = new Chart(ctx, {
     plugins: {
       legend: {
         display: false, // Hide the default legend
-      },
-      datalabels: {
-        color: 'white', // Color of the labels
-        anchor: 'end',
-        align: 'start',
-        offset: 10,
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 4,
-        backgroundColor: function(context) {
-          return context.dataset.backgroundColor;
-        },
-        formatter: (value, context) => {
-          return context.chart.data.labels[context.dataIndex] + ': ' + value;
-        },
       },
     },
   },
@@ -3381,77 +3366,114 @@ var myChart = new Chart(ctx, {
   <!-- ========== -->
   <script>
     nv.addGraph(function() {
-  var donutChart = nv.models.pieChart()
-  		.x(function(d) {
-        return d.label
-      })
-  		.y(function(d) {
-        return d.value
-      })
-  		.showLabels(true)
-  		.showLegend(false)
-  		.labelThreshold(.05)
-  		.labelType("key")
-  		.color(["#27A0FC", "#00B9FF",])
-  		.tooltipContent(
-        function(key, y, e, graph) { return 'Custom tooltip string' }
-      ) // This is for when I turn on tooltips
-  		.tooltips(false)
-  		.donut(true)
-  		.donutRatio(0.35);
+      var donutChart1 = nv.models.pieChart()
+        .x(function(d) {
+          return d.label;
+        })
+        .y(function(d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#27A0FC", "#00B9FF"])
+        .tooltipContent(function(key, y, e, graph) { 
+          return 'Custom tooltip string';
+        })
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.35);
   
-  	// Insert text into the center of the donut
-  	function centerText() {
-			return function() {
-        var svg = d3.select("svg");
-
-    		var donut = svg.selectAll("g.nv-slice").filter(
-          function (d, i) {
-            return i == 0;
-          }
-        );
-        
-        // Insert first line of text into middle of donut pie chart
-        donut.insert("text", "g")
+      var donutChart2 = nv.models.pieChart()
+        .x(function(d) {
+          return d.label;
+        })
+        .y(function(d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#6B6DF3", "#01B7FC"])
+        .tooltipContent(function(key, y, e, graph) { 
+          return 'Custom tooltip string';
+        })
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.35);
+  
+      function centerText() {
+        return function() {
+          var svg = d3.select("svg");
+  
+          var donut1 = svg.selectAll("#donut-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+  
+          var donut2 = svg.selectAll("#guesting-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+  
+          donut1.insert("text", "g")
             .attr("class", "middle")
             .attr("text-anchor", "middle")
-        		.attr("dy", "-.55em")
-        		.style("fill", "#27A0FC");
-        // Insert second line of text into middle of donut pie chart
-        donut.insert("text", "g")
+            .attr("dy", "-.55em")
+            .style("fill", "#27A0FC");
+  
+          donut2.insert("text", "g")
             .attr("class", "middle")
             .attr("text-anchor", "middle")
-        		.attr("dy", ".85em")
-        		.style("fill", "#27A0FC");
+            .attr("dy", "-.55em")
+            .style("fill", "#6B6DF3");
+        };
       }
+  
+      d3.select("#donut-chart svg")
+        .datum(seedData1())
+        .transition().duration(300)
+        .call(donutChart1)
+        .call(centerText());
+  
+      d3.select("#guesting-chart svg")
+        .datum(seedData2())
+        .transition().duration(300)
+        .call(donutChart2)
+        .call(centerText());
+  
+      return [donutChart1, donutChart2];
+    });
+  
+    function seedData1() {
+      return [
+        {
+          "label": "Total 505,677",
+          "value": 505677
+        },
+        {
+          "label": "Active 120,212",
+          "value":  120212
+        },
+      ];
     }
   
-  // Put the donut pie chart together
-  d3.select("#donut-chart svg")
-    .datum(seedData())
-    .transition().duration(300)
-    .call(donutChart)
-    .call(centerText())
-    .call(pieSlice());
-    
-  return donutChart;
-});
-
-
-// Seed data to populate donut pie chart
-function seedData() {
-  return [
-    {
-      "label": "Total 505,677",
-      "value": 505677
-    },
-    {
-      "label": "Active 120,212",
-      "value":  120212
-    },
-  ];
-}
+    function seedData2() {
+      return [
+        {
+          "value": 505677
+        },
+        {
+          "value":  120212
+        },
+      ];
+    }
   </script>
+  
 </body>
 
 </html>
