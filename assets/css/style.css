@@ -21,7 +21,7 @@
 }
 
 .start_btn_hover:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .podcast_report_heading {
@@ -38,6 +38,11 @@
 
 .bttn_login:hover {
     color: #6F69F2;
+}
+
+.vctr_faq {
+    left: 0;
+    bottom: 20%;
 }
 
 @media (max-width: 1199.98px) {

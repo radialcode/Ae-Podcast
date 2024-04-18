@@ -270,14 +270,10 @@
   background: linear-gradient(102.79deg, #00C2CB 2.64%, #01BAFF 98.35%);
   border-radius: 57px;
   padding: 16px 28px;
-  transition: background 0.5s linear;
-  /* Adjusted transition */
 }
 
 .gradient_btn:hover {
-  background: linear-gradient(102.79deg, #ffffff 4.64%, #ffffff 68.35%);
-  /* Use the same gradient definition as the normal state */
-  color: black;
+  transform: scale(1.05);
 }
 
 .card_p {
@@ -337,7 +333,30 @@
   scale: 1.2;
 }
 
-/*=================================== media-screen =====================================*/
+.vctr_faq {
+  left: 0;
+  bottom: 20%;
+}
+
+.accordion-item .active-text .accordion_heading {
+  color: black;
+}
+
+.accordion_heading {
+  color: #010101;
+  opacity: 80%;
+}
+
+.looking_switch {
+  color: #444444;
+  max-width: 606px;
+}
+
+.here_choice {
+  background: -webkit-linear-gradient(311.05deg, #428AF8 0%, #4B84F7 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media (max-width:1279.98px) {
   #back-top {
@@ -353,6 +372,10 @@
 }
 
 @media (max-width:991.98px) {
+  .vctr_faq {
+    left: -50px;
+    bottom: -80%;
+  }
 
   .footer_para {
     max-width: 378px;
@@ -416,6 +439,19 @@
 }
 
 @media (max-width:575.98px) {
+  #back-top {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .footer_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer_icons_gap {
+    gap: 18px;
+  }
 
   .gap_32 {
     gap: 24px !important;

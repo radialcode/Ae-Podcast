@@ -337,11 +337,6 @@ a:hover {
   background-image: url("../images/svg/faq_open.svg") !important;
 }
 
-.vctr_faq {
-  left: 0;
-  bottom: 20%;
-}
-
 @media (max-width: 991.98px) {
   .space_faq {
     padding-top: 90px;
@@ -355,11 +350,6 @@ a:hover {
 
   .accordion-body {
     padding: 0px 56px 14px 0px !important;
-  }
-
-  .vctr_faq {
-    left: -50px;
-    bottom: -63%;
   }
 
   .nav_bar {
