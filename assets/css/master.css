@@ -1,0 +1,485 @@
+.max_width {
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+.opacity_70 {
+  opacity: 70%;
+}
+
+.table_radius {
+  border-radius: 0px 4px 4px 4px;
+}
+
+.mb_3 {
+  margin-bottom: 3px;
+}
+
+.py_10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table_shadow {
+  box-shadow: 4px 4px 20px 0px #D4D4D440;
+}
+
+.line_right_podcast_table {
+  top: -85px;
+}
+
+.line_right_second_podcast_table {
+  top: 90%;
+}
+
+.line_left_podcast_table {
+  top: 40%;
+  left: 0px;
+}
+
+.support_table table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 4px;
+  border: 1px solid rgba(151, 203, 252);
+  overflow: hidden;
+}
+
+.blur_ellipse {
+  opacity: 10%;
+  filter: blur(100px);
+  border-radius: 60%;
+}
+
+.pink_blur_ellipse {
+  width: 258px;
+  height: 212px;
+  background-color: #6F69F2;
+}
+
+.sky_blur_ellipse_right_table {
+  width: 409px;
+  height: 336px;
+  background-color: #00C2CB;
+}
+
+.sky_blur_second_ellipse_right_table {
+  width: 258px;
+  height: 212px;
+  background-color: #00C2CB;
+}
+
+.pink_blur_left_position {
+  left: 73px;
+  top: 66%;
+}
+
+.sky_blur_right_position {
+  right: 10px;
+  top: 25%;
+}
+
+.sky_blur_second_right_position {
+  right: 40px;
+  top: 92%;
+}
+
+#back-top {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  font-family: 'poppins';
+  font-weight: 800;
+  background-color: #313EF7;
+  border: 2px solid #313EF7;
+  z-index: 100;
+}
+
+.back_top_img {
+  height: 40px;
+  width: 40px;
+}
+
+#back-top:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+.table_gradient_color {
+  background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+}
+
+.bg_impactful_card {
+  background: linear-gradient(to bottom, #fff 50%, #EBECEF 50%);
+}
+
+.border_top {
+  border-top: 2px solid #6F69F21A;
+}
+
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.transition_100 {
+  transition: all linear 100ms;
+}
+
+.transition_200 {
+  transition: all linear 200ms;
+}
+
+/*============================== poadcasting industries section  ===================*/
+.poadcasting_heading {
+  max-width: 526px !important;
+}
+
+.poadcasting_para {
+  max-width: 553px !important;
+}
+
+.poadcasting_p {
+  padding: 0px 0px 200px 0px;
+}
+
+.possible_heading {
+  max-width: 539px !important;
+}
+
+.chances_heading {
+  max-width: 532px !important;
+}
+
+.gradient_para_width {
+  max-width: 432px;
+}
+
+.select_bg {
+  background-color: #e9e6e6;
+  border: 1px solid #d2cfcf;
+  border-radius: 4px;
+  color: #474646;
+  padding: 6.5px 23px 4.12px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background-image: url('/assets/images/webp/select_arrow.webp');
+  background-size: 9px 5px;
+  background-repeat: no-repeat;
+  background-position: 95px !important;
+}
+
+.active_box {
+  border: 1px solid #00B9FF;
+  padding: 16px 24px;
+  width: 100%;
+  border-radius: 16px;
+  max-width: 176px;
+  box-shadow: 12px 12px 12px 0px #fcfeff;
+}
+
+.total_box {
+  border: 1px solid;
+  border-image-source: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+  background-color: transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+  background-clip: content-box, border-box;
+  max-width: 205px !important;
+  border-radius: 16px;
+  box-shadow: 12px 12px 20px 0px #fcfeff;
+}
+
+.gap_32 {
+  gap: 32px !important;
+}
+
+.gradient_text {
+  background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.podcasting_chart {
+  max-width: 522px !important;
+}
+
+.td_gradient {
+  background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+}
+
+/* ================ future sec ===================== */
+
+.future_sec_p {
+  padding: 0px 0px 257px 0px;
+}
+
+.arrow_width {
+  width: 106px;
+  margin: 25px 0px 0px -20px;
+}
+
+.chances_table {
+  max-width: 558px;
+}
+
+.possible_future_chart {
+  max-width: 494px;
+}
+
+/*============================ ellipse ============================*/
+.podcasting_industries_ellipse {
+  top: -75% !important;
+}
+
+.your_podcast_right_vec {
+  top: 50%;
+  right: 0;
+  max-height: 484px;
+}
+
+.chances_left_vector {
+  top: -60%;
+  max-height: 484px;
+}
+
+.possible_future_ellipse {
+  top: 20%;
+}
+
+/*============================ card ===========================*/
+
+.impactful_card {
+  max-width: 1140px;
+  width: 100%;
+  background: linear-gradient(133.83deg, #00B9FF 3.77%, #6F69F2 81.07%);
+  border: 4px solid white;
+  border-radius: 32px;
+  min-height: 318px;
+  /* transform: translateY(50%); */
+  box-shadow: 0px 12px 30px 0px #706AF34D;
+  padding: 54.5px 36px;
+  /* margin-top: -230px !important; */
+}
+
+.gradient_btn {
+  border: 1px solid #FFFFFF;
+  background: linear-gradient(102.79deg, #00C2CB 2.64%, #01BAFF 98.35%);
+  border-radius: 57px;
+  padding: 16px 28px;
+}
+
+.gradient_btn:hover {
+  transform: scale(1.05);
+}
+
+.card_p {
+  padding: 0px 12px;
+}
+
+/*============================ footer =============================*/
+.footer_links {
+  margin-top: 14px !important;
+}
+
+.footer_padding {
+  padding: 52px 0px 0px 0px;
+}
+
+.footer_bg {
+  background: #ebecef;
+}
+
+.footer_logo {
+  max-width: 227px !important;
+}
+
+.footer_para {
+  max-width: 324px;
+}
+
+.w_24 {
+  width: 24px !important;
+}
+
+.max_w_207 {
+  max-width: 207px !important;
+}
+
+.footer_icons_gap {
+  gap: 19px;
+}
+
+.footer_icon {
+  width: 32px;
+  height: 32px;
+  transition: all 300ms linear;
+}
+
+.footer_icon:hover {
+  transform: translateY(-5px);
+  scale: 1.1;
+}
+
+
+.links_hov:hover {
+  color: var(--clr-skyblue);
+}
+
+.links_hov:hover img {
+  scale: 1.2;
+}
+
+.vctr_faq {
+  left: 0;
+  bottom: 20%;
+}
+
+.accordion-item .active-text .accordion_heading {
+  color: black;
+}
+
+.accordion_heading {
+  color: #010101;
+  opacity: 80%;
+}
+
+.looking_switch {
+  color: #444444;
+  max-width: 606px;
+}
+
+.here_choice {
+  background: -webkit-linear-gradient(311.05deg, #428AF8 0%, #4B84F7 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:1279.98px) {
+  #back-top {
+    right: 20px;
+    bottom: 54px;
+  }
+
+  .line_left_podcast_table {
+    left: -30px;
+    max-width: 85px;
+    width: 100%;
+  }
+}
+
+@media (max-width:991.98px) {
+  .vctr_faq {
+    left: -50px;
+    bottom: -80%;
+  }
+
+  .footer_para {
+    max-width: 378px;
+  }
+
+  .footer_padding {
+    padding-top: 102px;
+  }
+
+  .possible_future_ellipse {
+    top: 10%;
+  }
+
+  .podcasting_industries_ellipse {
+    top: -40% !important;
+  }
+
+  .your_podcast_right_vec {
+    top: 25%;
+    right: 0;
+    max-height: 389px;
+  }
+
+  .chances_left_vector {
+    top: -9%;
+    max-height: 359px;
+  }
+
+  .future_sec_p {
+    padding: 0;
+  }
+
+  .poadcasting_para {
+    max-width: 575px !important;
+  }
+
+  .poadcasting_p {
+    padding: 0px 0px 110px 0px;
+  }
+
+  .impactful_card {
+    padding: 50px 37px;
+    /* transform: translateY(58%); */
+  }
+
+  .podcasting_chart {
+    margin-top: 60px;
+  }
+
+}
+
+@media (max-width:767.98px) {
+  .footer_links {
+    margin-top: 8px !important;
+  }
+
+  #back-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width:575.98px) {
+  #back-top {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .footer_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer_icons_gap {
+    gap: 18px;
+  }
+
+  .gap_32 {
+    gap: 24px !important;
+  }
+
+  .poadcasting_p {
+    padding: 0px 0px 80px 0px;
+  }
+
+  .footer_para {
+    max-width: none;
+  }
+
+  .impactful_card {
+    padding: 70px 42px;
+    /* transform: translateY(51%); */
+  }
+
+  .card_p {
+    padding: 0px 20px;
+  }
+
+  .podcasting_chart {
+    margin-top: 40px;
+  }
+
+  .back_top_img {
+    height: 35px;
+    width: 35px;
+  }
+}
