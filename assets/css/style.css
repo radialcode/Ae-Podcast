@@ -45,6 +45,29 @@
     bottom: 20%;
 }
 
+/* ==== podcasting_chart_parent ==== */
+.transition_02 {
+    transition: all 0.2s ease-in-out;
+}
+
+.podcasting_chart_parent .active_part:hover {
+    transform: translate3d(-11px, -2px, 0px);
+}
+
+.podcasting_chart_parent .total_part:hover {
+    transform: translate3d(11px, 2px, 0px);
+}
+
+.podcasting_chart_parent .total_part:hover path {
+    fill: #6F69F2 !important;
+}
+
+.podcasting_chart_parent title {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fff !important;
+}
+
+
 @media (max-width: 1199.98px) {
     .card_main {
         height: 302px;
@@ -66,6 +89,11 @@
 }
 
 @media (max-width: 575.98px) {
+    .podcasting_chart_parent svg {
+        max-width: 350px;
+        width: 100%;
+    }
+
     .card_main {
         height: auto;
     }
