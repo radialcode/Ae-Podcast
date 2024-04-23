@@ -50,16 +50,38 @@
     transition: all 0.2s ease-in-out;
 }
 
+.podcasting_chart_parent .active_part {
+    transform: translate3d(0px, 2px, 0px);
+}
+
+.podcasting_chart_parent .active_part .active_tooltip,
+.podcasting_chart_parent .total_part .total_tooltip,
+.industry_totals_chart .chances_low_part .chances_low,
+.industry_totals_chart .chances_high_part .chances_high,
+.possible_future_chart .possible_active_part .active_part,
+.possible_future_chart .possible_total_part .total_part,
+.guesting_chart .guesting_hosts .guesting_hosts_tooltip,
+.guesting_chart .guesting_guests .guesting_guests_tooltip {
+    opacity: 0;
+}
+
+.podcasting_chart_parent .active_part:hover .active_tooltip,
+.podcasting_chart_parent .total_part:hover .total_tooltip,
+.industry_totals_chart .chances_low_part:hover .chances_low,
+.industry_totals_chart .chances_high_part:hover .chances_high,
+.possible_future_chart .possible_active_part:hover .active_part,
+.possible_future_chart .possible_total_part:hover .total_part,
+.guesting_chart .guesting_hosts:hover .guesting_hosts_tooltip,
+.guesting_chart .guesting_guests:hover .guesting_guests_tooltip {
+    opacity: 1;
+}
+
 .podcasting_chart_parent .active_part:hover {
     transform: translate3d(-11px, -2px, 0px);
 }
 
-.podcasting_chart_parent .total_part:hover {
-    transform: translate3d(11px, 2px, 0px);
-}
-
-.podcasting_chart_parent .total_part:hover path {
-    fill: #6F69F2 !important;
+.podcasting_chart_parent .total_part:hover .total_bg {
+    fill: url(#gradient);
 }
 
 .podcasting_chart_parent title {
@@ -67,6 +89,58 @@
     color: #fff !important;
 }
 
+.podcasting_chart_parent svg,
+.possible_future_chart svg {
+    max-width: 500px;
+}
+
+/* ==== Chances of "Making It" ==== */
+
+.industry_totals_chart .chances_low_part:hover {
+    transform: translate3d(-9px, -5px, 0px);
+}
+
+.industry_totals_chart .chances_high_part:hover .chances_high_part_bg {
+    fill: url(#gradient);
+}
+
+.industry_totals_chart svg,
+.guesting_chart svg,
+.guesting_chart svg {
+    max-width: 522px;
+    border-radius: 24px;
+}
+
+.guesting_chart {
+    border-radius: 24px;
+}
+
+/* ==== Possible Future ==== */
+.possible_future_chart .possible_active_part:hover {
+    transform: translate3d(-7px, -13px, 0px);
+}
+
+.possible_future_chart .possible_total_part:hover .possible_total_part_bg {
+    fill: url(#gradient);
+}
+
+/* ==== Compared to Industry ==== */
+
+.guesting_chart .guesting_hosts {
+    transform: translate3d(11px, 8px, 0px);
+}
+
+.guesting_chart .guesting_hosts:hover {
+    transform: translate3d(-2px, 0px, 0px);
+}
+
+.guesting_chart .guesting_guests:hover .guesting_guests_bg {
+    fill: url(#gradient);
+}
+
+.guesting_chart {
+    box-shadow: 0px 0px 20px 4px rgba(226, 226, 226, 0.25);
+}
 
 @media (max-width: 1199.98px) {
     .card_main {
@@ -89,9 +163,10 @@
 }
 
 @media (max-width: 575.98px) {
+
     .podcasting_chart_parent svg {
         max-width: 350px;
-        width: 100%;
+        height: 350px;
     }
 
     .card_main {
@@ -104,5 +179,12 @@
 
     .podcast_report_heading {
         max-width: 360px;
+    }
+
+    .industry_totals_chart svg,
+    .possible_future_chart svg,
+    .guesting_chart svg {
+        max-width: 400px;
+        height: 300px;
     }
 }
