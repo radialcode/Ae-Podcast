@@ -1,8 +1,12 @@
 .compare_chart {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
-  width: 500px !important;
-  height: 400px;
+  width: 600px !important;
+  height: 550px;
+}
+
+.total_values {
+  transform: translateY(-50%) rotate(-90deg);
 }
 
 .td_gradient {
@@ -33,8 +37,8 @@
 .chart_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
-  width: 420px !important;
-  height: 400px;
+  width: 550px !important;
+  height: 450px;
 }
 
 /* ============================= */
@@ -172,7 +176,7 @@
   border-radius: 8px;
   z-index: 3;
   top: 105%;
-  box-shadow: 0px 0px 20px 4px #e2e2e240;
+  box-shadow: 2px 3px 4px 1px rgba(0, 0, 0, 0.492);
 }
 
 .option_item {
@@ -474,11 +478,21 @@
   .podcast_graph {
     max-width: 473px;
   }
+
+  .chart_box {
+    width: 450px !important;
+    height: 400px;
+  }
 }
 
 @media (max-width: 991.98px) {
+  .compare_chart {
+    width: 600px !important;
+    height: 500px;
+  }
+
   .chart_box {
-    width: 500px;
+    width: 600px !important;
     height: 500px;
     padding: 24px;
   }
@@ -601,6 +615,11 @@
   .mt_lg_166 {
     margin-top: 66px;
   }
+
+  .chart_box {
+    width: 500px !important;
+    height: 450px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -675,9 +694,8 @@
   }
 
   .chart_box {
-    width: 100%;
-    height: 300px;
-    padding: 24px;
+    max-width: 400px !important;
+    height: 400px;
   }
 
   #chart {
@@ -728,5 +746,18 @@
     position: absolute;
     left: 50px;
     top: 10%;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .chart_box {
+    max-width: 300px !important;
+    height: 350px;
+    padding: 0px !important;
+  }
+
+  .compare_chart {
+    width: 500px !important;
+    height: 350px;
   }
 }
