@@ -93,8 +93,8 @@
   font-family: 'poppins';
   font-weight: 800;
   background-color: #313EF7;
-  border: 2px solid #313EF7;
   z-index: 100;
+  outline: 1px solid white;
 }
 
 .back_top_img {
@@ -104,7 +104,6 @@
 
 #back-top:hover {
   background-color: black;
-  border: 2px solid black;
 }
 
 .table_gradient_color {
@@ -332,7 +331,7 @@
 .links_hov:hover img {
   scale: 1.2;
 }
-
+ 
 .vctr_faq {
   left: 0;
   bottom: 20%;
