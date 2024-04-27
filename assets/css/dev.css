@@ -474,6 +474,21 @@
   max-width: 119px;
 }
 
+/* ==== POPUP CSS ==== */
+
+.modal-header {
+  z-index: 1;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.btn-close:hover {
+  opacity: 70%;
+}
+
+
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;

@@ -37,9 +37,38 @@
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
     <!-- ==== -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css" rel="stylesheet">
+    <!-- ==== AOS ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
-<body>
+<body>   
+  <div class="custom-pop-up position-relative">
+        <div
+          class="modal fade"
+          id="exampleModal2"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel2"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+          >
+            <div class="modal-content">
+              <div class="modal-header border-0 pb-0 position-absolute top-0 end-0">
+                <button
+                  type="button"
+                  class="btn-close transition_03"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-3 p-sm-5">
+                <p class="mb-0 me-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <div class="overflow-x-hidden">
     <!-- --------------- Hero ------------ -->
     <section>
@@ -215,7 +244,7 @@
         <img class="position-absolute d-lg-none layer_img z-n1" src="./assets/images/svg/layer_header_sm.svg"
           alt="layer-img" />
         <div class="row justify-content-center align-items-center column-gap-md-2 column-gap-lg-0">
-          <div class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex">
+          <div class="col-md-5 col-lg-3 col-sm-6 order-0 justify-content-center align-items-center d-flex"data-aos="fade-up" data-aos-duration="800">
             <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +287,7 @@
             </div>
           </div>
           <div class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-lg-0 order-2 order-xl-1 justify-content-center 
-          align-items-center d-flex">
+          align-items-center d-flex" data-aos="fade-down" data-aos-duration="1600">
             <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -293,7 +322,7 @@
             </div>
           </div>
           <div class="col-md-5 col-lg-3 col-sm-6 mt-4 mt-sm-0 order-1 order-xl-2 justify-content-center 
-          align-items-center d-flex">
+          align-items-center d-flex" data-aos="fade-up" data-aos-duration="2400"> 
             <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,7 +350,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex">
+          <div class="col-md-5 col-lg-3 col-sm-6 mt-4 order-3 mt-lg-0 justify-content-center align-items-center d-flex" data-aos="fade-down" data-aos-duration="3000">
             <div class="card_main transition_03">
               <span>
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,7 +402,7 @@
 
     <div class="custom_container position-relative z-1 pt-lg-4">
       <div class="row poadcasting_p">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
            <div class="position-relative">
             <div
               id="industryselectBox"
@@ -477,7 +506,7 @@
             />
           </div>
         </div>
-        <div class="col-lg-6 col-12 justify-content-lg-start justify-content-center d-flex mt_40">
+        <div class="col-lg-6 col-12 justify-content-lg-start justify-content-center d-flex mt_40" data-aos="fade-left" data-aos-duration="1000">
           
 <div class="d-flex align-items-center justify-content-center">
           <div class="podcasting_chart_parent">
@@ -598,7 +627,7 @@
 
     <div class="custom_container position-relative z-1">
       <div class="row align-items-center justify-content-between flex-lg-row flex-column-reverse">
-        <div class="col-lg-6 mt-lg-0 mt-4 justify-content-center d-flex col-12 mt_40">
+        <div class="col-lg-6 mt-lg-0 mt-4 justify-content-center d-flex col-12 mt_40" data-aos="fade-right" data-aos-duration="1000">
           <div class="possible_future_chart">
             <svg class="w-100" width="496" height="453" viewBox="0 0 496 453" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3022_147)">
@@ -703,8 +732,7 @@
           </div>
 
         </div>
-
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
           <div class="position-relative">
             <div
               id="futureselectBox"
@@ -818,7 +846,7 @@
   ></div>
     <div class="custom_container position-relative z-3">
       <div class="row align-items-center justify-content-between">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000"> 
           <div class="position-relative">
             <div
               id="chanceselectBox"
@@ -995,7 +1023,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6 justify-content-center justify-content-lg-end d-flex col-12 mt_40">
+        <div class="col-lg-6 justify-content-center justify-content-lg-end d-flex col-12 mt_40" data-aos="fade-left" data-aos-duration="1000">
           <div class="industry_totals_chart">
               <svg class="w-100" width="526" height="478" viewBox="0 0 526 478" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3019_126)">
@@ -1115,7 +1143,7 @@
       <div
         class="row justify-content-between align-items-center flex-column-reverse flex-lg-row"
       >
-        <div class="col-lg-6 justify-content-center d-flex col-12 mt_40">
+        <div class="col-lg-6 justify-content-center d-flex col-12 mt_40" data-aos="fade-right" data-aos-duration="1000">
           <div class="d-flex justify-content-center pe-lg-3">
             <div class="chart_box d-flex flex-column align-items-center justify-content-center position-relative">
               <div id="linechart" class="position-relative"></div>
@@ -1124,8 +1152,7 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
           <div class="position-relative">
             <div
               id="activityselectBox"
@@ -1228,8 +1255,8 @@
     alt="chances_left_vector"
   />
     <div class="custom_container pt-lg-5">
-      <div class="row poadcasting_p align-items-center position-relative z-2">
-        <div class="col-lg-6">
+      <div class="row poadcasting_p align-items-center position-re lative">
+        <div class="col-lg-6" >
           <div class="position-relative">
             <div
               id="guestingBox"
@@ -1266,11 +1293,17 @@
             class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3 position-relative z-1"
           >
             Podcast Guesting Health (BETA)
-            <span
-              ><img
+      <span
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal2"
+    >
+       <img
                 src="./assets/images/svg/warning_symbol.svg"
                 alt="warning_symbol"
-            /></span>
+            />
+    </span>
+             
           </h2>
           <p
             class="clr_grey scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150"
@@ -1332,7 +1365,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6 justify-content-lg-start justify-content-center d-flex col-12 mt_40">
+        <div class="col-lg-6 justify-content-lg-start justify-content-center d-flex col-12 mt_40" data-aos="fade-left" data-aos-duration="1000">
           <div
             class="d-flex align-items-center justify-content-center position-relative z-2 guesting_chart transition_03"
           >
@@ -1487,7 +1520,7 @@
   />
     <div class="custom_container">
       <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-center">
-        <div class="col-lg-6 col-12 d-flex justify-content-center">
+        <div class="col-lg-6 col-12 d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">
         <div class="compare_chart d-flex flex-column align-items-center justify-content-center position-relative mx-auto mt_40">
           <div id="chart" class="position-relative">
           </div>
@@ -1495,7 +1528,7 @@
           <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 abs_text">Episode Downloads (First 7 Days)</p>
         </div>
         </div>
-        <div  class="col-lg-6 col-12 d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 your_podcast_compared">
+        <div  class="col-lg-6 col-12 d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 your_podcast_compared" data-aos="fade-left" data-aos-duration="1000">
         <div class="position-relative">
           <div
             id="compareselectBox"
@@ -1532,11 +1565,16 @@
             class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3"
           >
             Your Podcast Compared to Industry Averages
-            <span>
-              <img
+            <span
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal2"
+    >
+       <img
                 src="./assets/images/svg/warning_symbol.svg"
                 alt="warning_symbol"
-            /></span>
+            />
+    </span>
           </h2>
 
           <p class="clr_grey ff_graphik fs_sm fw-normal mb-1 fw-light pb-3">
@@ -1646,7 +1684,7 @@
     <section class="take_quiz">
       <div class="custom_container">
         <div class="d-flex flex-lg-row align-items-center flex-column-reverse justify-content-between">
-          <div class="d-flex flex-column align-items-center align-items-lg-start mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0">
+          <div class="d-flex flex-column align-items-center align-items-lg-start mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="ff_graphik fw-semibold text-lg-start text-center fs_4xl text-white mb-0 mb-3">
               Take The Quiz
             </h2>
@@ -1664,7 +1702,7 @@
               </button>
             </div>
           </div>
-          <div class="ms-lg-4 ps-lg-1 mt-1 mt-lg-0">
+          <div class="ms-lg-4 ps-lg-1 mt-1 mt-lg-0" data-aos="fade-left" data-aos-duration="1000">
             <img class="laptop w-100" src="./assets/images/webp/laptop.webp" alt="laptop" />
           </div>
         </div>
@@ -1684,7 +1722,7 @@
       <span
         class="d-block sky_blur_second_ellipse_right_table blur_ellipse sky_blur_second_right_position position-absolute  z-n1 "></span>
       <div class="custom_container support_table">
-        <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-up" data-aos-duration="1000">
           <h2 class="ff_graphik mb-0 fw-semibold fs_4xl text-center clr_black px-md-3 px-lg-0">
             Podcast Hosting Providers Ranked by Their Ability to
             Serve/Support Independent Podcasters
@@ -1697,7 +1735,7 @@
             get started!
           </p>
         </div>
-        <table class="mt-4 mt-lg-5 mx-auto table_shadow">
+        <table class="mt-4 mt-lg-5 mx-auto table_shadow" data-aos="fade-up" data-aos-duration="1000">
           <!-- TABLE FIRST DATA HEADING -->
           <tr>
             <th
@@ -1730,7 +1768,7 @@
             </th>
           </tr>
           <!-- TABLE FIRST DATA 1 -->
-          <tr>
+          <tr> 
             <td
               class="text-center fw-normal clr_tundora ff_graphik py_10 td_border border-bottom-0 border-start-0 border-top-0 fs_xsm bg-white">
               1
@@ -2880,7 +2918,7 @@
         </div>
         <div class="d-flex justify-content-center bg-white align-items-center">
           <div class="accordion space_accd " id="accordionExample">
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="300">
               <h2 class="accordion-header transition_300" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -2894,7 +2932,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="400">
               <h2 class="accordion-header transition_300" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -2908,7 +2946,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="500">
               <h2 class="accordion-header transition_300" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -2925,7 +2963,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="600">
               <h2 class="accordion-header transition_300" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -2939,7 +2977,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="700">
               <h2 class="accordion-header transition_300" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -2953,7 +2991,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="800">
               <h2 class="accordion-header transition_300" id="headingSix">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -2970,7 +3008,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="900">
               <h2 class="accordion-header transition_300" id="headingSeven">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -2984,7 +3022,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000">
               <h2 class="accordion-header transition_300" id="headingEight">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -2999,7 +3037,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1100">
               <h2 class="accordion-header transition_300" id="headingnine">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
@@ -3018,7 +3056,7 @@
       </div>
     </section>
     <!-- ---------------------------------- Impactful Interviews Card -------------------------- -->
-    <section class="bg_impactful_card py-5">
+    <section class="bg_impactful_card py-5" data-aos="fade-up" data-aos-duration="1000">
       <div class=" custom_container">
         <div class="impactful_card">
           <p class="ff_graphik fw-semibold lh_130 text-center fs_xl text-white mb-0">
@@ -3216,7 +3254,42 @@
   <!-- ==== -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
+  <!-- ==== AOS ==== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    var modal = document.querySelector(".modal");
+var triggers = document.querySelectorAll(".trigger");
+var closeButton = document.querySelector(".close-button");
 
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+for (var i = 0, len = triggers.length; i < len; i++) {
+  triggers[i].addEventListener("click", toggleModal);
+}
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+  </script>
+  <script>
+
+
+  window.addEventListener("load", function () {
+        AOS.init({
+            once: true, // Animation will only occur once per element
+            disable: function() {
+                var maxWidth = 992;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    });
+  </script>
   <!-- --------------- Navbar-Js ------------------ -->
  <script>
     const Navbar = document.getElementById("NavBar");
@@ -3278,7 +3351,6 @@
       });
     });
   </script>
-
   <script>
     function toggleDropdown(dropdownId) {
       var dropdown = document.getElementById(dropdownId);
@@ -3494,7 +3566,7 @@ function closeNav() {
   },
   series: [
     {
-      name: "sales",
+      name: "Downloads",
       data: [600, 1000, 1500, 2000, 5000],
     },
   ],
@@ -3602,7 +3674,7 @@ chart.render();
       },
       series: [
         {
-          name: "sales",
+          name: "Total",
           data: [
             10000, 12000, 20000, 26000, 29000, 28000, 32000, 30000, 33000,
             34000, 36000, 38000,
@@ -3719,6 +3791,23 @@ chart.render();
       });
     });
   </script>
+
+  <script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("popupContent").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("popupContent").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    // Attach click event to the warning symbol to trigger the popup
+    document.getElementById("popupTrigger").addEventListener("click", openPopup);
+</script>
 </body>
 
 </html>
