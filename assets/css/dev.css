@@ -58,7 +58,8 @@
   transform: scale(1.07);
 }
 /* ==== Possible Future Chart ==== */
-.future_chart {
+.future_chart,
+.chances_chart {
   transform: scale(1.4);
 }
 
@@ -568,9 +569,16 @@
     width: 450px !important;
     height: 400px;
   }
+
+  .chances_chart {
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 991.98px) {
+  .chances_chart {
+    transform: scale(1.3);
+  }
   .industry_chart_parent {
     margin-top: 40px;
     transform: scale(1.02);
@@ -885,5 +893,14 @@
   .compare_chart {
     width: 500px !important;
     height: 350px;
+  }
+}
+
+@media (min-width: 576px) {
+  .industry_chart_img {
+    background-image: url("../images/png/chart-bg-img.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
