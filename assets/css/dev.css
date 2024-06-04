@@ -51,11 +51,12 @@
 
 /* ====podcasting industry chart ==== */
 
-.podcasting_industry_chart_bg {
+.podcasting_industry_chart {
   max-width: 522px;
 }
+
 .industry_chart_parent {
-  transform: scale(1.07);
+  transform: scale(1.2);
 }
 /* ==== Possible Future Chart ==== */
 .future_chart,
@@ -114,12 +115,12 @@
 }
 
 /* ======= CHART 3 ====== */
-.pie_chart {
+/* .pie_chart {
   max-width: 500px;
   width: 100%;
   max-height: 360px;
   height: 100%;
-}
+} */
 
 .active_abs {
   position: absolute;
@@ -576,14 +577,18 @@
 }
 
 @media (max-width: 991.98px) {
+  .industry_chart_main_parent {
+   max-width: 450px;
+   height: 450px;
+  }
   .chances_chart {
     transform: scale(1.3);
   }
   .industry_chart_parent {
     margin-top: 40px;
-    transform: scale(1.02);
+    transform: scale(1.1);
   }
-  .podcasting_industry_chart_bg {
+  .podcasting_industry_chart {
     max-width: 470px;
     min-height: 390px;
     left: 50% !important;
@@ -750,7 +755,7 @@
   .industry_chart_main_parent {
     margin-top: 40px;
   }
-  .podcasting_industry_chart_bg {
+  .podcasting_industry_chart {
     max-width: 410px;
     min-height: 340px;
   }
@@ -843,12 +848,12 @@
     left: -95px;
   }
 
-  .pie_chart {
+  /* .pie_chart {
     max-width: 256px;
     width: 100%;
     max-height: 256px;
     height: 100%;
-  }
+  } */
 
   .failure_text_abs {
     position: absolute;
@@ -899,6 +904,13 @@
 @media (min-width: 576px) {
   .industry_chart_img {
     background-image: url("../images/png/chart-bg-img.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .podcasting_bg_img {
+    background-image: url("../images/png/podcasting-industry-chart-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;

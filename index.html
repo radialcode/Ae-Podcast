@@ -460,11 +460,9 @@
           <div class="col-lg-6 col-12 justify-content-lg-start justify-content-center d-flex mt_40" data-aos="fade-left"
             data-aos-duration="1000">
             <div
-              class="d-flex align-items-center justify-content-center industry_chart_bg position-relative w-100 industry_chart_main_parent">
-              <img class="position-absolute top-0 left-0 z-0 podcasting_industry_chart_bg w-100 h-100"
-                src="./assets/images/png/podcasting-industry-chart-bg.png" alt="">
-              <div class="d-inlin-block position-relative industry_chart_parent">
-                <canvas class="pie_chart" id="industryChart"></canvas>
+              class="d-flex align-items-center justify-content-center industry_chart_bg position-relative w-100 industry_chart_main_parent podcasting_bg_img">
+              <div class="d-inlin-block position-relative">
+                <canvas class="pie_chart industry_chart_parent" id="industryChart"></canvas>
                 <div class="active_abs">
                   <p class="mb-0 ff_graphik fw-semibold text-white">Active</p>
                 </div>
@@ -484,8 +482,8 @@
 
       <div class="custom_container position-relative z-1">
         <div class="row align-items-center justify-content-between flex-lg-row flex-column-reverse">
-          <div class="col-lg-6 mt-lg-0 mt-4 justify-content-center d-flex col-12 mt_40 position-relative" data-aos="fade-right"
-            data-aos-duration="1000">
+          <div class="col-lg-6 mt-lg-0 mt-4 justify-content-center d-flex col-12 mt_40 position-relative"
+            data-aos="fade-right" data-aos-duration="1000">
             <div class="d-flex justify-content-center industry_chart_bg position-relative z-1">
               <div class="content">
                 <div id="possible-donut-chart" class="future_chart industry_chart_img">
@@ -3229,41 +3227,40 @@
   <!-- ========== CHART 3 ======== -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    var ctx = document.getElementById("industryChart").getContext("2d");
-    var industryChart = new Chart(ctx, {
+      var ctx = document.getElementById("industryChart").getContext("2d");
+      var industryChart = new Chart(ctx, {
         type: "pie",
         data: {
-            labels: ["Total", "Active"],
-            datasets: [{
-                backgroundColor: ["#5c76f4", "#00B9FF"],
-                data: [863829, 224629],
-            }],
+          labels: ["Total", "Active"],
+          datasets: [{
+            backgroundColor: ["#5c76f4", "#00B9FF"],
+            data: [863829, 224629],
+          }],
         },
         options: {
-            plugins: {
-                legend: {
-                    display: false, // Hide the default legend
-                },
-                tooltip: {
-                  enabled: true,
-                    backgroundColor: "white",
-                    borderColor: "black",
-                    borderWidth: 1,
-                    borderRadius: 8,
-                    titleColor: "black",
-                    bodyColor: "black",
-                    displayColors: false,
-                    padding: 8,
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 4,
-                    shadowBlur: 8,
-                    position: "average"
-                },
+          plugins: {
+            legend: {
+              display: false, // Hide the default legend
             },
+            tooltip: {
+              enabled: true,
+              backgroundColor: "white",
+              borderColor: "black",
+              borderWidth: 1,
+              borderRadius: 8,
+              titleColor: "black",
+              bodyColor: "black",
+              displayColors: false,
+              padding: 8,
+              shadowOffsetX: 0,
+              shadowOffsetY: 4,
+              shadowBlur: 8,
+              position: "average"
+            },
+          },
         },
+      });
     });
-});
-
   </script>
   <!-- ==== Possible Future chart ==== -->
   <script>
@@ -3512,91 +3509,91 @@
     // possible-donut-chart
 
     nv.addGraph(function () {
-  var donutChart1 = nv.models.pieChart()
-    .x(function (d) {
-      return d.label;
-    })
-    .y(function (d) {
-      return d.value;
-    })
-    .showLabels(false)
-    .showLegend(false)
-    .labelThreshold(.05)
-    .color(["#27A0FC", "#00B9FF"])
-    .donut(true)
-    .donutRatio(0.35);
+      var donutChart1 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .color(["#27A0FC", "#00B9FF"])
+        .donut(true)
+        .donutRatio(0.35);
 
-  var donutChart2 = nv.models.pieChart()
-    .x(function (d) {
-      return d.label;
-    })
-    .y(function (d) {
-      return d.value;
-    })
-    .showLabels(false)
-    .showLegend(false)
-    .labelThreshold(.05)
-    .color(["#6B6DF3", "#01B7FC"])
-    .donut(true)
-    .donutRatio(0.35);
+      var donutChart2 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .color(["#6B6DF3", "#01B7FC"])
+        .donut(true)
+        .donutRatio(0.35);
 
-  function centerText(chart, labelText) {
-    return function () {
-      var svg = d3.select("svg");
+      function centerText(chart, labelText) {
+        return function () {
+          var svg = d3.select("svg");
 
-      var donut = svg.selectAll("#possible-donut-chart g.nv-slice").filter(
-        function (d, i) {
-          return i == 0;
-        }
-      );
+          var donut = svg.selectAll("#possible-donut-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
 
-      donut.insert("text", "g")
-        .attr("class", "middle")
-        .attr("text-anchor", "middle")
-        .attr("dy", "-.55em")
-        .style("fill", chart.color())
-        .text(labelText);
-    };
-  }
+          donut.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", chart.color())
+            .text(labelText);
+        };
+      }
 
-  d3.select("#possible-donut-chart svg")
-    .datum(seedData1())
-    .transition().duration(300)
-    .call(donutChart1)
-    .call(centerText(donutChart1, "active"));
+      d3.select("#possible-donut-chart svg")
+        .datum(seedData1())
+        .transition().duration(300)
+        .call(donutChart1)
+        .call(centerText(donutChart1, "active"));
 
-  d3.select("#possible-donut-chart svg")
-    .datum(seedData2())
-    .transition().duration(300)
-    .call(donutChart2)
-    .call(centerText(donutChart2, "total"));
+      d3.select("#possible-donut-chart svg")
+        .datum(seedData2())
+        .transition().duration(300)
+        .call(donutChart2)
+        .call(centerText(donutChart2, "total"));
 
-  return [donutChart1, donutChart2];
-});
+      return [donutChart1, donutChart2];
+    });
 
-function seedData1() {
-  return [{
-      "label": "Total",
-      "value": 505677
-    },
-    {
-      "label": "Active",
-      "value": 120212
-    },
-  ];
-}
+    function seedData1() {
+      return [{
+          "label": "Total",
+          "value": 505677
+        },
+        {
+          "label": "Active",
+          "value": 120212
+        },
+      ];
+    }
 
-function seedData2() {
-  return [{
-      "label": "Total",
-      "value": 505677
-    },
-    {
-      "label": "Active",
-      "value": 120212
-    },
-  ];
-}
+    function seedData2() {
+      return [{
+          "label": "Total",
+          "value": 505677
+        },
+        {
+          "label": "Active",
+          "value": 120212
+        },
+      ];
+    }
   </script>
 </body>
 
