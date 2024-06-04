@@ -3,7 +3,7 @@
   z-index: 2 !important;
 }
 
-.tooltip-inner{
+.tooltip-inner {
   background: white !important;
   box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.212);
   max-width: 500px;
@@ -14,16 +14,20 @@
 .tooltip .show {
   opacity: 1 !important;
 }
-.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before{
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
   border-top-color: white !important;
 }
-.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before{
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
   border-top-color: white !important;
 }
-.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-start .tooltip-arrow::before{
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before {
   border-left-color: white !important;
 }
-.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-end .tooltip-arrow::before{
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before {
   border-right-color: white !important;
 }
 .compare_chart {
@@ -38,9 +42,30 @@
 }
 
 .td_gradient {
-  background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+  background: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.1) 0%,
+    rgba(0, 185, 255, 0.1) 155.6%
+  );
 }
 
+/* ====podcasting industry chart ==== */
+
+.podcasting_industry_chart_bg {
+  max-width: 522px;
+}
+.industry_chart_parent {
+  transform: scale(1.07);
+}
+/* ==== Possible Future Chart ==== */
+.future_chart {
+  transform: scale(1.4);
+}
+
+/* ==== ==== */
+.health_chart_parent {
+  transform: scale(1.2);
+}
 /* ========= CHART JS ========= */
 #SvgjsLine1184 {
   display: contents !important;
@@ -89,7 +114,7 @@
 
 /* ======= CHART 3 ====== */
 .pie_chart {
-  max-width: 330px;
+  max-width: 500px;
   width: 100%;
   max-height: 360px;
   height: 100%;
@@ -97,37 +122,51 @@
 
 .active_abs {
   position: absolute;
-  top: 15%;
-  left: 20%;
+  top: 20%;
+  left: 22%;
+  transform: rotate(-30deg);
 }
 
-.total_abs {
+.total_abs,
+.possible_total_abs {
   position: absolute;
+  bottom: 35%;
+  left: 60%;
+  rotate: 20deg;
+}
+.possible_total_abs {
   bottom: 20%;
-  left: 40%;
+  left: 67%;
+  transform: rotate(-20deg);
 }
 
 /* =================== */
 #chartdiv {
-  width: 350px;
-  height: 370px;
+  width: 500px;
+  height: 500px;
 }
 
 .success_text_abs {
   position: absolute;
-  top: 4%;
-  left: 30%;
+  top: 10%;
+  left: 55%;
+  max-width: 110px;
+  transform: rotate(9deg);
+  z-index: -1;
 }
 
 .failure_text_abs {
   position: absolute;
-  bottom: 5%;
-  left: 25%;
+  bottom: 6%;
+  left: 30%;
+  max-width: 100px;
+  z-index: -1;
 }
 
 /* =================== */
 /* ========== */
-#donut-chart {
+#donut-chart,
+#possible-donut-chart {
   width: 350px !important;
   height: 370px !important;
 }
@@ -160,15 +199,15 @@
 
 .three_lines_abs {
   position: absolute !important;
-  bottom: 5% !important;
-  right: 23% !important;
+  bottom: -11% !important;
+  right: 3% !important;
   max-width: 200px;
 }
 
 .single_lines_abs {
   position: absolute !important;
-  top: 19% !important;
-  left: 30% !important;
+  top: 2% !important;
+  left: 9% !important;
   max-width: 200px;
 }
 
@@ -455,12 +494,13 @@
 .host_box {
   box-shadow: 0px 0px 107px 0px rgba(0, 0, 0, 0.1);
   border-radius: 9.5px;
-  width: 139px;
-  height: 80px;
+  width: 110px;
+  height: 60px;
 }
 
 .hosts {
   left: 10%;
+  top: 10%;
 }
 
 .guests {
@@ -515,8 +555,10 @@
 .btn-close:hover {
   opacity: 70%;
 }
-
-
+.marking_chart_parent .nv-label text {
+  fill: #ffffff !important; /* Set label color to white */
+  transform: rotate(-80deg);
+}
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
@@ -529,6 +571,18 @@
 }
 
 @media (max-width: 991.98px) {
+  .industry_chart_parent {
+    margin-top: 40px;
+    transform: scale(1.02);
+  }
+  .podcasting_industry_chart_bg {
+    max-width: 470px;
+    min-height: 390px;
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: -0px !important;
+  }
+
   .compare_chart {
     width: 600px !important;
     height: 500px;
@@ -540,8 +594,8 @@
     padding: 24px;
   }
 
-  .mt_40 {
-    margin-top: 40px;
+  .mt_100 {
+    margin-top: 100px;
   }
 
   .future_sec_p {
@@ -617,7 +671,7 @@
 
   .failure_text_abs {
     position: absolute;
-    bottom: -3%;
+    bottom: 6%;
     left: 25%;
   }
 
@@ -630,6 +684,14 @@
 
   .pb_80 {
     padding-bottom: 80px;
+  }
+  .industry_chart_bg {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .guesting_box {
+    margin-top: 50px;
   }
 }
 
@@ -666,7 +728,25 @@
 }
 
 @media (max-width: 575.98px) {
-  .tooltip-inner{
+  .active_abs {
+    top: 18%;
+    left: 20%;
+  }
+
+  .health_chart_parent {
+    transform: scale(1);
+  }
+  .chances_donut_chart_svg {
+    transform: scale(0.8);
+  }
+  .industry_chart_main_parent {
+    margin-top: 40px;
+  }
+  .podcasting_industry_chart_bg {
+    max-width: 410px;
+    min-height: 340px;
+  }
+  .tooltip-inner {
     max-width: 300px !important;
     width: 100% !important;
     margin: 0 10px;
@@ -677,6 +757,7 @@
     max-width: 570px;
     width: 100%;
     height: 278px;
+    margin-top: 50px;
   }
 
   .future_sec_p {
@@ -713,13 +794,13 @@
   .hosts {
     max-width: 88.98px;
     height: 51.33px;
-    top: 10% !important;
+    top: 15% !important;
   }
 
   .guests {
     max-width: 88.98px;
     height: 51.33px;
-    bottom: 10% !important;
+    bottom: 15% !important;
   }
 
   .fs_sm_12 {
@@ -763,21 +844,18 @@
 
   .failure_text_abs {
     position: absolute;
-    bottom: 5%;
+    bottom: 13%;
     left: 25%;
   }
 
-  .three_lines_abs {
-    bottom: 12% !important;
-    right: 20% !important;
-    max-width: 150px;
-    transform: rotate(5deg);
+  .industry_chart_bg {
+    margin-top: 40px;
   }
 
-  .single_lines_abs {
-    top: 20% !important;
-    left: 10% !important;
-    max-width: 200px;
+  .success_text_abs {
+    top: 11%;
+    left: 53%;
+    transform: rotate(-15deg);
   }
 
   #guesting-chart {
