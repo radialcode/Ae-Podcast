@@ -23,12 +23,13 @@
             max-width: 500px;
         }
 
-        .industry_box.seeking_guest_box {
+        .industry_box.seeking_guest_box,
+        .industry_podmatch_box.seeking_guest_box {
             max-width: 256px !important;
+            height: 106px;
         }
 
         .industry_podmatch_box.seeking_guest_box {
-            max-width: 256px !important;
             border: 1px solid #6F69F2 !important;
         }
 
@@ -60,6 +61,10 @@
             padding: 0 12px;
         }
 
+        .max_w_512 {
+            max-width: 512px;
+        }
+
         @media (max-width:1400px) {
             .production_average {
                 right: -20%;
@@ -80,6 +85,16 @@
             .mt_max_lg {
                 margin-top: 116px;
             }
+
+            .industry_box.seeking_guest_box,
+            .industry_podmatch_box.seeking_guest_box {
+                height: 102px;
+            }
+
+            .production_average {
+                right: -50%;
+            }
+
         }
 
         @media (max-width:768px) {
@@ -98,7 +113,12 @@
 
             .industry_box p:last-child,
             .industry_podmatch_box p:last-child {
-                font-size: 21px;
+                font-size: 24px;
+            }
+
+            .industry_box p:last-child span,
+            .industry_podmatch_box p:last-child span {
+                font-size: 18px;
             }
 
             .prouction_P {
@@ -112,6 +132,17 @@
             .industry_podmatch_box.seeking_guest_box,
             .industry_box.seeking_guest_box {
                 height: 90px;
+                padding: 12px;
+            }
+
+            .production_average {
+                right: -20%;
+            }
+
+            .text_gradient {
+                background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             .dot {
@@ -136,7 +167,7 @@
                         class="d-flex align-items-center justify-content-center justify-content-xxl-start bg-white production_box guesting_box">
                         <div class="position-relative pt-3 pt-sm-0">
                             <img class="w-100 podcast_guesting_circle"
-                                src="./assets/images/png/poodcast_gathering_circle.png" alt="podcasting_chart" />
+                                src="./assets/images/webp/podcast_production.webp" alt="podcasting_chart" />
                             <div class="d-flex flex-column gap-1 position-absolute production_average">
                                 <div class="d-flex align-items-center">
                                     <span class="dot dot-blue me-2"></span>
@@ -168,7 +199,7 @@
                         Time Spent on Podcast Production
                         <span><img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" /></span>
                     </h2>
-                    <p class="clr_black opacity_70 scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150">
+                    <p class="clr_black opacity_70 max_w_512 fw-normal ff_graphik my-3 fs_sm lh_150">
                         Numbers based on interview-based podcasts releasing one episode per week, averaging <span
                             class="fw-semibold">5 hours</span> of
                         production.
@@ -179,8 +210,8 @@
                             <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
                                 Industry
                             </p>
-                            <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0">
-                                22Hr Monthly
+                            <p class="mb-0 mt-1 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0">
+                                22Hr <span class="fs_xl">Monthly</span>
                             </p>
                         </div>
 
@@ -189,22 +220,22 @@
                                 <p class="mb-0 clr_off_purple ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
                                     PodMatch
                                 </p>
-                                <p class="mb-0 clr_off_purple ff_graphik text-nowrap fw-medium fs_2xl lh_120 pb-1">
-                                    9Hr Monthly
+                                <p class="mb-0 mt-1 clr_off_purple ff_graphik text-nowrap fw-medium fs_2xl lh_120 pb-1">
+                                    9Hr <span class="fs_xl">Monthly</span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <img class="ms-sm-2 d-sm-none d-block" src="/assets/images/svg/future_arrow_vector.svg"
-                            alt="arrow_vector" />
-                        <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">
+                    <div class="d-flex align-items-center gap-3 gap-sm-0">
+                        <img width="61" height="24" class="ms-sm-2 d-sm-none d-block"
+                            src="/assets/images/svg/future_arrow_vector.svg" alt="arrow_vector" />
+                        <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 text_gradient ff_graphik me-4 me-sm-0">
                             Podcasters who use PodMatch reclaim 26%
                             <br class="d-sm-flex d-none" />
                             (3 hours) of their time per episode!
                         </p>
-                        <img class="ms-sm-2 d-sm-block d-none" src="/assets/images/svg/poadcast_guesting_vec.svg"
-                            alt="arrow_vector" />
+                        <img width="61" height="24" class="ms-sm-3 mt-sm-3 d-sm-block d-none"
+                            src="/assets/images/svg/poadcast_guesting_vec.svg" alt="arrow_vector" />
                     </div>
                 </div>
             </div>
