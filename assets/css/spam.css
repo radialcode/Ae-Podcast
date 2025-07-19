@@ -56,6 +56,7 @@
 .card_main {
   width: 100%;
   max-width: 450px;
+  height: 251px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px 4px #dadada40;
   background-color: white;
@@ -392,16 +393,6 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
-<<<<<<< HEAD
-  .space_accd {
-      margin-top: 40px;
-    }
-=======
-  .card_space {
-    margin: 0px 70px !important;
-  }
-
->>>>>>> 7c19f9f812699a4304c31bfc5a9d9b7d3bf0b0d7
   .accordion-button {
     max-width: 650px !important;
   }
@@ -501,6 +492,7 @@ a:hover {
   }
 
   .card_main {
+    height: 251px;
     padding: 24px 25px;
   }
 
@@ -520,11 +512,6 @@ a:hover {
   .space_accd {
     margin-top: 24px;
   }
-
-  .accordion-item {
-    margin-top: 6px !important;
-  }
-
   .accordion-button {
     max-width: 800px !important;
     width: 100% !important;
@@ -577,10 +564,4 @@ a:hover {
     padding-top: 31px;
     padding-bottom: 80px;
   }
-
-  .d_sm_none {
-    display: none;
-  }
-
-
 }
