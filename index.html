@@ -1035,6 +1035,36 @@
         </div>
       </div>
     </section>
+    <!-- How Podcasters Share Episodes with Listeners -->
+    <section>
+      <div class="d-flex flex-column align-items-center">
+        <div class="position-relative">
+          <div id="compareselectBox"
+            class="d-flex align-items-center justify-content-between select_box bg-white border-1 border cursor_pointer">
+            <p id="compare" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June 2025</p>
+          </div>
+          <div id="compareoptions" class="position-absolute d-none option_box">
+            <p onclick="compareselectValue('March 2024')"
+              class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+              March 2024
+            </p>
+            <p onclick="compareselectValue(' Feb 2024')"
+              class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+              Feb 2024
+            </p>
+            <p onclick="compareselectValue(' Jan 2024')"
+              class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+              Jan 2024
+            </p>
+          </div>
+        </div>
+        <h2 class="ff_graphik fw-semibold fs_4xl text-center clr_black px-md-3 px-lg-0 max_w_550 my-3 leading_120">
+          How Podcasters Share Episodes with Listeners
+        </h2>
+        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-center opacity_70">We asked  <span class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the ranked list of the platforms they sent us to.</p>
+        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black text-center opacity_70"><span class="fw-semibold">84%</span>  of podcasters sent listeners to platforms with low accessibility!</p>
+      </div>
+    </section>
     <!-- ---------take quiz --- -->
     <section class="take_quiz">
       <div class="custom_container">
@@ -2655,7 +2685,7 @@
   <!-- ------------ Bootstrap Cdn Link ---------- -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="./assets/js/custom.js"></script>
   <!-- ==== -->
@@ -2989,7 +3019,7 @@
       series: [{
         name: "Downloads",
         data: [600, 1000, 1500, 2000, 5000],
-      }, ],
+      },],
       fontSize: "24px",
       legend: {
         show: false,
@@ -3097,7 +3127,7 @@
           10000, 12000, 20000, 26000, 29000, 28000, 32000, 30000, 33000,
           34000, 36000, 38000,
         ],
-      }, ],
+      },],
       fontSize: "12px", // Default font size
       legend: {
         show: false,
@@ -3271,13 +3301,13 @@
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
     chart.data = [{
-        country: "Chances of Failure",
-        litres: 100,
-      },
-      {
-        country: "Likelihood of Success",
-        litres: 20,
-      },
+      country: "Chances of Failure",
+      litres: 100,
+    },
+    {
+      country: "Likelihood of Success",
+      litres: 20,
+    },
     ];
 
     chart.innerRadius = am4core.percent(40);
@@ -3380,23 +3410,23 @@
 
     function successData() {
       return [{
-          "value": 5.69
-        },
-        {
-          "label": "94.31%",
-          "value": 94.31
-        },
+        "value": 5.69
+      },
+      {
+        "label": "94.31%",
+        "value": 94.31
+      },
       ];
     }
 
     function failureData() {
       return [{
-          "value": 5.69
-        },
-        {
-          "label": "94.31%",
-          "value": 94.31
-        },
+        "value": 5.69
+      },
+      {
+        "label": "94.31%",
+        "value": 94.31
+      },
       ];
     }
 
@@ -3488,21 +3518,21 @@
 
     function healthData1() {
       return [{
-          "value": 80
-        },
-        {
-          "value": 20
-        },
+        "value": 80
+      },
+      {
+        "value": 20
+      },
       ];
     }
 
     function healthData2() {
       return [{
-          "value": 80
-        },
-        {
-          "value": 20
-        },
+        "value": 80
+      },
+      {
+        "value": 20
+      },
       ];
     }
 
@@ -3573,25 +3603,25 @@
 
     function seedData1() {
       return [{
-          "label": "Total",
-          "value": 505677
-        },
-        {
-          "label": "Active",
-          "value": 120212
-        },
+        "label": "Total",
+        "value": 505677
+      },
+      {
+        "label": "Active",
+        "value": 120212
+      },
       ];
     }
 
     function seedData2() {
       return [{
-          "label": "Total",
-          "value": 505677
-        },
-        {
-          "label": "Active",
-          "value": 120212
-        },
+        "label": "Total",
+        "value": 505677
+      },
+      {
+        "label": "Active",
+        "value": 120212
+      },
       ];
     }
   </script>
