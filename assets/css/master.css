@@ -159,19 +159,20 @@
 }
 
 .select_bg {
-  background-color: #e9e6e6;
-  border: 1px solid #d2cfcf;
-  border-radius: 4px;
-  color: #474646;
-  padding: 6.5px 23px 4.12px 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  background-image: url('/assets/images/webp/select_arrow.webp');
-  background-size: 9px 5px;
-  background-repeat: no-repeat;
-  background-position: 95px !important;
+    width: 115px;
+    padding: 6px 11px;
+    background-color: #e9e6e6;
+    border: 1px solid #d2cfcf;
+    border-radius: 4px;
+    color: #474646;
+    outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('/assets/images/webp/select_arrow.webp');
+    background-size: 9px 5px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
 }
 
 .active_box {
@@ -249,6 +250,10 @@
 
 .possible_future_ellipse {
   top: 20%;
+}
+
+.faq {
+    z-index: 5;
 }
 
 /*============================ card ===========================*/
