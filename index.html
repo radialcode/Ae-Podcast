@@ -1039,22 +1039,26 @@
     <section>
       <div class="d-flex flex-column align-items-center">
         <div class="position-relative">
-          <div id="compareselectBox"
-            class="d-flex align-items-center justify-content-between select_box bg-white border-1 border cursor_pointer">
-            <p id="compare" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June 2025</p>
+          <div id="PodcastersselectBox"
+            class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+            <p id="Podcasters" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June 2025</p>
           </div>
-          <div id="compareoptions" class="position-absolute d-none option_box">
-            <p onclick="compareselectValue('March 2024')"
+          <div id="Podcastersoptions" class="position-absolute d-none option_box">
+            <p onclick="PodcastersselectValue('March 2024')"
               class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
               March 2024
             </p>
-            <p onclick="compareselectValue(' Feb 2024')"
+            <p onclick="PodcastersselectValue(' Feb 2024')"
               class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
               Feb 2024
             </p>
-            <p onclick="compareselectValue(' Jan 2024')"
+            <p onclick="PodcastersselectValue(' Jan 2024')"
               class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
               Jan 2024
+            </p>
+            <p onclick="PodcastersselectValue(' June 2025')"
+              class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+              June 2025
             </p>
           </div>
         </div>
@@ -1062,7 +1066,7 @@
           How Podcasters Share Episodes with Listeners
         </h2>
         <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-center opacity_70">We asked  <span class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the ranked list of the platforms they sent us to.</p>
-        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black text-center opacity_70"><span class="fw-semibold">84%</span>  of podcasters sent listeners to platforms with low accessibility!</p>
+        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black text-center opacity_70 mt-4 pt-2"><span class="fw-semibold">84%</span>  of podcasters sent listeners to platforms with low accessibility!</p>
       </div>
     </section>
     <!-- ---------take quiz --- -->
@@ -2988,6 +2992,25 @@
     document.addEventListener("click", function () {
       if (!industryoptions.classList.contains("d-none")) {
         industryoptions.classList.add("d-none");
+      }
+    });
+  </script>
+  <script>
+    var compare = document.getElementById("Podcasters");
+    var Podcastersoptions = document.getElementById("Podcastersoptions");
+    var Podcastersselectbox = document.getElementById("PodcastersselectBox");
+
+    function PodcastersselectValue(val) {
+      Podcasters.innerHTML = val;
+      Podcastersoptions.classList.add("d-none");
+    }
+    Podcastersselectbox.addEventListener("click", function (event) {
+      event.stopPropagation();
+      Podcastersoptions.classList.toggle("d-none");
+    });
+    document.addEventListener("click", function () {
+      if (!Podcastersoptions.classList.contains("d-none")) {
+        Podcastersoptions.classList.add("d-none");
       }
     });
   </script>
