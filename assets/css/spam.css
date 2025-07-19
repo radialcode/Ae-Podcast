@@ -12,7 +12,7 @@
 }
 
 .mxw_para {
-  max-width: 606px;
+  max-width: 620px;
 }
 
 .mxw_para_cntr {
@@ -68,6 +68,10 @@
   text-align: center;
 }
 
+.card_main:hover {
+  transform: scale(1.05);
+}
+
 .box_hdr {
   margin-top: 35px;
   width: 321px;
@@ -97,8 +101,8 @@
 }
 
 .bg_hero {
-  background-image: url("../images/png/hero_bg.png");
-  background-position: center;
+  background-image: url("../images/webp/hero_bg.webp");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -114,7 +118,7 @@
   border-radius: 100px;
   border: none;
   background-color: #6f69f2;
-  padding: 10px 25px;
+  padding: 9px 20.5px;
   transition: all 350ms linear;
   border: 1px solid transparent;
 }
@@ -273,7 +277,7 @@ a:hover {
   max-width: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   padding: 16px 0px 16px 0px !important;
   font-size: 16px !important;
   font-weight: 500 !important;
@@ -293,7 +297,6 @@ a:hover {
   padding-top: 0 !important;
   width: 800px;
   max-width: 100%;
-  color: #4d4d4d !important;
   font-weight: 400 !important;
   font-size: 16px !important;
 }
@@ -332,11 +335,11 @@ a:hover {
   width: 20px;
   height: 20px;
   background-image: url("../images/svg/faq_open.svg") !important;
+  margin-top: 3px;
 }
 
-.vctr_faq {
-  left: 0;
-  bottom: 20%;
+.faq_link:hover {
+  color: #00bbffb6;
 }
 
 @media (max-width: 991.98px) {
@@ -345,13 +348,13 @@ a:hover {
     padding-bottom: 42px;
   }
 
-  .accordion-body {
-    padding: 0px 56px 14px 0px !important;
+  .box_hdr {
+    width: 295px;
+    height: 66px;
   }
 
-  .vctr_faq {
-    left: -50px;
-    bottom: -63%;
+  .accordion-body {
+    padding: 0px 56px 14px 0px !important;
   }
 
   .nav_bar {
@@ -393,6 +396,10 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  .space_accd {
+    margin-top: 40px;
+  }
+
   .accordion-button {
     max-width: 650px !important;
   }
@@ -413,7 +420,7 @@ a:hover {
   }
 
   .card_main {
-    padding: 24px 10px;
+    padding: 24px;
   }
 
   .space_header {
@@ -424,6 +431,11 @@ a:hover {
   .space_overall {
     padding-top: 53px;
     padding-bottom: 110px;
+  }
+
+  .nav_space {
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 }
 
@@ -531,7 +543,7 @@ a:hover {
   }
 
   .bg_hero {
-    background-image: url("../images/png/header_bg_sm.png");
+    background-image: url("../images/webp/header_bg_sm.webp");
   }
 
   .mxw_para {
@@ -563,5 +575,14 @@ a:hover {
   .space_overall {
     padding-top: 31px;
     padding-bottom: 80px;
+  }
+
+  .d_sm_none {
+    display: none;
+  }
+
+  .nav_space {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }

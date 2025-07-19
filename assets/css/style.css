@@ -21,12 +21,139 @@
 }
 
 .start_btn_hover:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.podcast_report_heading {
+    max-width: 775px;
+}
+
+.nav_dropbtn:hover {
+    color: #6F69F2;
+}
+
+.transition_03 {
+    transition: all 0.3s ease-in-out;
+}
+
+.bttn_login:hover {
+    color: #6F69F2;
+}
+
+.vctr_faq {
+    left: 0;
+    bottom: 20%;
+}
+
+/* ==== podcasting_chart_parent ==== */
+.transition_02 {
+    transition: all 0.2s ease-in-out;
+}
+
+.podcasting_chart_parent .active_part {
+    transform: translate3d(0px, 2px, 0px);
+}
+
+.podcasting_chart_parent .active_part .active_tooltip,
+.podcasting_chart_parent .total_part .total_tooltip,
+.industry_totals_chart .chances_low_part .chances_low,
+.industry_totals_chart .chances_high_part .chances_high,
+.possible_future_chart .possible_active_part .active_part,
+.possible_future_chart .possible_total_part .total_part,
+.guesting_chart .guesting_hosts .guesting_hosts_tooltip,
+.guesting_chart .guesting_guests .guesting_guests_tooltip {
+    opacity: 0;
+}
+
+.podcasting_chart_parent .active_part:hover .active_tooltip,
+.podcasting_chart_parent .total_part:hover .total_tooltip,
+.industry_totals_chart .chances_low_part:hover .chances_low,
+.industry_totals_chart .chances_high_part:hover .chances_high,
+.possible_future_chart .possible_active_part:hover .active_part,
+.possible_future_chart .possible_total_part:hover .total_part,
+.guesting_chart .guesting_hosts:hover .guesting_hosts_tooltip,
+.guesting_chart .guesting_guests:hover .guesting_guests_tooltip {
+    opacity: 1;
+}
+
+.podcasting_chart_parent .active_part:hover {
+    transform: translate3d(-11px, -2px, 0px);
+}
+
+.podcasting_chart_parent .total_part:hover .total_bg {
+    fill: url(#gradient);
+}
+
+.podcasting_chart_parent title {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fff !important;
+}
+
+.podcasting_chart_parent svg,
+.possible_future_chart svg {
+    max-width: 500px;
+}
+
+/* ==== Chances of "Making It" ==== */
+
+.industry_totals_chart .chances_low_part:hover {
+    transform: translate3d(-9px, -5px, 0px);
+}
+
+.industry_totals_chart .chances_high_part:hover .chances_high_part_bg {
+    fill: url(#gradient);
+}
+
+.industry_totals_chart svg,
+.guesting_chart svg,
+.guesting_chart svg {
+    max-width: 522px;
+    border-radius: 24px;
+}
+
+.guesting_chart {
+    border-radius: 24px;
+}
+
+/* ==== Possible Future ==== */
+.possible_future_chart .possible_active_part:hover {
+    transform: translate3d(-7px, -13px, 0px);
+}
+
+.possible_future_chart .possible_total_part:hover .possible_total_part_bg {
+    fill: url(#gradient);
+}
+
+/* ==== Compared to Industry ==== */
+
+.guesting_chart .guesting_hosts {
+    transform: translate3d(11px, 8px, 0px);
+}
+
+.guesting_chart .guesting_hosts:hover {
+    transform: translate3d(-2px, 0px, 0px);
+}
+
+.guesting_chart .guesting_guests:hover .guesting_guests_bg {
+    fill: url(#gradient);
+}
+
+.guesting_chart {
+    box-shadow: 0px 0px 20px 4px rgba(226, 226, 226, 0.25);
+}
+
+.max_w_550 {
+    max-width: 550px;
+}
+
+.max_w_604 {
+    max-width: 604px;
 }
 
 @media (max-width: 1199.98px) {
     .card_main {
-        height: 282px;
+        height: 302px;
+        justify-content: space-between !important;
     }
 }
 
@@ -39,11 +166,165 @@
     }
 
     .card_main {
-        height: 286px;
+        min-height: 251px;
     }
 }
 
+/* Podcast Sharing Table Styles */
+.podcast_share {
+    padding: 0 20px 152px 20px;
+}
+
+.podcast-share-table-parent {
+    max-width: 569px;
+    width: 100%;
+    overflow-x: auto;
+    /* margin-top: 48px; */
+}
+
+
+.table-wrapper {
+    border-radius: 4px;
+    box-shadow: 4px 4px 20px 0px #D4D4D440;
+    position: relative;
+    /* z-index: 10; */
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.table-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.5) 0%, rgba(0, 185, 255, 0.5) 155.6%);
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    /* z-index: -1; */
+}
+
+
+.table-header .table-cell:nth-child(1) {
+    /* flex: 0.33; */
+    min-width: 70px;
+    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    border-top-left-radius: 4px;
+}
+
+.table-cell:nth-child(1) {
+    /* flex: 0.33; */
+    min-width: 70px;
+}
+
+.table-header .table-cell:nth-child(2) {
+    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    min-width: 170px;
+}
+
+.table-cell:nth-child(2) {
+    min-width: 170px;
+    /* flex: 1.5; */
+    font-weight: 600 !important;
+}
+
+.table-header .table-cell:nth-child(3) {
+    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%),
+        linear-gradient(336.51deg, #6F69F2 7.88%, #269FFB 47.87%);
+    /* flex: 0.8; */
+    min-width: 164px;
+}
+
+.table-cell:nth-child(3) {
+    min-width: 164px;
+    /* flex: 0.8; */
+}
+
+.table-header .table-cell:nth-child(4) {
+    background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+    /* flex: 0.8; */
+    min-width: 164px;
+    max-width: 164px;
+    width: 100%;
+    border-top-right-radius: 4px;
+}
+
+.table-cell:nth-child(4) {
+    /* flex: 0.8; */
+    min-width: 164px;
+}
+
+.table-header .table-cell {
+    color: white !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 164%;
+    padding: 10px 12px;
+    text-align: center;
+    border-right: 1px solid white !important;
+    font-family: 'Graphik', sans-serif;
+    /* flex: 1; */
+}
+
+.table-row {
+    display: flex;
+}
+
+.table-row:nth-child(odd) {
+    background: white;
+}
+
+.table-row:nth-child(even) {
+    background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row .table-cell {
+    padding: 10px 12px;
+    text-align: center;
+    border-right: 1px solid;
+    border-image: linear-gradient(311.05deg, rgba(111, 105, 242, 0.3) 0%, rgba(0, 185, 255, 0.3) 155.6%)1;
+    font-size: 14px;
+    color: #45474A;
+    font-weight: 400;
+    font-family: 'Graphik', sans-serif;
+}
+
+.table-cell:last-child {
+    border-right: none !important;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.5) 0%, rgba(0, 185, 255, 0.5) 155.6%);
+    border-radius: 6px;
+    border: 2px solid #FFFFFF;
+}
+
+
+
+
 @media (max-width: 575.98px) {
+
+    .podcasting_chart_parent svg {
+        max-width: 350px;
+        height: 350px;
+    }
+
     .card_main {
         height: auto;
     }
@@ -54,5 +335,45 @@
 
     .podcast_report_heading {
         max-width: 360px;
+    }
+
+    .industry_totals_chart svg,
+    .possible_future_chart svg,
+    .guesting_chart svg {
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .table-header .table-cell:nth-child(1) {
+        min-width: 50px;
+        max-width: 50px;
+    }
+
+    .table-cell:nth-child(1) {
+        min-width: 50px;
+    }
+
+    .table-header .table-cell:nth-child(2) {
+        min-width: 148px;
+    }
+
+    .table-cell:nth-child(2) {
+        min-width: 148px;
+    }
+
+    .table-header .table-cell:nth-child(3) {
+        min-width: 136px;
+    }
+
+    .table-cell:nth-child(3) {
+        min-width: 136px;
+    }
+
+    .table-header .table-cell:nth-child(4) {
+        min-width: 1436x;
+    }
+
+    .table-cell:nth-child(4) {
+        min-width: 136px;
     }
 }
