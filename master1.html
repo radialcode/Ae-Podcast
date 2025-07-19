@@ -12,10 +12,18 @@
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/dev.css">
+    <link rel="stylesheet" href="assets/css/spam.css">
 </head>
 <style>
     .prouction_P {
         padding-top: 152px;
+    }
+
+    .text_gradient {
+        background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .aep_chart {
@@ -41,6 +49,10 @@
         height: auto;
     }
 
+    .w_536 {
+        max-width: 536px !important;
+    }
+
     .y_axis_label {
         writing-mode: vertical-rl;
         transform: rotate(180deg);
@@ -57,16 +69,16 @@
     }
 
     .gap_60 {
-        gap: 60px;
+        gap: 60px !important;
     }
 
     .average_mothly_py {
-        padding-top: 23px;
-        padding-bottom: 16px;
+        padding-top: 23px !important;
+        padding-bottom: 16px !;
     }
 
     .gap_6 {
-        gap: 24px;
+        gap: 24px !important;
     }
 
     .industry_box.seeking_guest_box {
@@ -79,24 +91,24 @@
     }
 
     .seeking_guest_box {
-        border: 1px solid #00b9ff;
-        padding: 16px 24px;
+        border: 1px solid #00b9ff !important;
+        padding: 16px 24px !important;
         max-width: 224px !important;
-        width: 100%;
-        border-radius: 16px;
+        width: 100% !important;
+        border-radius: 16px !important;
     }
 
     .gap_24 {
-        gap: 24px;
+        gap: 24px !important;
     }
 
     .arrow_w {
-        width: 57px;
-        margin: 7px 0px 0px 0px;
+        width: 57px !important;
+        margin: 7px 0px 0px 0px !important;
     }
 
     .june_dropdown.select_bg {
-        background-color: #fff;
+        background-color: #fff !important;
         padding: 7px 12px 6px 10px !important;
     }
 
@@ -104,9 +116,13 @@
         max-width: 404px !important;
     }
 
+    .chance_box {
+        height: 106px !important;
+    }
+
     @media (max-width: 1199.98px) {
         .Podcaster_heading {
-            max-width: 566px;
+            max-width: 566px !important;
         }
 
         .shadow_box {
@@ -116,7 +132,10 @@
         }
 
         .gap_28 {
-            gap: 28px;
+            gap: 28px !important;
+        }
+        .chance_box{
+            height: 102px !important;
         }
     }
 
@@ -129,7 +148,10 @@
         }
 
         .gap_74 {
-            gap: 74px;
+            gap: 74px !important;
+        }
+         .chance_box{
+            height: 102px !important;
         }
 
         @media (max-width:575.98px) {
@@ -151,6 +173,18 @@
                 height: 335px;
                 object-fit: cover;
             }
+
+            .prouction_P {
+                padding-top: 80px;
+            }
+
+            .w_536 {
+                max-width: 100% !important;
+            }
+        }
+
+        .chance_box {
+            height: 90px !important;
         }
     }
 </style>
@@ -159,15 +193,29 @@
     <section class="bg-white prouction_P">
         <div class="custom_container position-relative">
             <div class="d-flex flex-column flex-lg-row align-items-lg-center gap_60 gap_28 gap_74">
-
                 <div class="left_content">
-                    <select class="select_bg june_dropdown aep_select p-0 text-center fs_xsm">
-                        <option value="June">June 2025</option>
-                        <option value="June">June 2025</option>
-                        <option value="June">June 2025</option>
-                        <option value="June">June 2025</option>
-                    </select>
+                    <div class="position-relative">
+                        <div id="futureselectBox"
+                            class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
+                            <p id="future" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024
+                            </p>
 
+                        </div>
+                        <div id="futureoptions" class="position-absolute d-none option_box">
+                            <p onclick="futureselectValue('March 2024')"
+                                class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                                March 2024
+                            </p>
+                            <p onclick="futureselectValue(' Feb 2024')"
+                                class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                                Feb 2024
+                            </p>
+                            <p onclick="futureselectValue(' Jan 2024')"
+                                class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                                Jan 2024
+                            </p>
+                        </div>
+                    </div>
                     <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 Podcaster_heading fw-semibold mt-3">
                         Average Monthly Income for Podcasters <span><img src="./assets/images/svg/warning_symbol.svg"
                                 alt="warning_symbol"></span>
@@ -176,21 +224,22 @@
                         Estimated income is from ads and sponsorships, based on a <span
                             class="fw-semibold">$46.30</span> CPM for weekly interview-based podcasts.
                     </p>
-                    <div class="d-flex align-items-center justify-content-start mt-sm:pt-3 pt-2 gap_6">
-                        <div class="industry_box seeking_guest_box d-flex flex-column justify-content-center">
-                            <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">Industry</p>
-                            <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">$5.80</p>
+                    <div class="d-flex align-items-center justify-content-start pt-3 p_1 gap_6 w_536">
+                        <div
+                            class="industry_box seeking_guest_box d-flex flex-column justify-content-center chance_box">
+                            <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_110 pb-2">Industry</p>
+                            <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_110 ws_nowrap">$5.80</p>
                         </div>
-                        <div class="industry_podmatch_box seeking_guest_box chance_3">
-                            <p class="mb-0 clr_purple ff_graphik fw-medium fs_sm lh_150 pb-2">PodMatch</p>
-                            <p class="mb-0 clr_purple ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap">$34.62</p>
+                        <div class="industry_podmatch_box seeking_guest_box chance_box">
+                            <p class="mb-0 clr_off_purple ff_graphik fw-medium fs_sm lh_110 pb-2">PodMatch</p>
+                            <p class="mb-0 clr_off_purple ff_graphik fw-medium fs_2xl lh_110 ws_nowrap">$34.62</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start mt-3 mt-sm-4 gap_24">
 
                         <img class="ms-sm-2 d-sm-none d-block" src="/assets/images/svg/future_arrow_vector.svg"
                             alt="arrow_vector" />
-                        <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2 w_404">
+                        <p class="mb-0 fw-bold fs_sm lh_150 text_gradient ff_graphik ms-2 w_404">
                             The average podcaster on PodMatch earns 497.59% more than the industry average podcaster!
                         </p>
                         <img class="arrow_w d-sm-block d-none" src="/assets/images/svg/arrow_vector.svg"
@@ -198,12 +247,12 @@
                     </div>
                 </div>
                 <div class="d-flex position-relative flex-column align-items-center shadow_box">
-                    <span class="position-absolute y_axis_label gradient_text">Income in USD ($)</span>
+                    <span class="position-absolute y_axis_label text_gradient">Income in USD ($)</span>
                     <img class="prodcaster_chart d-sm-none d-block" src="./assets/images/png/prodcaster_img2.png"
                         alt="possible_future" />
                     <img class="prodcaster_chart d-sm-block d-none" src="./assets/images/png/prodcaster_img.png"
                         alt="possible_future" />
-                    <p class="mb-0 fw-bold fs_xsm lh_150 gradient_text ff_graphik text-center average_mothly_py">
+                    <p class="mb-0 fw-bold fs_xsm lh_150 text_gradient ff_graphik text-center average_mothly_py">
                         Average Monthly Income for Podcasters (Monetization)
                     </p>
                 </div>

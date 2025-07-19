@@ -158,21 +158,6 @@
 }
 
 .select_bg {
-<<<<<<< HEAD
-  background-color: #e9e6e6;
-  border: 1px solid #d2cfcf;
-  border-radius: 4px;
-  color: #474646;
-  padding: 6.5px 23px 4.12px 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  background-image: url('/assets/images/webp/select_arrow.webp');
-  background-size: 9px 5px;
-  background-repeat: no-repeat;
-  background-position: 95px !important;
-=======
     width: 115px;
     padding: 6px 11px;
     background-color: #e9e6e6;
@@ -187,7 +172,6 @@
     background-size: 9px 5px;
     background-repeat: no-repeat;
     background-position: calc(100% - 12px) center;
->>>>>>> 7c19f9f812699a4304c31bfc5a9d9b7d3bf0b0d7
 }
 
 .active_box {
