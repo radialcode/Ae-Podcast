@@ -191,6 +191,12 @@
   margin: 0 auto;
   padding: 0 12px;
 }
+@media (max-width: 1200px) {
+  :root {
+    /* --------font sizes --------------- */
+    --fs-5xl: 45px;
+  }
+}
 
 @media (max-width: 991.98px) {
   :root {
@@ -219,5 +225,6 @@
     --fs-xl: 20px;
     --fs-md: 14px;
     --fs-sm: 14px !important;
+    --fs-xs: 10px;
   }
 }

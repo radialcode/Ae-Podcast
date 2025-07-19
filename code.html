@@ -56,7 +56,11 @@
             padding-top: 152px;
         }
 
-        @media (max-width:1200px) {
+        .px_12 {
+            padding: 0 12px;
+        }
+
+        @media (max-width:1400px) {
             .production_average {
                 right: -20%;
                 top: -20%;
@@ -65,9 +69,32 @@
             .prouction_P {
                 padding-top: 110px;
             }
+
+            .industry_box p:last-child,
+            .industry_podmatch_box p:last-child {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width:992px) {
+            .mt_max_lg {
+                margin-top: 116px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .mt_max_lg {
+                margin-top: 80px;
+            }
         }
 
         @media (max-width:576px) {
+            .production_box.guesting_box {
+                box-shadow: 0px 0px 12.74px 2.55px #E2E2E240 !important;
+                height: 312px;
+                padding-top: 14px;
+                border-radius: 15px;
+            }
 
             .industry_box p:last-child,
             .industry_podmatch_box p:last-child {
@@ -77,6 +104,24 @@
             .prouction_P {
                 padding-top: 80px;
             }
+
+            .mt_max_lg {
+                margin-top: 40px;
+            }
+
+            .industry_podmatch_box.seeking_guest_box,
+            .industry_box.seeking_guest_box {
+                height: 90px;
+            }
+
+            .dot {
+                width: 5px;
+                height: 5px;
+            }
+
+            .px_12 {
+                padding: 0;
+            }
         }
     </style>
 </head>
@@ -84,15 +129,15 @@
 <body>
     <!-- ------ podcasting guesting -- -->
     <section class="bg-white position-relative prouction_P">
-        <div class="custom_container pt-lg-5">
-            <div class="row poadcasting_p align-items-center">
-                <div class="col-lg-6 position-relative">
+        <div class="custom_container">
+            <div class="flex-column-reverse d-flex flex-lg-row poadcasting_p align-items-center">
+                <div class="col-12 col-lg-6 px_12 position-relative mt_max_lg">
                     <div
-                        class="d-flex align-items-center justify-content-center justify-content-xl-start bg-white production_box guesting_box">
-                        <div class="position-relative">
+                        class="d-flex align-items-center justify-content-center justify-content-xxl-start bg-white production_box guesting_box">
+                        <div class="position-relative pt-3 pt-sm-0">
                             <img class="w-100 podcast_guesting_circle"
                                 src="./assets/images/png/poodcast_gathering_circle.png" alt="podcasting_chart" />
-                            <div class="d-flex flex-column gap-2 position-absolute production_average">
+                            <div class="d-flex flex-column gap-1 position-absolute production_average">
                                 <div class="d-flex align-items-center">
                                     <span class="dot dot-blue me-2"></span>
                                     <span class="clr_off_gray fs_xs lh_150 fw-normal ff_graphik">Industry Average</span>
@@ -117,9 +162,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 px_12">
                     <h2
-                        class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_production fw-semibold mt-3 position-relative z-1">
+                        class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_production fw-semibold position-relative z-1">
                         Time Spent on Podcast Production
                         <span><img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" /></span>
                     </h2>
@@ -128,8 +173,8 @@
                             class="fw-semibold">5 hours</span> of
                         production.
                     </p>
-
-                    <div class="d-flex align-items-center justiy-content-center pt-3 gap-xl-4 gap-2">
+                    <div
+                        class="d-flex align-items-center justiy-content-center pt-2 pt-sm-3 gap-3 gap-sm-4  gap-xl-2 gap-xxl-4">
                         <div class="industry_box seeking_guest_box p-3 w_224">
                             <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
                                 Industry
@@ -150,14 +195,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="d-sm-flex align-items-center d-none">
+                    <div class="d-flex align-items-center">
+                        <img class="ms-sm-2 d-sm-none d-block" src="/assets/images/svg/future_arrow_vector.svg"
+                            alt="arrow_vector" />
                         <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">
                             Podcasters who use PodMatch reclaim 26%
-                            <br />
+                            <br class="d-sm-flex d-none" />
                             (3 hours) of their time per episode!
                         </p>
-                        <img class="ms-sm-2" src="/assets/images/svg/poadcast_guesting_vec.svg" alt="arrow_vector" />
+                        <img class="ms-sm-2 d-sm-block d-none" src="/assets/images/svg/poadcast_guesting_vec.svg"
+                            alt="arrow_vector" />
                     </div>
                 </div>
             </div>
