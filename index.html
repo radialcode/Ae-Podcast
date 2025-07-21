@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="./assets/css/spam.css" />
   <link rel="stylesheet" href="./assets/css/dev.css" />
   <link rel="stylesheet" href="./assets/css/master.css" />
+  <link rel="stylesheet" href="./assets/css/helper.css">
   <!-- --favicon --- -->
   <link rel="icon" type="image/x-icon" href="./assets/images/png/favicon.png" />
   <!-- =========== CHART JS SCRIPT =========== -->
@@ -43,180 +44,20 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css" rel="stylesheet">
   <!-- ==== AOS ==== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    .quicks-bg {
-      /* background-image: url(../images/png/quicks-bg.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; */
-      background: linear-gradient(133.83deg, #00B9FF 3.77%, #6F69F2 81.07%);
-      z-index: 10;
-
-    }
-
-    .quick_ways_ellipse {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
-
-
-    .max-w-1140 {
-      max-width: 1140px;
-    }
-
-    .max-w-785_7 {
-      max-width: 785.07px;
-    }
-
-    .pt-106 {
-      padding-top: 106px;
-    }
-
-    .pb-98 {
-      padding-bottom: 98px;
-    }
-
-    .max-w-785 {
-      max-width: 785px;
-    }
-
-    .mt-9 {
-      margin-top: 9px;
-    }
-
-    .pt-33 {
-      padding-top: 33px;
-    }
-
-    .gap-18 {
-      gap: 18px;
-    }
-
-    .radius-20 {
-      border-radius: 20px;
-    }
-
-    .fw-extrabold {
-      font-weight: 900;
-    }
-
-    .pt-103 {
-      padding-top: 103px;
-    }
-
-    .gap-24 {
-      gap: 24px;
-    }
-
-    .max-w-364 {
-      max-width: 364px !important;
-    }
-
-    .quicks-card {
-      /* border: 1px solid #0101011A; */
-      /* border-radius: 20px; */
-      /* backdrop-filter: blur(200px); */
-      /* box-shadow: 0px 0px 9.2px 0px #00000024; */
-    }
-
-
-    .py-12 {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .quick_ways_box {
-      transition: all 300ms linear;
-      position: relative;
-      z-index: 10;
-      border: 1px solid transparent;
-      border-radius: 20px;
-      border: 1px solid #0101011A;
-      backdrop-filter: blur(200px);
-      box-shadow: 0px 0px 9.2px 0px #00000024;
-
-    }
-
-    .quick_ways_box:hover {
-      border: 1px solid white;
-      backdrop-filter: blur(212.39999389648438px)
-    }
-
-    .quick_ways_box::after {
-      content: '';
-      position: absolute;
-      background: linear-gradient(311.4deg, #6F69F2 15.37%, #00B9FF 158.4%);
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0;
-      border-radius: 20px;
-      transition: all 400ms linear;
-    }
-
-    .quick_ways_box:hover::after {
-      opacity: 100;
-      z-index: -1;
-      /* background: linear-gradient(311.4deg, #6F69F2 15.37%, #00B9FF 158.4%); */
-    }
-
-    .quick_ways_box:hover p {
-      color: white;
-    }
-
-    .quick_ways_box:hover svg path {
-      fill: white;
-    }
-
-    .quick_ways_box:hover rect {
-      fill: #6F69F2;
-    }
-
-    .quick_ways_box.diffrent_hover:hover rect {
-      fill: white;
-    }
-
-    .quick_ways_box.diffrent_hover:hover svg path {
-      fill: #6F69F2;
-    }
-
-    .transition {
-      transition: all 300ms linear;
-    }
-
-    .quic_cards_wrap {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width:1024px) {
-      .mt-25 {
-        margin-top: 25px;
-      }
-
-      .pt-103 {
-        padding-top: 60px;
-      }
-    }
-
-    @media (max-width:768px) {
-      .pt-103 {
-        padding-top: 20px;
-      }
-
-      .max-w-364 {
-        max-width: unset !important;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <!-- Hidden SVG for gradient definitions -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="quick_ways_hover_gradient" x1="0%" y1="0%" x2="100%" y2="100%"
+        gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#6F69F2" />
+        <stop offset="100%" stop-color="#00B9FF" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <div class="custom-pop-up position-relative">
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -365,18 +206,17 @@
       <header class="bg_hero">
         <div class="custom_container space_header">
           <div class="d-flex flex-column justify-content-center align-items-center text-center">
-            <h1 class="lh_120 fs_4xl clr_black fw-semibold mb-0 podcast_report_heading ff_graphik">
-              The Actively Established Podcast Report
-              <span class="txt_hdng_clr fs_5xl">March 2024</span>
+            <h1 class="lh_120 fs_6xl clr_black fw-semibold mb-0 podcast_report_heading ff_graphik">
+              Podcasting Industry Report Specifically for Independent Podcasters
+              <span class="txt_hdng_clr d-block">June 2025</span>
             </h1>
             <p class="fs_sm clr_black fw-normal lh_150 mxw_para mt-2 mt-md-0 mt-md-3 mb-0 ff_graphik">
-              An Actively Established Podcaster is a non-celebrity independent
-              interview-based host with 100+ episodes and a release cadence of
-              10 days or less.
+              This report provides interview-based independent podcasters with relevant industry metrics
+              by excluding data from celebrity and big network shows.
             </p>
             <div class="box_hdr">
               <p id="counter" class="fw-semibold counter_mxw fs_3xl lh_120 text-white mb-0 ff_graphik">
-                38,965
+                36,212
               </p>
               <span class="mx-3">
                 <svg width="2" height="35" viewBox="0 0 2 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,8 +346,8 @@
               <p class="mb-0 fw-medium lh_130 fs_lg clr_black space_crd_para ff_graphik">
                 Listenership Health
               </p>
-              <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
-                HIGH
+              <p class="mb-0 clr_seagreen fs_xsm fw-semibold lh_150 ff_graphik">
+                VERY HIGH
               </p>
               <p class="ff_graphik mb-0 mt-3 clr_tundora fs_sm fw-normal lh_110 line_height_24">
                 504.9M podcast listeners estimated for 2024. (↑8.7%)
@@ -564,8 +404,9 @@
           <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
             <div class="position-relative">
               <div id="industryselectBox"
-                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
-                <p id="industry" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer bg-white">
+                <p id="industry" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
 
               </div>
               <div id="industryoptions" class="position-absolute d-none option_box">
@@ -580,6 +421,10 @@
                 <p onclick="industryselectValue(' Jan 2024')"
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
+                </p>
+                <p onclick="industryselectValue(' June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
                 </p>
               </div>
             </div>
@@ -598,10 +443,10 @@
                   Active
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                  384,629
+                  398,197
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">
-                  (+3.39%)
+                  (-0.2%)
                 </p>
               </div>
 
@@ -611,10 +456,10 @@
                     Total
                   </p>
                   <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                    2,963,829
+                    2,807,713
                   </p>
                   <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">
-                    (+0.65%)
+                    (+0.40%)
                   </p>
                 </div>
               </div>
@@ -622,10 +467,14 @@
 
             <div class="d-flex align-items-center">
               <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">
-                Only 13.3% of the total podcasts
-                <span class="d-sm-block d-inline">are active!</span>
+                Only 14.1% of the total
+                <span class="d-sm-block d-inline">podcasts are active!</span>
               </p>
               <img class="ms-sm-2 ms-1" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector" />
+            </div>
+            <div class="d-flex align-items-center mt-1 mt-sm-2 mt-lg-3">
+              <p class="ff_graphik fw-normal fs_sm lh_150 clr_black mb-0">Data provided by </p>
+              <img width="104" height="24" src="./assets/images/svg/rephonic.svg" alt="rephonic_logo">
             </div>
           </div>
           <div class="col-lg-6 col-12 justify-content-lg-start justify-content-center d-flex mt_40" data-aos="fade-left"
@@ -674,8 +523,9 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
             <div class="position-relative">
               <div id="futureselectBox"
-                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
-                <p id="future" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+                class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+                <p id="future" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
 
               </div>
               <div id="futureoptions" class="position-absolute d-none option_box">
@@ -691,16 +541,19 @@
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
                 </p>
+                <p onclick="futureselectValue(' June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
+                </p>
               </div>
             </div>
 
-            <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">
-              Possible Future Actively Established Podcasts
+            <h3 class="ff_graphik fs_5xl lh_120 clr_black mb-0 possible_heading fw-semibold mt-3">
+              Independent <span class="d-md-block">Interview-Based</span> Podcasters Totals
             </h3>
-            <p class="clr_black opacity_70 poadcasting_para fw-normal ff_graphik my-3 fs_sm lh_150 pe-4">
-              Most interview-based independent podcasters fail to reach the
-              Actively Established status due to quitting prematurely or
-              inconsistent episode releases.
+            <p class="clr_black opacity_70 poadcasting_para fw-normal ff_graphik my-3 fs_sm lh_150 pe-5">
+              Most interview-based podcasters fail to achieve the goal for their show due to quitting
+              prematurely or inconsistent episode releases.
             </p>
 
             <div class="d-flex align-items-center justiy-content-center pt-3 gap-md-4 gap-3">
@@ -709,10 +562,10 @@
                   Active
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                  120,212
+                  125,131
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-normal fs_sm lh_120">
-                  (+5.64%)
+                  (-0.1%)
                 </p>
               </div>
               <div class="total_box d-flex flex-column justify-content-center">
@@ -721,19 +574,19 @@
                     Total
                   </p>
                   <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                    505,677
+                    566,272
                   </p>
                   <p class="mb-0 gradient_text ff_graphik fw-normal fs_sm lh_120">
-                    (+1.27%)
+                    (+0.8%)
                   </p>
                 </div>
               </div>
             </div>
             <div class="d-flex align-items-center mt-4 pt-1">
-              <img class="mb-2" src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector" />
-              <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2">
-                Only 23.78% are active!
+              <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-4">
+                Only 22.0% are active!
               </p>
+              <img class="mb-2" src="/assets/images/svg/arrow_vector.svg" alt="future_arrow_vector" />
             </div>
           </div>
         </div>
@@ -748,8 +601,9 @@
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
             <div class="position-relative">
-              <div id="chanceselectBox" class="d-flex align-items-center select_box select_bg cursor_pointer">
-                <p id="chance" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+              <div id="chanceselectBox" class="d-flex align-items-center select_box select_bg bg-white cursor_pointer">
+                <p id="chance" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
               </div>
               <div id="chanceoptions" class="position-absolute d-none option_box">
                 <p onclick="chanceselectValue('March 2024')"
@@ -764,16 +618,20 @@
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
                 </p>
+                <p onclick="chanceselectValue('June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
+                </p>
               </div>
             </div>
 
-            <h3 class="ff_graphik fs_4xl lh_120 clr_black mb-0 chances_heading fw-semibold mt-3">
-              Chances of "Making It" as a Podcaster
+            <h3 class="ff_graphik fs_5xl lh_120 clr_black mb-0 chances_heading fw-semibold mt-3">
+              Chances of Success & Failure as a Podcaster
             </h3>
-            <p class="clr_black opacity_70 poadcasting_para fw-normal ff_graphik mt-3 mb-4 fs_sm lh_150">
-              On average, it takes 2 years and 100 episodes released to begin
-              yielding results from podcasting. Unfortunately, few stick with
-              it long enough to experience the reward.
+            <p class="clr_black opacity_70 poadcasting_para fw-normal ff_graphik mt-3 mb-4 fs_sm lh_150 pe-2">
+              On average it takes 2 years and 100 episodes released before podcasters see results. <span
+                class="fw-semibold">94.31%</span>
+              quit before reaching this point.
             </p>
 
             <table class="radius_4 mt-3 chances_table table_border">
@@ -785,10 +643,6 @@
                 <th class="fs_xsm ff_graphik fw-semibold text-white poadcast_group_th bg_episode text-center p-2">
                   Likelihood of Success
                 </th>
-                <th
-                  class="fs_xsm ff_graphik fw-semibold text-white poadcast_group_th bg_episode text-center radius_4_right p-2">
-                  Chances of Failure
-                </th>
               </tr>
 
               <tr>
@@ -798,11 +652,7 @@
                 </td>
                 <td
                   class="text-center fw-normal ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  45.95%
-                </td>
-                <td
-                  class="text-center fw-normal ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  4.65%
+                  41.49%
                 </td>
               </tr>
 
@@ -813,11 +663,7 @@
                 </td>
                 <td
                   class="text-center fw-normal td_gradient clr_grey ff_graphik py_7 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  9.95%
-                </td>
-                <td
-                  class="text-center fw-normal td_gradient clr_grey ff_graphik py_7 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  34.56%
+                  9.91%
                 </td>
               </tr>
 
@@ -828,11 +674,7 @@
                 </td>
                 <td
                   class="text-center fw-semibold ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  6.86%
-                </td>
-                <td
-                  class="text-center fw-semibold ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  53.55%
+                  5.69%
                 </td>
               </tr>
 
@@ -843,11 +685,7 @@
                 </td>
                 <td
                   class="text-center td_gradient fw-normal clr_grey ff_graphik py_7 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  2.19%
-                </td>
-                <td
-                  class="text-center td_gradient fw-normal clr_grey ff_graphik py_7 mx-n1 td_border border-top-0 border-bottom-0 fs_xsm">
-                  46.55%
+                  3.05%
                 </td>
               </tr>
 
@@ -858,11 +696,7 @@
                 </td>
                 <td
                   class="text-center fw-normal ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                  3.68%
-                </td>
-                <td
-                  class="text-center fw-normal ff_graphik py_7 clr_grey mx-n1 td_border border-top-0 bottom_r_radius fs_xsm">
-                  5.34%
+                  3.16%
                 </td>
               </tr>
 
@@ -870,12 +704,12 @@
 
             <div class="d-flex align-items-center">
               <p class="mb-0 mt-4 pt-2 fw-bold fs_sm lh_150 gradient_text ff_graphik gradient_para_width">
-                <span class="d-block d-sm-inline">You're 4x more likely to succeed with</span>
-                a business than a podcast. If you're podcasting to make money,
-                stop!
-                <span class="d-block">Go start a business instead.</span>
+                Approximately 332 podcasters <span class="d-block">
+                  quit
+                  every single day!
+                </span>
               </p>
-              <img class="arrow_width" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector" />
+              <img class="arrow_width ms-3" src="/assets/images/svg/arrow_vector.svg" alt="arrow_vector" />
             </div>
           </div>
 
@@ -888,6 +722,33 @@
                 <img class="success_text_abs" src="./assets/images/png/succes_text.png" alt="succes">
                 <img class="failure_text_abs" src="./assets/images/png/failure_text.png" alt="failure">
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <h3 class="ff_graphik fw-medium fs_xl lh_120 clr_black mb-0 mt-5 text-lg-center">Average Time Before
+            Podfade</h3>
+          <div class="w-100 average_time_box">
+            <div
+              class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
+              <div class="d-flex gap_22 align-items-center">
+                <div class="blue_inner_box">
+                  <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">50/<span
+                      class="fw-normal fs_md">days</span></p>
+                  <p class="ff_graphik fw-medium fs_sm lh_150 clr_skyblue mb-0 text-center">Industry
+                  </p>
+                </div>
+                <div class="blue_inner_box bg_violet">
+                  <p class="fw-medium fs_2xl lh_110 clr_off_purple text-center ff_graphik mb-1">
+                    254/<span class="fw-normal fs_md">days</span></p>
+                  <p class="ff_graphik fw-medium fs_sm lh_150 clr_off_purple mb-0 text-center">
+                    PodMatch</p>
+                </div>
+              </div>
+              <p
+                class="fw-normal fs_lg lh_150 clr_black ff_graphik max_w_529 mb-0 fst-italic text-center text-sm-start">
+                Podcasters on PodMatch keep their podcast going <span class="fw-semibold">405%</span>
+                longer than the industry average!</p>
             </div>
           </div>
         </div>
@@ -916,8 +777,9 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
             <div class="position-relative">
               <div id="activityselectBox"
-                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
-                <p id="activity" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+                class="d-flex align-items-center justify-content-between select_box bg-white select_bg cursor_pointer">
+                <p id="activity" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
 
               </div>
               <div id="activityoptions" class="position-absolute d-none option_box">
@@ -933,6 +795,10 @@
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
                 </p>
+                <p onclick="activityselectValue(' June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
+                </p>
               </div>
             </div>
 
@@ -940,35 +806,34 @@
               Actively Established Podcasts
             </h3>
             <p class="clr_black opacity_70 less_than fw-normal ff_graphik my-3 fs_sm lh_150">
-              Less than 10% of independent podcasters are in the Actively
-              Established category, but, they hold over 90% of the influence
-              in the podcasting industry!
+              Only 6% of independent podcasters are considered Actively Established, yet they account for
+              <span class="fw-semibold">95%</span> of total podcast listenership!
             </p>
 
             <div class="d-flex align-items-center justiy-content-center pt-3 gap-md-4 gap-3">
-              <div class="total_box d-flex flex-column justify-content-center height_box">
-                <div class="px-4 py-3">
-                  <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">
-                    Total
-                  </p>
-                  <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                    38,965
-                  </p>
-                </div>
-              </div>
               <div class="active_box chance_3 height_box">
                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2">
-                  Change
+                  Total
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_120 pb-1 ws_nowrap">
-                  + 3.39%
+                  36,212
                 </p>
+              </div>
+              <div class="total_box d-flex flex-column justify-content-center height_box border_violet">
+                <div class="px-4 py-3">
+                  <p class="mb-0 gradient_text ff_graphik fw-medium fs_sm lh_150 pb-2">
+                    Change
+                  </p>
+                  <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">
+                    -0.17%
+                  </p>
+                </div>
               </div>
             </div>
             <div class="d-flex align-items-center mt-sm-4 mt-3 pt-1">
               <img src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector" />
               <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2">
-                Only 1.31% of all podcasts are part <br />
+                Only 1.28% of all podcasts are part <br />
                 of the Actively Established category!
               </p>
             </div>
@@ -985,8 +850,9 @@
           <div class="col-lg-6">
             <div class="position-relative">
               <div id="guestingBox"
-                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
-                <p id="guesting" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+                class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+                <p id="guesting" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
 
               </div>
               <div id="guestingOptions" class="position-absolute d-none option_box">
@@ -1002,6 +868,10 @@
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
                 </p>
+                <p onclick="selectValue(' June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
+                </p>
               </div>
             </div>
             <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_guesting fw-semibold mt-3 position-relative z-1">
@@ -1013,9 +883,8 @@
             </h2>
             <p class="clr_grey scerious_podcast fw-normal ff_graphik my-3 fs_sm lh_150">
               Serious podcast guests and hosts exclusively use
-              <a class="clr_purple fw-medium" target="_blank" href="https://podmatch.com/">PodMatch.com </a> to
-              connect for interviews and to streamline the administrative and
-              booking process.
+              <a class="clr_purple fw-medium" target="_blank" href="https://podmatch.com/">PodMatch.com
+              </a> to higher quality interviews and to streamline the process.
             </p>
 
             <div class="d-flex align-items-center justiy-content-center pt-3 gap-md-4 gap-3 position-relative z-2">
@@ -1026,7 +895,7 @@
                   Seeking Guests
                 </p>
                 <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0">
-                  114,575
+                  101,159
                 </p>
               </div>
 
@@ -1037,7 +906,7 @@
                     Podcasts
                   </p>
                   <p class="mb-0 gradient_text ff_graphik fw-medium fs_2xl lh_120 pb-1">
-                    2,920,750
+                    4,528,077
                   </p>
                 </div>
               </div>
@@ -1046,7 +915,7 @@
             <div class="d-sm-flex align-items-center d-none">
               <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 gradient_text ff_graphik">
                 Every podcast has an average of
-                <span class="people">25 people </span> <br />
+                <span class="people">41 people </span> <br />
                 reaching out every day requesting to be a guest!
               </p>
               <img class="ms-sm-2" src="/assets/images/svg/poadcast_guesting_vec.svg" alt="arrow_vector" />
@@ -1076,6 +945,33 @@
               </div>
             </div>
           </div>
+          <div class="mt-0">
+            <h3 class="ff_graphik fw-medium fs_xl lh_120 clr_black mb-0 mt-5 text-lg-center">Average
+              Podcasts a Guest Appears on Per Month</h3>
+            <div class="w-100 average_time_box">
+              <div
+                class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
+                <div class="d-flex gap_22 align-items-center">
+                  <div class="blue_inner_box">
+                    <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">1
+                    <p class="ff_graphik fw-medium fs_sm lh_150 clr_skyblue mb-0 text-center">
+                      Industry
+                    </p>
+                  </div>
+                  <div class="blue_inner_box bg_violet">
+                    <p class="fw-medium fs_2xl lh_110 clr_off_purple text-center ff_graphik mb-1">5
+                    </p>
+                    <p class="ff_graphik fw-medium fs_sm lh_150 clr_off_purple mb-0 text-center">
+                      PodMatch</p>
+                  </div>
+                </div>
+                <p
+                  class="fw-normal fs_lg lh_150 clr_black ff_graphik max_w_477 mb-0 fst-italic text-center text-sm-start">
+                  Guests who use PodMatch get featured on <span class="fw-semibold">116%</span>
+                  more podcasts!</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1094,8 +990,10 @@
               class="compare_chart d-flex flex-column align-items-center justify-content-center position-relative mx-auto mt_40">
               <div id="chart" class="position-relative">
               </div>
-              <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Podcasters Group </p>
-              <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 abs_text">Episode
+              <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Podcasters Group
+              </p>
+              <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 abs_text">
+                Episode
                 Downloads (First 7 Days)</p>
             </div>
           </div>
@@ -1104,8 +1002,9 @@
             data-aos="fade-left" data-aos-duration="1000">
             <div class="position-relative">
               <div id="compareselectBox"
-                class="d-flex align-items-center justify-content-between select_box select_bg cursor_pointer">
-                <p id="compare" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">March 2024</p>
+                class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+                <p id="compare" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
 
               </div>
               <div id="compareoptions" class="position-absolute d-none option_box">
@@ -1121,10 +1020,14 @@
                   class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
                   Jan 2024
                 </p>
+                <p onclick="compareselectValue(' June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">
+                  June 2025
+                </p>
               </div>
             </div>
             <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3">
-              Your Podcast Compared to Industry Averages
+              Podcast Listenership Industry Averages
               <span class="cursor_pointer" data-bs-toggle="tooltip" data-bs-placement="top"
                 title="Downloads are not everything, nor are they essential to podcasting success. However, gaining perspective on the reality of where your podcast is can be encouraging!">
                 <img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" />
@@ -1132,9 +1035,8 @@
             </h2>
 
             <p class="clr_grey ff_graphik fs_sm fw-normal mb-1 fw-light pb-3">
-              A podcast listener is 100x more valuable than an engagement on
-              social media. Podcasting is comparable to public speaking. Hosts
-              are speakers, listeners are attendees.
+              A podcast listener is <span class="fw-semibold">100x</span> more valuable than an engagement
+              on social media. Podcasting is comparable to public speaking.
             </p>
             <table class="radius_4 mt-3 table_border">
               <tr class="w-100">
@@ -1204,14 +1106,46 @@
             </div>
           </div>
         </div>
+        <div class="mt-0">
+          <h3 class="ff_graphik fw-medium fs_xl lh_120 clr_black mb-0 mt-5 text-lg-center">Average Weekly
+            Downloads on New Episodes</h3>
+          <div class="w-100 average_time_box">
+            <div
+              class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
+              <div class="d-flex gap_22 align-items-center">
+                <div class="blue_inner_box">
+                  <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">30
+                  <p class="ff_graphik fw-medium fs_sm lh_150 clr_skyblue mb-0 text-center">Industry
+                  </p>
+                </div>
+                <div class="blue_inner_box bg_violet">
+                  <p class="fw-medium fs_2xl lh_110 clr_off_purple text-center ff_graphik mb-1">149
+                  </p>
+                  <p class="ff_graphik fw-medium fs_sm lh_150 clr_off_purple mb-0 text-center">
+                    PodMatch</p>
+                </div>
+              </div>
+              <p
+                class="fw-normal fs_lg lh_150 clr_black ff_graphik max_w_477 mb-0 fst-italic text-center text-sm-start">
+                The average podcaster on PodMatch gets <span class="fw-semibold">396%</span> more
+                listens than the industry average
+                podcaster!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- How Podcasters Share Episodes with Listeners -->
-    <section class="podcast_share">
-      <div class="d-flex flex-column align-items-center">
+    <section class="podcast_share position-relative">
+      <img class="position-absolute podcast_left_vector d-md-block d-none"
+        src="assets/images/webp/chances_left_vector.webp" alt="chances_left_vector" />
+      <img class="position-absolute podcaster_right_vector d-xl-block d-none" src="./assets/images/png/pc_lines_vec.png"
+        alt="lines-vec" />
+      <div class="d-flex flex-column align-items-sm-center">
         <div class="position-relative">
           <div id="PodcastersselectBox"
-            class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+            class="d-flex align-items-md-center justify-content-between select_box select_bg bg-white cursor_pointer">
             <p id="Podcasters" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June 2025</p>
           </div>
           <div id="Podcastersoptions" class="position-absolute d-none option_box">
@@ -1233,97 +1167,98 @@
             </p>
           </div>
         </div>
-        <h2 class="ff_graphik fw-semibold fs_4xl text-center clr_black px-md-3 px-lg-0 max_w_550 my-3 leading_120">
+        <h2
+          class="ff_graphik fw-semibold fs_5xl text-sm-center text-left clr_black px-md-3 px-lg-0 max_w_550 my-3 leading_120">
           How Podcasters Share Episodes with Listeners
         </h2>
-        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-center opacity_70">We asked <span
-            class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the ranked list of
+        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-sm-center text-left opacity_70">We
+          asked <span class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the
+          ranked list of
           the platforms they sent us to.</p>
-        <div class="podcast-share-table-parent custom-scrollbar mt-lg-5 mt-4">
-          <div class="table-wrapper d-flex flex-column bg-white ">
-            <div class="table-header d-flex">
-              <div class="table-cell">Rank</div>
-              <div class="table-cell">Platform</div>
-              <div class="table-cell">Count</div>
-              <div class="table-cell">Percentage</div>
+        <div class="podcast_share_table_parent custom_scrollbar mt-md-5">
+          <div class="table_wrapper d-flex flex-column bg-white mb-md-0 mb-2">
+            <div class="table_header d-flex">
+              <div class="table_cell">Rank</div>
+              <div class="table_cell">Platform</div>
+              <div class="table_cell">Count</div>
+              <div class="table_cell">Percentage</div>
             </div>
-            <div class="table-body">
-              <div class="table-row">
-                <div class="table-cell">1</div>
-                <div class="table-cell">spotify</div>
-                <div class="table-cell">62</div>
-                <div class="table-cell">29%</div>
+            <div class="table_body">
+              <div class="table_row">
+                <div class="table_cell">1</div>
+                <div class="table_cell">spotify</div>
+                <div class="table_cell">62</div>
+                <div class="table_cell">29%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">2</div>
-                <div class="table-cell">no link</div>
-                <div class="table-cell">32</div>
-                <div class="table-cell">15%</div>
+              <div class="table_row">
+                <div class="table_cell">2</div>
+                <div class="table_cell">no link</div>
+                <div class="table_cell">32</div>
+                <div class="table_cell">15%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">3</div>
-                <div class="table-cell">apple</div>
-                <div class="table-cell">31</div>
-                <div class="table-cell">15%</div>
+              <div class="table_row">
+                <div class="table_cell">3</div>
+                <div class="table_cell">apple</div>
+                <div class="table_cell">31</div>
+                <div class="table_cell">15%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">4</div>
-                <div class="table-cell">youtube</div>
-                <div class="table-cell">24</div>
-                <div class="table-cell">11%</div>
+              <div class="table_row">
+                <div class="table_cell">4</div>
+                <div class="table_cell">youtube</div>
+                <div class="table_cell">24</div>
+                <div class="table_cell">11%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">5</div>
-                <div class="table-cell">buzzsprout</div>
-                <div class="table-cell">19</div>
-                <div class="table-cell">9%</div>
+              <div class="table_row">
+                <div class="table_cell">5</div>
+                <div class="table_cell">buzzsprout</div>
+                <div class="table_cell">19</div>
+                <div class="table_cell">9%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">6</div>
-                <div class="table-cell">own website</div>
-                <div class="table-cell">15</div>
-                <div class="table-cell">7%</div>
+              <div class="table_row">
+                <div class="table_cell">6</div>
+                <div class="table_cell">own website</div>
+                <div class="table_cell">15</div>
+                <div class="table_cell">7%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">7</div>
-                <div class="table-cell">podbean</div>
-                <div class="table-cell">6</div>
-                <div class="table-cell">3%</div>
+              <div class="table_row">
+                <div class="table_cell">7</div>
+                <div class="table_cell">podbean</div>
+                <div class="table_cell">6</div>
+                <div class="table_cell">3%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">8</div>
-                <div class="table-cell">broken link</div>
-                <div class="table-cell">5</div>
-                <div class="table-cell">2%</div>
+              <div class="table_row">
+                <div class="table_cell">8</div>
+                <div class="table_cell">broken link</div>
+                <div class="table_cell">5</div>
+                <div class="table_cell">2%</div>
               </div>
             </div>
           </div>
         </div>
 
-        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black text-center opacity_70 mt-4 pt-2"><span
+        <p class="ff_graphik mb-0 fw-normal fs_xsm lh_150 clr_black text-center opacity_70 mt-sm-4 pt-2 max_w_293"><span
             class="fw-semibold">84%</span> of podcasters sent listeners to platforms with low accessibility!</p>
       </div>
     </section>
-
     <!-- --------quick way ------- -->
-    <section class="quicks-bg pt-106 pb-98 position-relative">
+    <section class="quick_parent position-relative">
       <img class="position-absolute quick_ways_ellipse" src="./assets/images/svg/quick_ways_ellipse.svg"
         alt="quick-ways-ellipse" />
       <div class="custom_container mx-auto">
-        <h2 class="fw-semibold text-white fs_5xl max-w-785 lh-120 ff_graphik text-center mx-auto m-0">
+        <h2 class="fw-semibold text-white fs_5xl max_w_785 lh_120 ff_graphik text-center mx-auto m-0">
           What <span style="position: relative; top: 9px; display: inline-block;">9</span> Quick Ways to Get
           Better Results from Podcasting?
         </h2>
-        <p class="text-white max-w-785 ff_graphik fw-medium text-center mx-auto pt-3 text-sm m-0">Most podcast
+        <p class="text-white max_w_785 lh_150 ff_graphik fw-medium text-center mx-auto pt-3 fs_sm m-0">Most podcast
           hosts, guests, and agencies are struggling. But this doesn't have to be the case for
           you! These 9 ideas will help you go from simply surviving to thriving in podcasting!</p>
-        <div>
-          <h3 class="text-white text-center fs-xl pt-33 lh-150 fw-extrabold m-0">Select Which Best Describes You
-          </h3>
-        </div>
-        <div class="quic_cards_wrap pt-103">
-          <div
-            class="d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20 quick_ways_box">
+        <!-- <div> -->
+        <h3 class="text-white text-center fs_xl lh_150 fw_black m-0 quick_ways_subtitle ff_graphik">Select Which Best
+          Describes You
+        </h3>
+        <!-- </div> -->
+        <div class="quick_cards_wrap">
+          <div class="quick_ways_box position-relative d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2104_1995)">
                 <rect width="54" height="54" rx="27" fill="white" />
@@ -1347,32 +1282,30 @@
                 </clipPath>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0 transition">I’m a Podcast Host</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 transition clr_black">I’m a Podcast Host</p>
           </div>
-              <div
-                class="quick_ways_box diffrent_hover d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_329)" />
-                  <path
-                    d="M24.8918 12.1878C19.6653 13.5941 17.7434 20.1449 21.3879 24.1175C22.2786 25.0785 23.1575 25.6644 24.4231 26.1097C25.302 26.4261 25.5715 26.4613 26.7668 26.4613C29.0286 26.473 30.5403 25.8167 32.0872 24.1761C33.4348 22.7464 34.0325 21.2464 34.0325 19.2425C34.0325 17.8949 33.8684 17.18 33.3059 15.9964C32.4504 14.2035 30.5989 12.68 28.6887 12.1878C27.7747 11.9535 25.7708 11.9535 24.8918 12.1878Z"
-                    fill="white" />
-                  <path
-                    d="M20.0859 26.5312C19.043 26.7188 18.5742 26.8945 17.8594 27.375C15.6797 28.8281 14.4727 32.0742 14.4609 36.4336C14.4609 37.9805 14.5781 38.625 15 39.4336C15.5508 40.5117 16.6289 41.3906 17.8477 41.7773C18.5508 41.9883 18.9844 42 26.918 42C33.5039 42 35.3906 41.9648 35.8477 41.8359C37.7344 41.332 39.0586 39.9141 39.4219 38.0156C39.6797 36.6445 39.4687 33.8086 38.9531 31.875C38.1094 28.6992 36.3164 26.8594 33.7031 26.5195C32.6016 26.3672 32.5664 26.3789 30.6797 27.5391C28.6875 28.7695 26.6836 29.0156 24.7266 28.2891C24.375 28.1484 23.5078 27.7031 22.8281 27.2812C21.4922 26.4727 21.0469 26.3555 20.0859 26.5312Z"
-                    fill="white" />
-                  <defs>
-                    <linearGradient id="paint0_linear_2010_329" x1="54" y1="54" x2="-55.8265" y2="-41.6529"
-                      gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#6F69F2" />
-                      <stop offset="0.813974" stop-color="#00B9FF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              
-              
-                <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">I’m a Podcast Guest</p>
-              </div>  
           <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+            class="quick_ways_box position-relative different_hover d-flex w-100 align-items-center flex-column  bg-white p-3">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_329)" />
+              <path
+                d="M24.8918 12.1878C19.6653 13.5941 17.7434 20.1449 21.3879 24.1175C22.2786 25.0785 23.1575 25.6644 24.4231 26.1097C25.302 26.4261 25.5715 26.4613 26.7668 26.4613C29.0286 26.473 30.5403 25.8167 32.0872 24.1761C33.4348 22.7464 34.0325 21.2464 34.0325 19.2425C34.0325 17.8949 33.8684 17.18 33.3059 15.9964C32.4504 14.2035 30.5989 12.68 28.6887 12.1878C27.7747 11.9535 25.7708 11.9535 24.8918 12.1878Z"
+                fill="white" />
+              <path
+                d="M20.0859 26.5312C19.043 26.7188 18.5742 26.8945 17.8594 27.375C15.6797 28.8281 14.4727 32.0742 14.4609 36.4336C14.4609 37.9805 14.5781 38.625 15 39.4336C15.5508 40.5117 16.6289 41.3906 17.8477 41.7773C18.5508 41.9883 18.9844 42 26.918 42C33.5039 42 35.3906 41.9648 35.8477 41.8359C37.7344 41.332 39.0586 39.9141 39.4219 38.0156C39.6797 36.6445 39.4687 33.8086 38.9531 31.875C38.1094 28.6992 36.3164 26.8594 33.7031 26.5195C32.6016 26.3672 32.5664 26.3789 30.6797 27.5391C28.6875 28.7695 26.6836 29.0156 24.7266 28.2891C24.375 28.1484 23.5078 27.7031 22.8281 27.2812C21.4922 26.4727 21.0469 26.3555 20.0859 26.5312Z"
+                fill="white" />
+              <defs>
+                <linearGradient id="paint0_linear_2010_329" x1="54" y1="54" x2="-55.8265" y2="-41.6529"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6F69F2" />
+                  <stop offset="0.813974" stop-color="#00B9FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center clr_black mb-0">I’m a Podcast Guest</p>
+          </div>
+          <div
+            class="quick_ways_box position-relative different_hover d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2030)" />
               <path
@@ -1402,37 +1335,36 @@
                 </linearGradient>
               </defs>
             </svg>
-
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">I’m a Booking Agency</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">I’m a Booking Agency</p>
           </div>
-              <div class="quick_ways_box d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_2104_1999)">
-                    <rect width="54" height="54" rx="27" fill="white" />
-                    <g clip-path="url(#clip1_2104_1999)">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M27.5 -1C43.2401 -1 56 11.7599 56 27.5C56 43.2401 43.2401 56 27.5 56C11.7599 56 -1 43.2401 -1 27.5C-1 11.7599 11.7599 -1 27.5 -1ZM27.5 32.7241C29.3318 32.7216 31.094 32.0224 32.4291 30.7682C33.7642 29.5141 34.5722 27.799 34.689 25.9709H30.7703C30.5488 25.9709 30.3364 25.8829 30.1799 25.7264C30.0233 25.5698 29.9353 25.3574 29.9353 25.1359C29.9353 24.9145 30.0233 24.7021 30.1799 24.5455C30.3364 24.389 30.5488 24.301 30.7703 24.301H34.704V22.1802H30.7697C30.5483 22.1802 30.3359 22.0922 30.1793 21.9356C30.0227 21.779 29.9347 21.5667 29.9347 21.3452C29.9347 21.1238 30.0227 20.9114 30.1793 20.7548C30.3359 20.5982 30.5483 20.5103 30.7697 20.5103H34.7035V18.3895H30.7697C30.5483 18.3895 30.3359 18.3015 30.1793 18.1449C30.0227 17.9883 29.9347 17.7759 29.9347 17.5545C29.9347 17.3331 30.0227 17.1207 30.1793 16.9641C30.3359 16.8075 30.5483 16.7195 30.7697 16.7195H34.6885C34.5746 14.8902 33.7676 13.1731 32.4319 11.918C31.0962 10.6629 29.3323 9.96414 27.4994 9.96414C25.6666 9.96414 23.9027 10.6629 22.567 11.918C21.2313 13.1731 20.4243 14.8902 20.3104 16.7195H24.2292C24.4506 16.7195 24.663 16.8075 24.8196 16.9641C24.9762 17.1207 25.0641 17.3331 25.0641 17.5545C25.0641 17.7759 24.9762 17.9883 24.8196 18.1449C24.663 18.3015 24.4506 18.3895 24.2292 18.3895H20.2971V20.5103H24.2303C24.4517 20.5103 24.6641 20.5982 24.8207 20.7548C24.9773 20.9114 25.0653 21.1238 25.0653 21.3452C25.0653 21.5667 24.9773 21.779 24.8207 21.9356C24.6641 22.0922 24.4517 22.1802 24.2303 22.1802H20.2971V24.301H24.2303C24.3399 24.301 24.4485 24.3226 24.5498 24.3645C24.6511 24.4065 24.7432 24.468 24.8207 24.5455C24.8982 24.6231 24.9597 24.7151 25.0017 24.8164C25.0437 24.9177 25.0653 25.0263 25.0653 25.1359C25.0653 25.2456 25.0437 25.3542 25.0017 25.4555C24.9597 25.5568 24.8982 25.6488 24.8207 25.7264C24.7432 25.8039 24.6511 25.8654 24.5498 25.9074C24.4485 25.9493 24.3399 25.9709 24.2303 25.9709H20.3115C20.4283 27.7989 21.2361 29.514 22.5711 30.7682C23.9061 32.0223 25.6683 32.7216 27.5 32.7241ZM17.4622 24.685C17.2408 24.685 17.0284 24.7729 16.8718 24.9295C16.7152 25.0861 16.6273 25.2985 16.6273 25.5199C16.6305 28.2146 17.6329 30.8124 19.4406 32.8108C21.2483 34.8092 23.7329 36.0663 26.4138 36.3389L26.6645 36.3639V40.7703H24.3521C23.8374 40.7709 23.3439 40.9756 22.9798 41.3395C22.6158 41.7033 22.4109 42.1967 22.41 42.7114V44.1992C22.41 44.4207 22.4979 44.633 22.6545 44.7896C22.8111 44.9462 23.0235 45.0342 23.2449 45.0342H31.755C31.9764 45.0342 32.1888 44.9462 32.3454 44.7896C32.502 44.633 32.5899 44.4207 32.5899 44.1992V42.7115C32.5892 42.1969 32.3844 41.7035 32.0204 41.3396C31.6564 40.9757 31.163 40.771 30.6484 40.7704H28.335V36.3636L28.5857 36.3386C31.2665 36.0658 33.7509 34.8087 35.5586 32.8103C37.3663 30.8119 38.3688 28.2142 38.3722 25.5196C38.3722 25.2981 38.2842 25.0858 38.1276 24.9292C37.9711 24.7726 37.7587 24.6846 37.5372 24.6846C37.3158 24.6846 37.1034 24.7726 36.9468 24.9292C36.7902 25.0858 36.7023 25.2981 36.7023 25.5196C36.6938 27.9547 35.7205 30.2873 33.9956 32.0062C32.2707 33.7251 29.9348 34.6903 27.4996 34.6903C25.0644 34.6903 22.7285 33.7251 21.0036 32.0062C19.2787 30.2873 18.3054 27.9547 18.2969 25.5196C18.2967 25.2983 18.2087 25.0861 18.0522 24.9297C17.8957 24.7732 17.6835 24.6852 17.4622 24.685Z"
-                        fill="url(#paint0_linear_2104_1999)" />
-                    </g>
-                  </g>
-                  <defs>
-                    <linearGradient id="paint0_linear_2104_1999" x1="56" y1="56" x2="-59.928" y2="-44.967"
-                      gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#6F69F2" />
-                      <stop offset="0.813974" stop-color="#00B9FF" />
-                    </linearGradient>
-                    <clipPath id="clip0_2104_1999">
-                      <rect width="54" height="54" rx="27" fill="white" />
-                    </clipPath>
-                    <clipPath id="clip1_2104_1999">
-                      <rect width="57" height="57" fill="white" transform="translate(-1 -1)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting a Podcast</p>
-              </div>
+          <div class="quick_ways_box position-relative d-flex w-100 align-items-center flex-column bg-white p-3">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2104_1999)">
+                <rect width="54" height="54" rx="27" fill="white" />
+                <g clip-path="url(#clip1_2104_1999)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M27.5 -1C43.2401 -1 56 11.7599 56 27.5C56 43.2401 43.2401 56 27.5 56C11.7599 56 -1 43.2401 -1 27.5C-1 11.7599 11.7599 -1 27.5 -1ZM27.5 32.7241C29.3318 32.7216 31.094 32.0224 32.4291 30.7682C33.7642 29.5141 34.5722 27.799 34.689 25.9709H30.7703C30.5488 25.9709 30.3364 25.8829 30.1799 25.7264C30.0233 25.5698 29.9353 25.3574 29.9353 25.1359C29.9353 24.9145 30.0233 24.7021 30.1799 24.5455C30.3364 24.389 30.5488 24.301 30.7703 24.301H34.704V22.1802H30.7697C30.5483 22.1802 30.3359 22.0922 30.1793 21.9356C30.0227 21.779 29.9347 21.5667 29.9347 21.3452C29.9347 21.1238 30.0227 20.9114 30.1793 20.7548C30.3359 20.5982 30.5483 20.5103 30.7697 20.5103H34.7035V18.3895H30.7697C30.5483 18.3895 30.3359 18.3015 30.1793 18.1449C30.0227 17.9883 29.9347 17.7759 29.9347 17.5545C29.9347 17.3331 30.0227 17.1207 30.1793 16.9641C30.3359 16.8075 30.5483 16.7195 30.7697 16.7195H34.6885C34.5746 14.8902 33.7676 13.1731 32.4319 11.918C31.0962 10.6629 29.3323 9.96414 27.4994 9.96414C25.6666 9.96414 23.9027 10.6629 22.567 11.918C21.2313 13.1731 20.4243 14.8902 20.3104 16.7195H24.2292C24.4506 16.7195 24.663 16.8075 24.8196 16.9641C24.9762 17.1207 25.0641 17.3331 25.0641 17.5545C25.0641 17.7759 24.9762 17.9883 24.8196 18.1449C24.663 18.3015 24.4506 18.3895 24.2292 18.3895H20.2971V20.5103H24.2303C24.4517 20.5103 24.6641 20.5982 24.8207 20.7548C24.9773 20.9114 25.0653 21.1238 25.0653 21.3452C25.0653 21.5667 24.9773 21.779 24.8207 21.9356C24.6641 22.0922 24.4517 22.1802 24.2303 22.1802H20.2971V24.301H24.2303C24.3399 24.301 24.4485 24.3226 24.5498 24.3645C24.6511 24.4065 24.7432 24.468 24.8207 24.5455C24.8982 24.6231 24.9597 24.7151 25.0017 24.8164C25.0437 24.9177 25.0653 25.0263 25.0653 25.1359C25.0653 25.2456 25.0437 25.3542 25.0017 25.4555C24.9597 25.5568 24.8982 25.6488 24.8207 25.7264C24.7432 25.8039 24.6511 25.8654 24.5498 25.9074C24.4485 25.9493 24.3399 25.9709 24.2303 25.9709H20.3115C20.4283 27.7989 21.2361 29.514 22.5711 30.7682C23.9061 32.0223 25.6683 32.7216 27.5 32.7241ZM17.4622 24.685C17.2408 24.685 17.0284 24.7729 16.8718 24.9295C16.7152 25.0861 16.6273 25.2985 16.6273 25.5199C16.6305 28.2146 17.6329 30.8124 19.4406 32.8108C21.2483 34.8092 23.7329 36.0663 26.4138 36.3389L26.6645 36.3639V40.7703H24.3521C23.8374 40.7709 23.3439 40.9756 22.9798 41.3395C22.6158 41.7033 22.4109 42.1967 22.41 42.7114V44.1992C22.41 44.4207 22.4979 44.633 22.6545 44.7896C22.8111 44.9462 23.0235 45.0342 23.2449 45.0342H31.755C31.9764 45.0342 32.1888 44.9462 32.3454 44.7896C32.502 44.633 32.5899 44.4207 32.5899 44.1992V42.7115C32.5892 42.1969 32.3844 41.7035 32.0204 41.3396C31.6564 40.9757 31.163 40.771 30.6484 40.7704H28.335V36.3636L28.5857 36.3386C31.2665 36.0658 33.7509 34.8087 35.5586 32.8103C37.3663 30.8119 38.3688 28.2142 38.3722 25.5196C38.3722 25.2981 38.2842 25.0858 38.1276 24.9292C37.9711 24.7726 37.7587 24.6846 37.5372 24.6846C37.3158 24.6846 37.1034 24.7726 36.9468 24.9292C36.7902 25.0858 36.7023 25.2981 36.7023 25.5196C36.6938 27.9547 35.7205 30.2873 33.9956 32.0062C32.2707 33.7251 29.9348 34.6903 27.4996 34.6903C25.0644 34.6903 22.7285 33.7251 21.0036 32.0062C19.2787 30.2873 18.3054 27.9547 18.2969 25.5196C18.2967 25.2983 18.2087 25.0861 18.0522 24.9297C17.8957 24.7732 17.6835 24.6852 17.4622 24.685Z"
+                    fill="url(#paint0_linear_2104_1999)" />
+                </g>
+              </g>
+              <defs>
+                <linearGradient id="paint0_linear_2104_1999" x1="56" y1="56" x2="-59.928" y2="-44.967"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6F69F2" />
+                  <stop offset="0.813974" stop-color="#00B9FF" />
+                </linearGradient>
+                <clipPath id="clip0_2104_1999">
+                  <rect width="54" height="54" rx="27" fill="white" />
+                </clipPath>
+                <clipPath id="clip1_2104_1999">
+                  <rect width="57" height="57" fill="white" transform="translate(-1 -1)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting a Podcast</p>
+          </div>
           <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+            class="quick_ways_box position-relative different_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_370)" />
               <path
@@ -1449,11 +1381,10 @@
                 </linearGradient>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting to be a Guest</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting to be a Guest</p>
           </div>
-      
           <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+            class="quick_ways_box position-relative different_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2024)" />
               <path
@@ -1483,41 +1414,12 @@
                 </linearGradient>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting a Booking Agency</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting a Booking Agency</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------take quiz --- -->
-    <section class="take_quiz">
-      <div class="custom_container">
-        <div class="d-flex flex-lg-row align-items-center flex-column-reverse justify-content-between">
-          <div class="d-flex flex-column align-items-center align-items-lg-start mt-md-5 mt-lg-0 pt-4 mt-4 pt-lg-0"
-            data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="ff_graphik fw-semibold text-lg-start text-center fs_4xl text-white mb-0 mb-3">
-              Take The Quiz
-            </h2>
-            <p class="ff_graphik text-white text-lg-start text-center lh_150 did_you_know fs_sm fw-medium pb-4">
-              Did you know it takes most podcasters 2 years to achieve
-              meaningful results with their podcast? Only 6.8% of podcasters
-              ever make it to that point! If you want to achieve your
-              podcasting goals faster, take the quiz!
-            </p>
-            <div
-              class="d-inlin-block transition_300 mb-lg-0 mb-1 d-flex justify-content-center align-items-center bg-white start_btn start_btn_hover">
-              <button
-                class="ff_graphik transition_300 mx-lg-0 mx-auto start_btn start_btn_clr w-100 fs_sm fw-semibold border-0 border-1 border-white bg-white">
-                Start Now
-              </button>
-            </div>
-          </div>
-          <div class="ms-lg-4 ps-lg-1 mt-1 mt-lg-0" data-aos="fade-left" data-aos-duration="1000">
-            <img class="laptop w-100" src="./assets/images/webp/laptop.webp" alt="laptop" />
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- ---------Podcast Hostig Provider --------------- -->
     <section class="ph_provider_sec position-relative">
       <img class="position-absolute end-0 line_right_podcast_table d-none d-md-block z-n1" width="115px"
@@ -2736,21 +2638,27 @@
               <h2 class="accordion-header transition_300" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What does it mean to be an Actively
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What does it mean to be
+                    an Actively
                     Established podcaster?</span>
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Actively established podcasters are interview-based show hosts with more than 100 episodes released
-                  without missing beyond a percentage of episode releases along the way. They’ve consistently created
-                  content for their podcast since launching! (For more, that’s 2 years, based on a weekly release
+                  Actively established podcasters are interview-based show hosts with more than 100
+                  episodes released
+                  without missing beyond a percentage of episode releases along the way. They’ve
+                  consistently created
+                  content for their podcast since launching! (For more, that’s 2 years, based on a
+                  weekly release
                   cadence.) For more on this, see Alex Sanfilippo’s original announcement, here: <a
                     class="faq_link transition_03 clr_skyblue" href="https://podpros.com/actively-established/"
                     target="_blank" rel="noopener noreferrer">https://podpros.com/actively-established/</a> . For an
-                  independent interview-based podcast, we’ve found that it takes 100 episodes before meaningful traction
-                  begins. Growing your influence and impact with listeners begins at 100 episodes, so that’s what we’re
+                  independent interview-based podcast, we’ve found that it takes 100 episodes before
+                  meaningful traction
+                  begins. Growing your influence and impact with listeners begins at 100 episodes, so
+                  that’s what we’re
                   tracking!
                 </div>
               </div>
@@ -2759,16 +2667,21 @@
               <h2 class="accordion-header transition_300" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What is this report exactly?</span>
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What is this report
+                    exactly?</span>
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  This report is based on filtering out all the shows that don’t actually matter. The Actively
-                  Established Podcast Report displays interview based independent podcasts only. All celebrity podcasts,
-                  non-interview based, big network podcasts, and podcasts with only one episode have been removed from
-                  the results. (Some newer/smaller shows from larger networks may be included in the data above.)
+                  This report is based on filtering out all the shows that don’t actually matter. The
+                  Actively
+                  Established Podcast Report displays interview based independent podcasts only. All
+                  celebrity podcasts,
+                  non-interview based, big network podcasts, and podcasts with only one episode have
+                  been removed from
+                  the results. (Some newer/smaller shows from larger networks may be included in the
+                  data above.)
                 </div>
               </div>
             </div>
@@ -2776,24 +2689,35 @@
               <h2 class="accordion-header transition_300" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How are hosting providers scored?</span>
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How are hosting
+                    providers scored?</span>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p>We pull +/- 15 days of data to use as our sample unit within the following ranges: 8 weeks, 50
+                  <p>We pull +/- 15 days of data to use as our sample unit within the following
+                    ranges: 8 weeks, 50
                     weeks, 100 weeks, 200 weeks, 300 weeks of current day.</p>
-                  <p>Once we have these sample units, we review the percentages of success/failure in each range after
-                    averaging outliers and hosting providers who do not reach the minimum criteria.</p>
-                  <p>From there, we have 39 separate formulas applied to calculate the datapoints. All fully automated,
-                    no manual adjustments made to the algorithm that’s deciding scoring and ranking. The size of a
-                    hosting provider has minimal effect on their rank, what matter is activity of podcasters and the
-                    episode release milestones that they reach. (Release cadence, total episodes released, and sample
+                  <p>Once we have these sample units, we review the percentages of success/failure in
+                    each range after
+                    averaging outliers and hosting providers who do not reach the minimum criteria.
+                  </p>
+                  <p>From there, we have 39 separate formulas applied to calculate the datapoints. All
+                    fully automated,
+                    no manual adjustments made to the algorithm that’s deciding scoring and ranking.
+                    The size of a
+                    hosting provider has minimal effect on their rank, what matter is activity of
+                    podcasters and the
+                    episode release milestones that they reach. (Release cadence, total episodes
+                    released, and sample
                     unit milestones are the top factors contributing to rank.)</p>
-                  <p class="mb-0"><span class="ff_graphik fw-semibold">TWO MANUAL ACTIONS:</span> If a podcast host
-                    gates/hides email addresses by default, they receive +50 points. If a hosting provider is a member
-                    of podstandards.org, they receive +50 points. (NOTE: The hosting provider data only shows
+                  <p class="mb-0"><span class="ff_graphik fw-semibold">TWO MANUAL ACTIONS:</span> If a
+                    podcast host
+                    gates/hides email addresses by default, they receive +50 points. If a hosting
+                    provider is a member
+                    of podstandards.org, they receive +50 points. (NOTE: The hosting provider data
+                    only shows
                     independent interview-based podcasts.)</p>
                 </div>
               </div>
@@ -2802,17 +2726,20 @@
               <h2 class="accordion-header transition_300" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What to do with this hosting provider
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">What to do with this
+                    hosting provider
                     data?</span>
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  We make suggestions on which hosting providers should be used, and avoided, within the Actively
-                  Established Podcast Formula Course. For free access to this $1,200.00 course, please complete the <a
-                    class="faq_link transition_03 clr_skyblue" href="PodScore.io" target="_blank"
-                    rel="noopener noreferrer">PodScore.io</a> quiz and you’ll be granted access to our hosting provider
+                  We make suggestions on which hosting providers should be used, and avoided, within
+                  the Actively
+                  Established Podcast Formula Course. For free access to this $1,200.00 course, please
+                  complete the <a class="faq_link transition_03 clr_skyblue" href="PodScore.io" target="_blank"
+                    rel="noopener noreferrer">PodScore.io</a> quiz and you’ll be
+                  granted access to our hosting provider
                   suggestions and exclusive discounts!
                 </div>
               </div>
@@ -2821,7 +2748,8 @@
               <h2 class="accordion-header transition_300" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading">How did we get the data about
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading">How did we get the data
+                    about
                     podcasts?</span>
                 </button>
               </h2>
@@ -2829,7 +2757,8 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   All data was pulled by our partner, <a class="faq_link transition_03 clr_skyblue" href="Rephonic.com."
-                    target="_blank" rel="noopener noreferrer">Rephonic.com.</a> Rephonic counted the number of podcasts
+                    target="_blank" rel="noopener noreferrer">Rephonic.com.</a>
+                  Rephonic counted the number of podcasts
                   by each hosting provider by RSS feed domain.
                 </div>
               </div>
@@ -2838,76 +2767,26 @@
               <h2 class="accordion-header transition_300" id="headingSix">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How did we get the data about podcast
+                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How did we get the data
+                    about podcast
                     listenership?</span>
                 </button>
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p>We use a combination of publicly available data from demandsage.com, nielsen.com, statista.com,
+                  <p>We use a combination of publicly available data from demandsage.com, nielsen.com,
+                    statista.com,
                     exploringtopics.com and edisonresearch.com.</p>
                   <p class="mt-4 mb-3 ff_graphik fw-semibold">Specific sources:</p>
                   <p>► Global Listenership Projections: <a class="faq_link transition_03 clr_skyblue"
                       href=" https://explodingtopics.com/blog/podcast-listeners" target="_blank"
-                      rel="noopener noreferrer"> https://explodingtopics.com/blog/podcast-listeners</a></p>
+                      rel="noopener noreferrer">
+                      https://explodingtopics.com/blog/podcast-listeners</a></p>
                   <p class="mb-0">► Listenership Deep Dive: <a class="faq_link transition_03 clr_skyblue"
                       href="https://content.nielsen.com/PodcastingToday" target="_blank"
-                      rel="noopener noreferrer">https://content.nielsen.com/PodcastingToday</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="900">
-              <h2 class="accordion-header transition_300" id="headingSeven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How do you calculate industry average
-                    downloads?</span>
-                </button>
-              </h2>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Our partner, Buzzsprout provided data on average industry downloads based on their internal data.
-                  Although they are specifically Buzzsprout’s numbers, they have enough market share for us to deem this
-                  as industry averages.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000">
-              <h2 class="accordion-header transition_300" id="headingEight">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">Is all the data and information in this
-                    report accurate?</span>
-                </button>
-              </h2>
-              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p>Rephonic uses automated Natural Language Processing to identify podcasts that accept guests and
-                    while it is usually very accurate, occasionally Rephonic may get it wrong.</p>
-                  <p class="mb-0">Sometimes Rephonic doesn’t find associated social accounts for a podcast, or link ones
-                    that are incorrect. Rephonic’s data is therefore not 100% accurate but in aggregate these issues are
-                    minimized.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1100">
-              <h2 class="accordion-header transition_300" id="headingnine">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
-                  <span class="transition_100 pe-1 pe-md-0 accordion_heading ">How did we calculate the chances of
-                    making it as a podcaster?</span>
-                </button>
-              </h2>
-              <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  We pulled data on podcasts from date-range criteria to determine how many succeeded or failed during
-                  that time. Every month, we update the date ranges to keep it current, while incorporating historical
-                  averages into the data. We pull based on weekly episode releases and follow the same “AE” standard as
-                  the rest of this report.
+                      rel="noopener noreferrer">https://content.nielsen.com/PodcastingToday</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -2920,29 +2799,28 @@
       <div class=" custom_container">
         <div class="impactful_card">
           <p class="ff_graphik fw-semibold lh_130 text-center fs_xl text-white mb-0">
-            Ready to Begin Getting Matched on Podmatch
+            Do You Want Better Results as a Podcast Host, Guest, or Agency?
           </p>
 
           <h3 class="ff_graphik fw-semibold lh_130 text-center fs_4xl text-white mb-0 mt-1 mt-sm-0">
-            So You Can Have More Impactful Interviews?
+            Here Are 9 Helpful Things You Can Do Today!
           </h3>
 
           <div class="d-flex justify-content-center pt-sm-1">
             <button class="mt-sm-3 mt-5 gradient_btn transition_03 clr_offwhite ff_graphik fw-semibold fs_sm lh_150">
-              See Matches
+              Read 9 Quick Wins
             </button>
           </div>
 
           <div class="mt-3 pt-1 d-flex align-items-center justify-content-center gap-2">
             <img class="w_24" src="./assets/images/webp/alert_icon.webp" alt="alert_icon" />
             <p class="text-white ff_graphik fw-normal fs_sm lh_150 mb-0 ms-1">
-              Try PodMatch Risk Free
+              100% Free. No Upsells. No Paywalls. No Email List.
             </p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- -------------------------------------------- footer --------------------------------- -->
     <footer class="footer_padding pt-5  footer_bg position-relative">
       <div class="max_width position-relative pt-md-2 pt-lg-0 mt-1 mt-md-5 mt-lg-1">
@@ -2956,12 +2834,21 @@
               </div>
 
               <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                <p
-                  class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start">
-                  PodMatch is the future standard for finding and booking
-                  podcast interviews. This is the quickest way to find guests
-                  for your podcast, and vice versa!
-                </p>
+                <div class="d-flex flex-column">
+                  <p
+                    class="ff_graphik fs_xsm lh_150 fw-normal mb-0 footer_para clr_grey mt-3 mt-lg-4 mb-sm-5 mb-4 mb-lg-0 text-sm-center text-lg-start text-start">
+                    Most podcast hosts and guests spend hours researching connections, coordinating
+                    interviews, and working on administrative tasks while only spending 10% of their
+                    time on what matters, recording impactful podcast episodes! PodMatch enables podcast
+                    guests and hosts to reclaim their time through automations and streamlined
+                    processes, so they can focus on creating content that serves listeners!
+                  </p>
+                  <p class="mb-0 mt-4 pt-2 ff_graphik fw-medium fs_xsm lh_150 text-black opacity_70">Is PodMatch right
+                    for you?</p>
+                  <a class="ff_graphik fs_xsm lh_150 text-black opacity_70"
+                    href="https://podmatch.com/blog/how-to-know-if-podmatch-is-right-for-you" target="_blank">Click here
+                    to find out!</a>
+                </div>
               </div>
             </div>
 
@@ -2979,9 +2866,11 @@
                     <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Pricing</a>
                   </li>
                   <li class="footer_links">
-                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200"><span
-                        class="d-sm-inline d-block">Best of</span>
-                      PodMatch</a>
+                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Quiz</a>
+                  </li>
+                  <li class="footer_links">
+                    <a href="#"
+                      class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">PodLottery</a>
                   </li>
                 </ul>
 
@@ -2991,11 +2880,11 @@
                   </li>
 
                   <li class="footer_links">
-                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Awards</a>
+                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Virtual
+                      Event</a>
                   </li>
                   <li class="footer_links">
-                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Live
-                      Event</a>
+                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Network</a>
                   </li>
                   <li class="footer_links">
                     <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200"><span
@@ -3011,10 +2900,14 @@
                       Report</a>
                   </li>
                   <li class="footer_links">
-                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Quizzes</a>
+                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Free
+                      Guides</a>
                   </li>
                   <li class="footer_links">
                     <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Blog</a>
+                  </li>
+                  <li class="footer_links">
+                    <a href="#" class="ff_graphik fw-normal fs_xsm lh_150 clr_grey links_hov transition_200">Books</a>
                   </li>
                 </ul>
 
@@ -3119,6 +3012,58 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
+    nv.addGraph(function () {
+      var donutChart = nv.models.pieChart()
+        .width(312)
+        .height(312)
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#27A0FC", "#FFFFFF", "#00B9FF", "#FFFFFF"])
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.50);
+
+      d3.select("#guesting-chart svg")
+        .datum(healthData1())
+        .call(donutChart);
+
+      setTimeout(() => {
+        d3.select("#guesting-chart svg")
+          .select(".nv-pieChart")
+          .classed("guesting-chart-size", true);
+      }, 310);
+
+      return donutChart;
+    });
+    function healthData1() {
+      return [
+        { value: 80, label: "Hosts" },
+        { value: 1, label: "Spacer1" },
+        { value: 20, label: "Guests" },
+        { value: 1, label: "Spacer2" },
+      ];
+    }
+
+    function healthData2() {
+      return [
+        { value: 60, label: "Hosts" },
+        { value: 1, label: "Spacer1" },
+        { value: 20, label: "Guests" },
+        { value: 1, label: "Spacer2" },
+      ];
+    }
+
+
+  </script>
+  <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -3177,8 +3122,8 @@
     let count = 0; // Start the counter from 0
 
     // Calculate the increment value to reach 38,965 in 5 seconds
-    const targetCount = 38965;
-    const duration = 100000; // 5 seconds
+    const targetCount = 36212;
+    const duration = 200000; // 5 seconds
     const increment = targetCount / (duration / 1000); // Increment per millisecond
 
     // Function to increment the counter
@@ -3651,13 +3596,13 @@
         },
       },
     };
-    var chart = new ApexCharts(document.querySelector("#linechart"), options);
-    chart.render();
+    var lineChart = new ApexCharts(document.querySelector("#linechart"), options);
+    lineChart.render();
     // Adjust font size when chart width changes
     window.addEventListener("resize", function () {
       var chartWidth = document.querySelector("#linechart").offsetWidth;
       var newFontSize = adjustFontSize(chartWidth);
-      chart.updateOptions({
+      lineChart.updateOptions({
         fontSize: newFontSize,
         xaxis: {
           labels: {
