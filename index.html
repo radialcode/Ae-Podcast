@@ -1136,91 +1136,6 @@
         </div>
       </div>
     </section>
-    <!-- ------ podcasting guesting -- -->
-    <section class="bg-white position-relative prouction_P overflow-hidden">
-      <div class="custom_container">
-        <div class="flex-column-reverse d-flex flex-lg-row poadcasting_p align-items-center">
-          <div class="col-12 col-lg-6 px_12 position-relative mt_max_lg">
-            <div
-              class="d-flex align-items-center justify-content-center justify-content-xxl-start bg-white production_box guesting_box">
-              <div class="position-relative pt-3 pt-sm-0">
-                <div class="guesting">
-                  <div id="guesting-chart">
-                    <svg class="transform_translate" width="312" height="312"></svg>
-                  </div>
-                  <!-- </div> -->
-                </div>
-                <div class="d-flex flex-column gap-1 position-absolute production_average">
-                  <div class="d-flex align-items-center">
-                    <span class="dot dot-blue me-2"></span>
-                    <span class="clr_off_gray fs_xs lh_150 fw-normal ff_graphik">Industry Average</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-1">
-                    <span class="dot dot-purple me-2"></span>
-                    <span class="clr_off_gray fs_xs lh_150 fw-normal ff_graphik">PodMatch Average</span>
-                  </div>
-                </div>
-                <div
-                  class="d-flex justify-content-center align-items-center host_time_box bg-white top-0 position-absolute hosts hosts_time">
-                  <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12">
-                    9Hrs
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-center align-items-center host_time_box bg-white position-absolute bottom-0 guests guests_time">
-                  <p class="clr_black ff_graphik fw-semibold fs_lg mb-0 bg-white fs_sm_12">
-                    22Hrs
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 px_12">
-            <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_production fw-semibold position-relative z-1">
-              Time Spent on Podcast Production
-              <span><img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" /></span>
-            </h2>
-            <p class="clr_black opacity_70 max_w_512 fw-normal ff_graphik my-3 fs_sm lh_150">
-              Numbers based on interview-based podcasts releasing one episode per week, averaging <span
-                class="fw-semibold">5 hours</span> of
-              production.
-            </p>
-            <div
-              class="d-flex align-items-center justiy-content-center pt-2 pt-sm-3 gap-3 gap-sm-4  gap-xl-2 gap-xxl-4">
-              <div class="industry_box seeking_guest_box p-3 w_224">
-                <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
-                  Industry
-                </p>
-                <p class="mb-0 mt-1 clr_skyblue ff_graphik fw-medium fs_2xl lh_150 pb-0 ws_nowrap pb-0">
-                  22Hr <span class="fs_xl">Monthly</span>
-                </p>
-              </div>
-
-              <div class="industry_podmatch_box seeking_guest_box p-3">
-                <div>
-                  <p class="mb-0 clr_off_purple ff_graphik fw-medium fs_sm lh_150 pb-2 ws_nowrap">
-                    PodMatch
-                  </p>
-                  <p class="mb-0 mt-1 clr_off_purple ff_graphik text-nowrap fw-medium fs_2xl lh_120 pb-1">
-                    9Hr <span class="fs_xl">Monthly</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-center gap-3 gap-sm-0">
-              <img width="61" height="24" class="ms-sm-2 d-sm-none d-block"
-                src="/assets/images/svg/future_arrow_vector.svg" alt="arrow_vector" />
-              <p class="mb-0 mt-3 pt-1 fw-bold fs_sm lh_150 text_gradient ff_graphik me-4 me-sm-0">
-                Podcasters who use PodMatch reclaim 26%
-                <br class="d-sm-flex d-none" />
-                (3 hours) of their time per episode!
-              </p>
-              <img width="61" height="24" class="ms-sm-3 mt-sm-3 d-sm-block d-none"
-                src="/assets/images/svg/poadcast_guesting_vec.svg" alt="arrow_vector" />
-            </div>
-          </div>
-        </div>
-    </section>
     <!-- How Podcasters Share Episodes with Listeners -->
     <section class="podcast_share position-relative">
       <img class="position-absolute podcast_left_vector d-md-block d-none"
@@ -3097,6 +3012,58 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
+    nv.addGraph(function () {
+      var donutChart = nv.models.pieChart()
+        .width(312)
+        .height(312)
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#27A0FC", "#FFFFFF", "#00B9FF", "#FFFFFF"])
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.50);
+
+      d3.select("#guesting-chart svg")
+        .datum(healthData1())
+        .call(donutChart);
+
+      setTimeout(() => {
+        d3.select("#guesting-chart svg")
+          .select(".nv-pieChart")
+          .classed("guesting-chart-size", true);
+      }, 310);
+
+      return donutChart;
+    });
+    function healthData1() {
+      return [
+        { value: 80, label: "Hosts" },
+        { value: 1, label: "Spacer1" },
+        { value: 20, label: "Guests" },
+        { value: 1, label: "Spacer2" },
+      ];
+    }
+
+    function healthData2() {
+      return [
+        { value: 60, label: "Hosts" },
+        { value: 1, label: "Spacer1" },
+        { value: 20, label: "Guests" },
+        { value: 1, label: "Spacer2" },
+      ];
+    }
+
+
+  </script>
+  <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -3629,13 +3596,13 @@
         },
       },
     };
-    var chart = new ApexCharts(document.querySelector("#linechart"), options);
-    chart.render();
+    var lineChart = new ApexCharts(document.querySelector("#linechart"), options);
+    lineChart.render();
     // Adjust font size when chart width changes
     window.addEventListener("resize", function () {
       var chartWidth = document.querySelector("#linechart").offsetWidth;
       var newFontSize = adjustFontSize(chartWidth);
-      chart.updateOptions({
+      lineChart.updateOptions({
         fontSize: newFontSize,
         xaxis: {
           labels: {
@@ -3658,115 +3625,6 @@
         },
       });
     });
-  </script>
-  <script>
-    nv.addGraph(function () {
-      var donutChart1 = nv.models.pieChart()
-        .width(312)
-        .height(312)
-        .x(function (d) {
-          return d.label;
-        })
-        .y(function (d) {
-          return d.value;
-        })
-        .showLabels(true)
-        .showLegend(false)
-        .labelThreshold(.05)
-        .labelType("key")
-        .color(["#27A0FC", "#FFFFFF", "#00B9FF", "#FFFFFF"])
-        .tooltipContent(function (key, y, e, graph) {
-          return 'Custom tooltip string';
-        })
-        .tooltips(false)
-        .donut(true)
-        .donutRatio(0.50);
-
-      var donutChart2 = nv.models.pieChart()
-        .x(function (d) {
-          return d.label;
-        })
-        .y(function (d) {
-          return d.value;
-        })
-        .showLabels(true)
-        .showLegend(false)
-        .labelThreshold(.05)
-        .labelType("key")
-        .color(["#01B7FC", "#FFFFFF", "#6B6DE3", "#FFFFFF"])
-        .tooltipContent(function (key, y, e, graph) {
-          return 'Custom tooltip string';
-        })
-        .tooltips(false)
-        .donut(true)
-        .donutRatio(0.50);
-
-      function centerText() {
-        return function () {
-          var svg = d3.select("svg");
-          var donut1 = svg.selectAll("#guesting-chart g.nv-slice").filter(
-            function (d, i) {
-              return i == 0;
-            }
-          );
-
-          var donut2 = svg.selectAll("#guesting-chart g.nv-slice").filter(
-            function (d, i) {
-              return i == 0;
-            }
-          );
-
-          donut1.insert("text", "g")
-            .attr("class", "middle")
-            .attr("text-anchor", "middle")
-            .attr("dy", "-.55em")
-            .style("fill", "#27A0FC");
-
-          donut2.insert("text", "g")
-            .attr("class", "middle")
-            .attr("text-anchor", "middle")
-            .attr("dy", "-.55em")
-            .style("fill", "#6B6DF3");
-        };
-      }
-
-      d3.select("#guesting-chart svg")
-        .datum(healthData1())
-        .transition().duration(300)
-        .call(donutChart1)
-        .call(centerText());
-
-      d3.select("#guesting-chart svg")
-        .datum(healthData2())
-        .transition().duration(300)
-        .call(donutChart2)
-        .call(centerText());
-      setTimeout(() => {
-        d3.select("#guesting-chart svg")
-          .select(".nv-pieChart")
-          .classed("guesting-chart-size", true);
-      }, 310);
-      return [donutChart1, donutChart2];
-    });
-    function healthData1() {
-      return [
-        { value: 80 },
-        { value: 1 },
-        { value: 20 },
-        { value: 1 },
-      ];
-    }
-
-    function healthData2() {
-      return [
-        { value: 60 },
-        { value: 1 },
-        { value: 20 },
-        { value: 1 },
-      ];
-    }
-
-
   </script>
   <script>
     // Function to open the popup
