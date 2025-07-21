@@ -2,7 +2,9 @@
   max-width: 1440px;
   margin: 0px auto;
 }
-
+.translate_y{
+  transform: translateY(-1.5px);
+}
 .opacity_70 {
   opacity: 70%;
 }
@@ -93,8 +95,8 @@
   font-family: 'poppins';
   font-weight: 800;
   background-color: #313EF7;
-  border: 2px solid #313EF7;
   z-index: 100;
+  outline: 1px solid white;
 }
 
 .back_top_img {
@@ -104,7 +106,6 @@
 
 #back-top:hover {
   background-color: black;
-  border: 2px solid black;
 }
 
 .table_gradient_color {
@@ -199,7 +200,7 @@
 }
 
 .gradient_text {
-  background: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+  background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -212,7 +213,7 @@
   background: linear-gradient(311.05deg, rgba(111, 105, 242, 0.1) 0%, rgba(0, 185, 255, 0.1) 155.6%);
 }
 
-/*================ future sec =====================*/
+/* ================ future sec ===================== */
 
 .future_sec_p {
   padding: 0px 0px 257px 0px;
@@ -275,14 +276,10 @@
   background: linear-gradient(102.79deg, #00C2CB 2.64%, #01BAFF 98.35%);
   border-radius: 57px;
   padding: 16px 28px;
-  transition: background 0.5s linear;
-  /* Adjusted transition */
 }
 
 .gradient_btn:hover {
-  background: linear-gradient(102.79deg, #ffffff 4.64%, #ffffff 68.35%);
-  /* Use the same gradient definition as the normal state */
-  color: black;
+  transform: scale(1.05);
 }
 
 .card_p {
@@ -341,8 +338,31 @@
 .links_hov:hover img {
   scale: 1.2;
 }
+ 
+.vctr_faq {
+  left: 0;
+  bottom: 20%;
+}
 
-/*=================================== media-screen =====================================*/
+.accordion-item .active-text .accordion_heading {
+  color: black;
+}
+
+.accordion_heading {
+  color: #010101;
+  opacity: 80%;
+}
+
+.looking_switch {
+  color: #444444;
+  max-width: 606px;
+}
+
+.here_choice {
+  background: -webkit-linear-gradient(311.05deg, #428AF8 0%, #4B84F7 155.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media (max-width:1279.98px) {
   #back-top {
@@ -358,6 +378,10 @@
 }
 
 @media (max-width:991.98px) {
+  .vctr_faq {
+    left: -50px;
+    bottom: -80%;
+  }
 
   .footer_para {
     max-width: 378px;
@@ -421,6 +445,19 @@
 }
 
 @media (max-width:575.98px) {
+  #back-top {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .footer_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer_icons_gap {
+    gap: 18px;
+  }
 
   .gap_32 {
     gap: 24px !important;

@@ -1,10 +1,243 @@
+.tooltip {
+  --bs-tooltip-opacity: 1 !important;
+  z-index: 2 !important;
+}
+
+.tooltip-inner {
+  background: white !important;
+  box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.212);
+  max-width: 500px;
+  width: 100% !important;
+  padding: 10px;
+  color: black !important;
+}
+.tooltip .show {
+  opacity: 1 !important;
+}
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: white !important;
+}
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-top-color: white !important;
+}
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: white !important;
+}
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: white !important;
+}
+.compare_chart {
+  box-shadow: 0px 0px 20px 4px #e2e2e240;
+  border-radius: 24px;
+  width: 600px !important;
+  height: 550px;
+}
+
+.total_values {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.td_gradient {
+  background: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.1) 0%,
+    rgba(0, 185, 255, 0.1) 155.6%
+  );
+}
+
+/* ====podcasting industry chart ==== */
+
+.podcasting_industry_chart {
+  max-width: 522px;
+}
+
+.industry_chart_parent {
+  transform: scale(1.2);
+}
+/* ==== Possible Future Chart ==== */
+.future_chart,
+.chances_chart {
+  transform: scale(1.4);
+}
+
+/* ==== ==== */
+.health_chart_parent {
+  transform: scale(1.2);
+}
+/* ========= CHART JS ========= */
+#SvgjsLine1184 {
+  display: contents !important;
+}
+
+#chart {
+  width: 80%;
+}
+
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+#SvgjsPath1019 {
+  width: 30px !important;
+}
+
+.apexcharts-bar-area:hover path {
+  filter: none !important;
+}
+
+.chart_box {
+  box-shadow: 0px 0px 20px 4px #e2e2e240;
+  border-radius: 24px;
+  width: 550px !important;
+  height: 450px;
+}
+
+/* ============================= */
+/* ========== SECOND CHART ======= */
+#linechart {
+  width: 90%;
+}
+
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+#SvgjsPath1019 {
+  width: 30px !important;
+}
+
+.apexcharts-bar-area:hover path {
+  filter: none !important;
+}
+
+/* ======= CHART 3 ====== */
+/* .pie_chart {
+  max-width: 500px;
+  width: 100%;
+  max-height: 360px;
+  height: 100%;
+} */
+
+.active_abs {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  transform: rotate(-30deg);
+}
+
+.total_abs,
+.possible_total_abs {
+  position: absolute;
+  bottom: 35%;
+  left: 60%;
+  rotate: 20deg;
+}
+.possible_total_abs {
+  bottom: 20%;
+  left: 67%;
+  transform: rotate(-20deg);
+}
+
+/* =================== */
+#chartdiv {
+  width: 500px;
+  height: 500px;
+}
+
+.success_text_abs {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  max-width: 110px;
+  transform: rotate(9deg);
+  z-index: -1;
+}
+
+.failure_text_abs {
+  position: absolute;
+  bottom: 6%;
+  left: 30%;
+  max-width: 100px;
+  z-index: -1;
+}
+
+/* =================== */
+/* ========== */
+#donut-chart,
+#possible-donut-chart {
+  width: 350px !important;
+  height: 370px !important;
+}
+
+.content h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.content svg {
+  max-width: 500px !important;
+  width: 100%;
+  max-height: 500px !important;
+  height: 100%;
+  margin: 0 auto;
+
+  text.middle {
+    font-family: "Graphik";
+    font-weight: 300;
+    font-size: 10px !important;
+  }
+
+  .nvd3.nv-pie .nv-pieLabels text {
+    font-family: "Graphik";
+    font-size: 12px !important;
+    font-weight: 300;
+    fill: #fff !important;
+  }
+}
+
+.three_lines_abs {
+  position: absolute !important;
+  bottom: -11% !important;
+  right: 3% !important;
+  max-width: 200px;
+}
+
+.single_lines_abs {
+  position: absolute !important;
+  top: 2% !important;
+  left: 9% !important;
+  max-width: 200px;
+}
+
+/* ================ */
+/* =========== */
+#guesting-chart {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.guesting svg {
+  max-width: 500px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* =========== */
 .height_box {
   height: 106px;
 }
+
 .select_box {
   width: 115px;
   height: 28px;
 }
+
 .option_box {
   width: 115px;
   background-color: white;
@@ -12,14 +245,38 @@
   border-radius: 8px;
   z-index: 3;
   top: 105%;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.248);
 }
+
 .option_item {
   transition: all 300ms linear;
   padding: 6px 10px;
 }
+
 .option_item:hover {
   background-color: #e9e6e6;
 }
+
+.interview_card_spacing {
+  padding: 160px 0;
+}
+
+.guest_left_vector {
+  max-width: 115px;
+  position: absolute;
+  left: 0;
+  top: -30%;
+  z-index: 1;
+}
+
+.table_border {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 4px;
+  border: 1px solid rgba(151, 203, 252);
+  overflow: hidden;
+}
+
 /* --------------------------take quiz --------------------------------------- */
 .take_quiz {
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
@@ -119,6 +376,12 @@
   border-bottom: 1px solid #6f69f2;
 }
 
+.abs_text {
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
 .ws_nowrap {
   white-space: nowrap;
 }
@@ -136,6 +399,7 @@
   padding: 16px 24px;
   max-width: 224px !important;
   width: 100%;
+  height: 106px;
   border-radius: 16px;
 }
 
@@ -157,15 +421,18 @@
 .podcast_guesting {
   max-width: 485px;
 }
+
 .py_7 {
   padding: 7px 0px;
 }
+
 /* -------------------------------------------------------activity establish -------------------------------------------- */
 .aep_blue_elipse {
   bottom: -58%;
   right: -12%;
   max-width: 115%;
 }
+
 .industry_elipse {
   bottom: -14%;
   right: -5%;
@@ -174,6 +441,7 @@
   opacity: 0.1;
   filter: blur(60px);
 }
+
 .chance_elipse {
   bottom: -5%;
   left: 5%;
@@ -185,21 +453,24 @@
 }
 
 .aep_lines_vec {
-  top: -100%;
-  right: -12%;
+  top: -18%;
+  right: 0;
   max-width: 115px;
 }
+
 .compare_lines_vec {
   top: -10%;
   right: 0%;
   max-width: 115px;
 }
+
 .compare_left_vector {
   top: 25%;
   left: -3%;
   width: 83px !important;
   height: 359px !important;
 }
+
 .aep_chart {
   box-shadow: 0px 4px 20px 0px rgba(6, 6, 6, 0.08);
 }
@@ -225,16 +496,18 @@
 .host_box {
   box-shadow: 0px 0px 107px 0px rgba(0, 0, 0, 0.1);
   border-radius: 9.5px;
-  width: 139px;
-  height: 80px;
+  width: 110px;
+  height: 60px;
 }
 
 .hosts {
-  left: -23%;
+  left: 10%;
+  top: 10%;
 }
 
 .guests {
-  right: -27%;
+  right: 5%;
+  bottom: 10%;
 }
 
 /*--------------------------------------------------------- podcast hosting provider ---------------------------------------------*/
@@ -246,15 +519,6 @@
   max-width: 633px;
 }
 
-.looking_switch {
-  max-width: 606px;
-}
-
-.here_choice {
-  background: -webkit-linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .guesting_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
@@ -262,6 +526,7 @@
   width: 100%;
   height: 438px;
 }
+
 /* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
   max-width: 70px;
@@ -279,21 +544,87 @@
   max-width: 119px;
 }
 
+/* ==== POPUP CSS ==== */
+
+.modal-header {
+  z-index: 1;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.btn-close:hover {
+  opacity: 70%;
+}
+.marking_chart_parent .nv-label text {
+  fill: #ffffff !important; /* Set label color to white */
+  transform: rotate(-80deg);
+}
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
   }
+
+  .chart_box {
+    width: 450px !important;
+    height: 400px;
+  }
+
+  .chances_chart {
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 991.98px) {
+  .industry_chart_main_parent {
+   max-width: 450px;
+   height: 450px;
+  }
+  .chances_chart {
+    transform: scale(1.3);
+  }
+  .industry_chart_parent {
+    margin-top: 40px;
+    transform: scale(1.1);
+  }
+  .podcasting_industry_chart {
+    max-width: 470px;
+    min-height: 390px;
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: -0px !important;
+  }
+
+  .compare_chart {
+    width: 600px !important;
+    height: 500px;
+  }
+
+  .chart_box {
+    width: 600px !important;
+    height: 500px;
+    padding: 24px;
+  }
+
+  .mt_100 {
+    margin-top: 100px;
+  }
+
+  .future_sec_p {
+    padding-bottom: 110px !important;
+  }
+
   .podcast_guesting {
     max-width: 100%;
   }
+
   .aep_blue_elipse {
-    bottom: -28% !important;
-    right: 7% !important;
+    bottom: -15% !important;
+    right: -2% !important;
     max-width: 115%;
   }
+
   .ph_provider_sec {
     padding-top: 80px;
   }
@@ -341,7 +672,39 @@
   }
 
   .mt_lg_166 {
-    margin-top: 166px;
+    margin-top: 112px;
+  }
+
+  .guest_left_vector {
+    max-width: 115px;
+    position: absolute;
+    left: -5%;
+    top: -30%;
+  }
+
+  .failure_text_abs {
+    position: absolute;
+    bottom: 6%;
+    left: 25%;
+  }
+
+  .nvd3.nv-pie .nv-pieLabels text {
+    font-family: "Graphik";
+    font-size: 12px !important;
+    font-weight: 300;
+    fill: #fff !important;
+  }
+
+  .pb_80 {
+    padding-bottom: 80px;
+  }
+  .industry_chart_bg {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .guesting_box {
+    margin-top: 50px;
   }
 }
 
@@ -370,19 +733,54 @@
   .mt_lg_166 {
     margin-top: 66px;
   }
+
+  .chart_box {
+    width: 500px !important;
+    height: 450px;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .active_abs {
+    top: 18%;
+    left: 20%;
+  }
+
+  .health_chart_parent {
+    transform: scale(1);
+  }
+  .chances_donut_chart_svg {
+    transform: scale(0.8);
+  }
+  .industry_chart_main_parent {
+    margin-top: 40px;
+  }
+  .podcasting_industry_chart {
+    max-width: 410px;
+    min-height: 340px;
+  }
+  .tooltip-inner {
+    max-width: 300px !important;
+    width: 100% !important;
+    margin: 0 10px;
+  }
   .guesting_box {
     box-shadow: 0px 0px 20px 4px #e2e2e240;
     border-radius: 24px;
     max-width: 570px;
     width: 100%;
     height: 278px;
+    margin-top: 50px;
   }
+
+  .future_sec_p {
+    padding-bottom: 40px !important;
+  }
+
   .podcast_guesting_circle {
     max-width: 205px;
   }
+
   .chance_elipse {
     bottom: -5%;
     left: -2%;
@@ -392,6 +790,7 @@
     opacity: 0.5;
     filter: blur(60px);
   }
+
   .data_provided_by {
     font-size: 14px;
   }
@@ -405,25 +804,115 @@
     max-width: 115px;
   }
 
-  .hosts,
+  .hosts {
+    max-width: 88.98px;
+    height: 51.33px;
+    top: 15% !important;
+  }
+
   .guests {
     max-width: 88.98px;
     height: 51.33px;
+    bottom: 15% !important;
   }
 
   .fs_sm_12 {
     font-size: 12px;
   }
+
   .aep_blue_elipse {
     bottom: -28% !important;
     right: -29% !important;
     z-index: -1;
   }
+
   .mt_lg_166 {
     margin-top: 40px;
   }
+
   .height_box {
     height: 93px;
     width: 158px;
+  }
+
+  .chart_box {
+    max-width: 400px !important;
+    height: 400px;
+  }
+
+  #chart {
+    width: 90%;
+  }
+
+  .abs_text {
+    left: -95px;
+  }
+
+  /* .pie_chart {
+    max-width: 256px;
+    width: 100%;
+    max-height: 256px;
+    height: 100%;
+  } */
+
+  .failure_text_abs {
+    position: absolute;
+    bottom: 13%;
+    left: 25%;
+  }
+
+  .industry_chart_bg {
+    margin-top: 40px;
+  }
+
+  .success_text_abs {
+    top: 11%;
+    left: 53%;
+    transform: rotate(-15deg);
+  }
+
+  #guesting-chart {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .chart_verticle_line {
+    width: 1px;
+    height: 64%;
+    background-color: #010101;
+    position: absolute;
+    left: 50px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .chart_box {
+    max-width: 300px !important;
+    height: 350px;
+    padding: 0px !important;
+  }
+
+  .compare_chart {
+    width: 500px !important;
+    height: 350px;
+  }
+}
+
+@media (min-width: 576px) {
+  .industry_chart_img {
+    background-image: url("../images/png/chart-bg-img.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .podcasting_bg_img {
+    background-image: url("../images/png/podcasting-industry-chart-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
