@@ -3711,6 +3711,308 @@
     series.labels.template.disabled = true;
   </script>
   <!-- ===== Chances of "Making It" as a Podcaster chart ===== -->
+  <script>
+    nv.addGraph(function () {
+      var donutChart1 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false) // Hide labels
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#27A0FC", "#00B9FF"])
+        .tooltipContent(function (key, y, e, graph) {
+          return '<p style="border-radius: 8px; color: black;">' + y + '%</p>';
+        })
+        .tooltips(true)
+        .donut(true)
+        .donutRatio(0.35);
+
+      var donutChart2 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false) // Hide labels
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#6B6DF3", "#01B7FC"])
+        .tooltipContent(function (key, y, e, graph) {
+          return '<p style="border-radius: 8px; color: black;">' + y + '%</p>';
+        })
+        .tooltips(true)
+        .donut(true)
+        .donutRatio(0.35);
+
+      function centerText() {
+        return function () {
+          var svg = d3.select("svg");
+
+          var donut1 = svg.selectAll("#chances-donut-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+
+          var donut2 = svg.selectAll("#chances-donut-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+
+          donut1.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", "#FFFFFF"); // Set the color to white
+
+          donut2.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", "#FFFFFF"); // Set the color to white
+        };
+      }
+
+      d3.select("#chances-donut-chart svg")
+        .datum(successData())
+        .transition().duration(300)
+        .call(donutChart1)
+        .call(centerText());
+
+      d3.select("#chances-donut-chart svg")
+        .datum(failureData())
+        .transition().duration(300)
+        .call(donutChart2)
+        .call(centerText());
+
+      return [donutChart1, donutChart2];
+    });
+
+    function successData() {
+      return [{
+        "value": 5.69
+      },
+      {
+        "label": "94.31%",
+        "value": 94.31
+      },
+      ];
+    }
+
+    function failureData() {
+      return [{
+        "value": 5.69
+      },
+      {
+        "label": "94.31%",
+        "value": 94.31
+      },
+      ];
+    }
+
+    // ==== Podcast Guesting Health (BETA) chart ====
+
+    nv.addGraph(function () {
+      var donutChart1 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#27A0FC", "#00B9FF"])
+        .tooltipContent(function (key, y, e, graph) {
+          return 'Custom tooltip string';
+        })
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.35);
+
+      var donutChart2 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(true)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .labelType("key")
+        .color(["#6B6DF3", "#01B7FC"])
+        .tooltipContent(function (key, y, e, graph) {
+          return 'Custom tooltip string';
+        })
+        .tooltips(false)
+        .donut(true)
+        .donutRatio(0.35);
+
+      function centerText() {
+        return function () {
+          var svg = d3.select("svg");
+
+          var donut1 = svg.selectAll("#guesting-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+
+          var donut2 = svg.selectAll("#guesting-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+
+          donut1.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", "#27A0FC");
+
+          donut2.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", "#6B6DF3");
+        };
+      }
+
+      d3.select("#guesting-chart svg")
+        .datum(healthData1())
+        .transition().duration(300)
+        .call(donutChart1)
+        .call(centerText());
+
+      d3.select("#guesting-chart svg")
+        .datum(healthData2())
+        .transition().duration(300)
+        .call(donutChart2)
+        .call(centerText());
+
+      return [donutChart1, donutChart2];
+    });
+
+    function healthData1() {
+      return [{
+        "value": 80
+      },
+      {
+        "value": 20
+      },
+      ];
+    }
+
+    function healthData2() {
+      return [{
+        "value": 80
+      },
+      {
+        "value": 20
+      },
+      ];
+    }
+
+    // possible-donut-chart
+
+    nv.addGraph(function () {
+      var donutChart1 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .color(["#27A0FC", "#00B9FF"])
+        .donut(true)
+        .donutRatio(0.35);
+
+      var donutChart2 = nv.models.pieChart()
+        .x(function (d) {
+          return d.label;
+        })
+        .y(function (d) {
+          return d.value;
+        })
+        .showLabels(false)
+        .showLegend(false)
+        .labelThreshold(.05)
+        .color(["#6B6DF3", "#01B7FC"])
+        .donut(true)
+        .donutRatio(0.35);
+
+      function centerText(chart, labelText) {
+        return function () {
+          var svg = d3.select("svg");
+
+          var donut = svg.selectAll("#possible-donut-chart g.nv-slice").filter(
+            function (d, i) {
+              return i == 0;
+            }
+          );
+
+          donut.insert("text", "g")
+            .attr("class", "middle")
+            .attr("text-anchor", "middle")
+            .attr("dy", "-.55em")
+            .style("fill", chart.color())
+            .text(labelText);
+        };
+      }
+
+      d3.select("#possible-donut-chart svg")
+        .datum(seedData1())
+        .transition().duration(300)
+        .call(donutChart1)
+        .call(centerText(donutChart1, "active"));
+
+      d3.select("#possible-donut-chart svg")
+        .datum(seedData2())
+        .transition().duration(300)
+        .call(donutChart2)
+        .call(centerText(donutChart2, "total"));
+
+      return [donutChart1, donutChart2];
+    });
+
+    function seedData1() {
+      return [{
+        "label": "Total",
+        "value": 505677
+      },
+      {
+        "label": "Active",
+        "value": 120212
+      },
+      ];
+    }
+
+    function seedData2() {
+      return [{
+        "label": "Total",
+        "value": 505677
+      },
+      {
+        "label": "Active",
+        "value": 120212
+      },
+      ];
+    }
+  </script>
 </body>
 
 </html>
