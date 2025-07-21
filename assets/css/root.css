@@ -44,6 +44,7 @@
 
 :root {
   /* --------font sizes --------------- */
+  --fs-6xl: 50px;
   --fs-5xl: 48px;
   --fs-4xl: 40px;
   --fs-3xl: 36px;
@@ -67,12 +68,16 @@
   --clr-red: #ff4d4d;
   --clr-lightblack: #343434;
   --clr-light-grey: #45474A;
-    --clr-purple: #6f69f2;
+  --clr-purple: #6f69f2;
   --clr-off-gray: #949494;
-  
+
 }
 
 /* ------------font classes ------------ */
+.fs_6xl {
+  font-size: var(--fs-6xl);
+}
+
 .fs_5xl {
   font-size: var(--fs-5xl);
 }
@@ -108,9 +113,11 @@
 .fs_xsm {
   font-size: var(--fs-xsm);
 }
+
 .fs_xs {
   font-size: var(--fs-xs);
 }
+
 /* ------------ colors classes ------------- */
 .clr_black {
   color: var(--clr-black);
@@ -155,6 +162,7 @@
 .clr_lightgrey {
   color: var(--clr-light-grey);
 }
+
 .bg_red {
   background-color: var(--clr-red);
 }
@@ -162,12 +170,15 @@
 .clr_tundora {
   color: var(--tundora);
 }
+
 .clr_off_purple {
   color: var(--clr-purple);
 }
+
 .clr_off_gray {
   color: var(--clr-off-gray);
 }
+
 /* ------------- line heights ------------- */
 .lh_120 {
   line-height: 120%;
@@ -191,6 +202,7 @@
   margin: 0 auto;
   padding: 0 12px;
 }
+
 @media (max-width: 1200px) {
   :root {
     /* --------font sizes --------------- */
@@ -201,6 +213,7 @@
 @media (max-width: 991.98px) {
   :root {
     /* --------font sizes --------------- */
+    --fs-6xl: 36px;
     --fs-5xl: 40px;
     --fs-3xl: 32px;
     --fs-md: 16px;
@@ -208,6 +221,12 @@
 
   .custom_container {
     padding: 0 48px;
+  }
+}
+
+@media (max-width:768px) {
+  :root {
+    --fs-6xl: 26px;
   }
 }
 
@@ -223,6 +242,7 @@
     --fs-3xl: 28px;
     --fs-2xl: 24px;
     --fs-xl: 20px;
+    --fs-lg: 18px;
     --fs-md: 14px;
     --fs-sm: 14px !important;
     --fs-xs: 10px;
