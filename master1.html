@@ -233,8 +233,8 @@
         <!-- -----podcast compare ---- -->
         <section class="bg-white prouction_P position-relative z-1">
             <div class="custom_container">
-                <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-center">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap_60 gap_28 gap_74">
+                <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-center gap_60 gap_28 gap_74">
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
                         <div class="left_content">
                             <div class="position-relative">
                                 <div id="PodcastersselectBox2"
@@ -391,12 +391,16 @@
             xaxis: {
                 categories: ["Industry Average", "PodMatch Average"],
                 labels: {
+                    show: true,
+                    formatter: function (value, index) {
+                        return ' •' + value;
+                    },
                     style: {
                         fontSize: "12px",
                         fontFamily: "Arial, sans-serif",
                         fontWeight: 500,
                         colors: ["#00B9FF", "#6F69F2"]
-                    },
+                    }
                 },
                 axisBorder: {
                     show: true,
@@ -409,6 +413,7 @@
                     placement: 'on'
                 }
             },
+
             yaxis: {
                 min: 0,
                 max: 40,
@@ -509,7 +514,7 @@
                 ]
             },
             legend: {
-                show: true,
+                show: false,
                 markers: {
                     width: 10,
                     height: 10
