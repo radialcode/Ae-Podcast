@@ -44,87 +44,30 @@
   <!-- ==== AOS ==== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    .quicks-bg {
-      /* background-image: url(../images/png/quicks-bg.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; */
+    .quick_parent {
       background: linear-gradient(133.83deg, #00B9FF 3.77%, #6F69F2 81.07%);
       z-index: 10;
-
+      padding: 106px 0 98px 0;
     }
 
     .quick_ways_ellipse {
-      top: 50%;
+      top: 49%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
     }
 
-
-    .max-w-1140 {
-      max-width: 1140px;
-    }
-
-    .max-w-785_7 {
-      max-width: 785.07px;
-    }
-
-    .pt-106 {
-      padding-top: 106px;
-    }
-
-    .pb-98 {
-      padding-bottom: 98px;
-    }
-
-    .max-w-785 {
+    .max_w_785 {
       max-width: 785px;
     }
 
-    .mt-9 {
-      margin-top: 9px;
-    }
-
-    .pt-33 {
+    .quick_ways_subtitle {
       padding-top: 33px;
     }
 
-    .gap-18 {
-      gap: 18px;
-    }
 
-    .radius-20 {
-      border-radius: 20px;
-    }
-
-    .fw-extrabold {
+    .fw_black {
       font-weight: 900;
-    }
-
-    .pt-103 {
-      padding-top: 103px;
-    }
-
-    .gap-24 {
-      gap: 24px;
-    }
-
-    .max-w-364 {
-      max-width: 364px !important;
-    }
-
-    .quicks-card {
-      /* border: 1px solid #0101011A; */
-      /* border-radius: 20px; */
-      /* backdrop-filter: blur(200px); */
-      /* box-shadow: 0px 0px 9.2px 0px #00000024; */
-    }
-
-
-    .py-12 {
-      padding-left: 12px;
-      padding-right: 12px;
     }
 
     .quick_ways_box {
@@ -136,6 +79,9 @@
       border: 1px solid #0101011A;
       backdrop-filter: blur(200px);
       box-shadow: 0px 0px 9.2px 0px #00000024;
+      margin: 0 auto;
+      max-width: 364px;
+      gap: 18px;
 
     }
 
@@ -152,7 +98,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: -10;
       opacity: 0;
       border-radius: 20px;
       transition: all 400ms linear;
@@ -161,7 +107,6 @@
     .quick_ways_box:hover::after {
       opacity: 100;
       z-index: -1;
-      /* background: linear-gradient(311.4deg, #6F69F2 15.37%, #00B9FF 158.4%); */
     }
 
     .quick_ways_box:hover p {
@@ -192,25 +137,46 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      padding-top: 103px;
     }
 
     @media (max-width:1024px) {
-      .mt-25 {
-        margin-top: 25px;
+      .quic_cards_wrap {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 73px;
       }
 
-      .pt-103 {
-        padding-top: 60px;
+      .quick_ways_box {
+        max-width: 100%;
       }
+
+      .quick_parent {
+        padding: 77px 0;
+      }
+
+      .quick_ways_subtitle {
+        padding-top: 53px;
+      }
+
     }
 
-    @media (max-width:768px) {
-      .pt-103 {
-        padding-top: 20px;
+    @media (max-width:575.98px) {
+      .quic_cards_wrap {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 55px;
       }
 
-      .max-w-364 {
-        max-width: unset !important;
+      .quick_ways_box svg {
+        width: 45px;
+        height: 45px;
+      }
+
+      .quick_parent {
+        padding: 54px 0;
+      }
+
+      .quick_ways_subtitle {
+        padding-top: 61px;
       }
     }
   </style>
@@ -1207,11 +1173,15 @@
       </div>
     </section>
     <!-- How Podcasters Share Episodes with Listeners -->
-    <section class="podcast_share">
+    <section class="podcast_share position-relative">
+      <img class="position-absolute podcast_left_vector d-md-block d-none"
+        src="assets/images/webp/chances_left_vector.webp" alt="chances_left_vector" />
+      <img class="position-absolute podcaster_right_vector d-xl-block d-none"
+        src="./assets/images/png/pc_lines_vec.png" alt="lines-vec" />
       <div class="d-flex flex-column align-items-center">
         <div class="position-relative">
           <div id="PodcastersselectBox"
-            class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
+            class="d-flex align-items-md-center justify-content-between select_box select_bg bg-white cursor_pointer">
             <p id="Podcasters" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June 2025</p>
           </div>
           <div id="Podcastersoptions" class="position-absolute d-none option_box">
@@ -1233,97 +1203,98 @@
             </p>
           </div>
         </div>
-        <h2 class="ff_graphik fw-semibold fs_4xl text-center clr_black px-md-3 px-lg-0 max_w_550 my-3 leading_120">
+        <h2
+          class="ff_graphik fw-semibold fs_5xl text-sm-center text-left clr_black px-md-3 px-lg-0 max_w_550 my-3 leading_120">
           How Podcasters Share Episodes with Listeners
         </h2>
-        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-center opacity_70">We asked <span
-            class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the ranked list of
+        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black max_w_604 text-sm-center text-left opacity_70">We
+          asked <span class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the
+          ranked list of
           the platforms they sent us to.</p>
-        <div class="podcast-share-table-parent custom-scrollbar mt-lg-5 mt-4">
-          <div class="table-wrapper d-flex flex-column bg-white ">
-            <div class="table-header d-flex">
-              <div class="table-cell">Rank</div>
-              <div class="table-cell">Platform</div>
-              <div class="table-cell">Count</div>
-              <div class="table-cell">Percentage</div>
+        <div class="podcast_share_table_parent custom-scrollbar mt-md-5">
+          <div class="table_wrapper d-flex flex-column bg-white mb-md-0 mb-2">
+            <div class="table_header d-flex">
+              <div class="table_cell">Rank</div>
+              <div class="table_cell">Platform</div>
+              <div class="table_cell">Count</div>
+              <div class="table_cell">Percentage</div>
             </div>
-            <div class="table-body">
-              <div class="table-row">
-                <div class="table-cell">1</div>
-                <div class="table-cell">spotify</div>
-                <div class="table-cell">62</div>
-                <div class="table-cell">29%</div>
+            <div class="table_body">
+              <div class="table_row">
+                <div class="table_cell">1</div>
+                <div class="table_cell">spotify</div>
+                <div class="table_cell">62</div>
+                <div class="table_cell">29%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">2</div>
-                <div class="table-cell">no link</div>
-                <div class="table-cell">32</div>
-                <div class="table-cell">15%</div>
+              <div class="table_row">
+                <div class="table_cell">2</div>
+                <div class="table_cell">no link</div>
+                <div class="table_cell">32</div>
+                <div class="table_cell">15%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">3</div>
-                <div class="table-cell">apple</div>
-                <div class="table-cell">31</div>
-                <div class="table-cell">15%</div>
+              <div class="table_row">
+                <div class="table_cell">3</div>
+                <div class="table_cell">apple</div>
+                <div class="table_cell">31</div>
+                <div class="table_cell">15%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">4</div>
-                <div class="table-cell">youtube</div>
-                <div class="table-cell">24</div>
-                <div class="table-cell">11%</div>
+              <div class="table_row">
+                <div class="table_cell">4</div>
+                <div class="table_cell">youtube</div>
+                <div class="table_cell">24</div>
+                <div class="table_cell">11%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">5</div>
-                <div class="table-cell">buzzsprout</div>
-                <div class="table-cell">19</div>
-                <div class="table-cell">9%</div>
+              <div class="table_row">
+                <div class="table_cell">5</div>
+                <div class="table_cell">buzzsprout</div>
+                <div class="table_cell">19</div>
+                <div class="table_cell">9%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">6</div>
-                <div class="table-cell">own website</div>
-                <div class="table-cell">15</div>
-                <div class="table-cell">7%</div>
+              <div class="table_row">
+                <div class="table_cell">6</div>
+                <div class="table_cell">own website</div>
+                <div class="table_cell">15</div>
+                <div class="table_cell">7%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">7</div>
-                <div class="table-cell">podbean</div>
-                <div class="table-cell">6</div>
-                <div class="table-cell">3%</div>
+              <div class="table_row">
+                <div class="table_cell">7</div>
+                <div class="table_cell">podbean</div>
+                <div class="table_cell">6</div>
+                <div class="table_cell">3%</div>
               </div>
-              <div class="table-row">
-                <div class="table-cell">8</div>
-                <div class="table-cell">broken link</div>
-                <div class="table-cell">5</div>
-                <div class="table-cell">2%</div>
+              <div class="table_row">
+                <div class="table_cell">8</div>
+                <div class="table_cell">broken link</div>
+                <div class="table_cell">5</div>
+                <div class="table_cell">2%</div>
               </div>
             </div>
           </div>
         </div>
 
-        <p class="ff_graphik mb-0 fw-normal fs_sm lh_150 clr_black text-center opacity_70 mt-4 pt-2"><span
+        <p class="ff_graphik mb-0 fw-normal fs_xsm lh_150 clr_black text-center opacity_70 mt-sm-4 pt-2 max_w_293"><span
             class="fw-semibold">84%</span> of podcasters sent listeners to platforms with low accessibility!</p>
       </div>
     </section>
-
     <!-- --------quick way ------- -->
-    <section class="quicks-bg pt-106 pb-98 position-relative">
+    <section class="quick_parent position-relative">
       <img class="position-absolute quick_ways_ellipse" src="./assets/images/svg/quick_ways_ellipse.svg"
         alt="quick-ways-ellipse" />
       <div class="custom_container mx-auto">
-        <h2 class="fw-semibold text-white fs_5xl max-w-785 lh-120 ff_graphik text-center mx-auto m-0">
+        <h2 class="fw-semibold text-white fs_5xl max_w_785 lh_120 ff_graphik text-center mx-auto m-0">
           What <span style="position: relative; top: 9px; display: inline-block;">9</span> Quick Ways to Get
           Better Results from Podcasting?
         </h2>
-        <p class="text-white max-w-785 ff_graphik fw-medium text-center mx-auto pt-3 text-sm m-0">Most podcast
+        <p class="text-white max_w_785 lh_150 ff_graphik fw-medium text-center mx-auto pt-3 fs_sm m-0">Most podcast
           hosts, guests, and agencies are struggling. But this doesn't have to be the case for
           you! These 9 ideas will help you go from simply surviving to thriving in podcasting!</p>
-        <div>
-          <h3 class="text-white text-center fs-xl pt-33 lh-150 fw-extrabold m-0">Select Which Best Describes You
-          </h3>
-        </div>
-        <div class="quic_cards_wrap pt-103">
-          <div
-            class="d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20 quick_ways_box">
+        <!-- <div> -->
+        <h3 class="text-white text-center fs_xl lh_150 fw_black m-0 quick_ways_subtitle ff_graphik">Select Which Best
+          Describes You
+        </h3>
+        <!-- </div> -->
+        <div class="quic_cards_wrap">
+          <div class="quick_ways_box d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2104_1995)">
                 <rect width="54" height="54" rx="27" fill="white" />
@@ -1347,32 +1318,28 @@
                 </clipPath>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0 transition">I’m a Podcast Host</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 transition clr_black">I’m a Podcast Host</p>
           </div>
-              <div
-                class="quick_ways_box diffrent_hover d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_329)" />
-                  <path
-                    d="M24.8918 12.1878C19.6653 13.5941 17.7434 20.1449 21.3879 24.1175C22.2786 25.0785 23.1575 25.6644 24.4231 26.1097C25.302 26.4261 25.5715 26.4613 26.7668 26.4613C29.0286 26.473 30.5403 25.8167 32.0872 24.1761C33.4348 22.7464 34.0325 21.2464 34.0325 19.2425C34.0325 17.8949 33.8684 17.18 33.3059 15.9964C32.4504 14.2035 30.5989 12.68 28.6887 12.1878C27.7747 11.9535 25.7708 11.9535 24.8918 12.1878Z"
-                    fill="white" />
-                  <path
-                    d="M20.0859 26.5312C19.043 26.7188 18.5742 26.8945 17.8594 27.375C15.6797 28.8281 14.4727 32.0742 14.4609 36.4336C14.4609 37.9805 14.5781 38.625 15 39.4336C15.5508 40.5117 16.6289 41.3906 17.8477 41.7773C18.5508 41.9883 18.9844 42 26.918 42C33.5039 42 35.3906 41.9648 35.8477 41.8359C37.7344 41.332 39.0586 39.9141 39.4219 38.0156C39.6797 36.6445 39.4687 33.8086 38.9531 31.875C38.1094 28.6992 36.3164 26.8594 33.7031 26.5195C32.6016 26.3672 32.5664 26.3789 30.6797 27.5391C28.6875 28.7695 26.6836 29.0156 24.7266 28.2891C24.375 28.1484 23.5078 27.7031 22.8281 27.2812C21.4922 26.4727 21.0469 26.3555 20.0859 26.5312Z"
-                    fill="white" />
-                  <defs>
-                    <linearGradient id="paint0_linear_2010_329" x1="54" y1="54" x2="-55.8265" y2="-41.6529"
-                      gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#6F69F2" />
-                      <stop offset="0.813974" stop-color="#00B9FF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              
-              
-                <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">I’m a Podcast Guest</p>
-              </div>  
-          <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 mt-25 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+          <div class="quick_ways_box diffrent_hover d-flex w-100 align-items-center flex-column  bg-white p-3">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_329)" />
+              <path
+                d="M24.8918 12.1878C19.6653 13.5941 17.7434 20.1449 21.3879 24.1175C22.2786 25.0785 23.1575 25.6644 24.4231 26.1097C25.302 26.4261 25.5715 26.4613 26.7668 26.4613C29.0286 26.473 30.5403 25.8167 32.0872 24.1761C33.4348 22.7464 34.0325 21.2464 34.0325 19.2425C34.0325 17.8949 33.8684 17.18 33.3059 15.9964C32.4504 14.2035 30.5989 12.68 28.6887 12.1878C27.7747 11.9535 25.7708 11.9535 24.8918 12.1878Z"
+                fill="white" />
+              <path
+                d="M20.0859 26.5312C19.043 26.7188 18.5742 26.8945 17.8594 27.375C15.6797 28.8281 14.4727 32.0742 14.4609 36.4336C14.4609 37.9805 14.5781 38.625 15 39.4336C15.5508 40.5117 16.6289 41.3906 17.8477 41.7773C18.5508 41.9883 18.9844 42 26.918 42C33.5039 42 35.3906 41.9648 35.8477 41.8359C37.7344 41.332 39.0586 39.9141 39.4219 38.0156C39.6797 36.6445 39.4687 33.8086 38.9531 31.875C38.1094 28.6992 36.3164 26.8594 33.7031 26.5195C32.6016 26.3672 32.5664 26.3789 30.6797 27.5391C28.6875 28.7695 26.6836 29.0156 24.7266 28.2891C24.375 28.1484 23.5078 27.7031 22.8281 27.2812C21.4922 26.4727 21.0469 26.3555 20.0859 26.5312Z"
+                fill="white" />
+              <defs>
+                <linearGradient id="paint0_linear_2010_329" x1="54" y1="54" x2="-55.8265" y2="-41.6529"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6F69F2" />
+                  <stop offset="0.813974" stop-color="#00B9FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center clr_black mb-0">I’m a Podcast Guest</p>
+          </div>
+          <div class="quick_ways_box diffrent_hover d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2030)" />
               <path
@@ -1402,37 +1369,35 @@
                 </linearGradient>
               </defs>
             </svg>
-
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">I’m a Booking Agency</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">I’m a Booking Agency</p>
           </div>
-              <div class="quick_ways_box d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_2104_1999)">
-                    <rect width="54" height="54" rx="27" fill="white" />
-                    <g clip-path="url(#clip1_2104_1999)">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M27.5 -1C43.2401 -1 56 11.7599 56 27.5C56 43.2401 43.2401 56 27.5 56C11.7599 56 -1 43.2401 -1 27.5C-1 11.7599 11.7599 -1 27.5 -1ZM27.5 32.7241C29.3318 32.7216 31.094 32.0224 32.4291 30.7682C33.7642 29.5141 34.5722 27.799 34.689 25.9709H30.7703C30.5488 25.9709 30.3364 25.8829 30.1799 25.7264C30.0233 25.5698 29.9353 25.3574 29.9353 25.1359C29.9353 24.9145 30.0233 24.7021 30.1799 24.5455C30.3364 24.389 30.5488 24.301 30.7703 24.301H34.704V22.1802H30.7697C30.5483 22.1802 30.3359 22.0922 30.1793 21.9356C30.0227 21.779 29.9347 21.5667 29.9347 21.3452C29.9347 21.1238 30.0227 20.9114 30.1793 20.7548C30.3359 20.5982 30.5483 20.5103 30.7697 20.5103H34.7035V18.3895H30.7697C30.5483 18.3895 30.3359 18.3015 30.1793 18.1449C30.0227 17.9883 29.9347 17.7759 29.9347 17.5545C29.9347 17.3331 30.0227 17.1207 30.1793 16.9641C30.3359 16.8075 30.5483 16.7195 30.7697 16.7195H34.6885C34.5746 14.8902 33.7676 13.1731 32.4319 11.918C31.0962 10.6629 29.3323 9.96414 27.4994 9.96414C25.6666 9.96414 23.9027 10.6629 22.567 11.918C21.2313 13.1731 20.4243 14.8902 20.3104 16.7195H24.2292C24.4506 16.7195 24.663 16.8075 24.8196 16.9641C24.9762 17.1207 25.0641 17.3331 25.0641 17.5545C25.0641 17.7759 24.9762 17.9883 24.8196 18.1449C24.663 18.3015 24.4506 18.3895 24.2292 18.3895H20.2971V20.5103H24.2303C24.4517 20.5103 24.6641 20.5982 24.8207 20.7548C24.9773 20.9114 25.0653 21.1238 25.0653 21.3452C25.0653 21.5667 24.9773 21.779 24.8207 21.9356C24.6641 22.0922 24.4517 22.1802 24.2303 22.1802H20.2971V24.301H24.2303C24.3399 24.301 24.4485 24.3226 24.5498 24.3645C24.6511 24.4065 24.7432 24.468 24.8207 24.5455C24.8982 24.6231 24.9597 24.7151 25.0017 24.8164C25.0437 24.9177 25.0653 25.0263 25.0653 25.1359C25.0653 25.2456 25.0437 25.3542 25.0017 25.4555C24.9597 25.5568 24.8982 25.6488 24.8207 25.7264C24.7432 25.8039 24.6511 25.8654 24.5498 25.9074C24.4485 25.9493 24.3399 25.9709 24.2303 25.9709H20.3115C20.4283 27.7989 21.2361 29.514 22.5711 30.7682C23.9061 32.0223 25.6683 32.7216 27.5 32.7241ZM17.4622 24.685C17.2408 24.685 17.0284 24.7729 16.8718 24.9295C16.7152 25.0861 16.6273 25.2985 16.6273 25.5199C16.6305 28.2146 17.6329 30.8124 19.4406 32.8108C21.2483 34.8092 23.7329 36.0663 26.4138 36.3389L26.6645 36.3639V40.7703H24.3521C23.8374 40.7709 23.3439 40.9756 22.9798 41.3395C22.6158 41.7033 22.4109 42.1967 22.41 42.7114V44.1992C22.41 44.4207 22.4979 44.633 22.6545 44.7896C22.8111 44.9462 23.0235 45.0342 23.2449 45.0342H31.755C31.9764 45.0342 32.1888 44.9462 32.3454 44.7896C32.502 44.633 32.5899 44.4207 32.5899 44.1992V42.7115C32.5892 42.1969 32.3844 41.7035 32.0204 41.3396C31.6564 40.9757 31.163 40.771 30.6484 40.7704H28.335V36.3636L28.5857 36.3386C31.2665 36.0658 33.7509 34.8087 35.5586 32.8103C37.3663 30.8119 38.3688 28.2142 38.3722 25.5196C38.3722 25.2981 38.2842 25.0858 38.1276 24.9292C37.9711 24.7726 37.7587 24.6846 37.5372 24.6846C37.3158 24.6846 37.1034 24.7726 36.9468 24.9292C36.7902 25.0858 36.7023 25.2981 36.7023 25.5196C36.6938 27.9547 35.7205 30.2873 33.9956 32.0062C32.2707 33.7251 29.9348 34.6903 27.4996 34.6903C25.0644 34.6903 22.7285 33.7251 21.0036 32.0062C19.2787 30.2873 18.3054 27.9547 18.2969 25.5196C18.2967 25.2983 18.2087 25.0861 18.0522 24.9297C17.8957 24.7732 17.6835 24.6852 17.4622 24.685Z"
-                        fill="url(#paint0_linear_2104_1999)" />
-                    </g>
-                  </g>
-                  <defs>
-                    <linearGradient id="paint0_linear_2104_1999" x1="56" y1="56" x2="-59.928" y2="-44.967"
-                      gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#6F69F2" />
-                      <stop offset="0.813974" stop-color="#00B9FF" />
-                    </linearGradient>
-                    <clipPath id="clip0_2104_1999">
-                      <rect width="54" height="54" rx="27" fill="white" />
-                    </clipPath>
-                    <clipPath id="clip1_2104_1999">
-                      <rect width="57" height="57" fill="white" transform="translate(-1 -1)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting a Podcast</p>
-              </div>
-          <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+          <div class="quick_ways_box d-flex w-100 align-items-center flex-column bg-white p-3">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2104_1999)">
+                <rect width="54" height="54" rx="27" fill="white" />
+                <g clip-path="url(#clip1_2104_1999)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M27.5 -1C43.2401 -1 56 11.7599 56 27.5C56 43.2401 43.2401 56 27.5 56C11.7599 56 -1 43.2401 -1 27.5C-1 11.7599 11.7599 -1 27.5 -1ZM27.5 32.7241C29.3318 32.7216 31.094 32.0224 32.4291 30.7682C33.7642 29.5141 34.5722 27.799 34.689 25.9709H30.7703C30.5488 25.9709 30.3364 25.8829 30.1799 25.7264C30.0233 25.5698 29.9353 25.3574 29.9353 25.1359C29.9353 24.9145 30.0233 24.7021 30.1799 24.5455C30.3364 24.389 30.5488 24.301 30.7703 24.301H34.704V22.1802H30.7697C30.5483 22.1802 30.3359 22.0922 30.1793 21.9356C30.0227 21.779 29.9347 21.5667 29.9347 21.3452C29.9347 21.1238 30.0227 20.9114 30.1793 20.7548C30.3359 20.5982 30.5483 20.5103 30.7697 20.5103H34.7035V18.3895H30.7697C30.5483 18.3895 30.3359 18.3015 30.1793 18.1449C30.0227 17.9883 29.9347 17.7759 29.9347 17.5545C29.9347 17.3331 30.0227 17.1207 30.1793 16.9641C30.3359 16.8075 30.5483 16.7195 30.7697 16.7195H34.6885C34.5746 14.8902 33.7676 13.1731 32.4319 11.918C31.0962 10.6629 29.3323 9.96414 27.4994 9.96414C25.6666 9.96414 23.9027 10.6629 22.567 11.918C21.2313 13.1731 20.4243 14.8902 20.3104 16.7195H24.2292C24.4506 16.7195 24.663 16.8075 24.8196 16.9641C24.9762 17.1207 25.0641 17.3331 25.0641 17.5545C25.0641 17.7759 24.9762 17.9883 24.8196 18.1449C24.663 18.3015 24.4506 18.3895 24.2292 18.3895H20.2971V20.5103H24.2303C24.4517 20.5103 24.6641 20.5982 24.8207 20.7548C24.9773 20.9114 25.0653 21.1238 25.0653 21.3452C25.0653 21.5667 24.9773 21.779 24.8207 21.9356C24.6641 22.0922 24.4517 22.1802 24.2303 22.1802H20.2971V24.301H24.2303C24.3399 24.301 24.4485 24.3226 24.5498 24.3645C24.6511 24.4065 24.7432 24.468 24.8207 24.5455C24.8982 24.6231 24.9597 24.7151 25.0017 24.8164C25.0437 24.9177 25.0653 25.0263 25.0653 25.1359C25.0653 25.2456 25.0437 25.3542 25.0017 25.4555C24.9597 25.5568 24.8982 25.6488 24.8207 25.7264C24.7432 25.8039 24.6511 25.8654 24.5498 25.9074C24.4485 25.9493 24.3399 25.9709 24.2303 25.9709H20.3115C20.4283 27.7989 21.2361 29.514 22.5711 30.7682C23.9061 32.0223 25.6683 32.7216 27.5 32.7241ZM17.4622 24.685C17.2408 24.685 17.0284 24.7729 16.8718 24.9295C16.7152 25.0861 16.6273 25.2985 16.6273 25.5199C16.6305 28.2146 17.6329 30.8124 19.4406 32.8108C21.2483 34.8092 23.7329 36.0663 26.4138 36.3389L26.6645 36.3639V40.7703H24.3521C23.8374 40.7709 23.3439 40.9756 22.9798 41.3395C22.6158 41.7033 22.4109 42.1967 22.41 42.7114V44.1992C22.41 44.4207 22.4979 44.633 22.6545 44.7896C22.8111 44.9462 23.0235 45.0342 23.2449 45.0342H31.755C31.9764 45.0342 32.1888 44.9462 32.3454 44.7896C32.502 44.633 32.5899 44.4207 32.5899 44.1992V42.7115C32.5892 42.1969 32.3844 41.7035 32.0204 41.3396C31.6564 40.9757 31.163 40.771 30.6484 40.7704H28.335V36.3636L28.5857 36.3386C31.2665 36.0658 33.7509 34.8087 35.5586 32.8103C37.3663 30.8119 38.3688 28.2142 38.3722 25.5196C38.3722 25.2981 38.2842 25.0858 38.1276 24.9292C37.9711 24.7726 37.7587 24.6846 37.5372 24.6846C37.3158 24.6846 37.1034 24.7726 36.9468 24.9292C36.7902 25.0858 36.7023 25.2981 36.7023 25.5196C36.6938 27.9547 35.7205 30.2873 33.9956 32.0062C32.2707 33.7251 29.9348 34.6903 27.4996 34.6903C25.0644 34.6903 22.7285 33.7251 21.0036 32.0062C19.2787 30.2873 18.3054 27.9547 18.2969 25.5196C18.2967 25.2983 18.2087 25.0861 18.0522 24.9297C17.8957 24.7732 17.6835 24.6852 17.4622 24.685Z"
+                    fill="url(#paint0_linear_2104_1999)" />
+                </g>
+              </g>
+              <defs>
+                <linearGradient id="paint0_linear_2104_1999" x1="56" y1="56" x2="-59.928" y2="-44.967"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6F69F2" />
+                  <stop offset="0.813974" stop-color="#00B9FF" />
+                </linearGradient>
+                <clipPath id="clip0_2104_1999">
+                  <rect width="54" height="54" rx="27" fill="white" />
+                </clipPath>
+                <clipPath id="clip1_2104_1999">
+                  <rect width="57" height="57" fill="white" transform="translate(-1 -1)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting a Podcast</p>
+          </div>
+          <div class="quick_ways_box diffrent_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_370)" />
               <path
@@ -1449,11 +1414,9 @@
                 </linearGradient>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting to be a Guest</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting to be a Guest</p>
           </div>
-      
-          <div
-            class="quick_ways_box diffrent_hover d-flex max-w-364 w-100 align-items-center flex-column gap-18 bg-white p-3 radius-20">
+          <div class="quick_ways_box diffrent_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2024)" />
               <path
@@ -1483,7 +1446,7 @@
                 </linearGradient>
               </defs>
             </svg>
-            <p class="ff_graphik fw-medium fs_xl lh_150 text-center m-0">Starting a Booking Agency</p>
+            <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting a Booking Agency</p>
           </div>
         </div>
       </div>
