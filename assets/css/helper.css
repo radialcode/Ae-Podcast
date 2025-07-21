@@ -33,6 +33,10 @@
     border: 1px solid #6F69F2 !important;
 }
 
+.max_w_477 {
+    max-width: 477px;
+}
+
 @media (max-width:992px) {
     .average_time_box {
         max-width: 577px;
