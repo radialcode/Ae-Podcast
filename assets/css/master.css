@@ -219,7 +219,7 @@
 /* ================ future sec ===================== */
 
 .future_sec_p {
-  padding: 0px 0px 257px 0px;
+  padding: 0px 0px 152px 0px;
 }
 
 .arrow_width {
@@ -237,7 +237,7 @@
 
 /*============================ ellipse ============================*/
 .podcasting_industries_ellipse {
-  top: -75% !important;
+  bottom: -75% !important;
 }
 
 .your_podcast_right_vec {

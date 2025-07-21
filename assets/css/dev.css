@@ -61,6 +61,7 @@
 
 .industry_chart_parent {
   transform: scale(1.2);
+  rotate: -35deg;
 }
 
 /* ==== Possible Future Chart ==== */
@@ -130,9 +131,8 @@
 
 .active_abs {
   position: absolute;
-  top: 20%;
-  left: 22%;
-  transform: rotate(-30deg);
+  top: 34%;
+  left: 6%;
 }
 
 .total_abs,
@@ -140,7 +140,6 @@
   position: absolute;
   bottom: 35%;
   left: 60%;
-  rotate: 20deg;
 }
 
 .possible_total_abs {
@@ -700,6 +699,11 @@
     left: 25%;
   }
 
+  .active_abs {
+    top: 42%;
+    left: 7%;
+  }
+
   .nvd3.nv-pie .nv-pieLabels text {
     font-family: "Graphik";
     font-size: 12px !important;
@@ -755,8 +759,8 @@
 
 @media (max-width: 575.98px) {
   .active_abs {
-    top: 18%;
-    left: 20%;
+    top: 43%;
+    left: 8%;
   }
 
   .health_chart_parent {
@@ -792,7 +796,7 @@
   }
 
   .future_sec_p {
-    padding-bottom: 40px !important;
+    padding-bottom: 80px !important;
   }
 
   .podcast_guesting_circle {
