@@ -66,7 +66,7 @@
   --clr-red: #ff4d4d;
   --clr-lightblack: #343434;
   --clr-light-grey: #45474A;
-  
+
 }
 
 /* ------------font classes ------------ */
@@ -181,6 +181,12 @@
   max-width: 1164px;
   margin: 0 auto;
   padding: 0 12px;
+}
+
+@media (max-width:768px) {
+:root{
+  --fs-xl: 20px;
+}
 }
 
 @media (max-width: 991.98px) {
