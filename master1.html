@@ -301,9 +301,9 @@
                             <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Average Monthly
                                 Income for Podcasters (Monetization)
                             </p>
-                            <p
+                            <!-- <p
                                 class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 income_text">
-                                Income in USD ($)</p>
+                                Income in USD ($)</p> -->
                         </div>
                     </div>
 
@@ -345,18 +345,18 @@
             });
         });
     </script>
-<script>
-            document.getElementById("PodcastersselectBox2").onclick = function (e) {
-                e.stopPropagation();
+    <script>
+        document.getElementById("PodcastersselectBox2").onclick = function (e) {
+            e.stopPropagation();
             document.getElementById("Podcastersoptions2").classList.toggle("d-none");
         };
 
-            function PodcastersselectValue2(value) {
-                document.getElementById("Podcasters2").innerText = value;
+        function PodcastersselectValue2(value) {
+            document.getElementById("Podcasters2").innerText = value;
             document.getElementById("Podcastersoptions2").classList.add("d-none");
         }
 
-            document.addEventListener("click", function (event) {
+        document.addEventListener("click", function (event) {
             const selectBox = document.getElementById("PodcastersselectBox2");
             const optionsBox = document.getElementById("Podcastersoptions2");
 
@@ -364,107 +364,173 @@
                 optionsBox.classList.add("d-none");
             }
         });
-</script>
+    </script>
     <!-- ========== CHART JS ========== -->
-<script>
-    var options = {
-        chart: {
-            type: "bar",
-        },
-        series: [{
-            name: "Average Monthly Income",
-            data: [5.80, 34.62],
-        }],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: "36px",
-                endingShape: "rounded",
-                borderRadius: 4,
-                distributed: true,
-                dataLabels: {
-                    position: 'top', // ✅ Label shown at the top
-                },
+
+    <script>
+        var options = {
+            chart: {
+                type: "bar",
+                height: 400
             },
-        },
-        dataLabels: {
-            enabled: true,
-            formatter: function (val) {
-                return "$" + val.toFixed(2); // ✅ $5.80, $34.62
-            },
-            style: {
-                fontSize: '14px',
-                fontWeight: 'bold',
-                colors: ['#000'],
-            },
-        },
-        colors: ["#00B9FF", "#6F69F2"],
-        xaxis: {
-            categories: ["Industry Average", "PodMatch Average"],
-            labels: {
-                style: {
-                    fontSize: "12px",
-                    fontFamily: "Graphik, Arial, sans-serif",
-                    fontWeight: 500,
-                    colors: ["#00B9FF", "#6F69F2"],
-                },
-            },
-            axisBorder: {
-                show: true,
-                color: "#010101",
-                height: 1.07,
-            },
-            axisTicks: {
-                show: true,
-                color: "#010101",
-                placement: 'on',
-            },
-        },
-        yaxis: {
-            min: 0,
-            max: 40,
-            labels: {
-                style: {
-                    colors: "#949494",
-                    fontSize: "12px",
-                    fontFamily: "Graphik, Arial, sans-serif",
-                    fontWeight: 500,
-                },
-                formatter: function (val) {
-                    return val; // No $ sign here
+            series: [{
+                name: "Average Monthly Income",
+                data: [5.80, 34.62],
+            }],
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: "36px",
+                    endingShape: "flat",
+                    borderRadius: 20,
+                    borderRadiusApplication: 'end',
+                    distributed: true
                 }
             },
-            axisBorder: {
-                show: true,
-                color: "#010101",
-                width: 1.07,
-            },
-            axisTicks: {
-                show: true,
-                color: "#010101",
-                width: 1.07,
-            },
-        },
-        legend: {
-            show: false,
-        },
-        grid: {
-            show: false,
-        },
-        tooltip: {
-            enabled: true,
-            y: {
-                formatter: function (val) {
-                    return "$" + val.toFixed(2);
+            colors: ["#00B9FF", "#6F69F2"],
+            xaxis: {
+                categories: ["Industry Average", "PodMatch Average"],
+                labels: {
+                    style: {
+                        fontSize: "12px",
+                        fontFamily: "Arial, sans-serif",
+                        fontWeight: 500,
+                        colors: ["#00B9FF", "#6F69F2"]
+                    },
                 },
+                axisBorder: {
+                    show: true,
+                    color: "#010101",
+                    height: 1.07
+                },
+                axisTicks: {
+                    show: true,
+                    color: "#010101",
+                    placement: 'on'
+                }
             },
-        },
-    };
+            yaxis: {
+                min: 0,
+                max: 40,
+                tickAmount: 8, // Optional: sets how many ticks (like 0, 5, 10, ... 40)
+                title: {
+                    text: 'Income in USD ($)',
+                    rotate: -90,
+                    style: {
+                        color: '#3461FF',
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+                    }
+                },
+                labels: {
+                    formatter: function (val) {
+                        return Math.round(val);
+                    },
+                    style: {
+                        colors: '#949494',
+                        fontSize: '12px',
+                    }
+                },
+                axisTicks: {
+                    show: true,
+                    color: '#000'
+                },
+                axisBorder: {
+                    show: true,
+                    color: '#000'
+                }
+            },
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>
+            grid: {
+                show: true,
+                borderColor: '#000',
+                strokeDashArray: 0,
+            },
 
+            dataLabels: {
+                enabled: false
+            },
+            annotations: {
+                points: [
+                    {
+                        x: "Industry Average",
+                        y: 5.80,
+                        label: {
+                            text: "$5.80",
+                            borderRadius: 8,
+                            style: {
+                                background: "#00B9FF",
+                                color: "#ffffff",
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 5,
+                                    bottom: 5
+                                }
+                            },
+                            offsetY: -10
+                        },
+                        marker: {
+                            size: 8,
+                            fillColor: "#00B9FF",
+                            strokeColor: "#fff",
+                            strokeWidth: 2
+                        }
+                    },
+                    {
+                        x: "PodMatch Average",
+                        y: 34.62,
+                        label: {
+                            text: "$34.62",
+                            borderRadius: 8,
+                            style: {
+                                background: "#6F69F2",
+                                color: "#ffffff",
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 5,
+                                    bottom: 5
+                                }
+                            },
+                            offsetY: -10
+                        },
+                        marker: {
+                            size: 8,
+                            fillColor: "#6F69F2",
+                            strokeColor: "#fff",
+                            strokeWidth: 2
+                        }
+                    }
+                ]
+            },
+            legend: {
+                show: true,
+                markers: {
+                    width: 10,
+                    height: 10
+                }
+            },
+            grid: {
+                show: false
+            },
+            tooltip: {
+                enabled: true,
+                y: {
+                    formatter: function (val) {
+                        return "$" + val.toFixed(2);
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
 </body>
 
 </html>
