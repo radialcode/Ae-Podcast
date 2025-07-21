@@ -20,7 +20,7 @@
 }
 
 .mxw_faq {
-  max-width: 566px;
+  max-width: 710px;
 }
 
 .counter_mxw {
@@ -28,8 +28,7 @@
 }
 
 .space_faq {
-  padding-top: 130px;
-  padding-bottom: 124px;
+  padding: 152px 0 152px 0;
 }
 
 .space_header {
@@ -523,6 +522,7 @@ a:hover {
   .space_accd {
     margin-top: 24px;
   }
+
   .accordion-button {
     max-width: 800px !important;
     width: 100% !important;

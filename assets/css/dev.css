@@ -533,20 +533,26 @@
 
 /* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
-  max-width: 70px;
+  min-width: 70px;
 }
 
 .rank_change {
-  max-width: 158px;
+  min-width: 156px;
 }
 
 .hosting_provider {
-  max-width: 336px;
+  min-width: 336px;
 }
 
-.all {
-  max-width: 119px;
+.up_comming {
+  min-width: 170px;
 }
+
+.establish {
+  min-width: 170px;
+}
+
+
 
 /* ==== POPUP CSS ==== */
 
@@ -566,6 +572,32 @@
   fill: #ffffff !important;
   /* Set label color to white */
   transform: rotate(-80deg);
+}
+
+@media (max-width:1024px) {
+  .hosting_table {
+    max-width: 615px;
+  }
+
+  .rank {
+    min-width: 49px;
+  }
+
+  .rank_change {
+    min-width: 109px;
+  }
+
+  .hosting_provider {
+    min-width: 196px;
+  }
+
+  .up_comming {
+    min-width: 137px;
+  }
+
+  .establish {
+    min-width: 124px;
+  }
 }
 
 @media (max-width: 1199.98px) {
