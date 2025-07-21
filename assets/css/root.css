@@ -70,6 +70,7 @@
   --clr-light-grey: #45474A;
   --clr-purple: #6f69f2;
   --clr-off-gray: #949494;
+  --clr-pale-grey: #D4D4D440;
 
 }
 
@@ -211,9 +212,9 @@
 }
 
 @media (max-width:768px) {
-:root{
-  --fs-xl: 20px;
-}
+  :root {
+    --fs-xl: 20px;
+  }
 }
 
 @media (max-width: 991.98px) {

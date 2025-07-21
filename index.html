@@ -43,146 +43,20 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css" rel="stylesheet">
   <!-- ==== AOS ==== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    .quick_parent {
-      background: linear-gradient(133.83deg, #00B9FF 3.77%, #6F69F2 81.07%);
-      z-index: 10;
-      padding: 106px 0 98px 0;
-    }
-
-    .quick_ways_ellipse {
-      top: 49%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
-
-    .max_w_785 {
-      max-width: 785px;
-    }
-
-    .quick_ways_subtitle {
-      padding-top: 33px;
-    }
-
-
-    .fw_black {
-      font-weight: 900;
-    }
-
-    .quick_ways_box {
-      transition: all 300ms linear;
-      position: relative;
-      z-index: 10;
-      border: 1px solid transparent;
-      border-radius: 20px;
-      border: 1px solid #0101011A;
-      backdrop-filter: blur(200px);
-      box-shadow: 0px 0px 9.2px 0px #00000024;
-      margin: 0 auto;
-      max-width: 364px;
-      gap: 18px;
-
-    }
-
-    .quick_ways_box:hover {
-      border: 1px solid white;
-      backdrop-filter: blur(212.39999389648438px)
-    }
-
-    .quick_ways_box::after {
-      content: '';
-      position: absolute;
-      background: linear-gradient(311.4deg, #6F69F2 15.37%, #00B9FF 158.4%);
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -10;
-      opacity: 0;
-      border-radius: 20px;
-      transition: all 400ms linear;
-    }
-
-    .quick_ways_box:hover::after {
-      opacity: 100;
-      z-index: -1;
-    }
-
-    .quick_ways_box:hover p {
-      color: white;
-    }
-
-    .quick_ways_box:hover svg path {
-      fill: white;
-    }
-
-    .quick_ways_box:hover rect {
-      fill: #6F69F2;
-    }
-
-    .quick_ways_box.diffrent_hover:hover rect {
-      fill: white;
-    }
-
-    .quick_ways_box.diffrent_hover:hover svg path {
-      fill: #6F69F2;
-    }
-
-    .transition {
-      transition: all 300ms linear;
-    }
-
-    .quic_cards_wrap {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      padding-top: 103px;
-    }
-
-    @media (max-width:1024px) {
-      .quic_cards_wrap {
-        grid-template-columns: repeat(2, 1fr);
-        padding-top: 73px;
-      }
-
-      .quick_ways_box {
-        max-width: 100%;
-      }
-
-      .quick_parent {
-        padding: 77px 0;
-      }
-
-      .quick_ways_subtitle {
-        padding-top: 53px;
-      }
-
-    }
-
-    @media (max-width:575.98px) {
-      .quic_cards_wrap {
-        grid-template-columns: repeat(1, 1fr);
-        padding-top: 55px;
-      }
-
-      .quick_ways_box svg {
-        width: 45px;
-        height: 45px;
-      }
-
-      .quick_parent {
-        padding: 54px 0;
-      }
-
-      .quick_ways_subtitle {
-        padding-top: 61px;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <!-- Hidden SVG for gradient definitions -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="quick_ways_hover_gradient" x1="0%" y1="0%" x2="100%" y2="100%"
+        gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#6F69F2" />
+        <stop offset="100%" stop-color="#00B9FF" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <div class="custom-pop-up position-relative">
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -1176,8 +1050,8 @@
     <section class="podcast_share position-relative">
       <img class="position-absolute podcast_left_vector d-md-block d-none"
         src="assets/images/webp/chances_left_vector.webp" alt="chances_left_vector" />
-      <img class="position-absolute podcaster_right_vector d-xl-block d-none"
-        src="./assets/images/png/pc_lines_vec.png" alt="lines-vec" />
+      <img class="position-absolute podcaster_right_vector d-xl-block d-none" src="./assets/images/png/pc_lines_vec.png"
+        alt="lines-vec" />
       <div class="d-flex flex-column align-items-center">
         <div class="position-relative">
           <div id="PodcastersselectBox"
@@ -1211,7 +1085,7 @@
           asked <span class="fw-semibold">204</span> podcasters for a link to listen to their podcasts. Here's the
           ranked list of
           the platforms they sent us to.</p>
-        <div class="podcast_share_table_parent custom-scrollbar mt-md-5">
+        <div class="podcast_share_table_parent custom_scrollbar mt-md-5">
           <div class="table_wrapper d-flex flex-column bg-white mb-md-0 mb-2">
             <div class="table_header d-flex">
               <div class="table_cell">Rank</div>
@@ -1293,8 +1167,8 @@
           Describes You
         </h3>
         <!-- </div> -->
-        <div class="quic_cards_wrap">
-          <div class="quick_ways_box d-flex w-100 align-items-center flex-column bg-white p-3">
+        <div class="quick_cards_wrap">
+          <div class="quick_ways_box position-relative d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2104_1995)">
                 <rect width="54" height="54" rx="27" fill="white" />
@@ -1320,7 +1194,7 @@
             </svg>
             <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 transition clr_black">I’m a Podcast Host</p>
           </div>
-          <div class="quick_ways_box diffrent_hover d-flex w-100 align-items-center flex-column  bg-white p-3">
+          <div class="quick_ways_box position-relative different_hover d-flex w-100 align-items-center flex-column  bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_329)" />
               <path
@@ -1339,7 +1213,7 @@
             </svg>
             <p class="ff_graphik fw-medium fs_xl lh_150 text-center clr_black mb-0">I’m a Podcast Guest</p>
           </div>
-          <div class="quick_ways_box diffrent_hover d-flex w-100 align-items-center flex-column bg-white p-3">
+          <div class="quick_ways_box position-relative different_hover d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2030)" />
               <path
@@ -1371,7 +1245,7 @@
             </svg>
             <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">I’m a Booking Agency</p>
           </div>
-          <div class="quick_ways_box d-flex w-100 align-items-center flex-column bg-white p-3">
+          <div class="quick_ways_box position-relative d-flex w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2104_1999)">
                 <rect width="54" height="54" rx="27" fill="white" />
@@ -1397,7 +1271,7 @@
             </svg>
             <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting a Podcast</p>
           </div>
-          <div class="quick_ways_box diffrent_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
+          <div class="quick_ways_box position-relative different_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2010_370)" />
               <path
@@ -1416,7 +1290,7 @@
             </svg>
             <p class="ff_graphik fw-medium fs_xl lh_150 text-center mb-0 clr_black">Starting to be a Guest</p>
           </div>
-          <div class="quick_ways_box diffrent_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
+          <div class="quick_ways_box position-relative different_hover d-flex  w-100 align-items-center flex-column bg-white p-3">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="54" height="54" rx="27" fill="url(#paint0_linear_2104_2024)" />
               <path
