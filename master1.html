@@ -197,7 +197,7 @@
                 height: 90px !important;
             }
 
-            .my_custom_chart_area {
+            #income-chart.monthly_income_chart {
                 width: 100% !important;
                 margin-left: 60px !important;
             }
@@ -283,9 +283,10 @@
                     <div>
                         <div
                             class="income_chart d-flex flex-column align-items-center justify-content-center position-relative mx-auto mt_40">
-                            <div class="my_custom_chart_area position-relative monthly_income_chart"></div>
-                            <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">
-                                Average Monthly Income for Podcasters (Monetization)
+                            <div id="income-chart" class="position-relative monthly_income_chart">
+                            </div>
+                            <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Average Monthly
+                                Income for Podcasters (Monetization)
                             </p>
                             <p
                                 class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 income_text">
@@ -364,12 +365,16 @@
             xaxis: {
                 categories: ["Industry Average", "PodMatch Average"],
                 labels: {
+                    show: true,
+                    formatter: function (value, index) {
+                        return ' •' + value;
+                    },
                     style: {
                         fontSize: "12px",
                         fontFamily: "Arial, sans-serif",
                         fontWeight: 500,
                         colors: ["#00B9FF", "#6F69F2"]
-                    },
+                    }
                 },
                 axisBorder: {
                     show: true,
@@ -382,6 +387,7 @@
                     placement: 'on'
                 }
             },
+
             yaxis: {
                 min: 0,
                 max: 40,
@@ -492,7 +498,7 @@
             }
         };
 
-        var chart = new ApexCharts(document.querySelector(".my_custom_chart_area"), options);
+        var chart = new ApexCharts(document.querySelector("#income-chart"), options);
         chart.render();
     </script>
 </body>

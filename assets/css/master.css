@@ -2,9 +2,11 @@
   max-width: 1440px;
   margin: 0px auto;
 }
-.translate_y{
+
+.translate_y {
   transform: translateY(-1.5px);
 }
+
 .opacity_70 {
   opacity: 70%;
 }
@@ -35,7 +37,7 @@
 }
 
 .line_left_podcast_table {
-  top: 40%;
+  top: 47%;
   left: 0px;
 }
 
@@ -44,7 +46,7 @@
   border-collapse: separate;
   border-radius: 4px;
   border: 1px solid rgba(151, 203, 252);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .blur_ellipse {
@@ -78,7 +80,7 @@
 
 .sky_blur_right_position {
   right: 10px;
-  top: 25%;
+  top: 33%;
 }
 
 .sky_blur_second_right_position {
@@ -143,7 +145,7 @@
 }
 
 .poadcasting_p {
-  padding: 0px 0px 200px 0px;
+  padding: 0px 0px 150px 0px;
 }
 
 .possible_heading {
@@ -159,20 +161,20 @@
 }
 
 .select_bg {
-    width: 115px;
-    padding: 6px 11px;
-    background-color: #e9e6e6;
-    border: 1px solid #d2cfcf;
-    border-radius: 4px;
-    color: #474646;
-    outline: none !important;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('/assets/images/webp/select_arrow.webp');
-    background-size: 9px 5px;
-    background-repeat: no-repeat;
-    background-position: calc(100% - 12px) center;
+  width: 115px;
+  padding: 6px 11px;
+  background-color: #e9e6e6;
+  border: 1px solid #d2cfcf;
+  border-radius: 4px;
+  color: #474646;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/assets/images/webp/select_arrow.webp');
+  background-size: 9px 5px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
 }
 
 .active_box {
@@ -191,6 +193,7 @@
   background-image: linear-gradient(#fff, #fff), linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
   background-clip: content-box, border-box;
   max-width: 205px !important;
+  min-width: 181px !important;
   border-radius: 16px;
   box-shadow: 12px 12px 20px 0px #fcfeff;
 }
@@ -216,7 +219,7 @@
 /* ================ future sec ===================== */
 
 .future_sec_p {
-  padding: 0px 0px 257px 0px;
+  padding: 0px 0px 152px 0px;
 }
 
 .arrow_width {
@@ -234,7 +237,7 @@
 
 /*============================ ellipse ============================*/
 .podcasting_industries_ellipse {
-  top: -75% !important;
+  bottom: -75% !important;
 }
 
 .your_podcast_right_vec {
@@ -253,7 +256,7 @@
 }
 
 .faq {
-    z-index: 5;
+  z-index: 5;
 }
 
 /*============================ card ===========================*/
@@ -338,7 +341,7 @@
 .links_hov:hover img {
   scale: 1.2;
 }
- 
+
 .vctr_faq {
   left: 0;
   bottom: 20%;
@@ -441,6 +444,10 @@
   #back-top {
     right: 20px;
     bottom: 20px;
+  }
+
+  .total_box {
+    min-width: 160px !important;
   }
 }
 

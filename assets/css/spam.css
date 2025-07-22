@@ -12,7 +12,7 @@
 }
 
 .mxw_para {
-  max-width: 620px;
+  max-width: 692px;
 }
 
 .mxw_para_cntr {
@@ -20,7 +20,7 @@
 }
 
 .mxw_faq {
-  max-width: 566px;
+  max-width: 710px;
 }
 
 .counter_mxw {
@@ -28,13 +28,12 @@
 }
 
 .space_faq {
-  padding-top: 130px;
-  padding-bottom: 124px;
+  padding: 152px 20px 152px 20px;
 }
 
 .space_header {
-  padding-top: 110px;
-  padding-bottom: 119px;
+  padding-top: 69px;
+  padding-bottom: 95px;
 }
 
 .space_overall {
@@ -56,7 +55,6 @@
 .card_main {
   width: 100%;
   max-width: 450px;
-  height: 251px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px 4px #dadada40;
   background-color: white;
@@ -86,10 +84,12 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(99.76deg,
-      #00b9ff 24.35%,
-      #6f69f2 100%,
-      #10b6d0 88.28%);
+  background: linear-gradient(
+    99.76deg,
+    #00b9ff 24.35%,
+    #6f69f2 100%,
+    #10b6d0 88.28%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -389,10 +389,6 @@ a:hover {
   .card_main {
     padding: 24px 10px;
   }
-
-  .space_ul_nav {
-    gap: 0px;
-  }
 }
 
 @media (max-width: 991.98px) {
@@ -440,7 +436,6 @@ a:hover {
 }
 
 @media (max-width: 767.98px) {
-
   .card_space {
     margin: 0px !important;
   }
@@ -524,6 +519,7 @@ a:hover {
   .space_accd {
     margin-top: 24px;
   }
+
   .accordion-button {
     max-width: 800px !important;
     width: 100% !important;
@@ -569,7 +565,7 @@ a:hover {
 
   .space_header {
     padding-top: 74px;
-    padding-bottom: 119px;
+    padding-bottom: 95px;
   }
 
   .space_overall {
