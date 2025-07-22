@@ -283,7 +283,7 @@
   max-width: 115px;
   position: absolute;
   left: 0;
-  top: -30%;
+  top: -14%;
   z-index: 1;
 }
 
@@ -337,7 +337,7 @@
 }
 
 .podcast_compare_section {
-  padding: 0px 0px 171px 0px;
+  padding: 0px 0px 152px 0px;
 }
 
 .podcast_graph {
@@ -1012,7 +1012,7 @@
     max-width: 115px;
     position: absolute;
     left: -5%;
-    top: -30%;
+    top: -14%;
   }
 
   .failure_text_abs {
