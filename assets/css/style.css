@@ -542,3 +542,8 @@
         padding-top: 61px;
     }
 }
+@media (min-width:1200px) {
+    .mt_4{
+        margin-top: 4px;
+    }
+}

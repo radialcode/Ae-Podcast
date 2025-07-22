@@ -44,6 +44,7 @@
 
 :root {
   /* --------font sizes --------------- */
+  --fs-7xl: 54px;
   --fs-6xl: 50px;
   --fs-5xl: 48px;
   --fs-4xl: 40px;
@@ -75,6 +76,10 @@
 }
 
 /* ------------font classes ------------ */
+.fs_7xl {
+  font-size: var(--fs-7xl);
+}
+
 .fs_6xl {
   font-size: var(--fs-6xl);
 }
@@ -228,6 +233,7 @@
 @media (max-width: 991.98px) {
   :root {
     /* --------font sizes --------------- */
+     --fs-7xl: 40px;
     --fs-xl: 20px;
     --fs-6xl: 36px;
     --fs-5xl: 40px;

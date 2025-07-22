@@ -162,7 +162,7 @@
 }
 
 .select_bg {
-  width: 115px;
+  width: 162px;
   padding: 6px 11px;
   background-color: #e9e6e6;
   border: 1px solid #d2cfcf;
@@ -183,15 +183,13 @@
   padding: 16px 24px;
   width: 100%;
   border-radius: 16px;
-  max-width: 176px;
+  max-width: 181px;
   box-shadow: 12px 12px 12px 0px #fcfeff;
 }
 
 .total_box {
-  border: 1px solid;
-  border-image-source: linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
+  border: 1px solid #6F69F2;
   background-color: transparent;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(311.05deg, #8C69F2 10.42%, #00B9FF 18.1%, #6F69F2 59.98%, #00B9FF 86.54%, #00B9FF 140.51%);
   background-clip: content-box, border-box;
   max-width: 205px !important;
   min-width: 181px !important;
