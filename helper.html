@@ -520,13 +520,13 @@
                                 </div>
                                 <img class="three_lines_abs z-n1" src="./assets/images/png/chart_lines.png" alt="lines">
                                 <img class="single_lines_abs" src="./assets/images/png/single_line.png" alt="lines">
-                                <div class="active_abs opacity-0">
-                                    <p class="mb-0  fs_xl ff_graphik fw-semibold text-white">Active</p>
-                                    <p class="fw-normal fs_sm lh_100 text-white mb-0 text-center">125,131</p>
+                                <div class="active_abs_donut position-absolute">
+                                    <p class="mb-0  fs_lg lh-1 ff_graphik fw-semibold text-white">Active</p>
+                                    <p class="fw-normal ff_graphik fs_xsm lh-1 text-white mb-0 text-center" style="margin-top: 2px;">125,131</p>
                                 </div>
                                 <div class="possible_total_abs">
-                                    <p class="mb-0  fs_xl ff_graphik fw-semibold text-white">Total</p>
-                                    <p class="fw-normal fs_sm lh_100 text-white mb-0 text-center">566,272</p>
+                                    <p class="mb-0  fs_lg lh-1 ff_graphik fw-semibold text-white">Total</p>
+                                    <p class="fw-normal ff_graphik fs_xsm lh-1 text-white mb-0 text-center" style="margin-top: 2px;">566,272</p>
                                 </div>
                             </div>
                         </div>
@@ -1455,7 +1455,7 @@
             </div>
         </section>
 
-          <!-- ---------Podcast Hostig Provider --------------- -->
+        <!-- ---------Podcast Hostig Provider --------------- -->
         <section class="ph_provider_sec position-relative">
             <img class="position-absolute end-0 line_right_podcast_table d-none d-md-block z-n1" width="115px"
                 src="./assets/images/png/line_right_podcast_table.png" alt="line Image">
@@ -1485,7 +1485,8 @@
                     </p>
                 </div>
                 <div class="overflow-x-scroll custom_scrollbar">
-                    <table class="mt-4 mt-lg-5 mx-auto table_shadow hosting_table mb-2" data-aos="fade-up" data-aos-duration="1000">
+                    <table class="mt-4 mt-lg-5 mx-auto table_shadow hosting_table mb-2" data-aos="fade-up"
+                        data-aos-duration="1000">
                         <!-- TABLE FIRST DATA HEADING -->
                         <tr>
                             <th
@@ -2356,16 +2357,16 @@
                 </div>
                 <p
                     class="ff_graphik px-md-5 px-lg-0 text-center pt-3 mt-1 mt-md-0 pt-md-4 mt-lg-2 mb-0 fw-normal clr_tundora fs_xsm">
-                The hosting provider data listed above has been calculated and analyzed by
+                    The hosting provider data listed above has been calculated and analyzed by
                     <span>
-                        <img class="translate_y object-fit-cover" width="67" height="13" src="./assets/images/svg/header_logo.svg"
-                            alt="rephonic logo">
+                        <img class="translate_y object-fit-cover" width="67" height="13"
+                            src="./assets/images/svg/header_logo.svg" alt="rephonic logo">
                     </span>
                     (See FAQ section below for details)
                 </p>
             </div>
         </section>
-         <!-- ------------Frequently-Asked-Questions ----------------- -->
+        <!-- ------------Frequently-Asked-Questions ----------------- -->
         <section class="position-relative z-3">
             <img class="position-absolute z-n1 d-none d-md-block vctr_faq" src="./assets/images/svg/faq_vector.svg"
                 alt="side-vector" />
@@ -3704,10 +3705,11 @@
                 })
                 .showLabels(false)
                 .showLegend(false)
-                .labelThreshold(.05)
+                .labelThreshold(false)
                 .color(["#27A0FC", "#00B9FF"])
                 .donut(true)
-                .donutRatio(0.35);
+                .donutRatio(0.45)
+                .tooltips(false);
 
             var donutChart2 = nv.models.pieChart()
                 .x(function (d) {
@@ -3721,7 +3723,8 @@
                 .labelThreshold(.05)
                 .color(["#6B6DF3", "#01B7FC"])
                 .donut(true)
-                .donutRatio(0.35);
+                .donutRatio(0.45)
+                .tooltips(false);
 
             function centerText(chart, labelText) {
                 return function () {

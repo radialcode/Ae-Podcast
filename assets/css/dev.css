@@ -143,8 +143,13 @@
 }
 
 .possible_total_abs {
-  bottom: 14%;
-  left: 62%;
+  bottom: 9%;
+  left: 55%;
+}
+
+.active_abs_donut {
+  top: 17%;
+  left: 19%;
 }
 
 /* =================== */
@@ -303,6 +308,7 @@
   height: 52px;
   border-radius: 8px;
 }
+
 .transition_300 {
   transition: 300ms linear;
 }
@@ -598,16 +604,15 @@
     min-width: 124px;
   }
 }
+
 .td_clr_gradiant {
   border-width: 1px, 0px, 0px, 1px;
 
   border-style: solid;
 
-  border-image-source: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.3) 0%,
-    rgba(0, 185, 255, 0.3) 155.6%
-  );
+  border-image-source: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.3) 0%,
+      rgba(0, 185, 255, 0.3) 155.6%);
 }
 
 @media (max-width: 1199.98px) {
@@ -787,6 +792,7 @@
   .buzzsuppot {
     max-width: 115px;
   }
+
   .mt_lg_166 {
     margin-top: 66px;
   }
