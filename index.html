@@ -3554,128 +3554,101 @@
     });
   </script>
   <!-- ========== CHART JS ========== -->
-<script>
-  var options = {
-    chart: {
-      type: "bar",
-    },
-    series: [{
-      name: "Downloads",
-      data: [600, 1000, 1500, 2000, 5000],
-    }],
-    fontSize: "24px",
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      categories: ["Top 50%", "Top 25%", "Top 10%", "Top 5%", "Top 1%"],
-      axisBorder: {
-        show: true,
-        color: "#010101",
-        height: 1.07,
+  <script>
+    var options = {
+      chart: {
+        type: "bar",
       },
-      axisTicks: {
-        show: true,
-        color: "#010101",
-        placement: 'on',
+      series: [{
+        name: "Downloads",
+        data: [600, 1000, 1500, 2000, 5000],
+      },],
+      fontSize: "24px",
+      legend: {
+        show: false,
       },
-    },
-    yaxis: {
-      min: 0,
-      max: 5000,
-      tickAmount: 5,
-      forceNiceScale: true,
+      xaxis: {
+        categories: ["Top 50%", "Top 25%", "Top 10%", "Top 5%", "Top 1%"],
+        axisBorder: {
+          show: true,
+          color: "#010101",
+          height: 1.07,
+        },
+        axisTicks: {
+          show: true,
+          color: "#010101",
+          placement: 'on',
+        },
+      },
+      yaxis: {
+        min: 0,
+        max: 5500, // Adjusted max value
+        tickAmount: 5,
+        forceNiceScale: true, // Force a more "nice" scale
+        labels: {
+          formatter: function (value) {
+            return value;
+          },
+        },
+        axisBorder: {
+          show: true,
+          color: "#010101",
+          width: 1.07,
+        },
+        axisTicks: {
+          show: true,
+          color: "#010101",
+          height: 1.07,
+        },
+      },
       labels: {
-        formatter: function (value) {
-          return value;
+        enabled: false,
+        style: {
+          fontSize: "12px",
+          fontFamily: "Graphik, Arial, sans-serif",
+          fontWeight: "bold",
+          colors: "#949494",
         },
       },
-      axisBorder: {
-        show: true,
-        color: "#010101",
-        width: 1.07,
-      },
-      axisTicks: {
-        show: true,
-        color: "#010101",
-        height: 1.07,
-      },
-    },
-    labels: {
-      enabled: false,
-      style: {
-        fontSize: "12px",
-        fontFamily: "Graphik, Arial, sans-serif",
-        fontWeight: "bold",
-        colors: "#949494",
-      },
-    },
-    tooltip: {
-      enabled: true,
-      y: {
-        formatter: function (val) {
-          return val;
-        },
-      },
-    },
-    grid: {
-      show: false,
-    },
-    dataLabels: {
-      enabledOnSeries: [1],
-    },
-    toolbar: false,
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: "24px",
-        borderRadius: 6, // Rounded corners
-        borderRadiusApplication: 'end', // Apply at top
-        borderRadiusWhenStacked: 'last', // Just in case of stacking
-        endingShape: "flat",
-        dataLabels: {
-          enabled: false,
-          style: {
-            fontSize: "12px",
-            fontFamily: "Graphik, Arial, sans-serif",
-            fontWeight: "bold",
-            colors: "#949494",
+      tooltip: {
+        enabled: true,
+        y: {
+          formatter: function (val) {
+            return val;
           },
         },
       },
-    },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shade: "light",
-        type: "diagonal1",
-        shadeIntensity: 1,
-        gradientToColors: ["#00B9FF"],
-        inverseColors: false,
-        opacityFrom: 1,
-        opacityTo: 1,
-        stops: [0, 100],
-        colorStops: [
-          {
-            offset: 0,
-            color: "#6F69F2",
-            opacity: 1
+      grid: {
+        show: false,
+      },
+      dataLabels: {
+        enabledOnSeries: [1],
+      },
+      toolbar: false,
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "24px",
+          endingShape: "roundedEnds",
+          borderTopRadius: 4,
+          dataLabels: {
+            enabled: false,
+            style: {
+              fontSize: "12px",
+              fontFamily: "Graphik, Arial, sans-serif",
+              fontWeight: "bold",
+              colors: "#949494",
+            },
           },
-          {
-            offset: 100,
-            color: "#00B9FF",
-            opacity: 1
-          }
-        ]
-      }
-    },
-    offsetX: 45,
-    offsetY: 0,
-  };
+        },
+      },
+      offsetX: 45,
+      offsetY: 0,
+    };
 
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  chart.render();
-</script>
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
   <!-- =========== Chart 2nd ============= -->
   <script>
     function adjustFontSize(chartWidth) {
@@ -4010,10 +3983,11 @@
         .showLabels(false)
         .showLegend(false)
         .donut(true)
-        .donutRatio(0.72)
+        .donutRatio(0.55) 
         .padAngle(0.01);
+
       var data = [
-        { label: "small", value: 15, color: "#00B9FF" },
+        { label: "small", value: 15, color: "#00B9FF" }, 
         { label: "large", value: 92 }
       ];
       chart.color(d =>
@@ -4029,6 +4003,7 @@
         .transition().duration(700)
         .call(chart)
         .each('end', applyGradientToLargeSlice);
+
       function applyGradientToLargeSlice() {
         var svg = d3.select("#guesting-chart svg");
         var defs = svg.select("defs");
@@ -4040,9 +4015,10 @@
 
         grad.append("stop")
           .attr("offset", "0%")
-          .attr("stop-color", "#269FFB");
+          .attr("stop-color", "#269FFB"); 
+
         grad.append("stop")
-          .attr("offset", "70%")
+          .attr("offset", "70%") 
           .attr("stop-color", "#6B6DF3");
         svg.selectAll(".nv-pie .nv-slice path")
           .each(function (d, i) {
@@ -4054,10 +4030,8 @@
         svg.selectAll(".nv-pie .nv-slice path")
           .style("stroke", "#fff")
           .style("stroke-width", "10px");
-
       }
     });
-
 
     // possible-donut-chart
 
