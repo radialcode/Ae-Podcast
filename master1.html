@@ -127,12 +127,17 @@
             width: 517px !important;
             height: 500px;
             box-shadow: 0px 4px 20px 0px #06060614;
+            border-radius: 24px !important;
         }
 
         .income_text {
             left: -3% !important;
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .my_custom_chart_area {
+            width: 422px !important;
         }
 
         @media (max-width: 1199.98px) {
@@ -147,6 +152,12 @@
             .chance_box {
                 height: 102px !important;
             }
+             .my_custom_chart_area {
+            width: 380px !important;
+        }
+         .income_chart {
+            width: 480px !important;
+        }
         }
 
         @media (max-width:991.98px) {
@@ -157,34 +168,36 @@
             .chance_box {
                 height: 102px !important;
             }
-                .income_chart {
-                 width: 517px !important;
+
+            .income_chart {
+                width: 517px !important;
                 height: 500px;
                 box-shadow: 0px 4px 20px 0px #06060614;
             }
 
         }
-           @media (max-width:575.98px) {
-                .prodcaster_chart {
-                    max-width: 281px !important;
-                    width: 100%;
-                    height: 335px;
-                    object-fit: cover;
-                }
 
-                .prouction_P {
-                    padding-top: 80px;
-                }
+        @media (max-width:575.98px) {
+            .prodcaster_chart {
+                max-width: 281px !important;
+                width: 100%;
+                height: 335px;
+                object-fit: cover;
+            }
 
-                .w_536 {
-                    max-width: 100% !important;
-                }
+            .prouction_P {
+                padding-top: 80px;
+            }
+
+            .w_536 {
+                max-width: 100% !important;
+            }
 
             .chance_box {
                 height: 90px !important;
             }
 
-            #chart.monthly_income_chart {
+            .my_custom_chart_area {
                 width: 100% !important;
                 margin-left: 60px !important;
             }
@@ -194,9 +207,10 @@
                 height: 500px;
                 box-shadow: 0px 4px 20px 0px #06060614;
             }
-              .income_text {
-            left: -10% !important;
-        }
+
+            .income_text {
+                left: -10% !important;
+            }
         }
     </style>
 </head>
@@ -219,7 +233,7 @@
                                 <div id="Podcastersoptions2"
                                     class="position-absolute d-none option_box same-width-dropdown">
                                     <p onclick="PodcastersselectValue2('june 2025')"
-                                        class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">june
+                                        class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">June
                                         2025
                                     </p>
                                     <p onclick="PodcastersselectValue2('July 2025')"
@@ -266,18 +280,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="">
+                    <div>
                         <div
                             class="income_chart d-flex flex-column align-items-center justify-content-center position-relative mx-auto mt_40">
-                            <div id="chart" class="position-relative monthly_income_chart">
-                            </div>
-                            <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Average Monthly
-                                Income for Podcasters (Monetization)
+                            <div class="my_custom_chart_area position-relative monthly_income_chart"></div>
+                            <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">
+                                Average Monthly Income for Podcasters (Monetization)
                             </p>
                             <p
                                 class="ff_graphik text-center fw-semibold fs_xsm gradient_text position-absolute mb-0 income_text">
-                                Income in USD ($)</p>
+                                Income in USD ($)
+                            </p>
                         </div>
+
                     </div>
 
                 </div>
@@ -463,7 +478,7 @@
                     width: 10,
                     height: 10
                 }
-            },  
+            },
             grid: {
                 show: false
             },
@@ -477,7 +492,7 @@
             }
         };
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        var chart = new ApexCharts(document.querySelector(".my_custom_chart_area"), options);
         chart.render();
     </script>
 </body>
