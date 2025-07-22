@@ -48,11 +48,9 @@
 }
 
 .td_gradient {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 /* ====podcasting industry chart ==== */
@@ -582,20 +580,17 @@
   /* Set label color to white */
   transform: rotate(-80deg);
 }
+
 /* ---------------------- podcast production ---------------------- */
 .production_box.guesting_box {
   box-shadow: none !important;
 }
 
-<<<<<<< HEAD
 .chances_donut_chart_svg {
   rotate: -75deg;
 }
 
-@media (max-width:1024px) {
-  .hosting_table {
-    max-width: 615px;
-=======
+
 .podcast_production {
   max-width: 500px;
 }
@@ -677,6 +672,7 @@
 .podcast_production_right_vec {
   top: -15% !important;
 }
+
 /* -------------------- average monthly income ------------------ */
 .prouction_P {
   padding-top: 152px;
@@ -788,7 +784,6 @@
   .production_average {
     right: -10%;
     top: -3%;
->>>>>>> 4acf1faf307e233ce152758e0c8425200347f8ed
   }
 
   .prouction_P {
@@ -811,6 +806,12 @@
       rgba(0, 185, 255, 0.3) 155.6%);
 }
 
+@media (max-width:1024px) {
+  .hosting_table {
+    max-width: 615px;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
@@ -824,6 +825,7 @@
   .chances_chart {
     transform: scale(1.2);
   }
+
   .Podcaster_heading {
     max-width: 566px !important;
   }
@@ -836,6 +838,7 @@
     height: 102px !important;
   }
 }
+
 @media (max-width: 1024px) {
   .hosting_table {
     max-width: 615px;
@@ -861,6 +864,7 @@
     min-width: 124px;
   }
 }
+
 @media (max-width: 991.98px) {
   .industry_chart_main_parent {
     max-width: 450px;
@@ -1000,6 +1004,7 @@
   .guesting_box {
     margin-top: 50px;
   }
+
   .mt_max_lg {
     margin-top: 116px;
   }
@@ -1016,6 +1021,7 @@
   .guesting_box {
     margin-top: 0 !important;
   }
+
   .gap_74 {
     gap: 74px !important;
   }
@@ -1061,6 +1067,7 @@
     width: 500px !important;
     height: 450px;
   }
+
   .mt_max_lg {
     margin-top: 80px;
   }
@@ -1211,6 +1218,7 @@
     width: 300px;
     height: 300px;
   }
+
   .production_box.guesting_box {
     box-shadow: 0px 0px 12.74px 2.55px #e2e2e240 !important;
     height: 380px;
