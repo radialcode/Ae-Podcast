@@ -1386,7 +1386,7 @@
 
   .compare_chart {
     width: 500px !important;
-    height: 350px;
+    height: 500px !important;
   }
 }
 
