@@ -542,6 +542,7 @@
 /* -------------------------------------------------------------table --------------------------------------------- */
 .rank {
   min-width: 70px;
+  border-top-left-radius: 3px;
 }
 
 .rank_change {
@@ -558,6 +559,16 @@
 
 .establish {
   min-width: 170px;
+  border-top-right-radius: 3px;
+}
+
+.py_11 {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.hosting_table {
+  margin-top: 48px;
 }
 
 /* ==== POPUP CSS ==== */
@@ -864,6 +875,31 @@
   }
 }
 
+.td_clr_gradiant {
+  border-width: 1px, 0px, 0px, 1px;
+
+  border-style: solid;
+
+  border-image-source: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.3) 0%,
+      rgba(0, 185, 255, 0.3) 155.6%);
+}
+
+@media (max-width: 1199.98px) {
+  .podcast_graph {
+    max-width: 473px;
+  }
+
+  .chart_box {
+    width: 450px !important;
+    height: 400px;
+  }
+
+  .chances_chart {
+    transform: scale(1.2);
+  }
+}
+
 @media (max-width: 991.98px) {
   .industry_chart_main_parent {
     max-width: 450px;
@@ -917,7 +953,7 @@
   }
 
   .ph_provider_sec {
-    padding-top: 80px;
+    padding-top: 110px;
   }
 
   .activity_heading {
@@ -1034,6 +1070,13 @@
     height: 500px;
     box-shadow: 0px 4px 20px 0px #06060614;
   }
+  .hosting_heading {
+    max-width: 700px;
+  }
+
+  .hosting_table {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1073,6 +1116,9 @@
 
   .production_average {
     right: -10%;
+  }
+  .hosting_heading {
+    font-size: 24px;
   }
 }
 
@@ -1318,6 +1364,9 @@
 
   .income_text {
     left: -10% !important;
+  }
+  .ph_provider_sec {
+    padding-top: 80px;
   }
 }
 

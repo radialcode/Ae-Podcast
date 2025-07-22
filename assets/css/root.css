@@ -181,6 +181,14 @@
 }
 
 /* ------------- line heights ------------- */
+.lh_100 {
+  line-height: 100%;
+}
+
+.lh_104 {
+  line-height: 104%;
+}
+
 .lh_120 {
   line-height: 120%;
 }
@@ -220,6 +228,7 @@
 @media (max-width: 991.98px) {
   :root {
     /* --------font sizes --------------- */
+    --fs-xl: 20px;
     --fs-6xl: 36px;
     --fs-5xl: 40px;
     --fs-3xl: 32px;
@@ -248,7 +257,7 @@
     --fs-4xl: 26px;
     --fs-3xl: 28px;
     --fs-2xl: 24px;
-    --fs-xl: 20px;
+    --fs-xl: 18px;
     --fs-lg: 18px;
     --fs-md: 14px;
     --fs-sm: 14px !important;

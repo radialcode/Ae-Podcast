@@ -393,6 +393,9 @@
     padding-top: 103px;
 }
 
+.quick_ways_description {
+    max-width: 785px;
+}
 
 @media (max-width: 1199.98px) {
     .card_main {
@@ -411,6 +414,10 @@
 
     .card_main {
         min-height: 251px;
+    }
+
+    .quick_ways_description {
+        max-width: 550px;
     }
 }
 
@@ -434,6 +441,12 @@
 
     .quick_ways_subtitle {
         padding-top: 53px;
+    }
+
+    .podcast_left_vector {
+        left: -13px;
+        top: 212px;
+        max-width: 92px;
     }
 }
 
@@ -513,6 +526,7 @@
     .quick_cards_wrap {
         grid-template-columns: repeat(1, 1fr);
         padding-top: 55px;
+        gap: 23px;
     }
 
     .quick_ways_box svg {
