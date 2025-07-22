@@ -39,8 +39,8 @@
 .compare_chart {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
-  width: 600px !important;
-  height: 550px;
+  width: 573px !important;
+  height: 525px;
 }
 
 .total_values {
@@ -691,10 +691,6 @@
 }
 
 /* -------------------- average monthly income ------------------ */
-.prouction_P {
-  padding-top: 152px;
-}
-
 .text_gradient {
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
   -webkit-background-clip: text;
@@ -787,14 +783,19 @@
 
 .income_chart {
   width: 517px !important;
-  height: 500px;
+  height: 568px;
   box-shadow: 0px 4px 20px 0px #06060614;
+  border-radius: 24px !important;
 }
 
 .income_text {
-  left: -3% !important;
+  left: -4% !important;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
+}
+
+.my_custom_chart_area {
+  width: 422px !important;
 }
 
 @media (max-width: 1400px) {
@@ -825,12 +826,6 @@
   );
 }
 
-@media (max-width: 1024px) {
-  .hosting_table {
-    max-width: 615px;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
@@ -855,6 +850,12 @@
 
   .chance_box {
     height: 102px !important;
+  }
+  .my_custom_chart_area {
+    width: 380px !important;
+  }
+  .income_chart {
+    width: 480px !important;
   }
 }
 
@@ -881,33 +882,6 @@
 
   .establish {
     min-width: 124px;
-  }
-}
-
-.td_clr_gradiant {
-  border-width: 1px, 0px, 0px, 1px;
-
-  border-style: solid;
-
-  border-image-source: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.3) 0%,
-    rgba(0, 185, 255, 0.3) 155.6%
-  );
-}
-
-@media (max-width: 1199.98px) {
-  .podcast_graph {
-    max-width: 473px;
-  }
-
-  .chart_box {
-    width: 450px !important;
-    height: 400px;
-  }
-
-  .chances_chart {
-    transform: scale(1.2);
   }
 }
 
@@ -1087,6 +1061,9 @@
 
   .hosting_table {
     margin-top: 40px;
+  }
+  .pt_20 {
+    padding-top: 20px !important;
   }
 }
 
@@ -1378,8 +1355,14 @@
   .income_text {
     left: -10% !important;
   }
-  .ph_provider_sec {
-    padding-top: 80px;
+  .gap_40 {
+    gap: 40px !important;
+  }
+  .pt_20 {
+    padding-top: 8px !important;
+  }
+  .mt_20 {
+    margin-top: 20px !important;
   }
 }
 
