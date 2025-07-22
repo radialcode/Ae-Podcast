@@ -125,13 +125,13 @@
 
         .income_chart {
             width: 517px !important;
-            height: 500px;
+            height: 568px;
             box-shadow: 0px 4px 20px 0px #06060614;
             border-radius: 24px !important;
         }
 
         .income_text {
-            left: -3% !important;
+            left: -4% !important;
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);
         }
@@ -139,7 +139,6 @@
         .my_custom_chart_area {
             width: 422px !important;
         }
-
         @media (max-width: 1199.98px) {
             .Podcaster_heading {
                 max-width: 566px !important;
@@ -173,6 +172,9 @@
                 width: 517px !important;
                 height: 500px;
                 box-shadow: 0px 4px 20px 0px #06060614;
+            }
+            .pt_20{
+                padding-top: 20px !important;
             }
 
         }
@@ -211,6 +213,15 @@
             .income_text {
                 left: -10% !important;
             }
+            .gap_40{
+                gap: 40px !important;
+            }
+             .pt_20{
+                padding-top: 8px !important;
+            }
+            .mt_20{
+                margin-top: 20px !important;
+            }
         }
     </style>
 </head>
@@ -220,7 +231,7 @@
         <!-- -----Average Monthly Income for Podcasters---- -->
         <section class="bg-white prouction_P position-relative z-1">
             <div class="custom_container">
-                <div class="d-flex flex-lg-row flex-column align-items-lg-center gap_60 gap_28 gap_74">
+                <div class="d-flex flex-lg-row flex-column align-items-lg-center gap_60 gap_28 gap_74 gap_40">
                     <div class="d-flex flex-column flex-lg-row align-items-lg-center">
                         <div class="left_content">
                             <div class="position-relative">
@@ -255,7 +266,7 @@
                                 weekly
                                 interview-based podcasts.
                             </p>
-                            <div class="d-flex align-items-center justify-content-start pt-3 p_1 gap_6 w_536">
+                            <div class="d-flex align-items-center justify-content-start pt-3 p_1 gap_6 w_536 pt_20">
                                 <div
                                     class="industry_box seeking_guest_box d-flex flex-column justify-content-center chance_box">
                                     <p class="mb-0 clr_skyblue ff_graphik fw-medium fs_sm lh_110 pb-2">Industry</p>
@@ -267,7 +278,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-start mt-3 mt-sm-4 gap_24">
+                            <div class="d-flex align-items-start mt-4 gap_24 mt_20">
 
                                 <img class="ms-sm-2 d-sm-none d-block" src="/assets/images/svg/future_arrow_vector.svg"
                                     alt="arrow_vector" />
@@ -340,167 +351,162 @@
         });
     </script>
     <!--========== CHART JS ==========-->
-
-    <script>
-        var options = {
-            chart: {
-                type: "bar",
-                height: 400
-            },
-            series: [{
-                name: "Average Monthly Income",
-                data: [5.80, 34.62],
-            }],
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: "36px",
-                    endingShape: "flat",
-                    borderRadius: 20,
-                    borderRadiusApplication: 'end',
-                    distributed: true
-                }
-            },
-            colors: ["#00B9FF", "#6F69F2"],
-            xaxis: {
-                categories: ["Industry Average", "PodMatch Average"],
-                labels: {
-                    show: true,
-                    formatter: function (value, index) {
-                        return ' •' + value;
-                    },
-                    style: {
-                        fontSize: "12px",
-                        fontFamily: "Arial, sans-serif",
-                        fontWeight: 500,
-                        colors: ["#00B9FF", "#6F69F2"]
-                    }
-                },
-                axisBorder: {
-                    show: true,
-                    color: "#010101",
-                    height: 1.07
-                },
-                axisTicks: {
-                    show: true,
-                    color: "#010101",
-                    placement: 'on'
-                }
-            },
-
-            yaxis: {
-                min: 0,
-                max: 40,
-                tickAmount: 8, // Optional: sets how many ticks (like 0, 5, 10, ... 40)
-                labels: {
-                    formatter: function (val) {
-                        return Math.round(val);
-                    },
-                    style: {
-                        colors: '#949494',
-                        fontSize: '12px',
-                    }
-                },
-                axisTicks: {
-                    show: true,
-                    color: '#000'
-                },
-                axisBorder: {
-                    show: true,
-                    color: '#000'
-                }
-            },
-
-            grid: {
+<script>
+    var options = {
+        chart: {
+            type: "bar",
+            height: 400
+        },
+        series: [{
+            name: "Average Monthly Income",
+            data: [5.80, 34.62],
+        }],
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: "36px",
+                endingShape: "flat",
+                borderRadius: 20,
+                borderRadiusApplication: 'end',
+                distributed: true
+            }
+        },
+        colors: ["#00B9FF", "#6F69F2"],
+        xaxis: {
+            categories: ["Industry Average", "PodMatch Average"],
+            labels: {
                 show: true,
-                borderColor: '#000',
-                strokeDashArray: 0,
-            },
-
-            dataLabels: {
-                enabled: false
-            },
-            annotations: {
-                points: [
-                    {
-                        x: "Industry Average",
-                        y: 5.80,
-                        label: {
-                            text: "$5.80",
-                            borderRadius: 8,
-                            style: {
-                                background: "#00B9FF",
-                                color: "#ffffff",
-                                fontSize: "13px",
-                                fontWeight: "bold",
-                                padding: {
-                                    left: 10,
-                                    right: 10,
-                                    top: 5,
-                                    bottom: 5
-                                }
-                            },
-                            offsetY: -10
-                        },
-                        marker: {
-                            size: 8,
-                            fillColor: "#00B9FF",
-                            strokeColor: "#fff",
-                            strokeWidth: 2
-                        }
-                    },
-                    {
-                        x: "PodMatch Average",
-                        y: 34.62,
-                        label: {
-                            text: "$34.62",
-                            borderRadius: 8,
-                            style: {
-                                background: "#6F69F2",
-                                color: "#ffffff",
-                                fontSize: "13px",
-                                fontWeight: "bold",
-                                padding: {
-                                    left: 10,
-                                    right: 10,
-                                    top: 5,
-                                    bottom: 5
-                                }
-                            },
-                            offsetY: -10
-                        },
-                        marker: {
-                            size: 8,
-                            fillColor: "#6F69F2",
-                            strokeColor: "#fff",
-                            strokeWidth: 2
-                        }
-                    }
-                ]
-            },
-            legend: {
-                show: false,
-                markers: {
-                    width: 10,
-                    height: 10
+                formatter: function (value, index) {
+                    return '●  ' + value;
+                },
+                style: {
+                    fontSize: "12px",
+                    fontFamily: "Arial, sans-serif",
+                    fontWeight: 500,
+                    colors: ["#00B9FF", "#6F69F2"]
                 }
             },
-            grid: {
-                show: false
+            axisBorder: {
+                show: true,
+                color: "#010101",
+                height: 1.07
             },
-            tooltip: {
-                enabled: true,
-                y: {
-                    formatter: function (val) {
-                        return "$" + val.toFixed(2);
+            axisTicks: {
+                show: true,
+                color: "#010101",
+                placement: 'on'
+            }
+        },
+
+        yaxis: {
+            min: 0,
+            max: 40,
+            tickAmount: 8,
+            labels: {
+                formatter: function (val) {
+                    return Math.round(val);
+                },
+                style: {
+                    colors: '#949494',
+                    fontSize: '12px',
+                }
+            },
+            axisTicks: {
+                show: true,
+                color: '#000'
+            },
+            axisBorder: {
+                show: true,
+                color: '#000'
+            }
+        },
+
+        grid: {
+            show: false
+        },
+
+        dataLabels: {
+            enabled: false
+        },
+        annotations: {
+            points: [
+                {
+                    x: "Industry Average",
+                    y: 5.80,
+                    label: {
+                        text: "$5.80",
+                        borderRadius: 8,
+                        style: {
+                            background: "#00B9FF",
+                            color: "#ffffff",
+                            fontSize: "13px",
+                            fontWeight: "bold",
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 5,
+                                bottom: 5
+                            }
+                        },
+                        offsetY: -10
+                    },
+                    marker: {
+                        size: 8,
+                        fillColor: "#00B9FF",
+                        strokeColor: "#fff",
+                        strokeWidth: 2
                     }
+                },
+                {
+                    x: "PodMatch Average",
+                    y: 34.62,
+                    label: {
+                        text: "$34.62",
+                        borderRadius: 8,
+                        style: {
+                            background: "#6F69F2",
+                            color: "#ffffff",
+                            fontSize: "13px",
+                            fontWeight: "bold",
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 5,
+                                bottom: 5
+                            }
+                        },
+                        offsetY: -10
+                    },
+                    marker: {
+                        size: 8,
+                        fillColor: "#6F69F2",
+                        strokeColor: "#fff",
+                        strokeWidth: 2
+                    }
+                }
+            ]
+        },
+        legend: {
+            show: false,
+            markers: {
+                width: 10,
+                height: 10
+            }
+        },
+        tooltip: {
+            enabled: true,
+            y: {
+                formatter: function (val) {
+                    return "$" + val.toFixed(2);
                 }
             }
-        };
+        }
+    };
 
-        var chart = new ApexCharts(document.querySelector("#income-chart"), options);
-        chart.render();
-    </script>
+    var chart = new ApexCharts(document.querySelector("#income-chart"), options);
+    chart.render();
+</script>
+
 </body>
 
 </html>
