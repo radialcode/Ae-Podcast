@@ -31,7 +31,28 @@
     <!-- ==== AOS ==== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
+<style>
+    .compare_chart {
+  box-shadow: 0px 0px 20px 4px #e2e2e240;
+  border-radius: 24px;
+  width: 573px !important;
+  height: 525px;
+}
+@media (max-width: 991.98px) {
+  .compare_chart {
+    width: 600px !important;
+    height: 500px;
+  }
 
+
+}
+@media (max-width: 479.98px) {
+  .compare_chart {
+    width: 500px !important;
+    height: 350px;
+  }
+}
+</style>
 <body>
     <!-- Hidden SVG for gradient definitions -->
     <svg width="0" height="0" style="position: absolute;">
@@ -46,6 +67,8 @@
     <div class="overflow-x-hidden">
         <!-- -----podcast compare ---- -->
         <section class="podcast_compare_section position-relative z-1">
+            <img class="position-absolute guest_left_vector d-md-block d-none" src="assets/images/webp/chances_left_vector.webp"
+                alt="chances_left_vector" />
             <div class="custom_container">
                 <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-center">
                     <div class="col-lg-6 col-12 d-flex justify-content-center">
@@ -96,11 +119,11 @@
                             </span>
                         </h2>
 
-                        <p class="clr_grey ff_graphik fs_sm fw-normal mb-1 fw-light pb-3">
+                        <p class="clr_grey ff_graphik fs_sm fw-normal fw-light pb-3 mb-3">
                             A podcast listener is <span class="fw-semibold">100x</span> more valuable than an engagement
                             on social media. Podcasting is comparable to public speaking.
                         </p>
-                        <table class="radius_4 mt-3 table_border">
+                        <table class="radius_4 table_border">
                             <tr class="w-100">
                                 <th
                                     class="ff_graphik text-white border-start-0 poadcast_group_th bg_episode podcast_group fw-semibold fs_xsm text-center radius_4_left p-2">

@@ -39,8 +39,8 @@
 .compare_chart {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
-  width: 600px !important;
-  height: 550px;
+  width: 573px !important;
+  height: 525px;
 }
 
 .total_values {
@@ -228,7 +228,10 @@
 
 /* ================ */
 /* =========== */
-#guesting-chart,
+#guesting-chart {
+  width: 350px !important;
+  height: 350px !important;
+}
 #production-chart {
   width: 400px !important;
   height: 400px !important;
@@ -244,7 +247,7 @@
 }
 .guesting {
   rotate: -67deg;
-  transform: translate(13px, 41px);
+  /* transform: translate(13px, 41px); */
 }
 /* =========== */
 .height_box {
@@ -283,7 +286,7 @@
   max-width: 115px;
   position: absolute;
   left: 0;
-  top: -30%;
+  top: -14%;
   z-index: 1;
 }
 
@@ -337,7 +340,7 @@
 }
 
 .podcast_compare_section {
-  padding: 0px 0px 171px 0px;
+  padding: 0px 0px 152px 0px;
 }
 
 .podcast_graph {
@@ -414,7 +417,7 @@
 
 .seeking_guest_box {
   border: 1px solid #00b9ff;
-  padding: 16px 24px;
+  padding: 16px;
   max-width: 224px !important;
   width: 100%;
   height: 106px;
@@ -513,18 +516,18 @@
 .host_box {
   box-shadow: 0px 0px 107px 0px rgba(0, 0, 0, 0.1);
   border-radius: 9.5px;
-  width: 110px;
-  height: 60px;
+  width: 139px;
+  height: 67px;
 }
 
 .hosts {
-  left: 10%;
-  top: 10%;
+  left: -13%;
+  top: 3%;
 }
 
 .guests {
-  right: 5%;
-  bottom: 10%;
+  right: -9%;
+  bottom: 4%;
 }
 
 /*--------------------------------------------------------- podcast hosting provider ---------------------------------------------*/
@@ -620,8 +623,8 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -666,7 +669,7 @@
 
 .guests_time {
   right: 0 !important;
-  bottom: 3% !important;
+  bottom: 7% !important;
 }
 
 .hosts_time {
@@ -688,10 +691,6 @@
 }
 
 /* -------------------- average monthly income ------------------ */
-.prouction_P {
-  padding-top: 152px;
-}
-
 .text_gradient {
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
   -webkit-background-clip: text;
@@ -784,14 +783,19 @@
 
 .income_chart {
   width: 517px !important;
-  height: 500px;
+  height: 568px;
   box-shadow: 0px 4px 20px 0px #06060614;
+  border-radius: 24px !important;
 }
 
 .income_text {
-  left: -3% !important;
+  left: -4% !important;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
+}
+
+.my_custom_chart_area {
+  width: 422px !important;
 }
 
 @media (max-width: 1400px) {
@@ -822,12 +826,6 @@
   );
 }
 
-@media (max-width: 1024px) {
-  .hosting_table {
-    max-width: 615px;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .podcast_graph {
     max-width: 473px;
@@ -852,6 +850,12 @@
 
   .chance_box {
     height: 102px !important;
+  }
+  .my_custom_chart_area {
+    width: 380px !important;
+  }
+  .income_chart {
+    width: 480px !important;
   }
 }
 
@@ -878,31 +882,6 @@
 
   .establish {
     min-width: 124px;
-  }
-}
-
-.td_clr_gradiant {
-  border-width: 1px, 0px, 0px, 1px;
-
-  border-style: solid;
-
-  border-image-source: linear-gradient(311.05deg,
-      rgba(111, 105, 242, 0.3) 0%,
-      rgba(0, 185, 255, 0.3) 155.6%);
-}
-
-@media (max-width: 1199.98px) {
-  .podcast_graph {
-    max-width: 473px;
-  }
-
-  .chart_box {
-    width: 450px !important;
-    height: 400px;
-  }
-
-  .chances_chart {
-    transform: scale(1.2);
   }
 }
 
@@ -1012,7 +991,7 @@
     max-width: 115px;
     position: absolute;
     left: -5%;
-    top: -30%;
+    top: -14%;
   }
 
   .failure_text_abs {
@@ -1082,6 +1061,9 @@
 
   .hosting_table {
     margin-top: 40px;
+  }
+  .pt_20 {
+    padding-top: 20px !important;
   }
 }
 
@@ -1373,8 +1355,14 @@
   .income_text {
     left: -10% !important;
   }
-  .ph_provider_sec {
-    padding-top: 80px;
+  .gap_40 {
+    gap: 40px !important;
+  }
+  .pt_20 {
+    padding-top: 8px !important;
+  }
+  .mt_20 {
+    margin-top: 20px !important;
   }
 }
 
@@ -1398,7 +1386,7 @@
 
   .compare_chart {
     width: 500px !important;
-    height: 350px;
+    height: 500px !important;
   }
 }
 
