@@ -47,16 +47,6 @@
             max-width: 566px;
         }
 
-        .box_shadow {
-            width: 517px;
-            height: 568px;
-            border-radius: 24px;
-            box-shadow: 0px 4px 20px 0px #06060614;
-            background-color: #fff;
-            padding: 66px 45px 0px 50px;
-            position: relative;
-        }
-
         .prodcaster_chart {
             max-width: 422px;
             width: 100%;
@@ -133,17 +123,6 @@
             height: 106px !important;
         }
 
-        .chart-border-frame {
-            width: 379px;
-            height: 393px;
-            border: 1.8px solid #010101;
-            border-left: 1.8px solid #010101;
-            border-bottom: 1.8px solid #010101;
-            border-top: none;
-            border-right: none;
-            pointer-events: none;
-        }
-
         .income_chart {
             width: 517px !important;
             height: 500px;
@@ -151,7 +130,7 @@
         }
 
         .income_text {
-            left: -3%;
+            left: -3% !important;
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);
         }
@@ -159,12 +138,6 @@
         @media (max-width: 1199.98px) {
             .Podcaster_heading {
                 max-width: 566px !important;
-            }
-
-            .shadow_box {
-                width: 426px;
-                height: 500px;
-                padding: 50px 40px 0px 40px;
             }
 
             .gap_28 {
@@ -177,13 +150,6 @@
         }
 
         @media (max-width:991.98px) {
-            .shadow_box {
-                width: 517px;
-                height: 568px;
-                padding: 66px 45px 0px 50px;
-                margin: auto;
-            }
-
             .gap_74 {
                 gap: 74px !important;
             }
@@ -192,37 +158,47 @@
                 height: 102px !important;
             }
 
-            @media (max-width:575.98px) {
-                .shadow_box {
-                    width: 335px;
-                    height: 397px;
-                    padding: 12px 45px 0px 50px;
-                    margin: auto;
-                }
+            .income_chart {
+                width: 517px !important;
+                height: 500px;
+                box-shadow: 0px 4px 20px 0px #06060614;
+            }
 
-                .average_mothly_py {
-                    padding-top: 12px;
-                    padding-bottom: 6px;
-                }
+        }
 
-                .prodcaster_chart {
-                    max-width: 281px !important;
-                    width: 100%;
-                    height: 335px;
-                    object-fit: cover;
-                }
+        @media (max-width:575.98px) {
+            .prodcaster_chart {
+                max-width: 281px !important;
+                width: 100%;
+                height: 335px;
+                object-fit: cover;
+            }
 
-                .prouction_P {
-                    padding-top: 80px;
-                }
+            .prouction_P {
+                padding-top: 80px;
+            }
 
-                .w_536 {
-                    max-width: 100% !important;
-                }
+            .w_536 {
+                max-width: 100% !important;
             }
 
             .chance_box {
                 height: 90px !important;
+            }
+
+            #income-chart.monthly_income_chart {
+                width: 100% !important;
+                margin-left: 60px !important;
+            }
+
+            .income_chart {
+                width: 332px !important;
+                height: 500px;
+                box-shadow: 0px 4px 20px 0px #06060614;
+            }
+
+            .income_text {
+                left: -10% !important;
             }
         }
     </style>
@@ -230,11 +206,11 @@
 
 <body>
     <div class="overflow-x-hidden">
-        <!-- -----podcast compare ---- -->
+        <!-- -----Average Monthly Income for Podcasters---- -->
         <section class="bg-white prouction_P position-relative z-1">
             <div class="custom_container">
-                <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-center">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap_60 gap_28 gap_74">
+                <div class="d-flex flex-lg-row flex-column align-items-lg-center gap_60 gap_28 gap_74">
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
                         <div class="left_content">
                             <div class="position-relative">
                                 <div id="PodcastersselectBox2"
@@ -296,7 +272,7 @@
                     <div class="">
                         <div
                             class="income_chart d-flex flex-column align-items-center justify-content-center position-relative mx-auto mt_40">
-                            <div id="chart" class="position-relative">
+                            <div id="income-chart" class="position-relative monthly_income_chart">
                             </div>
                             <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Average Monthly
                                 Income for Podcasters (Monetization)
@@ -310,10 +286,6 @@
                 </div>
             </div>
         </section>
-        <!-- ---------- Back to top button ------------- -->
-        <div onclick="topFunction()" id="back-top" class="cursor_pointer overflow-hidden transition_300 rounded-pill">
-            <img class="back_top_img" src="./assets/images/svg/back_to_top.svg" alt="back-top" />
-        </div>
     </div>
     <!-- ------------ Bootstrap Cdn Link ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -333,30 +305,19 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
-
-    <script>
-        window.addEventListener("load", function () {
-            AOS.init({
-                once: true, // Animation will only occur once per element
-                disable: function () {
-                    var maxWidth = 992;
-                    return window.innerWidth < maxWidth;
-                }
-            });
-        });
     </script>
-<script>
-            document.getElementById("PodcastersselectBox2").onclick = function (e) {
-                e.stopPropagation();
+    <script>
+        document.getElementById("PodcastersselectBox2").onclick = function (e) {
+            e.stopPropagation();
             document.getElementById("Podcastersoptions2").classList.toggle("d-none");
         };
 
-            function PodcastersselectValue2(value) {
-                document.getElementById("Podcasters2").innerText = value;
+        function PodcastersselectValue2(value) {
+            document.getElementById("Podcasters2").innerText = value;
             document.getElementById("Podcastersoptions2").classList.add("d-none");
         }
 
-            document.addEventListener("click", function (event) {
+        document.addEventListener("click", function (event) {
             const selectBox = document.getElementById("PodcastersselectBox2");
             const optionsBox = document.getElementById("Podcastersoptions2");
 
@@ -364,107 +325,169 @@
                 optionsBox.classList.add("d-none");
             }
         });
-</script>
-    <!-- ========== CHART JS ========== -->
-<script>
-    var options = {
-        chart: {
-            type: "bar",
-        },
-        series: [{
-            name: "Average Monthly Income",
-            data: [5.80, 34.62],
-        }],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: "36px",
-                endingShape: "rounded",
-                borderRadius: 4,
-                distributed: true,
-                dataLabels: {
-                    position: 'top', // ✅ Label shown at the top
-                },
+    </script>
+    <!--========== CHART JS ==========-->
+
+    <script>
+        var options = {
+            chart: {
+                type: "bar",
+                height: 400
             },
-        },
-        dataLabels: {
-            enabled: true,
-            formatter: function (val) {
-                return "$" + val.toFixed(2); // ✅ $5.80, $34.62
-            },
-            style: {
-                fontSize: '14px',
-                fontWeight: 'bold',
-                colors: ['#000'],
-            },
-        },
-        colors: ["#00B9FF", "#6F69F2"],
-        xaxis: {
-            categories: ["Industry Average", "PodMatch Average"],
-            labels: {
-                style: {
-                    fontSize: "12px",
-                    fontFamily: "Graphik, Arial, sans-serif",
-                    fontWeight: 500,
-                    colors: ["#00B9FF", "#6F69F2"],
-                },
-            },
-            axisBorder: {
-                show: true,
-                color: "#010101",
-                height: 1.07,
-            },
-            axisTicks: {
-                show: true,
-                color: "#010101",
-                placement: 'on',
-            },
-        },
-        yaxis: {
-            min: 0,
-            max: 40,
-            labels: {
-                style: {
-                    colors: "#949494",
-                    fontSize: "12px",
-                    fontFamily: "Graphik, Arial, sans-serif",
-                    fontWeight: 500,
-                },
-                formatter: function (val) {
-                    return val; // No $ sign here
+            series: [{
+                name: "Average Monthly Income",
+                data: [5.80, 34.62],
+            }],
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: "36px",
+                    endingShape: "flat",
+                    borderRadius: 20,
+                    borderRadiusApplication: 'end',
+                    distributed: true
                 }
             },
-            axisBorder: {
-                show: true,
-                color: "#010101",
-                width: 1.07,
-            },
-            axisTicks: {
-                show: true,
-                color: "#010101",
-                width: 1.07,
-            },
-        },
-        legend: {
-            show: false,
-        },
-        grid: {
-            show: false,
-        },
-        tooltip: {
-            enabled: true,
-            y: {
-                formatter: function (val) {
-                    return "$" + val.toFixed(2);
+            colors: ["#00B9FF", "#6F69F2"],
+            xaxis: {
+                categories: ["Industry Average", "PodMatch Average"],
+                labels: {
+                    show: true,
+                    formatter: function (value, index) {
+                        return ' •' + value;
+                    },
+                    style: {
+                        fontSize: "12px",
+                        fontFamily: "Arial, sans-serif",
+                        fontWeight: 500,
+                        colors: ["#00B9FF", "#6F69F2"]
+                    }
                 },
+                axisBorder: {
+                    show: true,
+                    color: "#010101",
+                    height: 1.07
+                },
+                axisTicks: {
+                    show: true,
+                    color: "#010101",
+                    placement: 'on'
+                }
             },
-        },
-    };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>
+            yaxis: {
+                min: 0,
+                max: 40,
+                tickAmount: 8, // Optional: sets how many ticks (like 0, 5, 10, ... 40)
+                labels: {
+                    formatter: function (val) {
+                        return Math.round(val);
+                    },
+                    style: {
+                        colors: '#949494',
+                        fontSize: '12px',
+                    }
+                },
+                axisTicks: {
+                    show: true,
+                    color: '#000'
+                },
+                axisBorder: {
+                    show: true,
+                    color: '#000'
+                }
+            },
 
+            grid: {
+                show: true,
+                borderColor: '#000',
+                strokeDashArray: 0,
+            },
+
+            dataLabels: {
+                enabled: false
+            },
+            annotations: {
+                points: [
+                    {
+                        x: "Industry Average",
+                        y: 5.80,
+                        label: {
+                            text: "$5.80",
+                            borderRadius: 8,
+                            style: {
+                                background: "#00B9FF",
+                                color: "#ffffff",
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 5,
+                                    bottom: 5
+                                }
+                            },
+                            offsetY: -10
+                        },
+                        marker: {
+                            size: 8,
+                            fillColor: "#00B9FF",
+                            strokeColor: "#fff",
+                            strokeWidth: 2
+                        }
+                    },
+                    {
+                        x: "PodMatch Average",
+                        y: 34.62,
+                        label: {
+                            text: "$34.62",
+                            borderRadius: 8,
+                            style: {
+                                background: "#6F69F2",
+                                color: "#ffffff",
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 5,
+                                    bottom: 5
+                                }
+                            },
+                            offsetY: -10
+                        },
+                        marker: {
+                            size: 8,
+                            fillColor: "#6F69F2",
+                            strokeColor: "#fff",
+                            strokeWidth: 2
+                        }
+                    }
+                ]
+            },
+            legend: {
+                show: false,
+                markers: {
+                    width: 10,
+                    height: 10
+                }
+            },
+            grid: {
+                show: false
+            },
+            tooltip: {
+                enabled: true,
+                y: {
+                    formatter: function (val) {
+                        return "$" + val.toFixed(2);
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#income-chart"), options);
+        chart.render();
+    </script>
 </body>
 
 </html>
