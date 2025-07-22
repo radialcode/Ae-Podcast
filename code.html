@@ -127,22 +127,7 @@
         }
 
         @media (max-width:992px) {
-            .mt_max_lg {
-                margin-top: 116px;
-            }
-
-            .industry_box.seeking_guest_box,
-            .industry_podmatch_box.seeking_guest_box {
-                height: 102px;
-            }
-
-            .production_average {
-                right: -20%;
-            }
-
-            .guesting_box {
-                margin-top: 0 !important;
-            }
+           
         }
 
         @media (max-width:768px) {
@@ -239,8 +224,8 @@
                     <div
                         class="d-flex align-items-center justify-content-center justify-content-xxl-start bg-white production_box guesting_box">
                         <div class="position-relative pt-3 pt-sm-0">
-                            <div class="guesting">
-                                <div id="guesting-chart">
+                            <div class="production">
+                                <div id="production-chart">
                                     <svg class="transform_translate" width="312" height="312"></svg>
                                 </div>
                             </div>
@@ -366,13 +351,13 @@
             function centerText() {
                 return function () {
                     var svg = d3.select("svg");
-                    var donut1 = svg.selectAll("#guesting-chart g.nv-slice").filter(
+                    var donut1 = svg.selectAll("#production-chart g.nv-slice").filter(
                         function (d, i) {
                             return i == 0;
                         }
                     );
 
-                    var donut2 = svg.selectAll("#guesting-chart g.nv-slice").filter(
+                    var donut2 = svg.selectAll("#production-chart g.nv-slice").filter(
                         function (d, i) {
                             return i == 0;
                         }
@@ -392,19 +377,19 @@
                 };
             }
 
-            d3.select("#guesting-chart svg")
+            d3.select("#production-chart svg")
                 .datum(healthData1())
                 .transition().duration(300)
                 .call(donutChart1)
                 .call(centerText());
 
-            d3.select("#guesting-chart svg")
+            d3.select("#production-chart svg")
                 .datum(healthData2())
                 .transition().duration(300)
                 .call(donutChart2)
                 .call(centerText());
             setTimeout(() => {
-                d3.select("#guesting-chart svg")
+                d3.select("#production-chart svg")
                     .select(".nv-pieChart")
                     .classed("guesting-chart-size", true);
             }, 310);
