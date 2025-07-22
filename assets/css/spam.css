@@ -28,7 +28,8 @@
 }
 
 .space_faq {
-  padding: 152px 20px 152px 20px;
+  padding-top: 148px;
+  padding-bottom: 152px;
 }
 
 .space_header {
@@ -84,12 +85,10 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(
-    99.76deg,
-    #00b9ff 24.35%,
-    #6f69f2 100%,
-    #10b6d0 88.28%
-  );
+  background: linear-gradient(99.76deg,
+      #00b9ff 24.35%,
+      #6f69f2 100%,
+      #10b6d0 88.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -278,7 +277,7 @@ a:hover {
   position: relative;
   display: flex;
   align-items: start;
-  padding: 16px 0px 16px 0px !important;
+  padding: 15px 0px 16px 0px !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   color: #343434;
@@ -329,6 +328,11 @@ a:hover {
   border-bottom: 1px solid #d6d6d6 !important;
 }
 
+.accordion-item:nth-child(1) {
+  margin-top: 0 !important;
+
+}
+
 .accordion-button::after {
   background-size: 15px 15px;
   /* Set the width and height here */
@@ -344,8 +348,8 @@ a:hover {
 
 @media (max-width: 991.98px) {
   .space_faq {
-    padding-top: 90px;
-    padding-bottom: 42px;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
 
   .box_hdr {
@@ -382,6 +386,10 @@ a:hover {
 
   .d_none {
     display: none;
+  }
+
+  .mxw_faq {
+    max-width: 643px;
   }
 }
 
@@ -512,8 +520,8 @@ a:hover {
   }
 
   .space_faq {
-    padding-top: 82px;
-    padding-bottom: 32px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .space_accd {
