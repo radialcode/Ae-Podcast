@@ -393,6 +393,10 @@
     padding-top: 103px;
 }
 
+.apexcharts-text {
+    fill: #949494 !important;
+}
+
 @media (max-width: 1199.98px) {
     .card_main {
         height: 302px;

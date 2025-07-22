@@ -162,10 +162,9 @@
 
 .success_text_abs {
   position: absolute;
-  top: 10%;
-  left: 55%;
+  top: 8%;
+  left: 40%;
   max-width: 110px;
-  transform: rotate(9deg);
   z-index: -1;
 }
 
@@ -1208,9 +1207,8 @@
   }
 
   .success_text_abs {
-    top: 11%;
-    left: 53%;
-    transform: rotate(-15deg);
+    top: 15%;
+    left: 41%;
   }
 
   #guesting-chart,
