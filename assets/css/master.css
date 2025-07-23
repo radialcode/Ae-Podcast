@@ -475,16 +475,19 @@
   .active_box {
     padding: 15px 24px;
     max-width: 256px;
+    width: 100%;
+    /* min-width: 256px; */
   }
 
   .total_box {
     max-width: 256px !important;
-    min-width: 256px !important;
+    width: 100%;
+    /* min-width: 256px !important; */
   }
 
-  .independent_future {
+  /* .independent_future {
     margin-top: 74px;
-  }
+  } */
 
   .chances_heading {
     max-width: 600px !important;
@@ -514,9 +517,9 @@
     bottom: 20px;
   }
 
-  .total_box {
+  /* .total_box {
     max-width: 160px !important;
-  }
+  } */
 
   .gradient_btn {
     margin-top: 40px;
@@ -588,5 +591,17 @@
 
   .gap_22 {
     gap: 19px !important;
+  }
+
+  .active_box {
+    padding: 16px;
+    max-width: 158px;
+    width: 100%;
+  }
+
+  .total_box {
+    max-width: 158px !important;
+    width: 100%;
+    min-width: 158px !important;
   }
 }
