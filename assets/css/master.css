@@ -112,11 +112,9 @@
 }
 
 .table_gradient_color {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 .bg_impactful_card {
@@ -127,7 +125,7 @@
   border-top: 2px solid #6f69f21a;
 }
 
-.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
@@ -216,11 +214,9 @@
 }
 
 .td_gradient {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 /* ================ future sec ===================== */
@@ -241,6 +237,8 @@
 .possible_future_chart {
   max-width: 494px;
 }
+
+
 
 /*============================ ellipse ============================*/
 .podcasting_industries_ellipse {
@@ -304,6 +302,7 @@
 .footer_padding {
   padding: 55px 0px 0px 0px;
 }
+
 .footer_bottom_spacing {
   padding-bottom: 41px;
 }
@@ -416,6 +415,7 @@
     left: -50px;
     bottom: -80%;
   }
+
   .footer_para {
     max-width: 645px;
   }
@@ -470,6 +470,37 @@
 
   .line_right_second_podcast_table {
     top: 93%;
+  }
+
+  .active_box {
+    padding: 15px 24px;
+    max-width: 256px;
+  }
+
+  .total_box {
+    max-width: 256px !important;
+    min-width: 256px !important;
+  }
+
+  .independent_future {
+    margin-top: 74px;
+  }
+
+  .chances_heading {
+    max-width: 600px !important;
+  }
+
+  .arrow_width {
+    margin: 15px 0px 0px -20px;
+  }
+
+  .chances_table {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  .font_xl {
+    font-size: 24px;
   }
 }
 
@@ -542,7 +573,20 @@
     font-size: 16px;
   }
 
+  .font_xl {
+    font-size: 20px;
+  }
+
   .footer_padding {
     padding-top: 51px;
+  }
+
+  .arrow_width {
+    width: 58px;
+    margin: 13px 35px 0px 0px;
+  }
+
+  .gap_22 {
+    gap: 19px !important;
   }
 }

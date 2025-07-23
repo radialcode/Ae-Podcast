@@ -48,11 +48,9 @@
 }
 
 .td_gradient {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 /* ====podcasting industry chart ==== */
@@ -232,6 +230,7 @@
   width: 350px !important;
   height: 350px !important;
 }
+
 #production-chart {
   width: 400px !important;
   height: 400px !important;
@@ -245,10 +244,12 @@
   height: 100%;
   margin: 0 auto;
 }
+
 .guesting {
   rotate: -67deg;
   transform: translate(13px, 41px);
 }
+
 /* =========== */
 .height_box {
   height: 106px;
@@ -819,11 +820,9 @@
 
   border-style: solid;
 
-  border-image-source: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.3) 0%,
-    rgba(0, 185, 255, 0.3) 155.6%
-  );
+  border-image-source: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.3) 0%,
+      rgba(0, 185, 255, 0.3) 155.6%);
 }
 
 @media (max-width: 1199.98px) {
@@ -851,9 +850,11 @@
   .chance_box {
     height: 102px !important;
   }
+
   .my_custom_chart_area {
     width: 380px !important;
   }
+
   .income_chart {
     width: 480px !important;
   }
@@ -1017,8 +1018,8 @@
   }
 
   .industry_chart_bg {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 74px;
+    margin-bottom: 0px;
   }
 
   .guesting_box {
@@ -1053,6 +1054,7 @@
     height: 500px;
     box-shadow: 0px 4px 20px 0px #06060614;
   }
+
   .hosting_heading {
     max-width: 700px;
   }
@@ -1060,8 +1062,14 @@
   .hosting_table {
     margin-top: 40px;
   }
+
   .pt_20 {
     padding-top: 20px !important;
+  }
+
+  .industry_chart_img {
+    margin-top: 74px;
+    margin-bottom: 70px;
   }
 }
 
@@ -1103,6 +1111,7 @@
   .production_average {
     right: -10%;
   }
+
   .hosting_heading {
     font-size: 24px;
   }
@@ -1353,12 +1362,15 @@
   .income_text {
     left: -10% !important;
   }
+
   .gap_40 {
     gap: 40px !important;
   }
+
   .pt_20 {
     padding-top: 8px !important;
   }
+
   .mt_20 {
     margin-top: 20px !important;
   }
