@@ -151,6 +151,17 @@
 }
 
 /* ====== Podcast Sharing Table Styles ===== */
+.padcaster_share_ellipse {
+    width: 257px;
+    height: 211px;
+    background-color: #00B9FF;
+    opacity: 10%;
+    filter: blur(79px);
+    top: 0;
+    right: 5%;
+
+}
+
 .podcaster_right_vector {
     bottom: 48px;
     right: 0;
@@ -447,6 +458,11 @@
         left: -13px;
         top: 212px;
         max-width: 92px;
+    }
+
+    .quick_ways_ellipse {
+        width: 500px;
+        top: 40%;
     }
 }
 

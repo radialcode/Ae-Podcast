@@ -67,6 +67,7 @@
   --clr-offgrey: #4444;
   --clr-green: #44dc59;
   --clr-red: #ff4d4d;
+  --clr-dark-red: #FF0000;
   --clr-lightblack: #343434;
   --clr-light-grey: #45474A;
   --clr-purple: #6f69f2;
@@ -183,6 +184,10 @@
 
 .clr_off_gray {
   color: var(--clr-off-gray);
+}
+
+.clr_dark_red {
+  color: var(--clr-dark-red);
 }
 
 /* ------------- line heights ------------- */

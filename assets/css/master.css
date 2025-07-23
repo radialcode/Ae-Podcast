@@ -276,8 +276,8 @@
   border-radius: 32px;
   min-height: 318px;
   /* transform: translateY(50%); */
-  box-shadow: 0px 12px 30px 0px #706af34d;
-  padding: 48px 36px;
+  box-shadow: 0px 12px 30px 0px #706AF34D;
+  padding: 45px 36px;
   /* margin-top: -230px !important; */
 }
 
@@ -397,14 +397,24 @@
   .max_w_630 {
     max-width: 630px;
   }
+
+  .line_right_second_podcast_table {
+    max-width: 85px;
+  }
+
+  .vctr_faq {
+    left: 0px;
+    bottom: 43%;
+    width: 70px;
+  }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width:991.98px) {
+
   .vctr_faq {
     left: -50px;
     bottom: -80%;
   }
-
   .footer_para {
     max-width: 645px;
   }
@@ -456,6 +466,10 @@
   .impactful_card h3 {
     max-width: 521px;
   }
+
+  .line_right_second_podcast_table {
+    top: 93%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -470,6 +484,10 @@
 
   .total_box {
     min-width: 160px !important;
+  }
+
+  .gradient_btn {
+    margin-top: 40px;
   }
 }
 
@@ -501,7 +519,7 @@
   }
 
   .impactful_card {
-    padding: 57px 16px;
+    padding: 56px 16px;
     border-radius: 24px;
     /* transform: translateY(51%); */
   }
