@@ -1204,6 +1204,30 @@
     max-width: 205px;
   }
 
+  .possible_total_abs {
+    bottom: 16%;
+    left: 55%;
+  }
+
+  .active_abs_donut {
+    top: 25%;
+    left: 19%;
+  }
+
+  .single_lines_abs {
+    position: absolute !important;
+    top: 11% !important;
+    left: 9% !important;
+    max-width: 200px;
+  }
+
+  .three_lines_abs {
+    position: absolute !important;
+    bottom: -1% !important;
+    right: 3% !important;
+    max-width: 200px;
+  }
+
   .chance_elipse {
     bottom: -5%;
     left: -2%;
