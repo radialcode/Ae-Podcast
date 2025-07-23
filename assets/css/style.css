@@ -408,9 +408,17 @@
     max-width: 785px;
 }
 
-@media (max-width: 1199.98px) {
-
+.chances_donut_chart_pos {
+    top: 29%;
+    left: 27%;
 }
+
+.chances_donut_chart_pos_days {
+    top: 68%;
+    right: 25%;
+}
+
+@media (max-width: 1199.98px) {}
 
 @media (max-width: 991.98px) {
 
@@ -554,9 +562,22 @@
     .quick_ways_subtitle {
         padding-top: 61px;
     }
+
+    .chances_donut_chart_pos_days {
+        top: 65%;
+        right: 31%;
+    }
+
+    .chances_donut_chart_pos {
+        top: 32%;
+        left: 31%;
+    }
+
+
 }
+
 @media (min-width:1200px) {
-    .mt_4{
+    .mt_4 {
         margin-top: 4px;
     }
 }
