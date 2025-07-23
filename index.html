@@ -55,6 +55,14 @@
         <stop offset="0%" stop-color="#6F69F2" />
         <stop offset="100%" stop-color="#00B9FF" />
       </linearGradient>
+      <linearGradient id="chart_gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#6F69F2" />
+        <stop offset="100%" stop-color="#269FFB" />
+      </linearGradient>
+      <linearGradient id="chart_gradient_2" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#6F69F2" />
+        <stop offset="100%" stop-color="#269FFB" />
+      </linearGradient>
     </defs>
   </svg>
 
@@ -595,7 +603,6 @@
             </div>
           </div>
         </div>
-        <div class="" style="width: 187px; height: 187p;"></div>
       </div>
     </section>
     <!-- ------------ chances section -------------- -->
@@ -959,7 +966,7 @@
             </div>
           </div>
           <div class="mt-0 mt-md-2 mt-xl-0" data-aos="fade-up" data-aos-duration="1000">
-            <h3 class="ff_graphik fw-medium fs_xl lh_120 clr_black mb-0 mt-5 text-lg-center">Average
+            <h3 class="ff_graphik fw-medium fs_xl lh_120 clr_black mb-0 mt-5 text-center">Average
               Podcasts a Guest Appears on Per Month</h3>
             <div class="w-100 average_time_box">
               <div
@@ -1009,7 +1016,7 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="1000"
-            class="col-lg-6 col-12 d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 your_podcast_compared">
+            class="col-lg-6 col-12 d-flex flex-column pb-3 pb-lg-0 align-items-start ms-xxl-4 ps-lg-3 ">
             <div class="position-relative">
               <div id="compareselectBox"
                 class="d-flex align-items-center justify-content-between select_box select_bg bg-white cursor_pointer">
@@ -1036,7 +1043,7 @@
                 </p>
               </div>
             </div>
-            <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3">
+            <h2 class="ff_graphik clr_black pb-2 fw-semibold fs_5xl lh_120 mt-3 your_podcast_compared">
               Podcast Listenership Industry Averages
               <span class="cursor_pointer" data-bs-toggle="tooltip" data-bs-placement="top"
                 title="Downloads are not everything, nor are they essential to podcasting success. However, gaining perspective on the reality of where your podcast is can be encouraging!">
@@ -1044,11 +1051,11 @@
               </span>
             </h2>
 
-            <p class="clr_grey ff_graphik fs_sm fw-normal fw-light pb-3 mb-3">
+            <p class="clr_grey ff_graphik fs_sm fw-normal fw-light pb-3 mb-3 your_podcast_compared">
               A podcast listener is <span class="fw-semibold">100x</span> more valuable than an engagement
               on social media. Podcasting is comparable to public speaking.
             </p>
-            <table class="radius_4 table_border">
+            <table class="radius_4 table_border w-100">
               <tr class="w-100">
                 <th
                   class="ff_graphik text-white border-start-0 poadcast_group_th bg_episode podcast_group fw-semibold fs_xsm text-center radius_4_left p-2">
@@ -3597,22 +3604,29 @@
   <!-- ========== CHART 3 ======== -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var ctx = document.getElementById("industryChart").getContext("2d");
+      var canvas = document.getElementById("industryChart"); // ✅ define canvas
+      var ctx = canvas.getContext("2d");
+
+
+      var gradient = ctx.createLinearGradient(canvas.width, 0, 0, canvas.height);
+      gradient.addColorStop(0, "#00B9FF");
+      gradient.addColorStop(1, "#6F69F2");
+
       var industryChart = new Chart(ctx, {
         type: "pie",
         data: {
           labels: ["Total", "Active"],
           datasets: [{
-            backgroundColor: ["#5c76f4", "#00B9FF"],
+            backgroundColor: [gradient, "#00B9FF"],
             data: [2807713, 898197],
-            borderWidth: 6, // Create visible separation
-            borderColor: "#ffffff" // Use chart background color (white) to simulate space
+            borderWidth: 6,
+            borderColor: "#ffffff"
           }],
         },
         options: {
           plugins: {
             legend: {
-              display: false, // Hide the default legend
+              display: false,
             },
             tooltip: {
               enabled: false,
@@ -3624,9 +3638,6 @@
               bodyColor: "black",
               displayColors: false,
               padding: 8,
-              shadowOffsetX: 0,
-              shadowOffsetY: 4,
-              shadowBlur: 8,
               position: "average"
             },
           },
@@ -3634,6 +3645,7 @@
       });
     });
   </script>
+
   <!-- ==== Possible Future chart ==== -->
   <script>
     am4core.useTheme(am4themes_animated);
@@ -3698,7 +3710,7 @@
         .showLegend(false)
         .labelThreshold(.05)
         .labelType("key")
-        .color(["#00B9FF", "#5979F5"])
+        .color(["#00B9FF", "url(#chart_gradient)"])
         .tooltipContent(function (key, y, e, graph) {
           return '<p style="border-radius: 8px; color: black;">' + y + '%</p>';
         })
@@ -3859,7 +3871,7 @@
         .showLabels(false)
         .showLegend(false)
         .labelThreshold(.05)
-        .color(["#6B6DF3", "#01B7FC"])
+        .color(["url(#chart_gradient)", "#00B9FF"])
         .donut(true)
         .donutRatio(0.45)
         .tooltips(false);
