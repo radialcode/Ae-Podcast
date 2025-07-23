@@ -28,7 +28,7 @@
 }
 
 .space_faq {
-  padding-top: 148px;
+  padding-top: 152px;
   padding-bottom: 152px;
 }
 
@@ -85,10 +85,7 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(99.76deg,
-      #00b9ff 24.35%,
-      #6f69f2 100%,
-      #10b6d0 88.28%);
+  background: linear-gradient(99.76deg, #00B9FF 34.35%, #6F69F2 64.82%, #10B6D0 88.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -404,6 +401,10 @@ a:hover {
     margin-top: 40px;
   }
 
+  .counter_mxw {
+    width: 105px;
+  }
+
   .accordion-button {
     max-width: 650px !important;
   }
@@ -424,7 +425,7 @@ a:hover {
   }
 
   .card_main {
-    padding: 24px;
+    padding: 24px 20px;
   }
 
   .space_header {
@@ -448,9 +449,6 @@ a:hover {
     margin: 0px !important;
   }
 
-  .counter_mxw {
-    width: 105px;
-  }
 
   .space_ul_nav {
     gap: 21px;
