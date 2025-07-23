@@ -246,9 +246,10 @@
 }
 
 .your_podcast_right_vec {
-  top: 50%;
+  top: -11% !important;
   right: 0;
-  max-height: 484px;
+  /* max-height: 484px; */
+  width: 115px;
 }
 
 .chances_left_vector {
@@ -262,6 +263,89 @@
 
 .faq {
   z-index: 5;
+}
+
+.independent_interview_ellipse {
+  width: 187px;
+  height: 187px;
+  background: #00C2CB;
+  filter: blur(168px);
+  bottom: 22%;
+  z-index: 1;
+  left: -14%;
+}
+
+.independent_interview_right_ellipse {
+  width: 142px;
+  height: 244px;
+  background: #6F69F2;
+  right: -5%;
+  bottom: 5%;
+  filter: blur(180px);
+  z-index: 1;
+}
+
+.hero_ellipse {
+  width: 187px;
+  height: 187px;
+  background: #00C2CB;
+  filter: blur(230px);
+  bottom: -117%;
+  z-index: 1;
+}
+
+.industry_vector {
+  right: 0;
+  bottom: 70px;
+}
+
+.independent_future_vector {
+  left: 0;
+  bottom: 107px;
+}
+
+.chance_vector {
+  right: 0;
+  bottom: 14%;
+}
+
+.activity_vector {
+  left: 0;
+  bottom: 4%;
+}
+
+.podcast_compare_vector {
+  right: 0;
+  top: -6%;
+}
+
+.monthly_income_vector {
+  right: 0;
+  top: -15%;
+}
+
+.podcast_hosting_vector {
+  top: 47%;
+  right: -2%;
+}
+
+.faq_vector {
+  top: 17%;
+  left: -3%;
+}
+
+.health_beta_ellipse {
+  width: 50px;
+  height: 50px;
+  background: #04C0CF;
+  filter: blur(80px);
+  top: 45%;
+  right: 6%;
+}
+
+.activity_right_vector {
+  right: 0;
+  top: 59%;
 }
 
 /*============================ card ===========================*/
@@ -505,6 +589,17 @@
   .font_xl {
     font-size: 24px;
   }
+
+  .independent_interview_ellipse {
+    filter: blur(175px);
+    bottom: 52%;
+    right: -14%;
+    left: auto;
+  }
+
+  .health_beta_ellipse {
+    top: 62%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -603,5 +698,10 @@
     max-width: 158px !important;
     width: 100%;
     min-width: 158px !important;
+  }
+
+  .health_beta_ellipse {
+    top: 63%;
+    right: 10%;
   }
 }
