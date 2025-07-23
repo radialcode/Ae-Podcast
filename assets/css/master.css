@@ -515,7 +515,7 @@
   }
 
   .total_box {
-    min-width: 160px !important;
+    max-width: 160px !important;
   }
 
   .gradient_btn {
