@@ -1301,6 +1301,14 @@
     height: 90px;
     padding: 12px;
   }
+  .industry_podmatch_box.seeking_guest_box {
+    max-width: 158px !important;
+    padding: 16px;
+  }
+    .industry_box.seeking_guest_box{
+      max-width: 158px !important;
+      padding: 16px !important;
+    }
 
   .production_average {
     right: 14%;
