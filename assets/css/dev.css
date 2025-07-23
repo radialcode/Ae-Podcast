@@ -247,7 +247,7 @@
 }
 .guesting {
   rotate: -67deg;
-  /* transform: translate(13px, 41px); */
+  transform: translate(13px, 41px);
 }
 /* =========== */
 .height_box {
@@ -521,13 +521,13 @@
 }
 
 .hosts {
-  left: -13%;
-  top: 3%;
+  left: -9%;
+  top: 10%;
 }
 
 .guests {
-  right: -9%;
-  bottom: 4%;
+  right: -6%;
+  bottom: 5%;
 }
 
 /*--------------------------------------------------------- podcast hosting provider ---------------------------------------------*/
