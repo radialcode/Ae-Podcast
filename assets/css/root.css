@@ -125,6 +125,10 @@
   font-size: var(--fs-xs);
 }
 
+.fs_custom_xs {
+  font-size: 14px;
+}
+
 /* ------------ colors classes ------------- */
 .clr_black {
   color: var(--clr-black);
@@ -238,7 +242,7 @@
 @media (max-width: 991.98px) {
   :root {
     /* --------font sizes --------------- */
-     --fs-7xl: 40px;
+    --fs-7xl: 40px;
     --fs-xl: 20px;
     --fs-6xl: 36px;
     --fs-5xl: 40px;
@@ -254,6 +258,10 @@
 @media (max-width:768px) {
   :root {
     --fs-6xl: 26px;
+  }
+
+  .fs_custom_xs {
+    font-size: 12px;
   }
 }
 

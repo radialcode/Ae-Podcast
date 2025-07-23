@@ -285,7 +285,7 @@
               <p class="mb-0 clr_skyblue fs_xsm fw-semibold lh_150 ff_graphik">
                 HIGH
               </p>
-              <p class="ff_graphik mb-0 mt-2 pt-1 mt-lg-3 clr_black opacity_70 fs_sm fw-normal lh_110 line_height_24">
+              <p class="ff_graphik mb-0 mt-2 pt-1 pt-lg-0 mt-lg-3 clr_black opacity_70 fs_sm fw-normal lh_110 line_height_24">
                 “Podcasts” are trending at 85% on search engines. (↓1%)
               </p>
             </div>
@@ -764,9 +764,9 @@
               <div class="chart_box d-flex flex-column align-items-center justify-content-center position-relative">
                 <div id="linechart" class="position-relative"></div>
                 <p
-                  class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0 total_values position-absolute top-50 start-0 ">
+                  class="ff_graphik text-center fw-semibold fs_custom_xs gradient_text mb-0 total_values position-absolute top-50 start-0 ">
                   Total</p>
-                <p class="ff_graphik text-center fw-semibold fs_xsm gradient_text mb-0">Month</p>
+                <p class="ff_graphik text-center fw-semibold fs_custom_xs gradient_text mb-0">Month</p>
               </div>
             </div>
           </div>
@@ -817,16 +817,16 @@
               </div>
               <div class="total_box d-flex flex-column justify-content-center height_box border_violet">
                 <div class="px-4 py-3">
-                  <p class="mb-0 gradient_text clr_off_purple fw-medium fs_sm lh_150 pb-2">
+                  <p class="mb-0 gradient_text clr_off_purple fw-medium fs_sm lh_150 pb-2 ff_graphik">
                     Change
                   </p>
-                  <p class="mb-0 gradient_text clr_off_purple fw-medium fs_2xl lh_120 pb-1">
+                  <p class="mb-0 gradient_text clr_off_purple fw-medium fs_2xl lh_120 pb-1 ff_graphik">
                     -0.17%
                   </p>
                 </div>
               </div>
             </div>
-            <div class="d-flex align-items-center mt-sm-4 mt-3 pt-1">
+            <div class="d-flex align-items-center mt-sm-4 mt-3 pt-1 pt-sm-0">
               <img src="/assets/images/svg/future_arrow_vector.svg" alt="future_arrow_vector" />
               <p class="mb-0 fw-bold fs_sm lh_150 gradient_text ff_graphik ms-2">
                 Only 1.28% of all podcasts are part <br />
@@ -1135,7 +1135,7 @@
                 <div id="PodcastersselectBox2"
                   class="d-flex align-items-center june_dropdown justify-content-between select_box select_bg bg-white cursor_pointer">
                   <p id="Podcasters2" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
-                    2025</p>`
+                    2025</p>
                 </div>
                 <div id="Podcastersoptions2" class="position-absolute d-none option_box same-width-dropdown">
                   <p onclick="PodcastersselectValue2('june 2025')"
@@ -3414,6 +3414,8 @@
     var options = {
       chart: {
         type: "bar",
+        height: window.innerWidth < 576 && 353 ,
+        width: window.innerWidth < 576 && 295,
       },
       series: [{
         name: "Total",
@@ -3745,7 +3747,7 @@
         .showLabels(false)
         .showLegend(false)
         .donut(true)
-        .donutRatio(0.55)
+        .donutRatio(0.45)
         .padAngle(0.01);
 
       var data = [
