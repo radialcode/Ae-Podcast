@@ -159,7 +159,6 @@
     filter: blur(79px);
     top: 0;
     right: 5%;
-
 }
 
 .podcaster_right_vector {
@@ -468,6 +467,13 @@
     .quick_ways_ellipse {
         width: 500px;
         top: 40%;
+    }
+}
+
+@media (max-width:991px) {
+    .padcaster_share_ellipse {
+        top: -24%;
+        right: 0;
     }
 }
 
