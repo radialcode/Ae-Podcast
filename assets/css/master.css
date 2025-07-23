@@ -298,7 +298,7 @@
 
 /*============================ footer =============================*/
 .footer_links {
-  margin-top: 10px !important;
+  margin-top: 14px !important;
 }
 
 .footer_padding {
@@ -314,6 +314,7 @@
 
 .footer_logo {
   max-width: 227px !important;
+  max-height: 42px;
 }
 
 .footer_para {
