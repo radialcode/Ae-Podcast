@@ -97,9 +97,9 @@
   font-size: 20px;
   font-family: "poppins";
   font-weight: 800;
-  background-color: #313ef7;
+  background-color: #299bfa;
   z-index: 100;
-  outline: 1px solid white;
+  border: 2px solid white;
 }
 
 .back_top_img {
@@ -108,13 +108,15 @@
 }
 
 #back-top:hover {
-  background-color: black;
+  transform: scale(1.1);
 }
 
 .table_gradient_color {
-  background: linear-gradient(311.05deg,
-      rgba(111, 105, 242, 0.1) 0%,
-      rgba(0, 185, 255, 0.1) 155.6%);
+  background: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.1) 0%,
+    rgba(0, 185, 255, 0.1) 155.6%
+  );
 }
 
 .bg_impactful_card {
@@ -125,7 +127,7 @@
   border-top: 2px solid #6f69f21a;
 }
 
-.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
@@ -190,7 +192,7 @@
 }
 
 .total_box {
-  border: 1px solid #6F69F2;
+  border: 1px solid #6f69f2;
   background-color: transparent;
   background-clip: content-box, border-box;
   max-width: 205px !important;
@@ -214,9 +216,11 @@
 }
 
 .td_gradient {
-  background: linear-gradient(311.05deg,
-      rgba(111, 105, 242, 0.1) 0%,
-      rgba(0, 185, 255, 0.1) 155.6%);
+  background: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.1) 0%,
+    rgba(0, 185, 255, 0.1) 155.6%
+  );
 }
 
 /* ================ future sec ===================== */
@@ -237,8 +241,6 @@
 .possible_future_chart {
   max-width: 494px;
 }
-
-
 
 /*============================ ellipse ============================*/
 .podcasting_industries_ellipse {
@@ -268,7 +270,7 @@
 .independent_interview_ellipse {
   width: 187px;
   height: 187px;
-  background: #00C2CB;
+  background: #00c2cb;
   filter: blur(168px);
   bottom: 22%;
   z-index: 1;
@@ -278,7 +280,7 @@
 .independent_interview_right_ellipse {
   width: 142px;
   height: 244px;
-  background: #6F69F2;
+  background: #6f69f2;
   right: -5%;
   bottom: 5%;
   filter: blur(180px);
@@ -288,7 +290,7 @@
 .hero_ellipse {
   width: 187px;
   height: 187px;
-  background: #00C2CB;
+  background: #00c2cb;
   filter: blur(230px);
   bottom: -117%;
   z-index: 1;
@@ -337,7 +339,7 @@
 .health_beta_ellipse {
   width: 50px;
   height: 50px;
-  background: #04C0CF;
+  background: #04c0cf;
   filter: blur(80px);
   top: 45%;
   right: 6%;
@@ -358,7 +360,7 @@
   border-radius: 32px;
   min-height: 318px;
   /* transform: translateY(50%); */
-  box-shadow: 0px 12px 30px 0px #706AF34D;
+  box-shadow: 0px 12px 30px 0px #706af34d;
   padding: 45px 36px;
   /* margin-top: -230px !important; */
 }
@@ -493,8 +495,7 @@
   }
 }
 
-@media (max-width:991.98px) {
-
+@media (max-width: 991.98px) {
   .vctr_faq {
     left: -50px;
     bottom: -80%;

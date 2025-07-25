@@ -85,7 +85,12 @@
 }
 
 .txt_hdng_clr {
-  background: linear-gradient(99.76deg, #00B9FF 34.35%, #6F69F2 64.82%, #10B6D0 88.28%);
+  background: linear-gradient(
+    99.76deg,
+    #00b9ff 34.35%,
+    #6f69f2 64.82%,
+    #10b6d0 88.28%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -100,7 +105,7 @@
   background-image: url("../images/webp/hero_bg.webp");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .nav_line {
@@ -311,7 +316,6 @@ a:hover {
   box-shadow: none !important;
 }
 
-
 .accordion-button:focus {
   z-index: 3;
   border-color: transparent !important;
@@ -327,7 +331,6 @@ a:hover {
 
 .accordion-item:nth-child(1) {
   margin-top: 0 !important;
-
 }
 
 .accordion-button::after {
@@ -448,7 +451,6 @@ a:hover {
   .card_space {
     margin: 0px !important;
   }
-
 
   .space_ul_nav {
     gap: 21px;
