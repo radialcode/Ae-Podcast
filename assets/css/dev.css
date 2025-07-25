@@ -48,9 +48,11 @@
 }
 
 .td_gradient {
-  background: linear-gradient(311.05deg,
-      rgba(111, 105, 242, 0.1) 0%,
-      rgba(0, 185, 255, 0.1) 155.6%);
+  background: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.1) 0%,
+    rgba(0, 185, 255, 0.1) 155.6%
+  );
 }
 
 /* ====podcasting industry chart ==== */
@@ -834,9 +836,11 @@
 
   border-style: solid;
 
-  border-image-source: linear-gradient(311.05deg,
-      rgba(111, 105, 242, 0.3) 0%,
-      rgba(0, 185, 255, 0.3) 155.6%);
+  border-image-source: linear-gradient(
+    311.05deg,
+    rgba(111, 105, 242, 0.3) 0%,
+    rgba(0, 185, 255, 0.3) 155.6%
+  );
 }
 
 @media (max-width: 1199.98px) {
@@ -1069,8 +1073,6 @@
     right: -20%;
   }
 
-
-
   .gap_74 {
     gap: 74px !important;
   }
@@ -1162,7 +1164,6 @@
     top: 43%;
     left: 8%;
   }
-
 
   .health_chart_parent {
     transform: scale(1);
@@ -1453,6 +1454,9 @@
   .ph_provider_sec {
     padding-top: 80px;
   }
+  .arrow_size {
+    width: 50px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1483,8 +1487,6 @@
     width: 350px !important;
     height: 363px !important;
   }
-
-
 
   .industry_chart_img {
     margin-top: 25px;
