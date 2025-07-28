@@ -1455,7 +1455,7 @@
     padding-top: 80px;
   }
   .arrow_size {
-    width: 50px;
+    width: 50px !important;
   }
 }
 
