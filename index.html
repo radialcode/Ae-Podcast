@@ -752,7 +752,7 @@
           <div class="w-100 average_time_box">
             <div
               class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
-              <div class="d-flex gap_22 align-items-center gap_19">
+              <div class="d-flex gap_22 align-items-center gap_19 mx-auto mx-lg-0">
                 <div class="blue_inner_box">
                   <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">50/<span
                       class="fw-normal fs_md">days</span></p>
@@ -972,7 +972,7 @@
             <div class="w-100 average_time_box">
               <div
                 class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
-                <div class="d-flex gap_22 align-items-center">
+                <div class="d-flex gap_22 align-items-center mx-auto mx-lg-0">
                   <div class="blue_inner_box">
                     <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">1
                     <p class="ff_graphik fw-medium fs_sm lh_150 clr_skyblue mb-0 text-center">
@@ -987,7 +987,7 @@
                   </div>
                 </div>
                 <p
-                  class="fw-normal fs_lg lh_150 clr_black ff_graphik max_w_477 mb-0 fst-italic text-center text-sm-start">
+                  class="fw-normal fs_lg lh_150 clr_black ff_graphik max_w_477 mb-0 fst-italic text-center text-lg-start">
                   Guests who use PodMatch get featured on <span class="fw-semibold">116%</span>
                   more podcasts!</p>
               </div>
@@ -1133,7 +1133,7 @@
           <div class="w-100 average_time_box">
             <div
               class="d-flex justify-content-between align-items-center flex-wrap flex-wrap flex-lg-nowrap gap-4 gap-xl-0">
-              <div class="d-flex gap_22 align-items-center">
+              <div class="d-flex gap_22 align-items-center mx-auto mx-lg-0">
                 <div class="blue_inner_box">
                   <p class="fw-medium fs_2xl lh_110 clr_skyblue text-center ff_graphik mb-1">30
                   <p class="ff_graphik fw-medium fs_sm lh_150 clr_skyblue mb-0 text-center">Industry
@@ -1186,14 +1186,18 @@
                 </div>
               </div>
               <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 Podcaster_heading fw-semibold mt-3">
-                Average Monthly Income for Podcasters <span><img src="./assets/images/svg/warning_symbol.svg"
-                    alt="warning_symbol"></span>
+                Average Monthly Income for Podcasters <span class="cursor_pointer" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="This estimate is based on the average number of listeners episodes receive within the first 7 days. Using an above-average CPM, it reflects what podcasters can expect to earn monthly for their efforts.">
+                <img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" />
+              </span>
               </h2>
               <p class="clr_grey less_than fw-normal ff_graphik my-3 fs_sm lh_150">
                 Estimated income is from ads and sponsorships, based on a <span class="fw-semibold">$46.30</span> CPM
                 for
                 weekly
-                interview-based podcasts.
+                interview-based podcasts.<a
+                  href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/04/18/how-to-monetize-a-small-podcast/"
+                  target="_blank" class="fw-semibold clr_grey">Here’s a better way to make money.</a>
               </p>
               <div class="d-flex align-items-center justify-content-start pt-3 p_1 gap_6 w_536 pt_20">
                 <div class="industry_box seeking_guest_box d-flex flex-column justify-content-center chance_box">
@@ -1279,9 +1283,32 @@
             </div>
           </div>
           <div class="col-lg-6 px_12" data-aos="fade-left" data-aos-duration="1000">
-            <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_production fw-semibold position-relative z-1">
+            <div class="position-relative">
+              <div id="TimeSpentselectBox2"
+                class="d-flex align-items-center june_dropdown justify-content-between select_box select_bg bg-white cursor_pointer">
+                <p id="TimeSpent2" class="ff_graphik fs_xsm cursor_pointer lh_110 mb-0 text-nowrap">June
+                  2025</p>
+              </div>
+              <div id="TimeSpentoptions2" class="position-absolute d-none option_box same-width-dropdown">
+                <p onclick="TimeSpentselectValue2('June 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">June
+                  2025
+                </p>
+                <p onclick="TimeSpentselectValue2('July 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">July
+                  2025</p>
+                <p onclick="TimeSpentselectValue2('August 2025')"
+                  class="ff_graphik fs_xsm cursor_pointer w-100 mb-0 option_item fw-normal">August
+                  2025
+                </p>
+              </div>
+            </div>
+            <h2 class="ff_graphik fs_5xl lh_120 clr_black mb-0 podcast_production fw-semibold position-relative z-1 mt-3">
               Time Spent on Podcast Production
-              <span><img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" /></span>
+              <span class="cursor_pointer" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Production includes everything from ideation of episodes, booking guests, episode preparation, recording, editing, post production copy, graphic design, dripped content pieces, etc.">
+                <img src="./assets/images/svg/warning_symbol.svg" alt="warning_symbol" />
+              </span>
             </h2>
             <p class="clr_black opacity_70 max_w_512 fw-normal ff_graphik my-3 fs_sm lh_150">
               Numbers based on interview-based podcasts releasing one episode per week, averaging <span
@@ -1453,7 +1480,7 @@
       <div class="custom_container mx-auto">
         <h2 data-aos="fade-up" data-aos-duration="1000"
           class="fw-semibold text-white fs_5xl max_w_785 lh_120 ff_graphik text-center mx-auto m-0">
-          Want <span style="position: relative; top: 9px; display: inline-block;">9</span> Quick Ways to Get
+          Want 9 Quick Ways to Get
           Better Results from Podcasting?
         </h2>
         <p data-aos="fade-up" data-aos-duration="1200"
@@ -3343,6 +3370,25 @@
       }
     });
   </script>
+  <script>
+    var compare = document.getElementById("compare");
+    var compareoptions = document.getElementById("compareoptions");
+    var compareselectbox = document.getElementById("compareselectBox");
+
+    function compareselectValue(val) {
+      compare.innerHTML = val;
+      compareoptions.classList.add("d-none");
+    }
+    compareselectbox.addEventListener("click", function (event) {
+      event.stopPropagation();
+      compareoptions.classList.toggle("d-none");
+    });
+    document.addEventListener("click", function () {
+      if (!compareoptions.classList.contains("d-none")) {
+        compareoptions.classList.add("d-none");
+      }
+    });
+  </script>
   <!-- ========== CHART JS ========== -->
   <script>
     var options = {
@@ -4093,6 +4139,26 @@
     document.addEventListener("click", function (event) {
       const selectBox = document.getElementById("PodcastersselectBox2");
       const optionsBox = document.getElementById("Podcastersoptions2");
+
+      if (!selectBox.contains(event.target) && !optionsBox.contains(event.target)) {
+        optionsBox.classList.add("d-none");
+      }
+    });
+  </script>
+  <script>
+    document.getElementById("TimeSpentselectBox2").onclick = function (e) {
+      e.stopPropagation();
+      document.getElementById("TimeSpentoptions2").classList.toggle("d-none");
+    };
+
+    function TimeSpentselectValue2(value) {
+      document.getElementById("TimeSpent2").innerText = value;
+      document.getElementById("TimeSpentoptions2").classList.add("d-none");
+    }
+
+    document.addEventListener("click", function (event) {
+      const selectBox = document.getElementById("TimeSpentselectBox2");
+      const optionsBox = document.getElementById("TimeSpentoptions2");
 
       if (!selectBox.contains(event.target) && !optionsBox.contains(event.target)) {
         optionsBox.classList.add("d-none");
