@@ -54,7 +54,9 @@
     rgba(0, 185, 255, 0.1) 155.6%
   );
 }
-
+.pl_3{
+  padding-left: 3px;
+}
 /* ====podcasting industry chart ==== */
 
 .podcasting_industry_chart {
