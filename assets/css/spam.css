@@ -266,11 +266,11 @@ a:hover {
 }
 
 /* accordion */
-.space_accd {
+.ae-report .space_accd {
   margin-top: 50px;
 }
 
-.accordion-button {
+.ae-report .accordion-button {
   font-family: "Graphik" !important;
   width: 800px;
   max-width: 100%;
@@ -300,21 +300,21 @@ a:hover {
   font-size: 16px !important;
 }
 
-.accordion-button:focus {
+.ae-report .accordion-button:focus {
   z-index: 3;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: none !important;
 }
 
-.accordion-button:not(.collapsed) {
+.ae-report .accordion-button:not(.collapsed) {
   color: #000000;
   font-size: 20px !important;
   background-color: transparent !important;
   box-shadow: none !important;
 }
 
-.accordion-button:focus {
+.ae-report .accordion-button:focus {
   z-index: 3;
   border-color: transparent !important;
   outline: 0;
@@ -331,7 +331,7 @@ a:hover {
   margin-top: 0 !important;
 }
 
-.accordion-button::after {
+.ae-report .accordion-button::after {
   background-size: 15px 15px;
   /* Set the width and height here */
   width: 20px;
@@ -398,7 +398,7 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
-  .space_accd {
+  .ae-report .space_accd {
     margin-top: 40px;
   }
 
@@ -406,7 +406,7 @@ a:hover {
     width: 105px;
   }
 
-  .accordion-button {
+  .ae-report .accordion-button {
     max-width: 650px !important;
   }
 
@@ -458,12 +458,12 @@ a:hover {
     padding: 16px 20px;
   }
 
-  .accordion-button {
+  .ae-report .accordion-button {
     max-width: 700px !important;
     font-size: 15px !important;
   }
 
-  .accordion-button:not(.collapsed) {
+  .ae-report .accordion-button:not(.collapsed) {
     font-size: 16px !important;
   }
 
@@ -486,7 +486,7 @@ a:hover {
 }
 
 @media (max-width: 765px) {
-  .accordion-button {
+  .ae-report .accordion-button {
     max-width: 500px !important;
   }
 
@@ -496,7 +496,7 @@ a:hover {
 }
 
 @media (max-width: 575.98px) {
-  .accordion-button::after {
+  .ae-report .accordion-button::after {
     background-image: url("../images/svg/sm_faq_close.svg") !important;
     background-size: 10px 10px;
     /* Set the width and height here */
@@ -522,18 +522,18 @@ a:hover {
     padding-bottom: 80px;
   }
 
-  .space_accd {
+  .ae-report .space_accd {
     margin-top: 24px;
   }
 
-  .accordion-button {
+  .ae-report .accordion-button {
     max-width: 800px !important;
     width: 100% !important;
     padding-bottom: 16px !important;
     font-size: 14px !important;
   }
 
-  .accordion-button:not(.collapsed) {
+  .ae-report .accordion-button:not(.collapsed) {
     font-size: 16px !important;
   }
 

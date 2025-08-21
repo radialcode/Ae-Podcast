@@ -177,14 +177,14 @@
     padding: 0 20px 152px 20px;
 }
 
-.podcast_share_table_parent {
+.ae-report .podcast_share_table_parent {
     max-width: 569px;
     width: 100%;
     overflow-x: auto;
 }
 
 
-.table_wrapper {
+.ae-report .table_wrapper {
     border-radius: 4px;
     box-shadow: 4px 4px 20px 0px var(--clr-pale-grey);
     position: relative;
@@ -192,7 +192,7 @@
     z-index: 10;
 }
 
-.table_wrapper::before {
+.ae-report .table_wrapper::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -208,7 +208,7 @@
 }
 
 
-.table_header .table_cell:nth-child(1) {
+.ae-report .table_header .table_cell:nth-child(1) {
     min-width: 70px;
     background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
     border-top-left-radius: 4px;
@@ -218,7 +218,7 @@
     min-width: 70px;
 }
 
-.table_header .table_cell:nth-child(2) {
+.ae-report .table_header .table_cell:nth-child(2) {
     background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
     min-width: 170px;
 }
@@ -228,7 +228,7 @@
     font-weight: 600 !important;
 }
 
-.table_header .table_cell:nth-child(3) {
+.ae-report .table_header .table_cell:nth-child(3) {
     background: linear-gradient(353.05deg, #6F69F2 0%, #00B9FF 116.6%),
         linear-gradient(336.51deg, #6F69F2 7.88%, #269FFB 47.87%);
     min-width: 164px;
@@ -238,7 +238,7 @@
     min-width: 164px;
 }
 
-.table_header .table_cell:nth-child(4) {
+.ae-report .table_header .table_cell:nth-child(4) {
     background: linear-gradient(311.05deg, #6F69F2 0%, #00B9FF 155.6%);
     min-width: 164px;
     max-width: 164px;
@@ -250,7 +250,7 @@
     min-width: 164px;
 }
 
-.table_header .table_cell {
+.ae-report .table_header .table_cell {
     color: white !important;
     font-weight: 600;
     font-size: var(--fs-xsm);
@@ -478,7 +478,7 @@
 }
 
 @media (max-width:768px) {
-    .podcast_share_table_parent {
+    .ae-report .podcast_share_table_parent {
         margin-top: 36px;
     }
 }
@@ -513,7 +513,7 @@
     }
 
 
-    .table_header .table_cell:nth-child(1) {
+    .ae-report .table_header .table_cell:nth-child(1) {
         min-width: 50px;
         max-width: 50px;
     }
@@ -522,7 +522,7 @@
         min-width: 50px;
     }
 
-    .table_header .table_cell:nth-child(2) {
+    .ae-report .table_header .table_cell:nth-child(2) {
         min-width: 148px;
     }
 
@@ -530,7 +530,7 @@
         min-width: 148px;
     }
 
-    .table_header .table_cell:nth-child(3) {
+    .ae-report .table_header .table_cell:nth-child(3) {
         min-width: 136px;
     }
 
@@ -538,7 +538,7 @@
         min-width: 136px;
     }
 
-    .table_header .table_cell:nth-child(4) {
+    .ae-report .table_header .table_cell:nth-child(4) {
         min-width: 1436x;
     }
 

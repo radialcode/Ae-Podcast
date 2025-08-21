@@ -35,8 +35,8 @@
 .bs-tooltip-end .tooltip-arrow::before {
   border-right-color: white !important;
 }
-
-.compare_chart {
+ 
+.ae-report .compare_chart {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
   width: 573px !important;
@@ -101,7 +101,7 @@
   filter: none !important;
 }
 
-.chart_box {
+.ae-report .chart_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
   width: 550px !important;
@@ -228,7 +228,7 @@
   max-width: 200px;
 }
 
-.podcasting_bg_img {
+.ae-report .podcasting_bg_img {
   background-image: url("../images/png/podcasting-industry-chart-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -262,7 +262,7 @@
 }
 
 /* =========== */
-.height_box {
+.ae-report .height_box {
   height: 106px;
 }
 
@@ -302,7 +302,7 @@
   z-index: 1;
 }
 
-.table_border {
+.ae-report .table_border {
   border-spacing: 0;
   border-collapse: separate;
   border-radius: 4px;
@@ -361,12 +361,12 @@
   border-radius: 24px;
 }
 
-.poadcast_group_th {
+.ae-report .poadcast_group_th {
   width: 264px;
   height: 37px;
 }
 
-.bg_episode {
+.ae-report .bg_episode {
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
 }
 
@@ -427,7 +427,7 @@
   max-width: 451px;
 }
 
-.seeking_guest_box {
+.ae-report .seeking_guest_box {
   border: 1px solid #00b9ff;
   padding: 16px;
   max-width: 224px !important;
@@ -551,7 +551,7 @@
   max-width: 633px;
 }
 
-.guesting_box {
+.ae-report .guesting_box {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
   max-width: 570px;
@@ -605,7 +605,7 @@
   opacity: 70%;
 }
 
-.industry_chart_img {
+.ae-report .industry_chart_img {
   background-image: url("../images/png/chart-bg-img.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -760,7 +760,7 @@
   border: 1px solid #6f69f2 !important;
 }
 
-.seeking_guest_box {
+.ae-report .seeking_guest_box {
   border: 1px solid #00b9ff !important;
   padding: 16px 22px !important;
   max-width: 224px !important;
@@ -800,7 +800,7 @@
   height: 106px !important;
 }
 
-.income_chart {
+.ae-report .income_chart {
   width: 517px !important;
   height: 568px;
   box-shadow: 0px 4px 20px 0px #06060614;
@@ -848,7 +848,7 @@
     max-width: 473px;
   }
 
-  .chart_box {
+  .ae-report .chart_box {
     width: 450px !important;
     height: 400px;
   }
@@ -873,7 +873,7 @@
     width: 380px !important;
   }
 
-  .income_chart {
+  .ae-report .income_chart {
     width: 480px !important;
   }
 }
@@ -941,13 +941,13 @@
     top: -0px !important;
   }
 
-  .compare_chart {
+  .ae-report .compare_chart {
     width: 600px !important;
     height: 500px;
     margin-top: 74px;
   }
 
-  .chart_box {
+   .ae-report .chart_box {
     width: 600px !important;
     height: 500px;
     padding: 24px;
@@ -1056,7 +1056,7 @@
     margin-bottom: 0px;
   }
 
-  .guesting_box {
+  .ae-report .guesting_box {
     margin-top: 74px;
   }
 
@@ -1081,7 +1081,7 @@
     height: 102px !important;
   }
 
-  .income_chart {
+  .ae-report .income_chart {
     width: 517px !important;
     height: 500px;
     box-shadow: 0px 4px 20px 0px #06060614;
@@ -1141,7 +1141,7 @@
     margin-top: 66px;
   }
 
-  .chart_box {
+  .ae-report .chart_box {
     width: 500px !important;
     height: 450px;
   }
@@ -1188,7 +1188,7 @@
     margin: 0 10px;
   }
 
-  .guesting_box {
+  .ae-report .guesting_box {
     box-shadow: 0px 0px 20px 4px #e2e2e240;
     border-radius: 24px;
     max-width: 570px;
@@ -1243,7 +1243,7 @@
     font-size: 14px;
   }
 
-  .seeking_guest_box {
+  .ae-report .seeking_guest_box {
     max-width: 159px !important;
     height: 117px;
   }
@@ -1280,12 +1280,12 @@
     margin-top: 40px;
   }
 
-  .height_box {
+  .ae-report .height_box {
     height: 93px;
     width: 158px;
   }
 
-  .chart_box {
+  .ae-report .chart_box {
     max-width: 400px !important;
     height: 400px;
   }
@@ -1429,7 +1429,7 @@
     margin-left: 60px !important;
   }
 
-  .income_chart {
+  .ae-report .income_chart {
     width: 332px !important;
     height: 500px;
     box-shadow: 0px 4px 20px 0px #06060614;
@@ -1496,14 +1496,14 @@
 }
 
 @media (max-width: 479.98px) {
-  .chart_box {
+  .ae-report .chart_box {
     max-width: 300px !important;
     height: 393px;
     padding: 0px !important;
     margin-top: 40px;
   }
 
-  .compare_chart {
+  .ae-report .compare_chart {
     width: 500px !important;
     height: 500px !important;
     margin-top: 40px;

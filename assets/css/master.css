@@ -41,7 +41,7 @@
   left: 0px;
 }
 
-.support_table table {
+.ae-report .support_table table {
   border-spacing: 0;
   border-collapse: separate;
   border-radius: 4px;
@@ -117,7 +117,7 @@
       rgba(0, 185, 255, 0.1) 155.6%);
 }
 
-.bg_impactful_card {
+.ae-report .bg_impactful_card {
   background: linear-gradient(to bottom, #fff 50%, #ebecef 50%);
 }
 
@@ -348,7 +348,7 @@
 
 /*============================ card ===========================*/
 
-.impactful_card {
+.ae-report .impactful_card {
   max-width: 1140px;
   width: 100%;
   background: linear-gradient(133.83deg, #00b9ff 3.77%, #6f69f2 81.07%);
@@ -472,7 +472,7 @@
 }
 
 @media (max-width: 1024px) {
-  .support_table table {
+  .ae-report .support_table table {
     max-width: 615px;
   }
 
@@ -536,7 +536,7 @@
     padding: 0px 0px 110px 0px;
   }
 
-  .impactful_card {
+  .ae-report .impactful_card {
     padding: 49px 37px;
     /* transform: translateY(58%); */
   }
@@ -545,7 +545,7 @@
     margin-top: 60px;
   }
 
-  .impactful_card h3 {
+  .ae-report .impactful_card h3 {
     max-width: 521px;
   }
 
@@ -557,18 +557,13 @@
     padding: 15px 24px;
     max-width: 256px;
     width: 100%;
-    /* min-width: 256px; */
   }
 
   .ae-report .total_box {
     max-width: 256px !important;
     width: 100%;
-    /* min-width: 256px !important; */
   }
 
-  /* .independent_future {
-    margin-top: 74px;
-  } */
 
   .chances_heading {
     max-width: 600px !important;
@@ -645,7 +640,7 @@
     max-width: none;
   }
 
-  .impactful_card {
+  .ae-report .impactful_card {
     padding: 56px 16px;
     border-radius: 24px;
     /* transform: translateY(51%); */
