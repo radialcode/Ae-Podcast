@@ -35,7 +35,7 @@
 .bs-tooltip-end .tooltip-arrow::before {
   border-right-color: white !important;
 }
- 
+
 .ae-report .compare_chart {
   box-shadow: 0px 0px 20px 4px #e2e2e240;
   border-radius: 24px;
@@ -69,13 +69,13 @@
 }
 
 /* ==== Possible Future Chart ==== */
-.future_chart,
+.ae-report .future_chart,
 .chances_chart {
   transform: scale(1.4);
 }
 
 /* ==== ==== */
-.health_chart_parent {
+.ae-report .health_chart_parent {
   transform: scale(1.2);
 }
 
@@ -619,7 +619,7 @@
 }
 
 /* ---------------------- podcast production ---------------------- */
-.production_box.guesting_box {
+.ae-report .production_box.guesting_box {
   box-shadow: none !important;
 }
 
@@ -947,7 +947,7 @@
     margin-top: 74px;
   }
 
-   .ae-report .chart_box {
+  .ae-report .chart_box {
     width: 600px !important;
     height: 500px;
     padding: 24px;
