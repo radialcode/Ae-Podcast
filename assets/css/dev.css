@@ -48,15 +48,15 @@
 }
 
 .td_gradient {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
-.pl_3{
+
+.pl_3 {
   padding-left: 3px;
 }
+
 /* ====podcasting industry chart ==== */
 
 .podcasting_industry_chart {
@@ -266,12 +266,12 @@
   height: 106px;
 }
 
-.select_box {
+.ae-report .select_box {
   width: 115px;
   height: 28px;
 }
 
-.option_box {
+.ae-report .option_box {
   width: 162px;
   background-color: white;
   overflow: hidden;
@@ -587,7 +587,7 @@
   padding-bottom: 11px;
 }
 
-.hosting_table {
+.ae-report .hosting_table {
   margin-top: 48px;
 }
 
@@ -783,7 +783,7 @@
   width: 162px !important;
 }
 
-.june_dropdown.select_box {
+.ae-report .june_dropdown.select_box {
   width: 162px !important;
   font-weight: 500 !important;
 }
@@ -838,11 +838,9 @@
 
   border-style: solid;
 
-  border-image-source: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.3) 0%,
-    rgba(0, 185, 255, 0.3) 155.6%
-  );
+  border-image-source: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.3) 0%,
+      rgba(0, 185, 255, 0.3) 155.6%);
 }
 
 @media (max-width: 1199.98px) {
@@ -881,7 +879,7 @@
 }
 
 @media (max-width: 1024px) {
-  .hosting_table {
+  .ae-report .hosting_table {
     max-width: 615px;
   }
 
@@ -1093,7 +1091,7 @@
     max-width: 700px;
   }
 
-  .hosting_table {
+  .ae-report .hosting_table {
     margin-top: 40px;
   }
 
@@ -1456,6 +1454,7 @@
   .ph_provider_sec {
     padding-top: 80px;
   }
+
   .arrow_size {
     width: 50px !important;
   }
