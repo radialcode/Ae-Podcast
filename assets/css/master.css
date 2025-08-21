@@ -112,11 +112,9 @@
 }
 
 .table_gradient_color {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 .bg_impactful_card {
@@ -127,7 +125,7 @@
   border-top: 2px solid #6f69f21a;
 }
 
-.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
@@ -145,11 +143,11 @@
   max-width: 526px !important;
 }
 
-.poadcasting_para {
+.ae-report .poadcasting_para {
   max-width: 553px !important;
 }
 
-.poadcasting_p {
+.ae-report .poadcasting_p {
   padding: 0px 0px 150px 0px;
 }
 
@@ -182,7 +180,7 @@
   background-position: calc(100% - 12px) center;
 }
 
-.active_box {
+.ae-report .active_box {
   border: 1px solid #00b9ff;
   padding: 16px 24px;
   width: 100%;
@@ -191,7 +189,7 @@
   box-shadow: 12px 12px 12px 0px #fcfeff;
 }
 
-.total_box {
+.ae-report .total_box {
   border: 1px solid #6f69f2;
   background-color: transparent;
   background-clip: content-box, border-box;
@@ -216,11 +214,9 @@
 }
 
 .td_gradient {
-  background: linear-gradient(
-    311.05deg,
-    rgba(111, 105, 242, 0.1) 0%,
-    rgba(0, 185, 255, 0.1) 155.6%
-  );
+  background: linear-gradient(311.05deg,
+      rgba(111, 105, 242, 0.1) 0%,
+      rgba(0, 185, 255, 0.1) 155.6%);
 }
 
 /* ================ future sec ===================== */
@@ -234,7 +230,7 @@
   margin: 25px 0px 0px -20px;
 }
 
-.chances_table {
+.ae-report .chances_table {
   max-width: 558px;
 }
 
@@ -532,11 +528,11 @@
     padding: 0;
   }
 
-  .poadcasting_para {
+  .ae-report .poadcasting_para {
     max-width: 575px !important;
   }
 
-  .poadcasting_p {
+  .ae-report .poadcasting_p {
     padding: 0px 0px 110px 0px;
   }
 
@@ -557,14 +553,14 @@
     top: 93%;
   }
 
-  .active_box {
+  .ae-report .active_box {
     padding: 15px 24px;
     max-width: 256px;
     width: 100%;
     /* min-width: 256px; */
   }
 
-  .total_box {
+  .ae-report .total_box {
     max-width: 256px !important;
     width: 100%;
     /* min-width: 256px !important; */
@@ -582,7 +578,7 @@
     margin: 15px 0px 0px -20px;
   }
 
-  .chances_table {
+  .ae-report .chances_table {
     max-width: 720px;
     width: 100%;
   }
@@ -641,7 +637,7 @@
     gap: 24px !important;
   }
 
-  .poadcasting_p {
+  .ae-report .poadcasting_p {
     padding: 0px 0px 80px 0px;
   }
 
