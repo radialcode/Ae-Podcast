@@ -82,6 +82,12 @@
   text-align: start;
   z-index: 7;
   background: linear-gradient(311.05deg, #6f69f2 0%, #00b9ff 155.6%);
+  cursor: pointer;
+  transition: all 350ms linear;
+}
+
+.box_hdr:hover {
+  scale: 1.05;
 }
 
 .txt_hdng_clr {
