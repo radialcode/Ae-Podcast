@@ -86,9 +86,6 @@
   transition: all 350ms linear;
 }
 
-.box_hdr:hover {
-  scale: 1.05;
-}
 
 .txt_hdng_clr {
   background: linear-gradient(99.76deg,
