@@ -1,15 +1,14 @@
 .tooltip {
   --bs-tooltip-opacity: 1 !important;
-  z-index: 2 !important;
 }
 
 .tooltip-inner {
-  background: white !important;
+  background: black !important;
   box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.212);
   max-width: 273px;
   width: 100% !important;
   padding: 10px;
-  color: black !important;
+  color: white !important;
 }
 
 .tooltip .show {
@@ -18,22 +17,22 @@
 
 .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
 .bs-tooltip-top .tooltip-arrow::before {
-  border-top-color: white !important;
+  border-top-color: black !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
-  border-top-color: white !important;
+  border-top-color: black !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
 .bs-tooltip-start .tooltip-arrow::before {
-  border-left-color: white !important;
+  border-left-color: black !important;
 }
 
 .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
 .bs-tooltip-end .tooltip-arrow::before {
-  border-right-color: white !important;
+  border-right-color: black !important;
 }
 
 .ae-report .compare_chart {

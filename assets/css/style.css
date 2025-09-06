@@ -6,6 +6,13 @@
     transform: translateX(-50%);
 }
 
+/* .tooltip.bs-tooltip-auto.fade.show {
+    position: absolute !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    transform: translate3d(871.5px, 422.5px, 0px) !important;
+} */
+
 .custom-dropdown-menu a {
     padding: 12px 16px;
     text-decoration: none;
